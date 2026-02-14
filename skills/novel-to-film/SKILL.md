@@ -128,7 +128,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 ### 阶段4：视觉资产生成
 
-**技能**：`step4-visual-asset-generator/SKILL.md`（待编写）
+**技能**：`step4-visual-asset-generator/SKILL.md` ✅
 
 将阶段3圣经中的 AI 绘图提示词，通过 Seedream 实际执行生成图片，经人工筛选确认后形成**视觉资产库**。这是连接"文字描述"与"可用画面"的关键桥梁——没有这一步，后续的首帧合成和视频生成无从谈起。
 
@@ -147,15 +147,17 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 production/step4-assets/
 ├── characters/
 │   ├── 朱围庸/
-│   │   ├── 灵魂期/              # 对应圣经中的阶段划分
-│   │   │   ├── 正面.png
-│   │   │   └── 侧面.png
+│   │   ├── _portrait/            # 角色肖像（跨阶段视觉基线）
+│   │   │   ├── 正面半身像.png
+│   │   │   ├── 四分之三侧面半身像.png
+│   │   │   ├── 正侧面半身像.png
+│   │   │   └── 全身正面像.png
+│   │   ├── 灵魂期/              # 阶段场景图（按 stage_id）
+│   │   │   └── *.png
 │   │   ├── 占身丁路期/
-│   │   │   └── ...
+│   │   │   └── *.png
 │   │   └── 占身乞丐期/
-│   │       ├── 正面.png
-│   │       ├── 四分之三侧面.png
-│   │       └── ...
+│   │       └── *.png
 │   └── 宋小仙/
 │       └── ...
 ├── locations/
@@ -177,6 +179,7 @@ production/step4-assets/
 ```markdown
 | 元素类型 | 元素名 | 阶段 | 章节范围 | 参考图路径 |
 |---------|--------|------|---------|-----------|
+| 角色 | 朱围庸 | 肖像 | — | characters/朱围庸/_portrait/*.png |
 | 角色 | 朱围庸 | 灵魂期 | ch1-3 | characters/朱围庸/灵魂期/*.png |
 | 角色 | 朱围庸 | 占身乞丐期 | ch8-71 | characters/朱围庸/占身乞丐期/*.png |
 | 场景 | 恶灵区 | 默认 | ch1-71 | locations/恶灵区/默认/*.png |
@@ -310,7 +313,7 @@ skills/novel-to-film/
 │   └── prop-writing-bible/                     # 道具圣经（planned）
 │       └── SKILL.md
 │
-├── step4-visual-asset-generator/               # 阶段4：视觉资产生成（planned）
+├── step4-visual-asset-generator/               # 阶段4：视觉资产生成 ✅
 │   └── SKILL.md
 │
 ├── step5-film-storyboard-extractor/            # 阶段5：场次分解与分镜
