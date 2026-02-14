@@ -87,7 +87,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 ### 阶段2：Art Direction（全局视觉风格定义）
 
-**技能**：`step2-art-direction/SKILL.md`（待编写）
+**技能**：`step2-art-direction/SKILL.md` ✅
 
 在编写任何元素圣经之前，先确定整部影片的**全局视觉风格基调**。这是好莱坞制作中 Look Development / Art Direction 阶段的对应——定义统领全片的视觉语言，确保后续所有元素（角色、场景、道具）在风格上统一。
 
@@ -110,10 +110,11 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 | 元素类型 | 技能 | 产出位置 | 状态 |
 |---------|------|---------|------|
-| 角色 | `step3-element-writing-bible/character-writing-bible/SKILL.md` | `production/02_characters/` | ✅ 已完成 |
-| 场景/地点 | `step3-element-writing-bible/location-writing-bible/SKILL.md` | `production/03_locations/` | 🔲 计划中 |
-| 道具 | `step3-element-writing-bible/prop-writing-bible/SKILL.md` | `production/04_props/` | 🔲 计划中 |
-| 世界观 | （待定） | `production/01_story_bible/` | 🔲 计划中 |
+| 角色 | `step3-.../character-writing-bible/SKILL.md` | `production/02_characters/` | ✅ 已完成 |
+| 场景/地点 | `step3-.../location-writing-bible/SKILL.md` | `production/03_locations/` | 🔲 计划中 |
+| 道具 | `step3-.../prop-writing-bible/SKILL.md` | `production/04_props/` | 🔲 计划中 |
+| 世界观 | `step3-.../world-writing-bible/SKILL.md` | `production/01_story_bible/` | 🔲 计划中 |
+| 关键事件 | `step3-.../event-writing-bible/SKILL.md` | `production/05_events/` | 🔲 计划中 |
 
 **关键约束**：每个元素圣经中的视觉描述和 AI 绘图提示词，必须符合阶段2定义的全局视觉风格。圣经中的 AI 提示词应自动继承全局 style prompt 前缀。
 
@@ -225,14 +226,18 @@ skills/novel-to-film/
 │   └── SKILL.md                                # ✅
 │
 ├── step2-art-direction/                        # 阶段2：全局视觉风格定义
-│   └── SKILL.md                                # （待编写）
+│   └── SKILL.md                                # ✅
 │
 ├── step3-element-writing-bible/                # 阶段3：圣经编写
 │   ├── character-writing-bible/                # 角色圣经 ✅
 │   │   └── SKILL.md
 │   ├── location-writing-bible/                 # 场景圣经（planned）
 │   │   └── SKILL.md
-│   └── prop-writing-bible/                     # 道具圣经（planned）
+│   ├── prop-writing-bible/                     # 道具圣经（planned）
+│   │   └── SKILL.md
+│   ├── world-writing-bible/                    # 世界观圣经（planned）
+│   │   └── SKILL.md
+│   └── event-writing-bible/                    # 关键事件视觉圣经（planned）
 │       └── SKILL.md
 │
 ├── step4-visual-asset-generator/               # 阶段4：视觉资产生成（planned）
@@ -265,6 +270,7 @@ production/                   # 阶段2+3产出：全局视觉风格 + 各类圣
 │   └── 群像/
 ├── 03_locations/             # 场景圣经（阶段3）
 ├── 04_props/                 # 道具圣经（阶段3）
+├── 05_events/                # 关键事件视觉圣经（阶段3）
 └── ...
 │
 assets/                       # 阶段4产出：视觉资产库
