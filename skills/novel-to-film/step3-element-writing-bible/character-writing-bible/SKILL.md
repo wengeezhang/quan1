@@ -9,7 +9,7 @@ description: 为单个角色编写完整的角色圣经——面向影视可视�
 
 角色圣经是影视可视化制作中**单个角色的完整视觉档案**。它回答的核心问题是："这个角色在每一个阶段，看起来是什么样的？"
 
-本技能的上游是 `film-elements-extractor` 产出的角色清单（`production/step1-extraction/characters.md`）。每一个重要性 ★★★★★ 或 ★★★★☆ 的角色，都需要用本技能编写一份角色圣经。
+本技能的上游是 `film-elements-extractor` 产出的角色清单（`production/step1-extraction/characters.md`）以及全局视觉风格定义（`production/step2-art-direction/art_direction.md`）。每一个重要性 ★★★★★ 或 ★★★★☆ 的角色，都需要用本技能编写一份角色圣经。
 
 **服务对象**：概念设计师、AI绘图、特效团队、导演、演员、造型师、调色师。
 
@@ -24,12 +24,14 @@ description: 为单个角色编写完整的角色圣经——面向影视可视�
 ## 输入
 
 - `production/step1-extraction/characters.md` 中该角色的基本信息（名字、身份、章节范围、重要性）
+- `production/step2-art-direction/art_direction.md`——全局视觉风格定义（色彩体系、光影规范、时代质感）
 - `chapters/` 下该角色覆盖的全部章节原文（`*.md`）
 - `chapters/` 下对应的角色分析文件（`*_character.md`）
 - 已完成的角色圣经作为风格参考（如 `production/step3-bibles/characters/主角/宋小仙.md`）
 
 **研究方法**：
 1. 先读 `production/step1-extraction/characters.md` 确认角色的章节范围和基本信息
+2. 读 `production/step2-art-direction/art_direction.md` 明确全局视觉约束
 2. 通读该角色覆盖范围内的所有 `*_character.md` 文件，建立角色全貌
 3. 回到原文 `*.md` 补充视觉细节（外貌描写、环境描写、动作描写等）
 4. 参考已有角色圣经的格式和深度
