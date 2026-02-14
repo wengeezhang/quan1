@@ -18,21 +18,21 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
        │
        ▼
 ┌──────────────────────────────┐
-│  阶段1：元素提取               │  film-elements-extractor/
+│  阶段1：元素提取               │  step1-film-elements-extractor/
 │  从小说中提取所有视觉元素       │
 │  产出：元素清单                 │  → _extraction/
 └──────────┬───────────────────┘
            │
            ▼
 ┌──────────────────────────────┐
-│  阶段2：圣经编写               │  film-elements-extractor/character-writing-bible/
-│  为每个重要元素编写制作圣经      │  film-elements-extractor/location-writing-bible/ (planned)
+│  阶段2：圣经编写               │  step2-element-writing-bible/
+│  为每个重要元素编写制作圣经      │
 │  产出：角色/场景/道具圣经       │  → production/
 └──────────┬───────────────────┘
            │
            ▼
 ┌──────────────────────────────┐
-│  阶段3：视觉资产生成            │  visual-asset-generator/ (planned)
+│  阶段3：视觉资产生成            │  step3-visual-asset-generator/ (planned)
 │  用 Seedream 生成参考图并确认   │
 │  产出：角色肖像、场景图、道具图  │  → assets/
 └──────────┬───────────────────┘
@@ -40,28 +40,28 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
            │
            ▼
 ┌──────────────────────────────┐
-│  阶段4：场次分解与分镜          │  film-storyboard-extractor/
+│  阶段4：场次分解与分镜          │  step4-film-storyboard-extractor/
 │  小说→场次表→镜头表→分镜脚本   │
 │  产出：场次表 + 分镜脚本        │  → storyboard/
 └──────────┬───────────────────┘
            │
            ▼
 ┌──────────────────────────────┐
-│  阶段5：首帧合成               │  keyframe-composer/ (planned)
+│  阶段5：首帧合成               │  step5-keyframe-composer/ (planned)
 │  为每个镜头合成首帧/尾帧图      │
 │  产出：镜头首帧图集             │  → keyframes/
 └──────────┬───────────────────┘
            │
            ▼
 ┌──────────────────────────────┐
-│  阶段6：视频生成               │  video-generator/
+│  阶段6：视频生成               │  step6-video-generator/
 │  首帧+参考图+prompt→8-15s片段  │
 │  产出：视频片段                 │  → clips/
 └──────────┬───────────────────┘
            │
            ▼
 ┌──────────────────────────────┐
-│  阶段7：剪辑与后期             │  post-production/ (planned)
+│  阶段7：剪辑与后期             │  step7-post-production/ (planned)
 │  片段拼接、转场、音频、调色     │
 │  产出：最终成片                 │  → output/
 └──────────────────────────────┘
@@ -71,7 +71,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 ### 阶段1：元素提取
 
-**技能**：`film-elements-extractor/SKILL.md` ✅
+**技能**：`step1-film-elements-extractor/SKILL.md` ✅
 
 从原始小说中提取所有影视可视化制作所需的核心元素，生成结构化清单。以"能否被画出来、拍出来"为筛选标准。
 
@@ -84,9 +84,9 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 | 元素类型 | 技能 | 产出位置 | 状态 |
 |---------|------|---------|------|
-| 角色 | `character-writing-bible/SKILL.md` | `production/02_characters/` | ✅ 已完成 |
-| 场景/地点 | `location-writing-bible/SKILL.md` | `production/03_locations/` | 🔲 计划中 |
-| 道具 | `prop-writing-bible/SKILL.md` | `production/04_props/` | 🔲 计划中 |
+| 角色 | `step2-element-writing-bible/character-writing-bible/SKILL.md` | `production/02_characters/` | ✅ 已完成 |
+| 场景/地点 | `step2-element-writing-bible/location-writing-bible/SKILL.md` | `production/03_locations/` | 🔲 计划中 |
+| 道具 | `step2-element-writing-bible/prop-writing-bible/SKILL.md` | `production/04_props/` | 🔲 计划中 |
 | 世界观 | （待定） | `production/01_story_bible/` | 🔲 计划中 |
 
 **前置依赖**：阶段2还应产出一份**全局视觉风格定义**（Art Direction），在所有圣经编写之前确定整部影片的视觉基调——写实/风格化、整体色彩体系、光影风格、时代质感。这份文件统领所有元素的视觉一致性，也作为阶段3生成图片时的全局 style prompt 前缀。
@@ -96,7 +96,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 ### 阶段3：视觉资产生成
 
-**技能**：`visual-asset-generator/SKILL.md`（待编写）
+**技能**：`step3-visual-asset-generator/SKILL.md`（待编写）
 
 将阶段2圣经中的 AI 绘图提示词，通过 Seedream 实际执行生成图片，经人工筛选确认后形成**视觉资产库**。这是连接"文字描述"与"可用画面"的关键桥梁——没有这一步，后续的首帧合成和视频生成无从谈起。
 
@@ -113,7 +113,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 ### 阶段4：场次分解与分镜
 
-**技能**：`film-storyboard-extractor/SKILL.md`（待编写）
+**技能**：`step4-film-storyboard-extractor/SKILL.md`（待编写）
 
 将小说转化为可拍摄/可生成的分镜脚本。参考好莱坞标准流程，分三个子步骤：
 
@@ -135,7 +135,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 ### 阶段5：首帧合成
 
-**技能**：`keyframe-composer/SKILL.md`（待编写）
+**技能**：`step5-keyframe-composer/SKILL.md`（待编写）
 
 为每个镜头生成"首帧图"（keyframe），作为 Seedance 2.0 image-to-video 的起点。这是当前 AI 视频生成中保证角色一致性和画面质量的最关键一步。
 
@@ -151,7 +151,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 ### 阶段6：视频生成
 
-**技能**：`video-generator/SKILL.md`（待编写）
+**技能**：`step6-video-generator/SKILL.md`（待编写）
 
 将每个镜头的首帧图 + 运动提示词 + 参考图，输入 Seedance 2.0 生成 8-15s 的视频片段。
 
@@ -170,7 +170,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 ### 阶段7：剪辑与后期
 
-**技能**：`post-production/SKILL.md`（待编写）
+**技能**：`step7-post-production/SKILL.md`（待编写）
 
 将所有视频片段按分镜脚本的顺序拼接成完整影片，并完成后期处理。
 
@@ -195,8 +195,10 @@ skills/novel-to-film/
 ├── SKILL.md                                    # 本文件：整体流程描述
 ├── references.md                               # 参考资料链接
 │
-├── film-elements-extractor/                    # 阶段1+2：元素提取与圣经编写
-│   ├── SKILL.md                                # 元素提取 ✅
+├── step1-film-elements-extractor/              # 阶段1：元素提取
+│   └── SKILL.md                                # 元素提取 ✅
+│
+├── step2-element-writing-bible/                # 阶段2：圣经编写
 │   ├── character-writing-bible/                # 角色圣经 ✅
 │   │   └── SKILL.md
 │   ├── location-writing-bible/                 # 场景圣经（planned）
@@ -204,19 +206,19 @@ skills/novel-to-film/
 │   └── prop-writing-bible/                     # 道具圣经（planned）
 │       └── SKILL.md
 │
-├── visual-asset-generator/                     # 阶段3：视觉资产生成（planned）
+├── step3-visual-asset-generator/               # 阶段3：视觉资产生成（planned）
 │   └── SKILL.md
 │
-├── film-storyboard-extractor/                  # 阶段4：场次分解与分镜
+├── step4-film-storyboard-extractor/            # 阶段4：场次分解与分镜
 │   └── SKILL.md                                # （待编写）
 │
-├── keyframe-composer/                          # 阶段5：首帧合成（planned）
+├── step5-keyframe-composer/                    # 阶段5：首帧合成（planned）
 │   └── SKILL.md
 │
-├── video-generator/                            # 阶段6：视频生成
+├── step6-video-generator/                      # 阶段6：视频生成
 │   └── SKILL.md                                # （待编写）
 │
-└── post-production/                            # 阶段7：剪辑与后期（planned）
+└── step7-post-production/                      # 阶段7：剪辑与后期（planned）
     └── SKILL.md
 ```
 
