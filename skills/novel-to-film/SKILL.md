@@ -114,7 +114,6 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 | 场景/地点 | `step3-.../location-writing-bible/SKILL.md` | `production/step3-bibles/locations/` | 🔲 计划中 |
 | 道具 | `step3-.../prop-writing-bible/SKILL.md` | `production/step3-bibles/props/` | 🔲 计划中 |
 | 世界观 | `step3-.../world-writing-bible/SKILL.md` | `production/step3-bibles/world/` | 🔲 计划中 |
-| 关键事件 | `step3-.../event-writing-bible/SKILL.md` | `production/step3-bibles/events/` | 🔲 计划中 |
 
 **关键约束**：
 - 每个元素圣经中的视觉描述和 AI 绘图提示词，必须符合阶段2定义的全局视觉风格。圣经中的 AI 提示词应自动继承全局 style prompt 前缀
@@ -122,8 +121,8 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
   - **角色圣经**：必须包含阶段注册表——角色在不同章节外貌变化巨大（灵魂→附身→变装）
   - **场景圣经**：必须包含阶段注册表——同一地点在不同时段视觉差异显著（繁华→废墟→战场）
   - **道具圣经**：按需包含——有状态变化的道具需设置阶段（如完好→损毁），无变化的道具可省略
-  - **事件圣经**：不需要阶段注册表——每个事件本身就是单一时间点上的视觉场景，天然一对一
   - **世界观圣经**：不需要阶段注册表——描述的是视觉规则和体系，被其他元素引用，不直接产出按阶段组织的资产
+- **关键事件不在此阶段处理**：事件是一次性时间点，其视觉由角色+场景+道具的组合决定，不需要独立圣经。事件的视觉预设计（Event Pre-visualization）在阶段5（分镜）中作为前置子步骤完成
 
 **输入**：阶段1的元素清单 + 原始小说章节 + 阶段2的全局视觉风格定义
 **产出**：`production/step3-bibles/` 下的各类圣经文件
@@ -143,7 +142,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 **资产组织方式——以"阶段注册表 stage_id"为桥梁**：
 
-角色在不同故事阶段有不同的外貌（如朱围庸：灵魂期 → 占身丁路期 → 占身乞丐期），场景在不同时段有不同氛围。对于**有阶段注册表的元素**（角色、场景、部分道具），资产库以圣经中定义的 `stage_id` 为组织单元，而非章节号。`stage_id` 是贯穿阶段3→4→5→6的**单一真相源**——圣经中注册的 `stage_id` = 资产目录文件夹名 = asset_index.md 索引键 = 分镜脚本角色/场景标注 = 首帧合成参考图查找键。**一个字都不能差。** 对于**无阶段注册表的元素**（事件、世界观），资产直接按元素名组织，无需阶段子目录。
+角色在不同故事阶段有不同的外貌（如朱围庸：灵魂期 → 占身丁路期 → 占身乞丐期），场景在不同时段有不同氛围。对于**有阶段注册表的元素**（角色、场景、部分道具），资产库以圣经中定义的 `stage_id` 为组织单元，而非章节号。`stage_id` 是贯穿阶段3→4→5→6的**单一真相源**——圣经中注册的 `stage_id` = 资产目录文件夹名 = asset_index.md 索引键 = 分镜脚本角色/场景标注 = 首帧合成参考图查找键。**一个字都不能差。** 对于**无阶段注册表的道具**，资产直接按元素名组织，无需阶段子目录。
 
 ```
 production/step4-assets/
@@ -171,11 +170,6 @@ production/step4-assets/
 │   │   └── 断裂期/
 │   └── 泉水/                  # 无阶段变化的道具，直接放图
 │       └── *.png
-├── events/                    # 事件无阶段子目录，每个事件直接放图
-│   ├── 牛台山围剿/
-│   │   └── *.png
-│   └── 恶灵区突围/
-│       └── *.png
 └── asset_index.md              # 资产索引（核心映射表）
 ```
 
@@ -189,7 +183,6 @@ production/step4-assets/
 | 场景 | 恶灵区 | 默认 | ch1-71 | locations/恶灵区/默认/*.png |
 | 道具 | 美女榕根系 | 完好期 | ch1-45 | props/美女榕根系/完好期/*.png |
 | 道具 | 泉水 | — | ch1-71 | props/泉水/*.png |
-| 事件 | 牛台山围剿 | — | ch15 | events/牛台山围剿/*.png |
 ```
 
 这样，下游只需知道"角色名 + 当前阶段"即可精准定位到正确的参考图，无需逐章标注。
@@ -202,19 +195,24 @@ production/step4-assets/
 
 **技能**：`step5-film-storyboard-extractor/SKILL.md`（待编写）
 
-将小说转化为可拍摄/可生成的分镜脚本。参考好莱坞标准流程，分三个子步骤：
+将小说转化为可拍摄/可生成的分镜脚本。参考好莱坞标准流程，分四个子步骤：
 
-**5a. 场次分解（Scene Breakdown）**
+**5a. 事件预可视化（Event Pre-visualization）**
+为阶段1提取的 ★★★★★ 关键事件生成视觉概念图。事件是角色+场景+道具在特定时间点的组合，其视觉元素已由各自的圣经定义，但复杂的多元素组合场面（大规模战斗、超自然对决、群体场景）需要在分镜之前先建立整体视觉概念。
+
+为每个 ★★★★★ 事件生成1-2张概念图（全景鸟瞰、关键瞬间），作为后续分镜的视觉锚点。概念图的提示词基于相关角色/场景/道具圣经中的描述组合而成。产出存放在 `production/step5-storyboard/event-previs/`。
+
+**5b. 场次分解（Scene Breakdown）**
 将小说按叙事段落拆分为独立的"场次"，每个场次对应一个连续的时空单元。这决定了整部影片的结构骨架。
 
 每个场次须标注：场次编号、对应章节/段落、地点、时间（日/夜）、出场角色、情绪基调、预估时长。
 
-**5b. 镜头设计（Shot List）**
+**5c. 镜头设计（Shot List）**
 为每个场次设计具体的镜头序列。每个镜头须标注：镜号、景别（远/中/近/特写）、机位角度、运镜方式（推/拉/摇/固定）、画面内容描述、时长（适配 Seedance 2.0 的 8-15s 限制）。
 
 **关键约束**：单个镜头时长不超过 15s（Seedance 2.0 上限），理想时长 8-10s。超过 15s 的连续动作须拆分为多个镜头，并设计衔接点。
 
-**5c. 分镜脚本（Storyboard）**
+**5d. 分镜脚本（Storyboard）**
 为每个镜头撰写详细的分镜描述，包含画面构图、角色动作、表情、光影氛围、音效提示。
 
 **资产引用规范**：分镜脚本中每个镜头必须标注出场角色的**当前阶段**，以便阶段6能精准查找对应的参考图。阶段可从场次所在章节 + asset_index.md 的章节范围自动推导。示例：
@@ -227,8 +225,8 @@ production/step4-assets/
 - **画面描述**：...
 ```
 
-**输入**：原始小说章节 + `production/step3-bibles/` 下的圣经文件 + `production/step4-assets/asset_index.md`
-**产出**：`production/step5-storyboard/` 下的场次表 + 镜头表 + 分镜脚本
+**输入**：原始小说章节 + `production/step1-extraction/events.md`（★★★★★事件清单）+ `production/step3-bibles/` 下的圣经文件 + `production/step4-assets/asset_index.md`
+**产出**：`production/step5-storyboard/` 下的事件概念图 + 场次表 + 镜头表 + 分镜脚本
 
 ### 阶段6：首帧合成
 
@@ -312,9 +310,7 @@ skills/novel-to-film/
 │   │   └── SKILL.md
 │   ├── prop-writing-bible/                     # 道具圣经（planned）
 │   │   └── SKILL.md
-│   ├── world-writing-bible/                    # 世界观圣经（planned）
-│   │   └── SKILL.md
-│   └── event-writing-bible/                    # 关键事件视觉圣经（planned）
+│   └── world-writing-bible/                    # 世界观圣经（planned）
 │       └── SKILL.md
 │
 ├── step4-visual-asset-generator/               # 阶段4：视觉资产生成（planned）
@@ -358,8 +354,7 @@ production/
 │   │   └── 群像/
 │   ├── locations/                 # 场景圣经
 │   ├── props/                     # 道具圣经
-│   ├── world/                     # 世界观圣经
-│   └── events/                    # 关键事件视觉圣经
+│   └── world/                     # 世界观圣经
 │
 ├── step4-assets/                  # 阶段4产出：视觉资产库
 │   ├── characters/                # 角色参考图（多角度）
@@ -367,10 +362,11 @@ production/
 │   ├── props/                     # 道具设计图
 │   └── asset_index.md             # 资产索引（元素名→图片路径）
 │
-├── step5-storyboard/              # 阶段5产出：场次表 + 分镜脚本
-│   ├── scene_breakdown.md         # 场次分解表
-│   ├── shot_list.md               # 镜头表
-│   └── storyboard/                # 分镜脚本（按场次分文件）
+├── step5-storyboard/              # 阶段5产出：事件概念图 + 场次表 + 分镜脚本
+│   ├── event-previs/              # 5a: ★★★★★事件概念图
+│   ├── scene_breakdown.md         # 5b: 场次分解表
+│   ├── shot_list.md               # 5c: 镜头表
+│   └── storyboard/                # 5d: 分镜脚本（按场次分文件）
 │
 ├── step6-keyframes/               # 阶段6产出：镜头首帧图
 │
