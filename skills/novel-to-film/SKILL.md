@@ -113,7 +113,6 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 | 角色 | `step3-.../character-writing-bible/SKILL.md` | `production/step3-bibles/characters/` | ✅ 已完成 |
 | 场景/地点 | `step3-.../location-writing-bible/SKILL.md` | `production/step3-bibles/locations/` | 🔲 计划中 |
 | 道具 | `step3-.../prop-writing-bible/SKILL.md` | `production/step3-bibles/props/` | 🔲 计划中 |
-| 世界观 | `step3-.../world-writing-bible/SKILL.md` | `production/step3-bibles/world/` | 🔲 计划中 |
 
 **关键约束**：
 - 每个元素圣经中的视觉描述和 AI 绘图提示词，必须符合阶段2定义的全局视觉风格。圣经中的 AI 提示词应自动继承全局 style prompt 前缀
@@ -121,7 +120,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
   - **角色圣经**：必须包含阶段注册表——角色在不同章节外貌变化巨大（灵魂→附身→变装）
   - **场景圣经**：必须包含阶段注册表——同一地点在不同时段视觉差异显著（繁华→废墟→战场）
   - **道具圣经**：按需包含——有状态变化的道具需设置阶段（如完好→损毁），无变化的道具可省略
-  - **世界观圣经**：不需要阶段注册表——描述的是视觉规则和体系，被其他元素引用，不直接产出按阶段组织的资产
+- **世界观不在此阶段处理**：世界观（视觉规则体系、阵营对立、超自然能力体系、空间体系）已被阶段2 Art Direction 消化为全局视觉规则，再由各元素圣经在具体元素层面落地（角色圣经→能力VFX、场景圣经→空间物理规则、道具圣经→超自然特效）。如需补充超自然VFX一致性规则，应扩展 Art Direction 而非新增圣经
 - **关键事件不在此阶段处理**：事件是一次性时间点，其视觉由角色+场景+道具的组合决定，不需要独立圣经。事件的视觉预设计（Event Pre-visualization）在阶段5（分镜）中作为前置子步骤完成
 
 **输入**：阶段1的元素清单 + 原始小说章节 + 阶段2的全局视觉风格定义
@@ -308,9 +307,7 @@ skills/novel-to-film/
 │   │   └── SKILL.md
 │   ├── location-writing-bible/                 # 场景圣经（planned）
 │   │   └── SKILL.md
-│   ├── prop-writing-bible/                     # 道具圣经（planned）
-│   │   └── SKILL.md
-│   └── world-writing-bible/                    # 世界观圣经（planned）
+│   └── prop-writing-bible/                     # 道具圣经（planned）
 │       └── SKILL.md
 │
 ├── step4-visual-asset-generator/               # 阶段4：视觉资产生成（planned）
@@ -353,8 +350,7 @@ production/
 │   │   ├── 配角/
 │   │   └── 群像/
 │   ├── locations/                 # 场景圣经
-│   ├── props/                     # 道具圣经
-│   └── world/                     # 世界观圣经
+│   └── props/                     # 道具圣经
 │
 ├── step4-assets/                  # 阶段4产出：视觉资产库
 │   ├── characters/                # 角色参考图（多角度）
