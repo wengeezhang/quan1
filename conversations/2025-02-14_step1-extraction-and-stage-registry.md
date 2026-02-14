@@ -137,8 +137,24 @@ step6-keyframes
 
 ---
 
-## 五、待办事项
+## 五、Stage Registry 按需设置（后续补充）
+
+经讨论确认，阶段注册表**不需要对所有元素类型强制要求**，改为按需设置：
+
+| 元素类型 | 是否需要阶段注册表 | 原因 |
+|---------|-----------------|------|
+| 角色 | **必须** | 跨章节外貌变化巨大（灵魂→附身→变装） |
+| 场景 | **必须** | 同一地点不同时段视觉差异显著（繁华→废墟→战场） |
+| 道具 | **按需** | 有状态变化的道具需要（完好→损毁），无变化的可省略 |
+| 事件 | **不需要** | 每个事件是单一时间点，天然一对一，无阶段演变 |
+| 世界观 | **不需要** | 描述视觉规则体系，被其他元素引用，不直接产出按阶段组织的资产 |
+
+对应修改了 `skills/novel-to-film/SKILL.md` 中 step3 关键约束和 step4 资产组织描述。
+
+---
+
+## 六、待办事项
 
 - [ ] 提交本次所有更改（step1-extraction 产出 + location-writing-bible + stage registry 更新）
-- [ ] 编写其他 element bible SKILL.md（prop、world、event）
+- [ ] 编写其他 element bible SKILL.md（prop、world、event）——其中 event 和 world 不含阶段注册表章节
 - [ ] 编写 step4~step8 的 SKILL.md
