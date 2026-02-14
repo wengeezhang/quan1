@@ -25,10 +25,10 @@ description: 在编写任何元素圣经之前，先确定整部影片的全局�
 
 ## 输入
 
-- `_extraction/characters.md`——角色清单（了解角色阵营和视觉对立关系）
-- `_extraction/locations.md`——场景清单（了解主要空间类型和氛围需求）
-- `_extraction/world_settings.md`——世界观设定（了解超自然视觉体系、空间体系）
-- `_extraction/events.md`——关键事件清单（了解视觉高潮点的氛围需求）
+- `production/step1-extraction/characters.md`——角色清单（了解角色阵营和视觉对立关系）
+- `production/step1-extraction/locations.md`——场景清单（了解主要空间类型和氛围需求）
+- `production/step1-extraction/world_settings.md`——世界观设定（了解超自然视觉体系、空间体系）
+- `production/step1-extraction/events.md`——关键事件清单（了解视觉高潮点的氛围需求）
 - `chapters/`——原始小说章节（回溯原文提炼整体氛围）
 
 **研究方法**：
@@ -39,10 +39,10 @@ description: 在编写任何元素圣经之前，先确定整部影片的全局�
 
 ## 输出
 
-一份 Markdown 文件，存放在 `production/00_art_direction/` 下：
+一份 Markdown 文件，存放在 `production/step2-art-direction/` 下：
 
 ```
-production/00_art_direction/
+production/step2-art-direction/
 └── art_direction.md          # 全局视觉风格定义
 ```
 
@@ -176,7 +176,7 @@ production/00_art_direction/
 
 ### 第一步：全局认知建立
 
-读取阶段1产出的全部元素清单（`_extraction/` 下的 characters.md、locations.md、world_settings.md、events.md），建立对故事视觉世界的整体认知：
+读取阶段1产出的全部元素清单（`production/step1-extraction/` 下的 characters.md、locations.md、world_settings.md、events.md），建立对故事视觉世界的整体认知：
 - 故事的世界观类型（现实 / 奇幻 / 科幻 / 混合）
 - 主要空间类型和它们之间的视觉对比
 - 阵营/势力的视觉对立关系

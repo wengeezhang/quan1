@@ -20,28 +20,28 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 ┌──────────────────────────────┐
 │  阶段1：元素提取               │  step1-film-elements-extractor/
 │  从小说中提取所有视觉元素       │
-│  产出：元素清单                 │  → _extraction/
+│  产出：元素清单                 │  → production/step1-extraction/
 └──────────┬───────────────────┘
            │
            ▼
 ┌──────────────────────────────┐
 │  阶段2：Art Direction          │  step2-art-direction/
 │  定义全局视觉风格基调          │
-│  产出：全局视觉风格定义         │  → production/00_art_direction/
+│  产出：全局视觉风格定义         │  → production/step2-art-direction/
 └──────────┬───────────────────┘
            │
            ▼
 ┌──────────────────────────────┐
 │  阶段3：圣经编写               │  step3-element-writing-bible/
 │  为每个重要元素编写制作圣经      │
-│  产出：角色/场景/道具圣经       │  → production/
+│  产出：角色/场景/道具圣经       │  → production/step3-bibles/
 └──────────┬───────────────────┘
            │
            ▼
 ┌──────────────────────────────┐
 │  阶段4：视觉资产生成            │  step4-visual-asset-generator/
 │  用 Seedream 生成参考图并确认   │
-│  产出：角色肖像、场景图、道具图  │  → assets/
+│  产出：角色肖像、场景图、道具图  │  → production/step4-assets/
 └──────────┬───────────────────┘
            │  ↑ 一致性验证循环
            │
@@ -49,28 +49,28 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 ┌──────────────────────────────┐
 │  阶段5：场次分解与分镜          │  step5-film-storyboard-extractor/
 │  小说→场次表→镜头表→分镜脚本   │
-│  产出：场次表 + 分镜脚本        │  → storyboard/
+│  产出：场次表 + 分镜脚本        │  → production/step5-storyboard/
 └──────────┬───────────────────┘
            │
            ▼
 ┌──────────────────────────────┐
 │  阶段6：首帧合成               │  step6-keyframe-composer/
 │  为每个镜头合成首帧/尾帧图      │
-│  产出：镜头首帧图集             │  → keyframes/
+│  产出：镜头首帧图集             │  → production/step6-keyframes/
 └──────────┬───────────────────┘
            │
            ▼
 ┌──────────────────────────────┐
 │  阶段7：视频生成               │  step7-video-generator/
 │  首帧+参考图+prompt→8-15s片段  │
-│  产出：视频片段                 │  → clips/
+│  产出：视频片段                 │  → production/step7-clips/
 └──────────┬───────────────────┘
            │
            ▼
 ┌──────────────────────────────┐
 │  阶段8：剪辑与后期             │  step8-post-production/
 │  片段拼接、转场、音频、调色     │
-│  产出：最终成片                 │  → output/
+│  产出：最终成片                 │  → production/step8-final/
 └──────────────────────────────┘
 ```
 
@@ -83,7 +83,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 从原始小说中提取所有影视可视化制作所需的核心元素，生成结构化清单。以"能否被画出来、拍出来"为筛选标准。
 
 **输入**：`chapters/` 下的全部小说章节
-**产出**：`_extraction/` 下的元素清单（角色、场景、道具、事件、世界观、时间线）
+**产出**：`production/step1-extraction/` 下的元素清单（角色、场景、道具、事件、世界观、时间线）
 
 ### 阶段2：Art Direction（全局视觉风格定义）
 
@@ -100,7 +100,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 - **全局 style prompt 前缀**：提炼一段标准化的风格描述，作为后续所有 Seedream 生成时的 prompt 前缀，保证画风一致
 
 **输入**：阶段1的元素清单 + 原始小说章节（整体氛围判断）
-**产出**：`production/00_art_direction/` 下的全局视觉风格定义文件
+**产出**：`production/step2-art-direction/` 下的全局视觉风格定义文件
 
 ### 阶段3：圣经编写
 
@@ -110,16 +110,16 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 | 元素类型 | 技能 | 产出位置 | 状态 |
 |---------|------|---------|------|
-| 角色 | `step3-.../character-writing-bible/SKILL.md` | `production/02_characters/` | ✅ 已完成 |
-| 场景/地点 | `step3-.../location-writing-bible/SKILL.md` | `production/03_locations/` | 🔲 计划中 |
-| 道具 | `step3-.../prop-writing-bible/SKILL.md` | `production/04_props/` | 🔲 计划中 |
-| 世界观 | `step3-.../world-writing-bible/SKILL.md` | `production/01_story_bible/` | 🔲 计划中 |
-| 关键事件 | `step3-.../event-writing-bible/SKILL.md` | `production/05_events/` | 🔲 计划中 |
+| 角色 | `step3-.../character-writing-bible/SKILL.md` | `production/step3-bibles/characters/` | ✅ 已完成 |
+| 场景/地点 | `step3-.../location-writing-bible/SKILL.md` | `production/step3-bibles/locations/` | 🔲 计划中 |
+| 道具 | `step3-.../prop-writing-bible/SKILL.md` | `production/step3-bibles/props/` | 🔲 计划中 |
+| 世界观 | `step3-.../world-writing-bible/SKILL.md` | `production/step3-bibles/world/` | 🔲 计划中 |
+| 关键事件 | `step3-.../event-writing-bible/SKILL.md` | `production/step3-bibles/events/` | 🔲 计划中 |
 
 **关键约束**：每个元素圣经中的视觉描述和 AI 绘图提示词，必须符合阶段2定义的全局视觉风格。圣经中的 AI 提示词应自动继承全局 style prompt 前缀。
 
 **输入**：阶段1的元素清单 + 原始小说章节 + 阶段2的全局视觉风格定义
-**产出**：`production/` 下的各类圣经文件
+**产出**：`production/step3-bibles/` 下的各类圣经文件
 
 ### 阶段4：视觉资产生成
 
@@ -136,7 +136,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 **AI工具**：Seedream（图片生成），Seedream 4.0+ 的角色一致性融合功能
 **输入**：阶段3的圣经文件（含 AI 提示词）+ 阶段2的全局视觉风格定义
-**产出**：`assets/` 下的视觉资产库（图片文件 + 资产索引）
+**产出**：`production/step4-assets/` 下的视觉资产库（图片文件 + 资产索引）
 
 ### 阶段5：场次分解与分镜
 
@@ -157,8 +157,8 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 **5c. 分镜脚本（Storyboard）**
 为每个镜头撰写详细的分镜描述，包含画面构图、角色动作、表情、光影氛围、音效提示。分镜描述须引用阶段3圣经和阶段4资产库中的具体角色/场景定义。
 
-**输入**：原始小说章节 + `production/` 下的圣经文件 + `assets/` 下的视觉资产索引
-**产出**：`storyboard/` 下的场次表 + 镜头表 + 分镜脚本
+**输入**：原始小说章节 + `production/step3-bibles/` 下的圣经文件 + `production/step4-assets/` 下的视觉资产索引
+**产出**：`production/step5-storyboard/` 下的场次表 + 镜头表 + 分镜脚本
 
 ### 阶段6：首帧合成
 
@@ -173,8 +173,8 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 - **连续性规划**：需要提前判断相邻镜头之间是否需要画面连续（如同一动作的多镜头拆分、正反打对话等）。对于需要连续衔接的镜头，必须同时规划并生成首帧和尾帧——前一个镜头的尾帧与后一个镜头的首帧保持画面衔接，以此保证连续性（利用 Seedance 2.0 的 First/Last Frame 模式）。对于不需要连续的独立镜头（如场次切换、跳切），只需生成首帧即可
 
 **AI工具**：Seedream（图片生成/合成），参考图一致性模式
-**输入**：阶段5的分镜脚本 + `assets/` 下的视觉资产库
-**产出**：`keyframes/` 下的镜头首帧图集（每个镜头对应一张或两张图）
+**输入**：阶段5的分镜脚本 + `production/step4-assets/` 下的视觉资产库
+**产出**：`production/step6-keyframes/` 下的镜头首帧图集（每个镜头对应一张或两张图）
 
 ### 阶段7：视频生成
 
@@ -193,7 +193,7 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 **AI工具**：Seedance 2.0（视频生成），支持 First/Last Frame 模式和 Full Reference 模式
 **输入**：阶段6的首帧图 + 阶段4的资产库 + 阶段5的分镜脚本
-**产出**：`clips/` 下的视频片段（每个镜头一个 8-15s 的视频文件）
+**产出**：`production/step7-clips/` 下的视频片段（每个镜头一个 8-15s 的视频文件）
 
 ### 阶段8：剪辑与后期
 
@@ -210,8 +210,8 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 - **字幕/标题**（如需要）
 
 **工具**：剪辑软件（CapCut/DaVinci Resolve 等）
-**输入**：`clips/` 下的全部视频片段 + 分镜脚本（作为剪辑蓝图）+ 全局视觉风格定义
-**产出**：`output/` 下的最终成片
+**输入**：`production/step7-clips/` 下的全部视频片段 + 分镜脚本（作为剪辑蓝图）+ 全局视觉风格定义
+**产出**：`production/step8-final/` 下的最终成片
 
 ---
 
@@ -258,37 +258,48 @@ skills/novel-to-film/
 
 ## 产出文件结构
 
+所有阶段的产出统一存放在 `production/` 根目录下，以 `step{N}-` 前缀对应各阶段：
+
 ```
-_extraction/                  # 阶段1产出：元素清单
+production/
+├── step1-extraction/              # 阶段1产出：元素清单
+│   ├── characters.md
+│   ├── locations.md
+│   ├── props.md
+│   ├── events.md
+│   ├── world_settings.md
+│   ├── timeline.md
+│   └── coverage_report.md
 │
-production/                   # 阶段2+3产出：全局视觉风格 + 各类圣经
-├── 00_art_direction/         # 全局视觉风格定义（阶段2）
-├── 01_story_bible/           # 世界观（阶段3）
-├── 02_characters/            # 角色圣经（阶段3）
-│   ├── 主角/
-│   ├── 配角/
-│   └── 群像/
-├── 03_locations/             # 场景圣经（阶段3）
-├── 04_props/                 # 道具圣经（阶段3）
-├── 05_events/                # 关键事件视觉圣经（阶段3）
-└── ...
+├── step2-art-direction/           # 阶段2产出：全局视觉风格定义
+│   └── art_direction.md
 │
-assets/                       # 阶段4产出：视觉资产库
-├── characters/               # 角色参考图（多角度）
-├── locations/                # 场景概念图
-├── props/                    # 道具设计图
-└── asset_index.md            # 资产索引（元素名→图片路径）
+├── step3-bibles/                  # 阶段3产出：各类元素圣经
+│   ├── characters/                # 角色圣经
+│   │   ├── 主角/
+│   │   ├── 配角/
+│   │   └── 群像/
+│   ├── locations/                 # 场景圣经
+│   ├── props/                     # 道具圣经
+│   ├── world/                     # 世界观圣经
+│   └── events/                    # 关键事件视觉圣经
 │
-storyboard/                   # 阶段5产出：场次表 + 分镜脚本
-├── scene_breakdown.md        # 场次分解表
-├── shot_list.md              # 镜头表
-└── storyboard/               # 分镜脚本（按场次分文件）
+├── step4-assets/                  # 阶段4产出：视觉资产库
+│   ├── characters/                # 角色参考图（多角度）
+│   ├── locations/                 # 场景概念图
+│   ├── props/                     # 道具设计图
+│   └── asset_index.md             # 资产索引（元素名→图片路径）
 │
-keyframes/                    # 阶段6产出：镜头首帧图
+├── step5-storyboard/              # 阶段5产出：场次表 + 分镜脚本
+│   ├── scene_breakdown.md         # 场次分解表
+│   ├── shot_list.md               # 镜头表
+│   └── storyboard/                # 分镜脚本（按场次分文件）
 │
-clips/                        # 阶段7产出：视频片段
+├── step6-keyframes/               # 阶段6产出：镜头首帧图
 │
-output/                       # 阶段8产出：最终成片
+├── step7-clips/                   # 阶段7产出：视频片段
+│
+└── step8-final/                   # 阶段8产出：最终成片
 ```
 
 ## 核心原则

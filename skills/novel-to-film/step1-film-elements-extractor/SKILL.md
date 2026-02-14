@@ -40,10 +40,10 @@ chapters/
 
 ## 输出
 
-所有产出文件存放在 `_extraction/` 目录下：
+所有产出文件存放在 `production/step1-extraction/` 目录下：
 
 ```
-_extraction/
+production/step1-extraction/
 ├── characters.md          # 角色清单（含视觉特征摘要）
 ├── locations.md           # 场景/地点清单（含空间与氛围描述）
 ├── props.md               # 关键道具清单（含外观与功能）
@@ -74,7 +74,7 @@ chapters/part5_chapter71_summary_simple.md
 
 逐章扫描 `*_character.md` 和正文，提取所有需要被"画出来"或"演出来"的角色。
 
-**角色清单格式**（`_extraction/characters.md`）：
+**角色清单格式**（`production/step1-extraction/characters.md`）：
 
 ```markdown
 # 角色清单
@@ -109,7 +109,7 @@ chapters/part5_chapter71_summary_simple.md
 
 扫描全部章节，提取所有需要被"搭建"或"绘制"的场景。
 
-**场景清单格式**（`_extraction/locations.md`）：
+**场景清单格式**（`production/step1-extraction/locations.md`）：
 
 ```markdown
 # 场景/地点清单
@@ -138,7 +138,7 @@ chapters/part5_chapter71_summary_simple.md
 
 提取所有需要被"制作"或"渲染"的物品。
 
-**道具清单格式**（`_extraction/props.md`）：
+**道具清单格式**（`production/step1-extraction/props.md`）：
 
 ```markdown
 # 关键道具清单
@@ -159,7 +159,7 @@ chapters/part5_chapter71_summary_simple.md
 
 提取需要被"拍出来"的重大视觉场景。
 
-**事件清单格式**（`_extraction/events.md`）：
+**事件清单格式**（`production/step1-extraction/events.md`）：
 
 ```markdown
 # 关键事件清单
@@ -180,7 +180,7 @@ chapters/part5_chapter71_summary_simple.md
 
 提取有视觉表现的规则体系——只提取那些需要在画面中被呈现出来的世界观规则。
 
-**世界观格式**（`_extraction/world_settings.md`）：
+**世界观格式**（`production/step1-extraction/world_settings.md`）：
 
 ```markdown
 # 世界观设定
@@ -207,7 +207,7 @@ chapters/part5_chapter71_summary_simple.md
 
 将全部事件按时间顺序排列，标注视觉变化节点。
 
-**时间线格式**（`_extraction/timeline.md`）：
+**时间线格式**（`production/step1-extraction/timeline.md`）：
 
 ```markdown
 # 故事时间线
@@ -224,7 +224,7 @@ chapters/part5_chapter71_summary_simple.md
 
 生成验证报告，确保无遗漏。
 
-**验证报告格式**（`_extraction/coverage_report.md`）：
+**验证报告格式**（`production/step1-extraction/coverage_report.md`）：
 
 ```markdown
 # 覆盖率验证报告

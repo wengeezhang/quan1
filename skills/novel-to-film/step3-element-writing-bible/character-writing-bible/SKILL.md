@@ -9,7 +9,7 @@ description: 为单个角色编写完整的角色圣经——面向影视可视�
 
 角色圣经是影视可视化制作中**单个角色的完整视觉档案**。它回答的核心问题是："这个角色在每一个阶段，看起来是什么样的？"
 
-本技能的上游是 `film-elements-extractor` 产出的角色清单（`_extraction/characters.md`）。每一个重要性 ★★★★★ 或 ★★★★☆ 的角色，都需要用本技能编写一份角色圣经。
+本技能的上游是 `film-elements-extractor` 产出的角色清单（`production/step1-extraction/characters.md`）。每一个重要性 ★★★★★ 或 ★★★★☆ 的角色，都需要用本技能编写一份角色圣经。
 
 **服务对象**：概念设计师、AI绘图、特效团队、导演、演员、造型师、调色师。
 
@@ -23,23 +23,23 @@ description: 为单个角色编写完整的角色圣经——面向影视可视�
 
 ## 输入
 
-- `_extraction/characters.md` 中该角色的基本信息（名字、身份、章节范围、重要性）
+- `production/step1-extraction/characters.md` 中该角色的基本信息（名字、身份、章节范围、重要性）
 - `chapters/` 下该角色覆盖的全部章节原文（`*.md`）
 - `chapters/` 下对应的角色分析文件（`*_character.md`）
-- 已完成的角色圣经作为风格参考（如 `production/02_characters/主角/宋小仙.md`）
+- 已完成的角色圣经作为风格参考（如 `production/step3-bibles/characters/主角/宋小仙.md`）
 
 **研究方法**：
-1. 先读 `_extraction/characters.md` 确认角色的章节范围和基本信息
+1. 先读 `production/step1-extraction/characters.md` 确认角色的章节范围和基本信息
 2. 通读该角色覆盖范围内的所有 `*_character.md` 文件，建立角色全貌
 3. 回到原文 `*.md` 补充视觉细节（外貌描写、环境描写、动作描写等）
 4. 参考已有角色圣经的格式和深度
 
 ## 输出
 
-一份 Markdown 文件，存放在 `production/02_characters/` 对应子目录下：
+一份 Markdown 文件，存放在 `production/step3-bibles/characters/` 对应子目录下：
 
 ```
-production/02_characters/
+production/step3-bibles/characters/
 ├── 主角/
 │   ├── 宋小仙.md
 │   ├── 朱围庸.md
@@ -201,7 +201,7 @@ production/02_characters/
 
 ### 第一步：确认角色范围
 
-从 `_extraction/characters.md` 获取：
+从 `production/step1-extraction/characters.md` 获取：
 - 角色名、别名
 - 章节覆盖范围（首次出现 → 末次出现）
 - 重要性等级
