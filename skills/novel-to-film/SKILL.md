@@ -195,7 +195,7 @@ production/step4-assets/
 
 ### 阶段5：场次分解与分镜
 
-**技能**：`step5-film-storyboard-extractor/SKILL.md`（待编写）
+**技能**：`step5-film-storyboard-extractor/SKILL.md` ✅
 
 将小说转化为可拍摄/可生成的分镜脚本。参考好莱坞标准流程，分四个子步骤：
 
@@ -316,8 +316,8 @@ skills/novel-to-film/
 ├── step4-visual-asset-generator/               # 阶段4：视觉资产生成 ✅
 │   └── SKILL.md
 │
-├── step5-film-storyboard-extractor/            # 阶段5：场次分解与分镜
-│   └── SKILL.md                                # （待编写）
+├── step5-film-storyboard-extractor/            # 阶段5：场次分解与分镜 ✅
+│   └── SKILL.md
 │
 ├── step6-keyframe-composer/                    # 阶段6：首帧合成（planned）
 │   └── SKILL.md
