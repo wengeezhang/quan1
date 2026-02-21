@@ -54,16 +54,16 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
            │
            ▼
 ┌──────────────────────────────┐
-│  阶段6：首帧合成               │  step6-keyframe-composer/
-│  为每个镜头合成首帧/尾帧图      │
-│  产出：镜头首帧图集             │  → production/step6-keyframes/
+│  阶段6：锚点帧合成             │  step6-keyframe-composer/
+│  仅为链头/独立镜头生成首帧      │
+│  产出：锚点帧图集               │  → production/step6-keyframes/
 └──────────┬───────────────────┘
            │
            ▼
 ┌──────────────────────────────┐
 │  阶段7：视频生成               │  step7-video-generator/
-│  首帧+参考图+prompt→8-15s片段  │
-│  产出：视频片段                 │  → production/step7-clips/
+│  锚点帧+反馈循环→8-15s片段     │
+│  产出：视频片段+尾帧            │  → production/step7-clips/
 └──────────┬───────────────────┘
            │
            ▼
@@ -104,15 +104,15 @@ description: 将小说转化为可视化影视作品的端到端制作流程。�
 
 ### 阶段3：圣经编写
 
-**技能**：`step3-element-writing-bible/SKILL.md`（待编写）
+**技能**：`step3-element-writing-bible/`（总入口暂不编写，直接使用子技能）
 
 在全局视觉风格的约束下，为阶段1提取出的每个重要元素（★★★★★ 和 ★★★★☆），编写详细的制作圣经。不同类型的元素使用不同的子技能：
 
 | 元素类型 | 技能 | 产出位置 | 状态 |
 |---------|------|---------|------|
 | 角色 | `step3-.../character-writing-bible/SKILL.md` | `production/step3-bibles/characters/` | ✅ 已完成 |
-| 场景/地点 | `step3-.../location-writing-bible/SKILL.md` | `production/step3-bibles/locations/` | 🔲 计划中 |
-| 道具 | `step3-.../prop-writing-bible/SKILL.md` | `production/step3-bibles/props/` | 🔲 计划中 |
+| 场景/地点 | `step3-.../location-writing-bible/SKILL.md` | `production/step3-bibles/locations/` | ✅ 已完成 |
+| 道具 | `step3-.../prop-writing-bible/SKILL.md` | `production/step3-bibles/props/` | ✅ 已完成 |
 
 **关键约束**：
 - 每个元素圣经中的视觉描述和 AI 绘图提示词，必须符合阶段2定义的全局视觉风格。圣经中的 AI 提示词应自动继承全局 style prompt 前缀
@@ -230,17 +230,17 @@ production/step4-assets/
 **输入**：原始小说章节 + `production/step1-extraction/events.md`（★★★★★事件清单）+ `production/step3-bibles/` 下的圣经文件 + `production/step4-assets/asset_index.md`
 **产出**：`production/step5-storyboard/` 下的事件概念图 + 场次表 + 镜头表 + 分镜脚本
 
-### 阶段6：首帧合成
+### 阶段6：锚点帧合成
 
 **技能**：`step6-keyframe-composer/SKILL.md` ✅
 
-为每个镜头生成"首帧图"（keyframe），作为 Seedance 2.0 image-to-video 的起点。这是当前 AI 视频生成中保证角色一致性和画面质量的最关键一步。
+采用**锚点帧模式**——识别连续性链，仅为链头镜头和独立镜头生成首帧（锚点帧）。连续性链内部的后续镜头不在此阶段生成首帧，而是由阶段7从实际视频尾帧提取，确保连续性基于真实画面而非想象。
 
 **工作内容**：
-- 读取分镜脚本中每个镜头的角色+阶段标注，通过 asset_index.md 查找对应的参考图路径
-- 使用 Seedream 结合参考图 + 镜头描述，生成该镜头的首帧图
-- 首帧图须满足：角色外貌与资产库一致、构图匹配分镜设计、光影氛围符合场次情绪
-- **连续性规划**：需要提前判断相邻镜头之间是否需要画面连续（如同一动作的多镜头拆分、正反打对话等）。对于需要连续衔接的镜头，必须同时规划并生成首帧和尾帧——前一个镜头的尾帧与后一个镜头的首帧保持画面衔接，以此保证连续性（利用 Seedance 2.0 的 First/Last Frame 模式）。对于不需要连续的独立镜头（如场次切换、跳切），只需生成首帧即可
+- 分析分镜脚本，识别连续性链（需要画面衔接的相邻镜头序列）
+- 为三类镜头生成锚点帧：**链头镜头**（连续性链的第一个镜头）、**独立镜头**（场次切换、跳切等）、**正反打镜头**（各独立生成，保持180度法则空间一致性）
+- 链内后续镜头**跳过**——其首帧将由阶段7的反馈循环提供
+- 当阶段7触发链条中断时，响应回退请求，为中断点后的镜头应急生成新锚点帧
 
 **参考图查找流程**：
 ```
@@ -251,26 +251,26 @@ production/step4-assets/
 
 **AI工具**：Seedream（图片生成/合成），参考图一致性模式
 **输入**：阶段5的分镜脚本（含角色阶段标注）+ `production/step4-assets/`（含 asset_index.md）
-**产出**：`production/step6-keyframes/` 下的镜头首帧图集（每个镜头对应一张或两张图）
+**产出**：`production/step6-keyframes/` 下的锚点帧图集（仅链头+独立+正反打镜头有首帧文件，链内镜头无文件）
 
 ### 阶段7：视频生成
 
 **技能**：`step7-video-generator/SKILL.md` ✅
 
-将每个镜头的首帧图 + 运动提示词 + 参考图，输入 Seedance 2.0 生成 8-15s 的视频片段。
+将首帧 + 运动提示词 + 参考图输入 Seedance 2.0 生成 8-15s 视频片段。内置**连续性反馈循环**和**链条中断处理**。
 
 **工作内容**：
 - 为每个镜头组装多模态输入包：
-  - **首帧图**（来自阶段6）——定义画面起点
+  - **首帧**（3种来源：阶段6锚点帧 / 上一镜头视频尾帧 / 中断回退锚点帧）
   - **参考图**（来自阶段4资产库）——约束角色/场景一致性
   - **运动提示词**（text prompt）——描述镜头内的动作、运镜、情绪变化
-  - **音频提示**（可选）——Seedance 2.0 支持同步音频生成
-- 执行生成，对结果进行质量和一致性检查
-- 不合格的片段标记问题并重新生成
+- **连续性反馈循环**：按连续性链顺序生成，每个视频生成后提取尾帧 `_tail.png`，作为链内下一个镜头的首帧输入
+- **链条中断处理**：当链内视频质量为 C 级（角色一致性=C 或画面稳定性=C）时，中断链条，请求阶段6应急生成新锚点帧，防止低质量尾帧污染后续镜头
+- 2种核心生成模式：First Frame（独立/连续性镜头）+ Full Reference（角色一致性增强）
 
-**AI工具**：Seedance 2.0（视频生成），支持 First/Last Frame 模式和 Full Reference 模式
-**输入**：阶段6的首帧图 + 阶段4的资产库 + 阶段5的分镜脚本
-**产出**：`production/step7-clips/` 下的视频片段（每个镜头一个 8-15s 的视频文件）
+**AI工具**：Seedance 2.0（视频生成），支持 First Frame 模式和 Full Reference 模式
+**输入**：阶段6的锚点帧图集 + 阶段4的资产库 + 阶段5的分镜脚本
+**产出**：`production/step7-clips/` 下的视频片段 + 尾帧图（每个镜头一个 .mp4 + 一个 _tail.png）
 
 ### 阶段8：剪辑与后期
 
@@ -308,9 +308,9 @@ skills/novel-to-film/
 ├── step3-element-writing-bible/                # 阶段3：圣经编写
 │   ├── character-writing-bible/                # 角色圣经 ✅
 │   │   └── SKILL.md
-│   ├── location-writing-bible/                 # 场景圣经（planned）
+│   ├── location-writing-bible/                 # 场景圣经 ✅
 │   │   └── SKILL.md
-│   └── prop-writing-bible/                     # 道具圣经（planned）
+│   └── prop-writing-bible/                     # 道具圣经 ✅
 │       └── SKILL.md
 │
 ├── step4-visual-asset-generator/               # 阶段4：视觉资产生成 ✅
@@ -367,9 +367,9 @@ production/
 │   ├── shot_list.md               # 5c: 镜头表
 │   └── storyboard/                # 5d: 分镜脚本（按场次分文件）
 │
-├── step6-keyframes/               # 阶段6产出：镜头首帧图
+├── step6-keyframes/               # 阶段6产出：锚点帧图集
 │
-├── step7-clips/                   # 阶段7产出：视频片段
+├── step7-clips/                   # 阶段7产出：视频片段+尾帧
 │
 └── step8-final/                   # 阶段8产出：最终成片
 ```
@@ -393,6 +393,6 @@ production/
 | 阶段3 | Claude / LLM | 圣经编写（在全局风格约束下） |
 | 阶段4 | Seedream 4.0+ | 角色肖像、场景概念图、道具图生成；角色一致性融合 |
 | 阶段5 | Claude / LLM | 场次分解、镜头设计、分镜脚本编写 |
-| 阶段6 | Seedream 4.0+ | 基于参考图+镜头描述合成首帧图 |
-| 阶段7 | Seedance 2.0 | First/Last Frame 模式 + Full Reference 模式生成视频片段 |
+| 阶段6 | Seedream 4.0+ | 基于参考图+镜头描述合成锚点帧（链头+独立镜头） |
+| 阶段7 | Seedance 2.0 | First Frame 模式 + Full Reference 模式生成视频片段；反馈循环提取尾帧 |
 | 阶段8 | CapCut / 剪辑工具 | 片段拼接、转场、音频、调色 |

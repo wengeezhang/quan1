@@ -207,5 +207,37 @@ step6 为所有镜头生成首帧，但连续性链内部的首帧只作为 fall
 - [x] 用户决策连续性帧架构 → 采用方式 A
 - [x] 根据决策更新 step6 SKILL.md（锚点帧模式）
 - [x] 根据决策更新 step7 SKILL.md（反馈循环+链条中断）
-- [ ] location-writing-bible SKILL.md（step3 子项，仍为 planned）
-- [ ] step3 umbrella SKILL.md（仍为待编写）
+- [x] location-writing-bible SKILL.md → 已确认完成
+- [x] prop-writing-bible SKILL.md → 已确认完成
+- [x] step3 umbrella SKILL.md → 用户明确暂不需要，跳过
+
+## 八、当前项目总状态
+
+### SKILL.md 体系（全部完成 ✅）
+
+| 步骤 | SKILL.md | 状态 |
+|------|----------|------|
+| 总入口 | `skills/novel-to-film/SKILL.md` | ✅ |
+| Step1 元素提取 | `step1-film-elements-extractor/SKILL.md` | ✅ |
+| Step2 美术方向 | `step2-art-direction/SKILL.md` | ✅ |
+| Step3 角色圣经 | `step3-element-writing-bible/character-writing-bible/SKILL.md` | ✅ |
+| Step3 场景圣经 | `step3-element-writing-bible/location-writing-bible/SKILL.md` | ✅ |
+| Step3 道具圣经 | `step3-element-writing-bible/prop-writing-bible/SKILL.md` | ✅ |
+| Step4 视觉资产生成 | `step4-visual-asset-generator/SKILL.md` | ✅ |
+| Step5 分镜脚本 | `step5-film-storyboard-extractor/SKILL.md` | ✅ |
+| Step6 关键帧合成 | `step6-keyframe-composer/SKILL.md` | ✅（锚点帧模式） |
+| Step7 视频生成 | `step7-video-generator/SKILL.md` | ✅（反馈循环+链条中断） |
+| Step8 后期制作 | `step8-post-production/SKILL.md` | ✅ |
+
+### 制作产出（Production）
+
+| 步骤 | 状态 | 说明 |
+|------|------|------|
+| Step1 元素提取 | ✅ 完成 | 7个文档（characters/locations/props/events/world_settings/timeline/coverage_report） |
+| Step2 美术方向 | ✅ 完成 | 光影设计 + 色彩脚本 |
+| Step3 圣经 | ✅ 完成 | 3主角 + 9配角 + 18场景 + 6道具 = 38份圣经文档 |
+| Step4 视觉资产 | ⏳ 待执行 | 目录已建，等待 Seedream 生成 |
+| Step5 分镜脚本 | ⏳ 待执行 | 目录已建 |
+| Step6 关键帧 | ⏳ 待执行 | 目录已建 |
+| Step7 视频 | ⏳ 待执行 | 目录已建 |
+| Step8 后期 | ⏳ 待执行 | 目录已建 |
