@@ -232,7 +232,7 @@ production/step4-assets/
 
 ### 阶段6：首帧合成
 
-**技能**：`step6-keyframe-composer/SKILL.md`（待编写）
+**技能**：`step6-keyframe-composer/SKILL.md` ✅
 
 为每个镜头生成"首帧图"（keyframe），作为 Seedance 2.0 image-to-video 的起点。这是当前 AI 视频生成中保证角色一致性和画面质量的最关键一步。
 
@@ -255,7 +255,7 @@ production/step4-assets/
 
 ### 阶段7：视频生成
 
-**技能**：`step7-video-generator/SKILL.md`（待编写）
+**技能**：`step7-video-generator/SKILL.md` ✅
 
 将每个镜头的首帧图 + 运动提示词 + 参考图，输入 Seedance 2.0 生成 8-15s 的视频片段。
 
@@ -319,11 +319,11 @@ skills/novel-to-film/
 ├── step5-film-storyboard-extractor/            # 阶段5：场次分解与分镜 ✅
 │   └── SKILL.md
 │
-├── step6-keyframe-composer/                    # 阶段6：首帧合成（planned）
+├── step6-keyframe-composer/                    # 阶段6：首帧合成 ✅
 │   └── SKILL.md
 │
-├── step7-video-generator/                      # 阶段7：视频生成
-│   └── SKILL.md                                # （待编写）
+├── step7-video-generator/                      # 阶段7：视频生成 ✅
+│   └── SKILL.md
 │
 └── step8-post-production/                      # 阶段8：剪辑与后期（planned）
     └── SKILL.md
