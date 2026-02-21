@@ -255,6 +255,7 @@ production/step3-bibles/props/
 - 包含：道具类型、材质、尺寸参照、色彩、细节特征、光影氛围、视角、画面风格
 - 所有提示词必须以全局 style prompt 前缀开头
 - 不使用小说中的专有名词，用通用描述替代（如"ancient spring water glowing with faint blue light"而非"泉水"）
+- **中英双语**：每组提示词必须同时提供英文版和中文版（中文版为英文版的直译），分别用 `**English：**` 和 `**中文：**` 标注，各用独立代码块包裹
 
 **有阶段注册表时**：
 - 提示词标题严格使用注册表中的 stage_id：`### 提示词N：{stage_id}`

@@ -121,8 +121,14 @@ production/step5-storyboard/
 
 #### AI 生成提示词
 
+**English：**
 ` `` (用实际三反引号)
-{完整的 Seedream 提示词，包含全局 style prompt 前缀}
+{完整的 Seedream 英文提示词，包含全局 style prompt 前缀}
+` ``
+
+**中文：**
+` `` (用实际三反引号)
+{上述英文提示词的中文直译版本}
 ` ``
 
 ### 概念图B：{描述性标题}（如"关键瞬间特写"）

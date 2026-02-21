@@ -33,6 +33,7 @@ description: 将阶段3各元素圣经中的 AI 绘图提示词通过 Seedream �
 1. 先读 `production/step2-art-direction/art_direction.md` 第七章，提取全局 style prompt 前缀
 2. 按元素类型批量读取各圣经的 AI 绘图提示词章节
 3. 校验每个提示词是否已包含全局 style prompt 前缀（应已在圣经编写时自动继承）
+4. 校验每个提示词是否包含中英双语版本（英文版用于 Seedream 生成，中文版用于人工审核）——如缺少中文版，需补充英文版的直译
 
 ## 输出
 

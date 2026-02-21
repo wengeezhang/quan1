@@ -14,7 +14,7 @@ description: 将每个镜头的首帧图+参考图+运动提示词输入 Seedanc
 在好莱坞制作流程中，这对应 **Principal Photography（主摄影/拍摄）** 阶段——一切准备就绪，开机拍摄。区别在于：传统流程中"拍摄"由摄影师和演员完成；AI 制作流中，"拍摄"由 Seedance 2.0 根据首帧图 + 运动提示词 + 参考图自动生成。
 
 **本阶段的核心技术挑战有四个**：
-1. **Motion Prompt 工程**——将 step5 的中文导演动态描述翻译为 Seedance 可执行的英文运动指令，这与 step6 的 Image Prompt 工程是同构但不同的翻译任务
+1. **Motion Prompt 工程**——将 step5 的中文导演动态描述翻译为 Seedance 可执行的英文运动指令，这与 step6 的 Image Prompt 工程是同构但不同的翻译任务。**所有 motion prompt 必须中英双语输出**——英文版用于 Seedance 生成，中文版（英文版的直译）用于人工审核和导演确认
 2. **生成模式选择**——Seedance 2.0 支持多种模式（First Frame / Full Reference），每个镜头需要根据画面复杂度选择最合适的模式
 3. **连续性反馈循环**——连续性链内部的镜头不再由 step6 提供首帧，而是由 step7 从前一镜头视频的实际尾帧提取。这要求 step7 按严格的依赖顺序逐镜头生成，并在每个视频生成后提取尾帧用于下一镜头
 4. **运动质量控制与链条中断**——AI 生成的运动可能出现质量问题，而在连续性链中，一个低质量视频的尾帧会污染后续所有镜头。需要建立质量评估标准、链条中断阈值和回退到 step6 的机制
@@ -241,10 +241,16 @@ lighting, cinematic, subtle film grain
 
 {First Frame / Full Reference}
 
-## Motion Prompt
+## Motion Prompt (English)
 
 \```
-{部分一 + 部分二 + 部分三 的完整组装}
+{部分一 + 部分二 + 部分三 的完整组装（英文）}
+\```
+
+## Motion Prompt (中文)
+
+\```
+{上述英文 Motion Prompt 的中文直译}
 \```
 
 ## 参考图
