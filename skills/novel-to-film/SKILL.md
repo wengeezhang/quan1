@@ -274,7 +274,7 @@ production/step4-assets/
 
 ### 阶段8：剪辑与后期
 
-**技能**：`step8-post-production/SKILL.md`（待编写）
+**技能**：`step8-post-production/SKILL.md` ✅
 
 将所有视频片段按分镜脚本的顺序拼接成完整影片，并完成后期处理。
 
@@ -325,7 +325,7 @@ skills/novel-to-film/
 ├── step7-video-generator/                      # 阶段7：视频生成 ✅
 │   └── SKILL.md
 │
-└── step8-post-production/                      # 阶段8：剪辑与后期（planned）
+└── step8-post-production/                      # 阶段8：剪辑与后期 ✅
     └── SKILL.md
 ```
 
