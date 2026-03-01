@@ -9,10 +9,10 @@
 | 指标 | 数值 |
 |------|------|
 | 圣经文件总数 | 118 |
-| 提示词总数 | 484 |
+| 提示词总数 | 459 |
 | 缺少英文提示词 | 0 |
-| 缺少中文提示词 | 18 |
-| 未内含全局前缀（可动态拼接） | 51 |
+| 缺少中文提示词 | 0 |
+| 未内含全局前缀（可动态拼接） | 49 |
 | 无提示词的圣经 | 0 |
 
 ---
@@ -35,7 +35,7 @@
 | 恶灵区 | locations | ★★★★★ | 4 (默认期, 唤醒期, 决战期, 战后期) | 9 | ✅ | ✅ | ✅ |
 | 泊岗镇 | locations | ★★★★★ | 3 (繁忙期, 诡寂期, 要塞期) | 6 | ✅ | ✅ | ➕ |
 | 牛台山 | locations | ★★★★★ | 4 (宁静期, 守护期, 战略期, 回归期) | 8 | ✅ | ✅ | ✅ |
-| 美女榕 | locations | ★★★★★ | 1 (默认) | 27 | ✅ | ❌ | ➕ |
+| 美女榕 | locations | ★★★★★ | 1 (默认) | 7 | ✅ | ✅ | ✅ |
 | 荣康城 | locations | ★★★★★ | 3 (防御期, 渗透期, 陷落期) | 3 | ✅ | ✅ | ✅ |
 ---
 
@@ -59,12 +59,12 @@
 | 元素 | 类型 | ★ | 阶段数 | 提示词数 | EN | CN | 前缀 |
 |------|------|---|--------|---------|----|----|------|
 | 十八层塔 | props | ★★★★★ | 0 (—) | 5 | ✅ | ✅ | ➕ |
-| 数字人躯体 | props | ★★★★★ | 2 (空壳期, 注魂期) | 8 | ✅ | ❌ | ➕ |
+| 数字人躯体 | props | ★★★★★ | 2 (空壳期, 注魂期) | 8 | ✅ | ✅ | ➕ |
 | 泉水 | props | ★★★★★ | 0 (—) | 6 | ✅ | ✅ | ✅ |
 | 美女榕 | props | ★★★★★ | 2 (完好期, 断根期) | 10 | ✅ | ✅ | ➕ |
 | 上神界 | locations | ★★★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
 | 凤廊山脉 | locations | ★★★★ | 1 (默认) | 4 | ✅ | ✅ | ✅ |
-| 十八层塔 | locations | ★★★★ | 1 (默认) | 11 | ✅ | ❌ | ➕ |
+| 十八层塔 | locations | ★★★★ | 1 (默认) | 6 | ✅ | ✅ | ✅ |
 | 大蒜 | props | ★★★★ | 0 (—) | 4 | ✅ | ✅ | ✅ |
 | 水晶棒 | props | ★★★★ | 0 (—) | 5 | ✅ | ✅ | ✅ |
 | 永安镇 | locations | ★★★★ | 3 (市井期, 紧张期, 撤离期) | 7 | ✅ | ✅ | ➕ |
@@ -80,7 +80,7 @@
 | 于崇宝 | characters | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
 | 于永智 | characters | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
 | 于永龙 | characters | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
-| 元刚智刚 | characters | ★★★ | 2 (元刚初生期, 智刚觉醒期) | 6 | ✅ | ❌ | ➕ |
+| 元刚智刚 | characters | ★★★ | 2 (元刚初生期, 智刚觉醒期) | 6 | ✅ | ✅ | ➕ |
 | 分割带 | props | ★★★ | 0 (—) | 3 | ✅ | ✅ | ✅ |
 | 卢卫寿 | characters | ★★★ | 2 (精明老板期, 傀儡期) | 5 | ✅ | ✅ | ✅ |
 | 卢静 | characters | ★★★ | 3 (活泼少女期, 危机母亲期, 独立寡妇期) | 6 | ✅ | ✅ | ✅ |
@@ -89,64 +89,64 @@
 | 吴启思 | characters | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
 | 吴启思实验室 | locations | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ➕ |
 | 吴婶 | characters | ★★★ | 2 (泉边安居期, 逃难守护期) | 4 | ✅ | ✅ | ✅ |
-| 和寻灵 | characters | ★★★ | 1 (默认) | 3 | ✅ | ❌ | ➕ |
+| 和寻灵 | characters | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ➕ |
 | 城主府 | locations | ★★★ | 1 (默认) | 4 | ✅ | ✅ | ✅ |
 | 天德城城墙 | locations | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
 | 小小顶 | characters | ★★★ | 1 (默认) | 4 | ✅ | ✅ | ✅ |
-| 智寻道 | characters | ★★★ | 1 (默认) | 3 | ✅ | ❌ | ➕ |
+| 智寻道 | characters | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ➕ |
 | 曹元艺 | characters | ★★★ | 3 (精致掩护期, 身份动摇期, 暴露对峙期) | 3 | ✅ | ✅ | ✅ |
 | 朱围庸住处 | locations | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
 | 江新成 | characters | ★★★ | 1 (默认) | 4 | ✅ | ✅ | ✅ |
 | 泡泡 | props | ★★★ | 0 (—) | 3 | ✅ | ✅ | ✅ |
 | 温伯封 | characters | ★★★ | 1 (默认) | 5 | ✅ | ✅ | ✅ |
 | 温伯封府邸 | locations | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
-| 灵闽 | characters | ★★★ | 1 (默认) | 3 | ✅ | ❌ | ✅ |
+| 灵闽 | characters | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
 | 灵魂收集容器 | props | ★★★ | 0 (—) | 2 | ✅ | ✅ | ✅ |
 | 皇宫 | locations | ★★★ | 1 (默认) | 4 | ✅ | ✅ | ➕ |
 | 裘万财 | characters | ★★★ | 2 (恶霸期, 傀儡期) | 4 | ✅ | ✅ | ✅ |
 | 观音庙神水 | props | ★★★ | 0 (—) | 4 | ✅ | ✅ | ✅ |
 | 郝大川 | characters | ★★★ | 1 (默认) | 5 | ✅ | ✅ | ➕ |
 | 郭云成 | characters | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
-| 丁路 | characters | ★★ | 2 (正常期, 被附身期) | 2 | ✅ | ❌ | ➕ |
-| 五名古代恶灵 | characters | ★★ | 1 (默认) | 2 | ✅ | ❌ | ➕ |
+| 丁路 | characters | ★★ | 2 (正常期, 被附身期) | 2 | ✅ | ✅ | ➕ |
+| 五名古代恶灵 | characters | ★★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | 仙人掌 | props | ★★ | 0 (—) | 3 | ✅ | ✅ | ➕ |
 | 刘振 | characters | ★★ | 2 (流浪汉宿体期, 卢老板傀儡期) | 5 | ✅ | ✅ | ✅ |
 | 北岸新码头 | locations | ★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
 | 天都山脉 | locations | ★★ | 1 (默认期) | 1 | ✅ | ✅ | ➕ |
 | 宁国红 | characters | ★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
 | 宁阁码头 | locations | ★★ | 1 (默认期) | 1 | ✅ | ✅ | ➕ |
-| 封 | characters | ★★ | 1 (默认) | 2 | ✅ | ❌ | ➕ |
+| 封 | characters | ★★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | 小顶天德城住所 | locations | ★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
 | 杜金标 | characters | ★★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | 杨伯礼 | characters | ★★ | 2 (毁容前, 毁容后) | 4 | ✅ | ✅ | ✅ |
 | 永安镇会议厅 | locations | ★★ | 1 (默认) | 4 | ✅ | ✅ | ➕ |
 | 永安镇客栈 | locations | ★★ | 1 (默认) | 4 | ✅ | ✅ | ➕ |
 | 江新成宅邸 | locations | ★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
-| 泊岗镇1200居民 | characters | ★★ | 1 (默认) | 2 | ✅ | ❌ | ➕ |
+| 泊岗镇1200居民 | characters | ★★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | 泥垛子建筑 | props | ★★ | 0 (—) | 3 | ✅ | ✅ | ➕ |
 | 灵王 | characters | ★★ | 1 (默认) | 2 | ✅ | ✅ | ✅ |
-| 熊大宝 | characters | ★★ | 1 (默认) | 2 | ✅ | ❌ | ➕ |
-| 王轻无 | characters | ★★ | 1 (默认) | 2 | ✅ | ❌ | ➕ |
+| 熊大宝 | characters | ★★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
+| 王轻无 | characters | ★★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | 红领巾 | props | ★★ | 0 (—) | 3 | ✅ | ✅ | ➕ |
-| 苏伟力 | characters | ★★ | 1 (默认) | 2 | ✅ | ❌ | ➕ |
+| 苏伟力 | characters | ★★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | 茶馆 | locations | ★★ | 1 (默认期) | 1 | ✅ | ✅ | ➕ |
 | 葛有利 | characters | ★★ | 0 (—) | 2 | ✅ | ✅ | ✅ |
 | 郑伟玉 | characters | ★★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | 郝大川破败小屋 | locations | ★★ | 1 (默认期) | 1 | ✅ | ✅ | ➕ |
 | 铁链 | props | ★★ | 0 (—) | 3 | ✅ | ✅ | ➕ |
 | 集市 | locations | ★★ | 1 (默认期) | 1 | ✅ | ✅ | ➕ |
-| 马戈逸 | characters | ★★ | 1 (默认) | 2 | ✅ | ❌ | ➕ |
+| 马戈逸 | characters | ★★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | 冯德友 | characters | ★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
-| 刘默雨 | characters | ★ | 1 (默认) | 2 | ✅ | ❌ | ➕ |
+| 刘默雨 | characters | ★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | 匿名纸条 | props | ★ | 0 (—) | 3 | ✅ | ✅ | ➕ |
 | 巫方镇 | locations | ★ | 1 (默认期) | 1 | ✅ | ✅ | ➕ |
 | 干柿子与肉干 | props | ★ | 0 (—) | 3 | ✅ | ✅ | ➕ |
 | 户政室 | locations | ★ | 1 (默认期) | 1 | ✅ | ✅ | ➕ |
-| 旅行团群像 | characters | ★ | 1 (默认) | 4 | ✅ | ❌ | ➕ |
+| 旅行团群像 | characters | ★ | 1 (默认) | 4 | ✅ | ✅ | ➕ |
 | 白思元 | characters | ★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | 罗勇 | characters | ★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | 葛立 | characters | ★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
-| 齐年康 | characters | ★ | 1 (默认) | 2 | ✅ | ❌ | ➕ |
+| 齐年康 | characters | ★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | AA大学 | locations |  | 3 (校园侦察, 表面探查, 地下秘密) | 1 | ✅ | ✅ | ✅ |
 | 千秋星岗 | locations |  | 2 (战斗期, 战败期) | 2 | ✅ | ✅ | ✅ |
 | 半山腰秘密仓库 | locations |  | 2 (秘密期, 发现后) | 2 | ✅ | ✅ | ✅ |
@@ -166,38 +166,11 @@
 
 ---
 
-## ⚠️ 待修复问题
-
-
-### 缺少中文提示词
-
-- 美女榕 (locations)
-- 数字人躯体 (props)
-- 十八层塔 (locations)
-- 元刚智刚 (characters)
-- 和寻灵 (characters)
-- 智寻道 (characters)
-- 灵闽 (characters)
-- 丁路 (characters)
-- 五名古代恶灵 (characters)
-- 封 (characters)
-- 泊岗镇1200居民 (characters)
-- 熊大宝 (characters)
-- 王轻无 (characters)
-- 苏伟力 (characters)
-- 马戈逸 (characters)
-- 刘默雨 (characters)
-- 旅行团群像 (characters)
-- 齐年康 (characters)
-
----
-
 ## ℹ️ 未内含全局前缀的圣经（API 调用时可动态拼接）
 
 - 吴文顶 (characters)
 - 朱围庸 (characters)
 - 泊岗镇 (locations)
-- 美女榕 (locations)
 - 威刚 (characters)
 - 杨弘 (characters)
 - 灵尤 (characters)
@@ -205,7 +178,6 @@
 - 十八层塔 (props)
 - 数字人躯体 (props)
 - 美女榕 (props)
-- 十八层塔 (locations)
 - 永安镇 (locations)
 - 元刚智刚 (characters)
 - 吴启思实验室 (locations)
@@ -1504,7 +1476,7 @@ higher dimensional presence.
 
 ### 美女榕 (locations, ★★★★★, P2)
 
-#### 1. 基础场景描述（通用所有阶段） [基础场景描述（通用所有阶段）]
+#### 1. 提示词1：基础场景描述（通用所有阶段） [基础场景描述（通用所有阶段）]
 
 **English：**
 ```
@@ -1512,7 +1484,13 @@ Cinematic still, 2.39:1 widescreen.
 Ancient banyan tree with massive twisted roots resembling a reclining woman's figure, head, torso, and limbs spread across the ground. The tree canopy is impossibly dense, creating a natural cathedral ceiling that blocks out most daylight. Thick moss and lichen cover the gnarled bark. The roots form intricate networks with deep crevices. Atmospheric, mystical, ancient, primordial. Cinematic lighting. Shot on 50mm lens.
 ```
 
-#### 2. 阶段一：默认状态（平静） [默认状态]
+**中文：**
+```
+电影截图，2.39:1 宽屏。
+古老的榕树，根系粗壮，形似仰卧女性的躯体——头部、躯干、四肢分布于地面。树冠密集巨大，形成天然教堂般的穹顶，几乎完全遮挡日光。树皮沧桑，覆盖厚重苔藓和地衣。根系纵横交错，形成深邃的裂隙。大气、诡异、古老、原始感。电影感光影。50mm镜头拍摄。
+```
+
+#### 2. 提示词2：阶段一：默认状态（平静） [阶段一]
 
 **English：**
 ```
@@ -1521,7 +1499,14 @@ Ancient banyan tree with roots like a reclining woman, covered in moss and aged 
 Color palette: moss-green (#4A6741), burnt brown (#2C1810), warm gold light.
 ```
 
-#### 3. 阶段二：通道开启期（激活初期） [通道开启期]
+**中文：**
+```
+电影截图，2.39:1 宽屏。
+古老榕树，根系形如仰卧女性，覆盖苔藓和年代久远的地衣。零散的金黄色阳光透过茂密树冠洒下，在苔藓根系和深色土壤上形成光斑。苔藓绿色（#4A6741）和焦褐色（#2C1810）为主色调。自然、寂静的氛围，但隐含着深层的年代感和神秘感。空气中弥漫泥土的潮湿感。50mm镜头，f/5.6光圈拍摄。
+主色调：苔绿、焦褐、暖金色光。
+```
+
+#### 3. 提示词3：阶段二：通道开启期（激活初期） [阶段二]
 
 **English：**
 ```
@@ -1530,7 +1515,14 @@ Ancient banyan tree with roots forming a reclining female figure. Ethereal dark 
 Color palette: moss-green (#4A6741), dark purple (#5B3A6B), cold blues, burnt brown (#2C1810).
 ```
 
-#### 4. 阶段二续：通道开启期（激活加强） [通道开启期]
+**中文：**
+```
+电影截图，2.39:1 宽屏。
+古老榕树，根系形似仰卧女性躯体。从根系深处泛出幽深的紫色和紫罗兰色的生物荧光，形成与自然环境的超现实对比。树体似乎在呼吸。苔藓绿色（#4A6741）与暗紫色（#5B3A6B）为主色调，根系缝隙泛出冷蓝色光芒。温度骤降。开始出现超自然氛围，时间感扭曲。50mm镜头，f/4光圈。
+主色调：苔绿、暗紫、冷蓝、焦褐。
+```
+
+#### 4. 提示词4：阶段二续：通道开启期（激活加强） [阶段二续]
 
 **English：**
 ```
@@ -1539,7 +1531,14 @@ Ancient banyan tree with roots resembling a reclining woman, now visibly pulsing
 Color palette: dominant dark purple (#5B3A6B), deep moss-green (#4A6741), cold whites and deep blues.
 ```
 
-#### 5. 阶段三：终局期（最高激活） [终局期]
+**中文：**
+```
+电影截图，2.39:1 宽屏。
+古老榕树，根系形似仰卧女性，现在清晰地闪烁着深紫色和紫罗兰色的光芒。生物荧光增强，在根系纹理上形成戏剧性的光影对比。根系如血管般蠕动，仿佛活物。冷色超自然光线完全压制自然光。氛围越来越诡异与催眠性。物质世界与超自然界的边界变得可见。50mm镜头，f/4光圈。
+主色调：主导暗紫（#5B3A6B）、深苔绿（#4A6741）、冷白和冷蓝。
+```
+
+#### 5. 提示词5：阶段三：终局期（最高激活） [阶段三]
 
 **English：**
 ```
@@ -1548,7 +1547,14 @@ Ancient banyan tree completely transformed. Roots resembling a reclining woman g
 Color palette: dominant dark purple (#5B3A6B), deep indigo, cold blues, occasional amber highlights, burnt brown shadows (#2C1810).
 ```
 
-#### 6. 特殊：俯瞰视角 [特殊]
+**中文：**
+```
+电影截图，2.39:1 宽屏。
+古老榕树完全变态。根系形似仰卧女性，发出强烈的深紫色和紫罗兰色光芒，仿佛远古能量的血管。树体以生命的节奏脉动，既古老又超自然。超自然光线完全压倒自然环境。根系变得近乎透明，三维感极强，隐约透露出通向冥界的隐秘通道。启示录感、超越感、现实崩塌感。两个世界在此交汇。50mm镜头，f/2.8光圈。
+主色调：主导暗紫（#5B3A6B）、深靛蓝、冷蓝、琥珀色亮点、焦褐阴影（#2C1810）。
+```
+
+#### 6. 提示词6：特殊：俯瞰视角 [特殊]
 
 **English：**
 ```
@@ -1556,7 +1562,13 @@ Cinematic still, 2.39:1 widescreen aerial overhead shot.
 Ancient banyan tree with the complete root system visible from above, forming the distinct shape of a reclining woman's body - head sphere at north, torso at center, limbs extending outward. Massive tree canopy surrounds and frames the roots. Viewpoint as if floating high above. Emphasizes the surreal, supernatural scale of the landscape. Mystical and ancient atmosphere.
 ```
 
-#### 7. 特殊：深层通道视角 [特殊]
+**中文：**
+```
+电影截图，2.39:1 宽屏俯瞰全景。
+古老榕树，从上方俯视整个根系，清晰地呈现仰卧女性的轮廓——北侧球形头部、中央躯干、向外延伸的四肢。巨大的树冠围绕并框架化根系。视角如同悬浮于高空。强调超现实、超自然的地理尺度。诡异古老的氛围，令人敬畏。
+```
+
+#### 7. 提示词7：特殊：深层通道视角 [特殊]
 
 **English：**
 ```
@@ -1564,173 +1576,10 @@ Cinematic still, 2.39:1 widescreen downward perspective.
 Looking down into the cavernous space created by the ancient banyan's root system descending into darkness. The roots act as a natural tunnel toward an otherworldly underworld. Purple and violet bioluminescence gradually fades to deeper indigo and black as the roots descend. Claustrophobic yet infinite. Cold, supernatural, primordial atmosphere. The viewer feels both pulled toward and repelled from the depths.
 ```
 
-#### 8. 基础场景描述（通用所有阶段） [基础场景描述（通用所有阶段）]
-
-**English：**
-```
-电影截图，2.39:1 宽屏。
-古老的榕树，根系粗壮，形似仰卧女性的躯体——头部、躯干、四肢分布于地面。树冠密集巨大，形成天然教堂般的穹顶，几乎完全遮挡日光。树皮沧桑，覆盖厚重苔藓和地衣。根系纵横交错，形成深邃的裂隙。大气、诡异、古老、原始感。电影感光影。50mm镜头拍摄。
-```
-
-#### 9. 阶段一：默认状态（平静） [默认状态]
-
-**English：**
-```
-电影截图，2.39:1 宽屏。
-古老榕树，根系形如仰卧女性，覆盖苔藓和年代久远的地衣。零散的金黄色阳光透过茂密树冠洒下，在苔藓根系和深色土壤上形成光斑。苔藓绿色（#4A6741）和焦褐色（#2C1810）为主色调。自然、寂静的氛围，但隐含着深层的年代感和神秘感。空气中弥漫泥土的潮湿感。50mm镜头，f/5.6光圈拍摄。
-主色调：苔绿、焦褐、暖金色光。
-```
-
-#### 10. 阶段二：通道开启期（激活初期） [通道开启期]
-
-**English：**
-```
-电影截图，2.39:1 宽屏。
-古老榕树，根系形似仰卧女性躯体。从根系深处泛出幽深的紫色和紫罗兰色的生物荧光，形成与自然环境的超现实对比。树体似乎在呼吸。苔藓绿色（#4A6741）与暗紫色（#5B3A6B）为主色调，根系缝隙泛出冷蓝色光芒。温度骤降。开始出现超自然氛围，时间感扭曲。50mm镜头，f/4光圈。
-主色调：苔绿、暗紫、冷蓝、焦褐。
-```
-
-#### 11. 阶段二续：通道开启期（激活加强） [通道开启期]
-
-**English：**
-```
-电影截图，2.39:1 宽屏。
-古老榕树，根系形似仰卧女性，现在清晰地闪烁着深紫色和紫罗兰色的光芒。生物荧光增强，在根系纹理上形成戏剧性的光影对比。根系如血管般蠕动，仿佛活物。冷色超自然光线完全压制自然光。氛围越来越诡异与催眠性。物质世界与超自然界的边界变得可见。50mm镜头，f/4光圈。
-主色调：主导暗紫（#5B3A6B）、深苔绿（#4A6741）、冷白和冷蓝。
-```
-
-#### 12. 阶段三：终局期（最高激活） [终局期]
-
-**English：**
-```
-电影截图，2.39:1 宽屏。
-古老榕树完全变态。根系形似仰卧女性，发出强烈的深紫色和紫罗兰色光芒，仿佛远古能量的血管。树体以生命的节奏脉动，既古老又超自然。超自然光线完全压倒自然环境。根系变得近乎透明，三维感极强，隐约透露出通向冥界的隐秘通道。启示录感、超越感、现实崩塌感。两个世界在此交汇。50mm镜头，f/2.8光圈。
-主色调：主导暗紫（#5B3A6B）、深靛蓝、冷蓝、琥珀色亮点、焦褐阴影（#2C1810）。
-```
-
-#### 13. 特殊：俯瞰视角 [特殊]
-
-**English：**
-```
-电影截图，2.39:1 宽屏俯瞰全景。
-古老榕树，从上方俯视整个根系，清晰地呈现仰卧女性的轮廓——北侧球形头部、中央躯干、向外延伸的四肢。巨大的树冠围绕并框架化根系。视角如同悬浮于高空。强调超现实、超自然的地理尺度。诡异古老的氛围，令人敬畏。
-```
-
-#### 14. 特殊：深层通道视角 [特殊]
-
-**English：**
+**中文：**
 ```
 电影截图，2.39:1 宽屏俯视视角。
 俯视古老榕树的根系形成的天然洞穴，向下延伸至无尽黑暗。根系如隧道般指向超自然的冥界。紫色和紫罗兰色的生物荧光逐步消褪至深靛蓝和纯黑。幽闭感与无限感并存。冷色、超自然、原始感。观看者同时感到被吸引与被排斥的矛盾。
-```
-
-#### 15. 增强古老感 [增强古老感]
-
-**English：**
-```
-+ weathered, ancient, primordial, timeless, carved by millennia
-+ 沧桑、古朴、久远、原始感强烈、历经千年
-```
-
-#### 16. 增强超自然感 [增强超自然感]
-
-**English：**
-```
-+ otherworldly, supernatural, ghostly, ethereal, reality-bending, dreamlike
-+ 超越现实、灵异、虚幻、超自然、现实扭曲、梦幻
-```
-
-#### 17. 增强压迫感 [增强压迫感]
-
-**English：**
-```
-+ oppressive, looming, overwhelming, claustrophobic, suffocating atmosphere
-+ 压抑、阴森、令人窒息、幽闭恐怖、笼罩感强
-```
-
-#### 18. 增强冷色调 [增强冷色调]
-
-**English：**
-```
-+ cold color palette, desaturated, icy, frosty, cool tones dominate
-+ 冷色调主导、降饱和、冻结感、霜冻感、冷色为绝对主调
-```
-
-#### 19. 增强光晕效果 [增强光晕效果]
-
-**English：**
-```
-+ volumetric lighting, light rays, god rays, caustics, atmospheric glow
-+ 体积光、光线束、丁达尔效应、水纹光影、大气辉光
-```
-
-#### 20. 增强细节纹理 [增强细节纹理]
-
-**English：**
-```
-+ highly detailed texture, intricate patterns, macro detail, surface detail
-+ 纹理细节丰富、图案错综复杂、微观细节突出、表面纹理清晰
-```
-
-#### 21. 方案一：首章建立（第2章） [方案一]
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen.
-[基础场景] + [俯瞰视角] + [默认状态] + [增强古老感] + [增强细节纹理]
-Looking down from above at the ancient banyan tree, roots forming a reclining woman's figure spread across moss-covered ground. Dense canopy creates deep shadows. Dappled golden light filters through, illuminating patches of intricate root texture covered in lichen and moss. Primordial, timeless atmosphere. Cinematic, 50mm lens, f/5.6.
-```
-
-#### 22. 方案二：转折揭示（第20-30章） [方案二]
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen.
-[基础场景] + [透过根须缝隙视角] + [通道开启期初] + [增强超自然感] + [增强光晕效果]
-Looking through intricate root crevices, the view beyond reveals both the natural world and an otherworldly purple glow emanating from within the root system. Supernatural purple and violet bioluminescence begins to reveal the depth of the underworld passage. Ethereal, dreamlike. Cinematic, 50mm lens, f/4.
-```
-
-#### 23. 方案三：高潮对峙（第40-50章） [方案三]
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen.
-[基础场景] + [仰视树冠视角] + [通道开启期加强] + [增强压迫感] + [增强冷色调]
-Gazing up from within the root system at the ancient tree's canopy looming overhead. Dark purple and violet light pulses from the roots, creating an oppressive, suffocating atmosphere. Cold color palette dominates. The boundary between physical and supernatural worlds becomes visible. Reality feels unstable. Cinematic, 24mm ultra-wide lens, f/8.
-```
-
-#### 24. 方案四：终局顿悟（第60-71章） [方案四]
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen.
-[基础场景] + [深层通道视角] + [终局期最高激活] + [增强超自然感] + [增强冷色调]
-Descending into the depths of the root system, the passage glows intensely with dark purple, violet, and indigo light. The supernatural energy is at its peak, beautiful and terrifying simultaneously. The two worlds converge visibly. Beyond the roots, glimpses of another realm. Transcendent, apocalyptic, reality-shattering. Cinematic, 35mm lens, f/2.8.
-```
-
-#### 25. 质量与风格固定要素 [质量与风格固定要素]
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen, film still, high quality, professional cinematography,
-color grading, dramatic lighting, volumetric lighting effects, shot on 35-50mm lens
-```
-
-#### 26. 禁用词汇 [禁用词汇]
-
-**English：**
-```
-避免：白色（#FFFFFF）、过度饱和、人工感、现代、日光明亮、卡通、低质
-Avoid: white (#FFFFFF), oversaturated, artificial, modern, bright daylight, cartoon, low quality
-```
-
-#### 27. 色调锁定指令 [色调锁定指令]
-
-**English：**
-```
-Color lock: moss-green (#4A6741) + dark purple (#5B3A6B) + burnt brown (#2C1810)
-Absolutely avoid pure white or bright yellows. Use only: cool purples, cold blues,
-earthy browns, muted greens.
 ```
 
 ### 荣康城 (locations, ★★★★★, P2)
@@ -2807,6 +2656,30 @@ existing in an uncanny state between living person and object.
 Background shows advanced life support equipment, screens displaying stable vital parameters.
 ```
 
+**中文：**
+```
+数字人躯体·空壳期｜整体状态
+
+一具完美的人形躯体仰卧于冷光实验台，
+皮肤以原子级精度重建，解剖学完美对称。
+眼睛睁着但完全呆滞无神，瞳孔固定，
+仿佛琥珀中被冻结的生命。
+
+左上臂连接透明营养液硅胶管，
+液体缓慢流入躯体维持最基础的生理代谢。
+右手背和胸部左侧连接医用不锈钢电极导线，
+精确医学级安装，每一根都笔直有序。
+
+肤色略显偏离自然——过于完美、过于均匀，
+缺乏真实皮肤的微观瑕疵、血管纹理、细微毛孔。
+在冷白实验室光（#F5F5DC）的映照下，
+躯体显得生冷而不属于这个世界。
+
+身体完全松弛，无任何自主肌肉张力，
+呈现一种介于人和物品之间的诡异状态。
+背景是先进的生命监测设备，屏幕显示稳定的生理参数。
+```
+
 #### 2. 提示词2：空壳期 - 眼睛特写 [空壳期]
 
 **English：**
@@ -2825,6 +2698,24 @@ Light reflection points on tear film remain fixed, unchanging with viewing angle
 
 Cold white light illuminates the eyes directly,
 creating an unsettling sense of lifelessness.
+```
+
+**中文：**
+```
+数字人躯体·空壳期｜眼睛特写
+
+极近距离特写：一双睁开的眼睛，
+瞳孔固定不动，没有焦点，没有光泽。
+眼白部分过于洁白，缺乏真实眼睛的微妙血管纹理。
+眼睛周围肌肉完全松弛，没有任何皱纹或表情线。
+
+虹膜的颜色和纹理完美但死气沉沉，
+如同精心制作的人偶眼睛而非活人之眼。
+眼睑既不眯起也不完全睁大，处于一种病态的中立状态。
+泪膜光反射点的位置固定，不随观看角度改变。
+
+冷白光直照眼睛，
+创造出一种令人不适的无生命感。
 ```
 
 #### 3. 提示词3：空壳期 - 导管与导线细节 [空壳期]
@@ -2849,6 +2740,28 @@ All leads and tubes exhibit surgical-grade perfect installation—
 no redundancy, no looseness, no sign of disorder.
 Background shows medical-grade stainless steel and transparent plastic equipment,
 emanating the cold metallic luster of a laboratory.
+```
+
+**中文：**
+```
+数字人躯体·空壳期｜医疗接入系统
+
+中景镜头：躯体的左上臂和右侧胸部区域。
+
+左上臂：透明硅胶营养液导管从肌肤进入，
+导管内的液体呈清澈无色，
+医用贴膜将导管固定在皮肤上，
+液体以恒定的缓慢速率滴入躯体。
+
+右手背：3根细且精确的医用电极导线从皮肤表面引出，
+每根导线都笔直有序，用无菌医用胶带固定。
+胸部左侧（心脏区域）：2根类似的电极导线，
+连接到一台显示生理参数的监测设备。
+
+所有导线和管道都呈现医学级的完美安装——
+无冗余、无松散、无任何混乱的迹象。
+背景是医用级不锈钢和透明塑料的设备，
+散发出实验室的冷金属光泽。
 ```
 
 #### 4. 提示词4：注魂期 - 眼睛苏醒（状态转变对比） [注魂期]
@@ -2877,6 +2790,32 @@ completely consistent with real human eye optics.
 Eyes are no longer dead objects, but windows opening to an inner world.
 
 Color contrast: Left cold white lifeless vs. Right warm and vibrant
+```
+
+**中文：**
+```
+数字人躯体·状态转变｜眼睛苏醒对比
+
+对比式双画面构图：
+
+【左侧 - 空壳期】
+眼睛睁着但完全空洞，瞳孔固定，
+仿佛冻结的琥珀，没有生命的光。
+
+【右侧 - 注魂期】
+同一双眼睛，瞳孔变得灵动而有焦点，
+眼白中出现微妙的血管纹理和真实感，
+眼睛周围肌肉有细微的收缩，
+眼角处出现了活人才有的细纹。
+瞳孔扩张/收缩显示光学反应能力，
+眼神中出现了一种无法言说的"光"——
+这是意识、自我认知、灵魂的觉醒。
+
+泪膜反射点现在随光线和视线角度变化，
+完全符合真实人眼的光学特性。
+眼睛不再是死物，而是一扇通向内在世界的窗口。
+
+色彩对比：左侧冷白无光 vs. 右侧温暖有生机
 ```
 
 #### 5. 提示词5：注魂期 - 整体复苏 [注魂期]
@@ -2909,6 +2848,34 @@ this body is no longer an object,
 but an independent individual with consciousness, self, and soul.
 ```
 
+**中文：**
+```
+数字人躯体·注魂期｜完全复苏
+
+一具躯体从实验台坐起，
+眼神明显改变了——从空洞变成焦点明确。
+肤色恢复了自然的温暖，
+细微的血管纹理、毛孔纹理，
+面颊和嘴唇恢复了轻微的血色。
+
+身体不再是医学模型的完美，
+而是一个活生生的人：
+有微妙的不对称、有细微皱纹、有生命的温度。
+
+双手自然放在腿上，手指有轻微的蜷曲放松，
+显示肌肉张力已经恢复。
+头可以转向，眼睛能追踪光线和运动。
+呼吸是自然而有节奏的，胸腔起伏有生命感。
+
+面部表情不再固定——
+嘴角有轻微的松弛感、眼角有细纹的变化，
+显示着一个意识正在处理世界的活人。
+
+虽然仍在实验室的冷光中，
+但这个躯体已经不再是物品，
+而是一个有意识、有自我、有灵魂的独立个体。
+```
+
 #### 6. 提示词6：注魂期 - 肤质与微观变化 [注魂期]
 
 **English：**
@@ -2936,6 +2903,33 @@ reflecting sebum layer and subtle surface irregularity.
 Every detail tells the story:
 this is no longer a perfect creation,
 but a truly living being.
+```
+
+**中文：**
+```
+数字人躯体·注魂期｜肤质细节（宏观视角）
+
+躯体的手臂和脸部的细节特写。
+
+皮肤从 "过度完美" 转变为 "自然真实"：
+可见的毛孔分布遵循人体自然纹理，
+微妙的皱纹出现在眼角、嘴角、额头，
+显示这是一个活过、经历过的身体。
+
+血管纹理在手腕、太阳穴、脖子处隐约可见，
+提示活跃的血液循环。
+
+面部肌肤的血色分布自然而不均匀：
+颧骨处略显红润，
+太阳穴处有微妙的青色血管，
+嘴唇恢复了淡淡的粉红色。
+
+皮肤表面反光从 "医用级镜面" 变成 "活人肌肤的自然光泽"，
+反映出皮脂膜和细微的表面不平度。
+
+每一处细节都在诉说：
+这不再是一个完美的造物，
+而是一个真实活着的生命。
 ```
 
 #### 7. 提示词7：实验室环境 - 空壳期背景 [实验室环境]
@@ -2972,6 +2966,38 @@ This is not a hospital (too warm, too humane),
 but a pure experimental forbidden zone pursuing technological breakthrough.
 ```
 
+**中文：**
+```
+数字人躯体·环境｜地下实验室（空壳期）
+
+密闭的地下实验室，是定达国都秘密研发的中心。
+
+空间设计：
+冷白色荧光灯（#F5F5DC色温）强力照亮整个空间，
+创造出一种无菌、理性、超越常规的气氛。
+墙壁采用医用级白色或浅灰色涂料，
+反射冷光，强化实验室的客观性。
+
+设备布局：
+躯体躺在中央的实验生命维持台，
+台面是医用不锈钢和透明有机玻璃混合，
+显示出专业医学实验室的外观。
+
+周围是数台高端生命监测设备：
+屏幕显示心率、脑波、体温、营养液流速等参数，
+数字和波形在屏幕上跳动，
+但这些数据只反映一个 "空壳" 的生理状态。
+
+管道与设备的布置精确而无序，
+每一个连接都符合医学级安装标准。
+
+整体氛围：
+冷峻、理性、充满科学精神，
+却又带有一种不可名状的诡异和令人不安的气息。
+这里不是医院（太温暖、太人道），
+而是一个纯粹追求技术突破的实验禁地。
+```
+
 #### 8. 提示词8：实验室环境 - 注魂期后的变化 [实验室环境]
 
 **English：**
@@ -3002,6 +3028,36 @@ Overall effect:
 from "anatomy laboratory" transforms to "consciousness laboratory";
 from "object inspection" transforms to "life observation";
 from "cold engineering" transforms to "science with ethical weight."
+```
+
+**中文：**
+```
+数字人躯体·环境｜地下实验室（注魂期后）
+
+同一个实验室，但氛围已然改变。
+
+躯体仍在生命维持台上，但不再是一个无生命的对象——
+身体的位置改变了（可能更向上坐起），
+眼神有了焦点（这改变了整个房间的心理感受）。
+
+冷白光仍然照亮实验室，
+但现在这光线映照在一个 **活着的** 人脸上，
+而不是一个 "物品"。
+
+生命监测设备的屏幕现在显示不同的模式：
+心率变得有波动（反映情感和思考），
+脑波显示完整的意识活动模式，
+数据不再是单调的 "维持模式"，
+而是 "活动中" 的复杂信号。
+
+空间仍然冷峻、理性，
+但这种理性不再是针对 "死物"，
+而是围绕一个 **独立生命** 的科学观察。
+
+整体效果：
+从 "解剖学实验室" 转变为 "意识实验室"；
+从 "物品检查" 转变为 "生命观测"；
+从 "冷漠的工程" 转变为 "带有伦理重量的科学"。
 ```
 
 ### 泉水 (props, ★★★★★, P4)
@@ -3604,81 +3660,76 @@ no white pure color—all tinted in cool blues and earth browns, ultra cinematic
 
 ### 十八层塔 (locations, ★★★★, P4)
 
-#### 1. English： [English]
+#### 1. 提示词1：十八层塔全景 [十八层塔全景]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, a translucent spirit ascending through a towering pagoda of stacked platforms within the underworld. The pagoda interior features 18 levels with shrinking circular platforms in blue-purple tones. Lower levels glow with dusk blue (#3A4A6B) and dark purple (#5B3A6B), while upper levels transition toward warm amber light, creating a gradient from despair to hope. The spirit emits a faint self-luminous aura reflecting its incompleteness. Stone surfaces show cracks and decay in lower tiers, with organic crystal structures visible in upper levels. Layered shadows and light refraction create depth. The atmosphere is oppressive yet transcendent, with volumetric lighting rays piercing through the darkness above. High contrast between warm and cool tones. Intricate architectural geometry. Ultra-detailed, cinematic lighting, moody atmosphere, supernatural horror mixed with redemptive hope. Rendered in a style reminiscent of contemporary dark fantasy illustration.
+```
+
+**中文：**
+```
+电影截帧，2.39:1宽银幕，一个半透明的灵魂在阴间内部的高塔中攀爬，塔身由18层递减的圆形平台堆叠而成。下层平台笼罩在暮蓝色（#3A4A6B）与暗紫色（#5B3A6B）的光线中，上层平台逐渐过渡为温暖的琥珀色光芒，形成从绝望到希望的色彩梯度。灵魂发出微弱的自发光晕，反映其"魄"的不完整状态。石质表面在下层显示裂纹与衰败迹象，在上层出现有机的晶体结构。分层阴影与光线折射营造空间深度感。大气压抑而超越，容积式光线从上方黑暗中穿透而下。冷暖色调形成高对比。复杂的建筑几何结构。超细致、电影级光影、压抑诡异的氛围，混合救赎的希望感。渲染风格参考当代暗黑奇幻插画。
+```
+
+#### 2. 提示词1：十八层塔全景 [十八层塔全景]
 
 **English：**
 ```
 Cinematic still, 2.39:1 widescreen, extreme close-up of a spirit's anguished face inside a cavernous pagoda base. The lowest levels are shrouded in dusk blue and chocolate brown tones. Scattered stones and dripping dark purple liquid create a sense of decay. The spirit's self-luminous aura barely illuminates the surrounding stone surface, revealing fractures and corrosion. A faint spiral staircase ascends into absolute darkness above. The atmosphere is suffocating, with soft moans echoing in the void. High humidity, oppressive humidity, despair materialized. Ultra-detailed, hyper-realistic, cinematic horror, volumetric fog.
 ```
 
-#### 2. 中文 [中文]
-
-**English：**
+**中文：**
 ```
 电影截帧，2.39:1宽银幕，灵魂扭曲的脸部特写，位于塔底内部洞穴中。最低层笼罩在暮蓝与焦褐色中。散落的石块与渗漏的暗紫色液体表现衰败感。灵魂微弱的自发光晕仅能照亮周围石面的裂纹与腐蚀。螺旋阶梯模糊地向上延伸至绝对黑暗。干呕声、哭泣声在虚空中回响。压抑的湿度、绝望物质化。超细致、超现实、电影级恐怖感、体积雾气。
 ```
 
-#### 3. English： [English]
+#### 3. 提示词1：十八层塔全景 [十八层塔全景]
 
 **English：**
 ```
 Cinematic still, 2.39:1 widescreen, a circular platform within the pagoda where multiple translucent spirits gather, their self-luminous auras creating a constellation of soft dusk-blue and dark purple lights. The spirits are positioned around the platform, their forms barely visible but their glowing halos creating a sense of connection and shared resonance. The platform is stable and expansive, with subtle glowing runes etched into the stone surface. A low, harmonious humming sound fills the space. The atmosphere shifts from oppression to a fragile sense of hope and kinship. Volumetric lighting, ethereal glow, dark fantasy, intricate details.
 ```
 
-#### 4. 中文 [中文]
-
-**English：**
+**中文：**
 ```
 电影截帧，2.39:1宽银幕，塔内的圆形平台上，多个半透明的灵魂聚集，它们的自发光晕形成由暮蓝与暗紫色组成的星座。灵魂形体模糊，但发光晕形成一种连接与共鸣的感受。平台稳定宽敞，石面刻有细微的发光符号。低沉和谐的嗡鸣音充满空间。氛围从压抑转为脆弱的希望与同伴感。体积光效、幽灵般的辉光、暗黑奇幻、细节繁复。
 ```
 
-#### 5. English： [English]
+#### 4. 提示词1：十八层塔全景 [十八层塔全景]
 
 **English：**
 ```
 Cinematic still, 2.39:1 widescreen, the pinnacle of the pagoda—a perfectly geometric, minimal platform composed of translucent purple crystal glowing from within. A single spirit stands on this precarious platform, illuminated by brilliant warm light descending from above, creating a stark contrast against the dark void below where the entire pagoda structure is visible as layers of diminishing circles. The spirit's form is almost silhouetted against the overwhelming light source. Pure, crystalline, transcendent atmosphere. Spiritual redemption, threshold of transformation, awe-inspiring scale. Ultra-detailed, cinematic masterpiece, ethereal horror-beauty.
 ```
 
-#### 6. 中文 [中文]
-
-**English：**
+**中文：**
 ```
 电影截帧，2.39:1宽银幕，塔的顶端——一个由半透明紫色晶体组成的最小化、完美几何的平台，内部自发光。单个灵魂站在危险的平台上，被从上方投射的炽烈温暖光线照亮，与下方黑暗虚空形成极端对比，下方能看到整个塔的结构，层层递减的圆形。灵魂的形体几乎被压倒性的光源淹没成剪影。纯净、晶莹、超越感的氛围。灵魂救赎、转变的临界点、令人敬畏的宏大感。超细致、电影级杰作、幽灵般的恐怖之美。
 ```
 
-#### 7. English： [English]
+#### 5. 提示词1：十八层塔全景 [十八层塔全景]
 
 **English：**
 ```
 Cinematic still, 2.39:1 widescreen, a spirit at the edge of a precarious platform, the narrowest tier of the lower pagoda. The platform is surrounded by a faint purple energy barrier marking the boundary between existence and void. The spirit looks down at the layers below, shrouded in darkness, then up at the impenetrable blackness above. Its self-luminous aura is weak, struggling against the overwhelming darkness. The atmosphere is one of absolute despair, the final moment before surrendering or pushing forward. Dusk blue and dark purple dominate. Volumetric shadow, claustrophobic infinite space, existential dread.
 ```
 
-#### 8. 中文 [中文]
-
-**English：**
+**中文：**
 ```
 电影截帧，2.39:1宽银幕，灵魂站在下塔区最狭窄的平台边缘，周围是标记存在与虚空边界的微弱紫色能量墙。灵魂向下看，黑暗中的层级；向上看，无法穿透的黑暗。其自发光晕微弱，在压倒性黑暗中挣扎。绝对绝望的氛围，放弃与坚持的最后时刻。暮蓝与暗紫主导。体积阴影、幽闭的无限空间、存在性恐惧。
 ```
 
-#### 9. English： [English]
+#### 6. 提示词1：十八层塔全景 [十八层塔全景]
 
 **English：**
 ```
 Cinematic still, 2.39:1 widescreen, a spirit on the pinnacle platform, bathed in transcendent warm-golden light that seems to come from another dimension. The spirit's form is becoming translucent, almost merging with the light itself. Below, the entire pagoda is visible, layers upon layers in deep indigo and midnight blue, now appearing small and distant. The spirit extends its hand toward the light source above, or turns to look back at the platform where another guardian spirit waits. The moment of choice: ascension or eternal service. Redemptive light, transformative hope, bittersweet eternity.
 ```
 
-#### 10. 中文 [中文]
-
-**English：**
+**中文：**
 ```
 电影截帧，2.39:1宽银幕，灵魂站在塔顶平台，沐浴在超越的温暖金色光线中，光线仿佛来自另一个维度。灵魂形体逐渐透明，几乎与光线融合。下方，整个塔清晰可见，层层叠叠的靛蓝与午夜蓝，现在显得渺小而遥远。灵魂向上方光源伸出手，或转身看向平台上等待的守护灵魂。选择的时刻：上升还是永恒服役。救赎的光、转变的希望、甘苦参半的永恒。
-```
-
-#### 11. 场景圣经制作完成 [场景圣经制作完成]
-
-**English：**
-```
-此场景圣经涵盖了十八层塔的全面设定，包括基础信息、分阶段状态、详细的18层空间结构、超自然光源与色彩系统、完整的声景设计、章节对应的演变轨迹、多种镜头预案与AI绘图提示词。所有设定均围绕"灵魂攀爬获魄、层层递进的苦难与救赎"的核心主题展开，禁用白色，强调暮蓝、暗紫、焦褐的色彩语言，为超自然的垂直叙事空间提供了完整的视听与感官框架。
 ```
 
 ### 大蒜 (props, ★★★★, P4)
@@ -4640,7 +4691,7 @@ A sterile laboratory illuminated by cold white LED lights uniformly. Glass walls
 
 **中文：**
 ```
-两个头部特写，并排对比。左侧是元刚的头部，年轻清秀的男性面容，皮肤过度光滑与均匀（显示人造特征），眼睛清澈透彻如琉璃，瞳孔边缘清晰，眼神空白而充满好奇，嘴唇淡红色，整个面部在冷白灯光下显得有点青白（正常的医学照明效果），无任何瑕疵或痕迹，显得无菌而完美。右侧是智刚的头部，同样的面部结构但神情截然不同，眼睛锐利深邃，瞳孔集中，眼神如刀锋般专注，可能闪现微妙的蓝色或琥珀色微光，面部线条因专注而显得坚定，嘴角略微紧绷，整个头部被微妙的蓝白色光晕环绕，显得危险而可靠。两个头部都应该显示出人造体的精致与完美，但通过眼神与气质的差异传递完全不同的人物质感。
+一个无菌实验室，冷白LED灯光均匀照射。玻璃墙壁与精密设备围绕空间。左侧站着元刚，年轻男性，清爽清新面容，天真无害的眼神如白纸般空白，穿着简洁的白色科研制服，整体显得纯净与无菌。右侧漂浮着智刚，同样的身体但气质完全不同，眼神锐利自信，身体周围环绕蓝白色的柔和能量光晕与微妙的波纹，穿着深灰色战术装，显得致命而有力。两者形成鲜明对比，象征科技与超自然的融合，80%写实主义+20%魔幻元素。
 ```
 
 #### 2. 
@@ -4648,6 +4699,11 @@ A sterile laboratory illuminated by cold white LED lights uniformly. Glass walls
 **English：**
 ```
 Two head close-ups side by side, in comparison. On the left is Yuan Gang's head, a young and handsome male face, skin excessively smooth and uniform (displaying artificial characteristics), eyes crystal clear and transparent like jade, pupil edges sharp and defined, gaze blank yet full of curiosity, lips pale pink, the entire face under cold white lighting appearing slightly blue-white (normal medical lighting effect), without any blemishes or traces, appearing sterile and perfect. On the right is Zhi Gang's head, same facial structure but expression completely different, eyes sharp and profound, pupils concentrated, gaze like a knife blade sharp, possibly flashing subtle blue or amber micro-light, facial lines appearing determined due to focus, mouth corners slightly tense, the entire head surrounded by subtle blue-white halos, appearing dangerous yet reliable. Both heads should display the refinement and perfection of artificial beings, but through differences in gaze and aura convey completely different character qualities.
+```
+
+**中文：**
+```
+两个头部特写，并排对比。左侧是元刚的头部，年轻清秀的男性面容，皮肤过度光滑与均匀（显示人造特征），眼睛清澈透彻如琉璃，瞳孔边缘清晰，眼神空白而充满好奇，嘴唇淡红色，整个面部在冷白灯光下显得有点青白（正常的医学照明效果），无任何瑕疵或痕迹，显得无菌而完美。右侧是智刚的头部，同样的面部结构但神情截然不同，眼睛锐利深邃，瞳孔集中，眼神如刀锋般专注，可能闪现微妙的蓝色或琥珀色微光，面部线条因专注而显得坚定，嘴角略微紧绷，整个头部被微妙的蓝白色光晕环绕，显得危险而可靠。两个头部都应该显示出人造体的精致与完美，但通过眼神与气质的差异传递完全不同的人物质感。
 ```
 
 #### 3. 
@@ -4659,7 +4715,7 @@ A digital human creation laboratory, sci-fi style sealed clean room. Cold white 
 
 **中文：**
 ```
-同一个数字人造体实验室，但现在充满了超自然的能量。冷白LED灯光仍在，但整个空间被微妙的蓝白色能量光晕所笼罩。中央，智刚悬浮在空中，身体距地面约50厘米，脚下环绕明亮的蓝白色光圈，光圈向外扩散成微妙的能量波纹。他的身体周围可见肉眼可辨的能量流线，如水中的涟漪，扭曲周围的光线。他穿着深灰色的战术装，眼神锐利如刀，眼睛中闪现冰蓝色或琥珀色的微光。他的身体被柔和但有力的蓝白色光膜包围，显示出被激发的超自然能量。周围的精密设备显示出被能量冲击而微妙晃动的痕迹，监测屏幕闪烁着异常的数据。这是科学与超自然的完美融合，充满力量与危险。
+数字人造体实验室，科幻风格的密封无尘室。冷白色的LED日光灯均匀照射每个角落，色温约6000K，医学级别的照明环境。地面与墙体采用纯白与浅灰的磨砂材料。中心是一个开放式的生命维持平台，周围环绕精密的扫描设备（外形如医学成像设备）、能量监测仪表、数据显示屏与数十根管道与电源线。天花板是可见的工业风格网格与通风系统。大型玻璃观察窗显示外部监控室。整个空间显得无菌、冷调、充满科学与未来感。中央，年轻男性的元刚刚刚睁开眼睛，躺在生命维持平台上，穿着简单的白色医疗衣，皮肤光滑如镜，眼神清澈但充满困惑与好奇。天花板的蓝白色能量指示灯微妙地闪烁。这是一个人工生命诞生的关键时刻，既充满奇迹感，又充满了科技冷感。
 ```
 
 #### 4. 
@@ -4671,7 +4727,7 @@ The same digital human creation laboratory, but now filled with supernatural ene
 
 **中文：**
 ```
-数字人造体实验室，冷白灯光强烈而不均匀，因为能量的释放而产生光线扭曲。左侧，元刚被迫退后，眼神充满恐惧与困惑，身体显得脆弱与无助。右侧，智刚悬浮在空中，身体周围环绕强烈的蓝白色能量护盾与光晕，双手可能汇聚着蓝白色的能量球，即将释放冲击波。周围的空气可见性改变，光线呈现不规则折射，仿佛整个空间都被能量场压倒。地面与墙体因冲击波而产生裂纹或晃动。这一刻象征着从天真到觉醒、从无力到强大的转变。场景充满了科学实验室的冷调与超自然战斗的紧张感。
+同一个数字人造体实验室，但现在充满了超自然的能量。冷白LED灯光仍在，但整个空间被微妙的蓝白色能量光晕所笼罩。中央，智刚悬浮在空中，身体距地面约50厘米，脚下环绕明亮的蓝白色光圈，光圈向外扩散成微妙的能量波纹。他的身体周围可见肉眼可辨的能量流线，如水中的涟漪，扭曲周围的光线。他穿着深灰色的战术装，眼神锐利如刀，眼睛中闪现冰蓝色或琥珀色的微光。他的身体被柔和但有力的蓝白色光膜包围，显示出被激发的超自然能量。周围的精密设备显示出被能量冲击而微妙晃动的痕迹，监测屏幕闪烁着异常的数据。这是科学与超自然的完美融合，充满力量与危险。
 ```
 
 #### 5. 
@@ -4683,7 +4739,7 @@ Digital human creation laboratory, cold white lighting intense and uneven, light
 
 **中文：**
 ```
-从实验室外部的观察室看向内部，透过大玻璃窗。冷白LED灯光强烈地照亮了整个内部空间，显示出所有的设备与平台的细节。中央，元刚或智刚（或两者）可见。观察室内，吴启思或其他科研人员在操作面板，屏幕上显示出各种数据与能量波形。这个视角强调了人造体的科学性与实验室的医学感。玻璃上可能有反光或指纹，显示真实感。灯光从实验室内透出，在观察室内产生微妙的阴影。这是一个观察与被观察、创造与被创造的权力动态的视觉呈现。
+数字人造体实验室，冷白灯光强烈而不均匀，因为能量的释放而产生光线扭曲。左侧，元刚被迫退后，眼神充满恐惧与困惑，身体显得脆弱与无助。右侧，智刚悬浮在空中，身体周围环绕强烈的蓝白色能量护盾与光晕，双手可能汇聚着蓝白色的能量球，即将释放冲击波。周围的空气可见性改变，光线呈现不规则折射，仿佛整个空间都被能量场压倒。地面与墙体因冲击波而产生裂纹或晃动。这一刻象征着从天真到觉醒、从无力到强大的转变。场景充满了科学实验室的冷调与超自然战斗的紧张感。
 ```
 
 #### 6. 
@@ -4691,6 +4747,11 @@ Digital human creation laboratory, cold white lighting intense and uneven, light
 **English：**
 ```
 Viewing from the control room outside the laboratory, looking through large glass windows. Intense cold white LED lights illuminate the entire interior space, displaying details of all equipment and platforms. At the center, Yuan Gang or Zhi Gang (or both) are visible. Inside the control room, Wu Qisi or other researchers operate panels, screens displaying various data and energy waveforms. This perspective emphasizes the scientific nature of artificial beings and the laboratory's medical atmosphere. The glass may show reflections or fingerprints, displaying realism. Light from the laboratory interior projects out, creating subtle shadows in the control room. This is a visual representation of the power dynamics of observation and being observed, creation and being created.
+```
+
+**中文：**
+```
+从实验室外部的观察室看向内部，透过大玻璃窗。冷白LED灯光强烈地照亮了整个内部空间，显示出所有的设备与平台的细节。中央，元刚或智刚（或两者）可见。观察室内，吴启思或其他科研人员在操作面板，屏幕上显示出各种数据与能量波形。这个视角强调了人造体的科学性与实验室的医学感。玻璃上可能有反光或指纹，显示真实感。灯光从实验室内透出，在观察室内产生微妙的阴影。这是一个观察与被观察、创造与被创造的权力动态的视觉呈现。
 ```
 
 ### 分割带 (props, ★★★, P5)
@@ -5155,18 +5216,17 @@ Special Effects: Light may have color spectrum edges (gold→yellow→warm-white
 
 **中文：**
 ```
-高质量古幻艺术，超自然光学设计。和寻灵与宋小仙的裁决对话场景。
-和寻灵形态：巨大的纯能量发光体，侧面45度角显示，光芒聚焦强化，暗示权力的直接投射与绝对权威。
-颜色方案：暗金 (#DAA520) 主体占60%，暖白 (#FFF8DC) 高亮与光晕占30%，深金 (#B8860B) 权力聚焦处占10%。
-光学效果：无阴影的均匀金光为基础，权力投射时光芒聚集成更集中的束，深金色加强，形成强烈视觉压制。
-宋小仙对比：渺小的人类形态被和寻灵的巨大压倒性光芒所笼罩，显示绝对的权力差异与命运的不可抗拒。
-空间感：和寻灵占据画面的上半部分和中心焦点，宋小仙在下方边缘位置，强化上神的权力等级与绝对地位。
-背景：天界虚空，无方向的金色光线交织成网，可见能量波动，产生超越维度的视觉折叠感。
-互动视觉：和寻灵的光可能向下投射形成光束指向宋小仙，暗示神圣的裁决与能量的单向流动。
-气质：威严中不失某种对倾听的微妙认可，但绝不动摇权力的绝对性，冷静而不失庄严。
-风格：80% 写实 + 25-35% 超自然（侧重光学、多维效应与权力投射的视觉呈现）。
-视角：侧面45度角，突出对话中和寻灵与宋小仙的权力张力与绝对压制感。
-特效：可见光的波澜与能量脉动；空间可能因光束而微微扭曲；宋小仙周身可能被光所笼罩如"洗礼"。
+高质量古幻艺术，纯能量神灵体设计。和寻灵，至高上神，掌管人界的神灵。
+形态：巨大发光的能量体，完全没有具体的人类身体特征，只有模糊的人形轮廓消融于光中。
+色彩：主色为暗金 (#DAA520) 与暖白 (#FFF8DC) 组成的柔和强烈的金色光芒，绝对禁用纯白 (#FFFFFF)。
+光学：无方向的均匀360度金色光源，完全无阴影，柔和的向外扩散的光晕逐渐消散于虚空无限延伸。
+质感：纯能量形态，非物质体，微妙的光脉动如心跳一般暗示宇宙力量的持续流动。
+细节：周身可能环绕多重光环或光符号、几何图案，代表宇宙法则的编织与权力等级。
+背景：虚空天界，无方向的金光洒满整个环境，显得梦幻而超越，背景应被压低突出主体。
+气质：绝对权威、超然冷静、永恒稳固、令人敬畏而无可反抗。
+风格：80% 写实 + 20% 超自然（可酌情提升至30-40% 超自然以强调神灵的非物质性）。
+视角：正面俯视或平视，强调其宏大而压倒性的存在感与绝对权力。
+特效：光可能有彩色光谱边缘（金→黄→暖白），暗示多维度；光粒子散射增加能量感。
 ```
 
 #### 2. 
@@ -5185,6 +5245,22 @@ Mood: Majesty combined with subtle acknowledgment of listening, but absolute aut
 Style: 80% realistic + 25-35% supernatural (emphasizing optics, multidimensional effects, and power projection visualization).
 Viewpoint: 45-degree profile angle, emphasizing dialogue tension and absolute suppression between He Xunling and Song Xiaoxian.
 Special Effects: Visible light ripples and energy pulsation; space may subtly distort due to light beams; Song Xiaoxian may be surrounded by light as if "baptized".
+```
+
+**中文：**
+```
+高质量古幻艺术，超自然光学设计。和寻灵与宋小仙的裁决对话场景。
+和寻灵形态：巨大的纯能量发光体，侧面45度角显示，光芒聚焦强化，暗示权力的直接投射与绝对权威。
+颜色方案：暗金 (#DAA520) 主体占60%，暖白 (#FFF8DC) 高亮与光晕占30%，深金 (#B8860B) 权力聚焦处占10%。
+光学效果：无阴影的均匀金光为基础，权力投射时光芒聚集成更集中的束，深金色加强，形成强烈视觉压制。
+宋小仙对比：渺小的人类形态被和寻灵的巨大压倒性光芒所笼罩，显示绝对的权力差异与命运的不可抗拒。
+空间感：和寻灵占据画面的上半部分和中心焦点，宋小仙在下方边缘位置，强化上神的权力等级与绝对地位。
+背景：天界虚空，无方向的金色光线交织成网，可见能量波动，产生超越维度的视觉折叠感。
+互动视觉：和寻灵的光可能向下投射形成光束指向宋小仙，暗示神圣的裁决与能量的单向流动。
+气质：威严中不失某种对倾听的微妙认可，但绝不动摇权力的绝对性，冷静而不失庄严。
+风格：80% 写实 + 25-35% 超自然（侧重光学、多维效应与权力投射的视觉呈现）。
+视角：侧面45度角，突出对话中和寻灵与宋小仙的权力张力与绝对压制感。
+特效：可见光的波澜与能量脉动；空间可能因光束而微微扭曲；宋小仙周身可能被光所笼罩如"洗礼"。
 ```
 
 #### 3. 
@@ -5206,6 +5282,25 @@ Other Elements: If Zhi Xundao appears, luminescence forms harmonious yet indepen
 Style: 80% realistic + 30-40% supernatural (emphasizing deity's non-corporeality, transcendence and absolute power display).
 Composition: Monumental and symmetrical, emphasizing absolute authority and perfect balance and irreversibility of universal order.
 Viewpoint: High-angle bird's eye view or panorama, emphasizing macro-level sense of order and absolute power suppression.
+```
+
+**中文：**
+```
+史诗级古幻场景，神灵权力的绝对展现。神界裁决场景，宇宙秩序的最终仲裁。
+主体：和寻灵，至高上神，以巨大的能量光体形态显现，占据整个视觉空间的绝对主导，无可置疑。
+色彩基调：暗金 (#DAA520) 与暖白 (#FFF8DC) 组成的神圣金光，填充并压倒整个空间，所有其他色彩都应被压低。
+光学特性：无方向的均匀光源，完全无阴影，光线向四面八方扩散延伸至无限，创造"一切都在光中"的感觉。
+空间设置：虚无的天界，没有具体的地形、建筑或物质维度，只有能量与光的织造，超越物理维度。
+神圣符号：可见抽象的光符号、几何图案或光环在空中浮动，代表宇宙法则的运行与权力的等级制。
+权力展示：光芒可能聚焦成集中的力量束，颜色加深至深金 (#B8860B)，表现权力的绝对释放与投射。
+氛围：庄严肃穆、超越世俗、充满绝对权威感与宿命的压制，令人敬畏而无可奈何。
+对比元素：可能包括渺小的人类身影（如宋小仙或其他请愿者），用于强化和寻灵的宏大与绝对权力的压制性。
+视觉焦点：和寻灵位于画面中心或最高点，所有光线与注意力都汇聚汇集于其身，形成绝对的视觉中心。
+特效：光芒可能有微妙的脉动如心跳，暗示持续的宇宙力量；可能有光粒子的散射效果；空间可能有能量波澜。
+其他元素：智寻道若出现，光芒与和寻灵形成和谐但独立的视觉构图，双星的权力对称。
+风格：80% 写实 + 30-40% 超自然（强调神灵的非物质性、超越性与权力的绝对展现）。
+构图：宏大而对称，强调绝对权威与宇宙秩序的完美平衡与不可逆转。
+视角：高角度俯视或全景，强调宏观的秩序感与绝对的权力压制。
 ```
 
 ### 城主府 (locations, ★★★, P5)
@@ -5440,6 +5535,18 @@ controlled and precise, not scattered or chaotic. Detailed, cinematic quality, c
 lighting, high resolution.
 ```
 
+**中文：**
+```
+兽界至高神灵，呈现为流动的能量与神圣光芒构成的人形体态。主体为暗蓝色发光形态
+（#3A4A6B），表面覆盖精致的闪电纹路，呈现电紫色（#7B68EE）。暗金色（#DAA520）
+点缀权力区域。透明的龙与麒麟虚影在柔和蓝白色光芒中环绕。眼眸发出暗蓝色光芒，
+暗示古老的智慧与绝对的权威。整个身体散发暖白色（#FFF8DC）的神圣光晕。呈现权
+力展示姿态，单手抬起，能量从指尖流出。周围空间显示微妙的扭曲效果，暗示因果干
+预的力量。整体美学为80%现实主义与70%超自然融合，灵感来自东方神话与宇宙神圣
+性。应传达至高权威与神秘感，但不显得威胁或混乱。能量流动显得精准而非散乱。精
+致、电影质感、宇宙光线、高分辨率。
+```
+
 #### 2. 
 
 **English：**
@@ -5457,6 +5564,18 @@ composed and reserved. Aura is contained within 200-300cm radius. The background
 should be neutral, perhaps showing a hint of a divine realm or cosmic space. Aesthetic
 is 80% realism with 50% supernatural, emphasizing the contemplative mood. Still-frame
 composition, solemn atmosphere, professional quality, high resolution.
+```
+
+**中文：**
+```
+同一位兽界至高神灵处于沉思观察的姿态。身体垂直站立，肩膀放松但仍保持压迫力。
+暗蓝色发光（#3A4A6B）相比之前更加收敛，闪电效果减少为微弱的偶尔闪烁。暗金色
+点缀（#DAA520）最少化，仅在头部和胸口处显现细微纹饰。主龙图腾显现为环绕身体
+的幽灵般轮廓，而非多个生动的虚影。眼眸柔和发光，显示观察而非主动展示能力。暖
+白色光晕（#FFF8DC）形成温和的光环而非强烈光芒。整体显得"可接近却绝对不可冒
+犯"，沉着而内敛。气场收敛在200-300cm范围内。背景应为中立，可略微显示神界或
+宇宙空间的暗示。美学为80%现实主义与50%超自然融合，强调沉思的气氛。静帧构图、
+庄严氛围、专业质感、高分辨率。
 ```
 
 #### 3. 
@@ -5477,6 +5596,19 @@ to bend slightly. Golden light descends from above, illuminating the sacred mome
 atmosphere is tense but orderly, suggesting cosmic law and divine judgment. Dark neutral
 background behind the figures. Cinematic, detailed, atmospheric lighting, ethereal,
 high-end concept art quality, 4K resolution.
+```
+
+**中文：**
+```
+神界宏大的谈判大厅场景。设定特色包括高耸的大理石般柱子，上面刻有黄金色（#DAA520）
+天界纹饰。地面铺有精致的宇宙纹样，散发柔和的蓝金色光芒。天花板打开露出宇宙景象，
+显示星辰与远处的星云。两位至高神灵对峙 - 一位（兽界神灵智寻道）以暗蓝色发光与闪
+烁的闪电和幽灵般的龙麒麟虚影显现，另一位（人界神灵和寻灵）散发温暖的黄金色调。
+两者之间站着第三位人物（宋小仙）- 一位被提升至神圣地位的人类，穿着人类与天界服
+饰的融合风格，看起来既感到不安又坚定。他们之间的空气闪烁着神圣能量，现实本身似乎
+微妙地弯曲。金色光线从上方降下，照亮这神圣的时刻。气氛紧张但有序，暗示宇宙法则与
+神圣判决。人物背后为暗色中立背景。电影质感、细致、大气光线、缥缈、高端概念艺术质
+量、4K分辨率。
 ```
 
 ### 曹元艺 (characters, ★★★, P5)
@@ -5764,6 +5896,23 @@ Medium-high contrast, photorealistic with subtle supernatural luminosity.
 Clear visual contrast to brother Lingyu's wildness — where Lingyu is fierce, Lingmin is serene.
 ```
 
+**中文：**
+```
+电影感静帧，2.39:1宽银幕，灵族神兽灵闽的正面半身肖像。
+正面半身视角，展现灵闽特有的温柔与柔和特征，与其巨大的体量形成对比。
+纯白长毛 #F5F5F5，光滑顺畅，蓬松柔软的质感，约20厘米长度，在自然光下呈现温暖光泽。
+纯黑无毛面部 #1A1A1A，温柔好奇、略带羞怯的表情。
+温和信任的眼眸充满智慧与理解，传达善良而非威胁。
+柔和优雅的身体线条传达易接近与温柔，与5-6米的巨大身躯形成对比。
+无任何侵略性元素——表情中只有纯真、智慧与同情。
+电影级色彩分级，暖金色调，柔和胶片颗粒，强调神圣与亲密的矛盾统一。
+自然方向光来自左上方，在白毛上产生发光高光，同时维持黑脸的纯净。
+柔和的土褐色背景，深绿色暗示山地或森林栖息地。
+宽屏 2.39:1 aspect ratio，强调体量与存在感同时通过构图维持温和气质。
+中高对比度，摄影写实风格配合细微的超自然发光。
+与兄长灵尤的凶悍形成清晰视觉对比——灵尤暴戾则灵闽温和。
+```
+
 #### 2. 
 
 **English：**
@@ -5786,6 +5935,26 @@ High production value, cinematic quality, sense of hope and warmth radiating fro
 Expression should convey: wisdom, kindness, trust, and an openness to genuine connection across species boundaries.
 ```
 
+**中文：**
+```
+电影感静帧，2.39:1宽银幕，灵族神兽灵闽的全身正面肖像。
+挺立姿态，身体微微倾斜表示易接近与温柔，双脚与肩同宽站立。
+巨大的5-6米身躯但线条柔和优雅，姿态开放友善，打破传统威胁性巨人刻板印象。
+纯白长毛 #F5F5F5 覆盖全身，约20厘米长度，光滑流畅，呈现温暖发光质感。
+纯黑无毛面部 #1A1A1A，温和善良、略带羞怯的表情，眼神清澈聪慧。
+前肢处于非威胁姿态，暗示准备帮助与保护而非支配的意愿。
+后肢稳固自信地植入地面，传达静默力量与稳定性但不显侵略性。
+整体轮廓：温和的巨人，既神圣又极易接近，力量被同情所温柔化。
+电影级上方光线呈暖金色调，使白毛发出光芒般的光泽，同时维持黑脸的纯净与神秘。
+柔和色彩调色板：柔软的土褐色、深森林绿、温暖光线，营造人与自然和谐的氛围。
+无暗沉或阴影色调暗示危险——光线始终温暖邀请。
+整体呈现胶片颗粒质感，柔和焦点深度从背景中隔离出灵闽。
+素色深色背景，将焦点完全集中在角色的形体与精神上。
+宽屏 2.39:1 aspect ratio，允许欣赏神兽的完整体量同时强调温和的存在。
+高制作价值，电影质感，希望与温暖从人物身上辐射而出。
+表情应该传达：智慧、善良、信任、以及跨越物种边界进行真诚连接的开放性。
+```
+
 #### 3. 
 
 **English：**
@@ -5801,6 +5970,21 @@ Atmosphere: Breakthrough moment — fear transforming into hope, trust being est
 Film grain quality throughout, cinematic composition emphasizing the emotional rather than physical dominance.
 Aspect ratio 2.39:1 maintaining the sense of scale while centering on the profound connection between two beings.
 High production value, emotional resonance of hope, redemption, and the possibility of understanding across species boundaries.
+```
+
+**中文：**
+```
+电影感静帧，2.39:1宽银幕，展现灵闽与朱围庸在信任与理解的转变性时刻中建立连接的场景。
+前景：灵闽的巨大白色毛发身躯 #F5F5F5 配纯黑面部 #1A1A1A，姿态温柔友善暗示非威胁性与易接近。
+灵闽的眼眸传达温暖、聪慧与同情——这是场景的视觉中心。
+朱围庸与灵闽相互关联的位置，他们共享的空间展现捕食者与猎物界限的消解。
+光线：温暖的金色光暗示希望与转变，在灵闽白毛上产生发光高光同时维持黑脸的神秘感。
+背景：过渡性环境——囚禁的元素逐渐转向自然景观，象征从束缚向自由的运动。
+色彩：前景以灵闽为主的暖金色与琥珀色，背景冷灰色与柔和绿色，产生情绪对比。
+氛围：突破时刻——恐惧转化为希望，信任在实时建立，两个生物超越自然角色。
+整体胶片颗粒质感，电影构图强调情绪而非物理力量的统治。
+宽屏 2.39:1 维持体量感同时聚焦于两个生物间的深刻连接。
+高制作价值，希望、救赎与跨越物种理解可能性的情绪共鸣。
 ```
 
 ### 灵魂收集容器 (props, ★★★, P5)
@@ -6203,6 +6387,18 @@ Color palette: Wheat brown #8B7355 as primary tone.
 Front-facing half-body portrait, warm lighting, minimalist background.
 ```
 
+**中文：**
+```
+年轻男性导游，20多岁，健康阳光气质。
+面容立体，眼神明亮有神，含着爽朗微笑。
+皮肤健康有光泽，略带小麦色（户外工作痕迹）。
+黑色短发蓬松整洁，肩膀挺拔。
+穿着整洁的导游制服或休闲衣物。
+整体散发年轻、热情、可信赖的气场。
+色彩：枯草黄 #8B7355 为主色调。
+正面半身像，光线温暖，背景简洁。
+```
+
 #### 2. 
 
 **English：**
@@ -6220,6 +6416,21 @@ Color palette: Dark purple #5B3A6B as primary tone, avoid pure white #FFFFFF.
 Front-facing half-body portrait, gloomy lighting, mysterious oppressive background.
 ```
 
+**中文：**
+```
+年轻男性，20多岁，但显得苍白疲惫。
+面容消瘦，肤色病态苍白，眼眶深陷。
+眼神深邃得不匹配年龄，空洞而沉重，瞳孔时而涣散。
+嘴角诡异上扬，表情与语境不符，散发被操纵感。
+头部角度略显不自然，脖子僵硬。
+双手指甲掐入手心，手指微颤，冷汗迹象。
+皮肤暗沉，血管隐约可见，头发贴着额头。
+衣着依旧但显得不合身，身体消瘦。
+整体散发诡异、压抑、被吞没的人偶感。
+色彩：暗紫 #5B3A6B 为主色调，禁用纯白 #FFFFFF。
+正面半身像，光线阴沉，背景神秘压抑。
+```
+
 ### 五名古代恶灵 (characters, ★★, P5)
 
 #### 1. 
@@ -6227,13 +6438,11 @@ Front-facing half-body portrait, gloomy lighting, mysterious oppressive backgrou
 **English：**
 ```
 5 ancient evil spirits group portrait in early beggar possession form: tattered beggar corpses, dark purple eye sockets glowing, pupils radiating outward, eerie upturned mouths, twisted uncoordinated limbs, surrounded by faint dark purple mist, dark oppressive background, 5 figures arranged in diagonal formation, low-key cool lighting, detail focus: torn rags, grime stains, ancient seal script faintly floating on skin, oil painting texture, oppressive eerie atmosphere. Prohibit pure white background.
-
-### B. 群体场景标准构图
 ```
 
 **中文：**
 ```
-五名古代恶灵后期协调态群像场景：5个人物穿着破碎古代官袍，暗紫色纹路完全覆盖躯体，5人排成五角星阵型，同步转身动作，头颅可怕地360度扭转，肢体拉长弯曲，皮肤呈现龟裂瓷器质感，周围形成黑暗磁场，暗紫和暗红能量漩涡，温度视觉化为冰蓝色寒气环绕，被害者灵魂被吸入中心漏斗，细节：古篆文字在肌肤发光、骨裂音效的视觉表现、5个影子重叠成巨大黑影、金色破碎纹饰在官袍上闪烁。诡异恐怖，写实风格。
+5名古代恶灵群像肖像，乞丐附身初期：破败的乞丐躯体，暗紫色眼眶泛光芒，瞳孔呈放射状纹理，嘴角诡异上扬，肢体扭曲不协调，周身缠绕淡薄的暗紫色雾气，背景黑暗压抑，5个人物排列成对角线阵型，光线低沉冷色调，细节刻画：破碎衣衫、污垢斑驳、古篆文纹隐约浮现于皮肤，真实油画质感，压抑诡异氛围。禁用纯白背景。
 ```
 
 #### 2. 
@@ -6241,13 +6450,11 @@ Front-facing half-body portrait, gloomy lighting, mysterious oppressive backgrou
 **English：**
 ```
 Five ancient evil spirits late-stage synchronized state group scene: 5 figures in tattered ancient official robes, dark purple patterns completely covering bodies, 5 arranged in pentagram formation, synchronized turning motion, skulls terrifyingly twisted 360 degrees, elongated curved limbs, skin with cracked porcelain texture, surrounding dark magnetic field, dark purple and crimson energy vortex, temperature visualized as icy blue cold mist encircling, victim souls sucked into center funnel, details: ancient seal script glowing on skin, bone-cracking sound visual effects, 5 shadows merged into giant silhouette, golden fractured patterns flickering on robes. Eerie horror, realistic style.
+```
 
----
-
-**版本信息**
-- 创建日期：2026-02-23
-- 更新版本：1.0
-- 适配：ch30-ch55 古代恶灵篇章
+**中文：**
+```
+五名古代恶灵后期协调态群像场景：5个人物穿着破碎古代官袍，暗紫色纹路完全覆盖躯体，5人排成五角星阵型，同步转身动作，头颅可怕地360度扭转，肢体拉长弯曲，皮肤呈现龟裂瓷器质感，周围形成黑暗磁场，暗紫和暗红能量漩涡，温度视觉化为冰蓝色寒气环绕，被害者灵魂被吸入中心漏斗，细节：古篆文字在肌肤发光、骨裂音效的视觉表现、5个影子重叠成巨大黑影、金色破碎纹饰在官袍上闪烁。诡异恐怖，写实风格。
 ```
 
 ### 仙人掌 (props, ★★, P5)
@@ -6484,6 +6691,17 @@ supernatural entity, stylized rather than photorealistic, emphasizing visual rep
 avoid pure white (#FFFFFF).
 ```
 
+**中文：**
+```
+周朝古灵，阴间最老的灵魂体，悬浮的巨大光球形态，
+表面覆盖深刻的年轮般纹理如同古树切面，每一圈纹路代表漫长岁月沉淀，
+色调为暗紫（#5B3A6B）和古铜色混合，散发深邃而沉静的灵能光晕，
+边界清晰凝聚，体现数千年灵力的积累，
+阴间环境背景，暮蓝色调（#3A4A6B）的氛围衬托，
+超自然存在，非写实风格，强调时间的视觉化呈现，
+禁用纯白色。
+```
+
 #### 2. 
 
 **English：**
@@ -6496,6 +6714,18 @@ overall color palette: cool tones dominated by dark purple, twilight-blue, deep 
 light sourced from the spirits themselves creating supernatural visual effects,
 emphasize atmosphere of antiquity, ancient patina, and authority,
 avoid pure white and warm color tones.
+```
+
+**中文：**
+```
+恶灵区内部场景，昏暗的阴间空间，众多较小的灵魂光团散布四周，
+中央是巨大而凝实的古老灵魂"封"，
+表面的年轮纹理在深紫色光晕中清晰可见，仿佛被时间雕琢的艺术品，
+周围低等灵魂被其灵力压制而显得暗淡，形成以封为中心的视觉等级差异，
+整体色调冷调：暗紫、暮蓝、深灰的主导，
+光线来自灵魂体自身，营造超自然的视觉效果，
+强调古老、沧桑、威权的氛围，
+禁用纯白色和温暖色调。
 ```
 
 ### 小顶天德城住所 (locations, ★★, P5)
@@ -6848,13 +7078,11 @@ Cinematic still, 2.39:1 widescreen, shadowy figure moving through the rear garde
 **English：**
 ```
 Bobang Town 1200 possessed residents group portrait close-up perspective: multiple residents of different ages and genders in dense arrangement, all with identical expressions—empty rigid 0-shaped mouths, eyes dilated into deep black pupils, purple-tinted blood vessel networks in eye whites, skin showing sickly grayish-white tone, muscles completely slack as if post-mortem stiffening, multiple faces tightly adjacent in grid arrangement, overall atmosphere silent and terrifying, detail emphasis: vacant eyes, unnatural head tilt angles, dark purple energy lines coiling around necks, cold harsh lighting, no life signs, realistic oil painting style, oppressive despair.
-
-### B. 群体场景标准构图
 ```
 
 **中文：**
 ```
-泊岗镇集体附身场景：整个小镇广场被1200个失魂傀儡填满，人物排成完美的网格阵列，间距完全相同（1.5米），所有人采用同一姿势——双臂下垂、脊椎弯曲、头部微后仰、表情一致的空洞，肤色统一的灰白色，整个镇子笼罩在冷蓝色的诡异光线中，天空压抑昏暗，远景是破败的镇子建筑，植物枯萎，空气中弥漫暗紫色的能量线（连接1200人与五灵）形成蜘蛛网状结构，1200个人同时进行统一的呼吸（白雾节奏一致），完全无声，宛如一个巨大有机体的细胞组织。细节：脖颈转向时的骨裂痕迹、眼睛同步眨动时的湿润光泽、整齐划一的脚步声。极度诡异、压抑、绝望的氛围。
+泊岗镇1200被附身居民群像肖像，密集排列视角：多个不同年龄和性别的镇民脸部特写，表情完全相同——空洞僵硬的零字型嘴，眼睛扩散成深黑色瞳孔，眼白处浮现暗紫色血丝网络，肌肤呈现病态灰白色，肌肉完全松弛，仿佛死后僵直，多张脸紧密相邻排列，整体氛围寂静恐怖，细节强调：失神的眼神、不自然的头颅倾斜角度、暗紫色能量线缠绕在脖颈，灯光冷酷惨白，无任何生命迹象，真实油画风格，压抑绝望。
 ```
 
 #### 2. 
@@ -6862,13 +7090,11 @@ Bobang Town 1200 possessed residents group portrait close-up perspective: multip
 **English：**
 ```
 Bobang Town collective possession scene: entire town square filled with 1200 soulless puppets arranged in perfect grid formation, spacing completely uniform (1.5m apart), all adopting identical posture—arms hanging down, spine curved unnaturally, heads slightly tilted back, expressions uniformly vacant, skin color uniformly grayish-white, entire town shrouded in cold blue eerie light, oppressive dim sky, distant decaying town buildings, withered plants, dark purple energy lines in air (connecting 1200 people to five spirits) forming spider web structure, 1200 people simultaneously synchronized breathing (white mist rhythm consistent), completely silent, like cellular tissue of giant organism. Details: neck rotation fracture marks, synchronized eye blink wet luster, perfectly uniform footstep sounds. Extremely eerie, oppressive, despairing atmosphere.
+```
 
----
-
-**版本信息**
-- 创建日期：2026-02-23
-- 更新版本：1.0
-- 适配：ch34 泊岗镇集体附身篇章
+**中文：**
+```
+泊岗镇集体附身场景：整个小镇广场被1200个失魂傀儡填满，人物排成完美的网格阵列，间距完全相同（1.5米），所有人采用同一姿势——双臂下垂、脊椎弯曲、头部微后仰、表情一致的空洞，肤色统一的灰白色，整个镇子笼罩在冷蓝色的诡异光线中，天空压抑昏暗，远景是破败的镇子建筑，植物枯萎，空气中弥漫暗紫色的能量线（连接1200人与五灵）形成蜘蛛网状结构，1200个人同时进行统一的呼吸（白雾节奏一致），完全无声，宛如一个巨大有机体的细胞组织。细节：脖颈转向时的骨裂痕迹、眼睛同步眨动时的湿润光泽、整齐划一的脚步声。极度诡异、压抑、绝望的氛围。
 ```
 
 ### 泥垛子建筑 (props, ★★, P5)
@@ -6958,11 +7184,21 @@ Cinematic still, 2.39:1 widescreen, a stern Chinese male underworld bureaucratic
 A 20-year-old emaciated male youth, half-body frontal view, plain face filled with terror. Eyes unfocused, dilated pupils, expressionless mouth, pallid complexion lacking blood color. Shoulders hunched inward, sunken chest, showing severe malnutrition. Wearing tattered clothes with irregularly distributed patches, faded fabric, noticeably worn collar and cuffs. Slender trembling fingers, dirt under fingernails. Deep dark circles under eyes, disheveled hair. Overall color palette dominated by dry grass yellow #8B7355, combined with gray-brown shadows, dim lighting, muted background, no pure white elements. Atmosphere oppressive and melancholic, embodying the despair of war trauma.
 ```
 
+**中文：**
+```
+一个20岁的瘦弱男青年，正面半身，面容普通但充满惊恐。眼神散焦，瞳孔扩张，嘴角无弧度，面色苍白缺血色。肩膀内缩，胸腔凹陷，显示严重营养不良。身穿破烂衣物，多处补丁不规则分布，布料褪色，领口袖口磨损明显。手指纤细颤抖，指甲有泥土痕迹。眼周有深色黑眼圈，头发蓬乱。整体色调以枯草黄#8B7355为主，配合灰褐阴影，光线昏暗，背景素雅，无纯白元素。氛围压抑沧桑，承载战争创伤的绝望感。
+```
+
 #### 2. 
 
 **English：**
 ```
 In the ruins of Qingping Town, a corner of a dilapidated house. The emaciated male youth sits curled on the ground, back leaning against a cracked stone wall, knees drawn up, arms hugging knees. Vacant eyes gazing into the distance, filled with terror and despair. Scattered rubble and dust surround him, haze permeating the air. Light filters through a broken window, casting diagonal dim shadows. Clothing appears dry grass yellow in the shadows, blending with the gray-brown ruins. Overall image dull and dark, no bright colors, no pure white elements. The figure appears extremely fragile, as if about to be consumed by this shattered world.
+```
+
+**中文：**
+```
+清平镇的废墟中，一间残破房屋的角落。瘦弱男青年蜷缩坐在地上，背靠断裂的石墙，膝盖拉起，双臂抱膝。眼神空洞注视远方，充满惊恐与绝望。周围散落残砖碎瓦，烟尘弥漫。光线从破损窗户透入，形成斜暗的光影。衣物在阴影中呈现枯草黄，与灰褐废墟融为一体。整体画面沉闷灰暗，无鲜艳色彩，禁用纯白。人物显得极度脆弱，仿佛即将被这个残破的世界吞噬。
 ```
 
 ### 王轻无 (characters, ★★, P5)
@@ -6979,6 +7215,16 @@ Minimalist background. Lighting from top-left creates contemplative shadows on f
 No pure white. Overall: a conscientious military officer within the system.
 ```
 
+**中文：**
+```
+一位30-40岁的东方男性副官，诚实面容、恳切眼神。穿着简朴的军装，
+以暗金色为主色调（#DAA520），点缀苔绿色（#5F7A61）细节。
+肩膀宽阔，军姿挺直，面无表情中透露细微的道德犹豫。
+眼神清晰但含有内敛的忧虑，显示职业军人的沉着与人性的冲突。
+背景简洁，避免分散注意力。光线从左上打来，在脸部投射出思考的阴影。
+禁用纯白色。整体气质：体制内有良知的军人。
+```
+
 #### 2. 
 
 **English：**
@@ -6990,6 +7236,15 @@ Candlelight illuminates his honest face; moral dilemma flickers in his eyes.
 Military maps and battle reports nearby emphasize his adjutant role. Other soldiers
 blur in background, highlighting his middle-management position in the hierarchy.
 Atmosphere: tense yet restrained.
+```
+
+**中文：**
+```
+杨弘帐篷内部场景。王轻无站在将军帐的一侧，身体挺直但眼神向下微敛，
+显示听命但心存疑虑的姿态。背景是军营帐篷的内部，暗金色的军旗与
+苔绿色的帐篷布料交织。烛火映照在他诚实的面容上，眼神中隐现道德困境。
+身旁摆放着军事地图与战报，显示其副官身份。其他士兵在背景模糊处，
+突出王轻无作为权力结构中间层的地位。气氛：紧张但克制。
 ```
 
 ### 红领巾 (props, ★★, P5)
@@ -7049,13 +7304,11 @@ checkpoint gate in soft focus background, tense atmosphere
 **English：**
 ```
 A cold and composed man in dark suit, appearing around 40 years old, with deep and emotionless eyes. Ancient evil spirit inhabiting a modern human body; posture is upright and coordinated. Pale complexion suggesting non-human nature. Background filled with fleeting dark purple spiritual light (#5B3A6B) and dark red battle aura (#8B1A1A). Lighting from upper left emphasizes cold majesty. Expressionless face, gaze directed forward, exuding absolute dominance. Black minimalist clothing, no warm color tones.
-
-### B1. 场景：与恶灵士兵的指挥互动
 ```
 
 **中文：**
 ```
-暗色大厅内，苏伟力(不用真名)穿深色西装站立，身体微微侧身，单手指向前方下达命令。其周围环绕着模糊的恶灵士兵轮廓，在暗紫色灵光（#5B3A6B）中若隐若现。其肢体动作精确而克制，透出古代将领的战术思维。地面倒映出暗红色的战气（#8B1A1A），强化战争氛围。背景为古代宫殿与现代混杂的建筑。远处光线昏暗，仅有紫红色灵光照亮现场。冷调、压抑、专业的视觉效果。
+身穿深色西装的冷酷男性，年约40岁，眼神深邃而无温度。古代恶灵附身现代人体，肢体姿态挺直而协调。肌肤略显苍白，透出非生人特质。背景为暗紫色灵光闪现（#5B3A6B）与暗红色战气（#8B1A1A）的混杂氛围。光线从左上方打来，强调其冷酷威仪。无面部表情，目光直视前方，给人绝对压迫感。黑色简洁着装，避免任何温暖色彩。
 ```
 
 #### 2. 
@@ -7063,13 +7316,11 @@ A cold and composed man in dark suit, appearing around 40 years old, with deep a
 **English：**
 ```
 In a dark hall, the ancient general (do not use real name) stands in dark suit, body slightly turned sideways, one hand pointing forward issuing commands. Blurred silhouettes of evil spirits surround him, flickering in dark purple spiritual light (#5B3A6B). His movements are precise and restrained, reflecting ancient general's tactical wisdom. Dark red battle aura (#8B1A1A) reflects on the ground, intensifying war atmosphere. Background blends ancient palace and modern architecture. Dim background lighting with only purple-red spirit light illuminating the scene. Cold, oppressive, and professional visual effect.
+```
 
----
-
-**文档版本**：v1.0
-**更新日期**：2026-02-23
-**格式标准**：8章制角色圣经
-**适用范围**：恶灵阵营角色设定指南
+**中文：**
+```
+暗色大厅内，苏伟力(不用真名)穿深色西装站立，身体微微侧身，单手指向前方下达命令。其周围环绕着模糊的恶灵士兵轮廓，在暗紫色灵光（#5B3A6B）中若隐若现。其肢体动作精确而克制，透出古代将领的战术思维。地面倒映出暗红色的战气（#8B1A1A），强化战争氛围。背景为古代宫殿与现代混杂的建筑。远处光线昏暗，仅有紫红色灵光照亮现场。冷调、压抑、专业的视觉效果。
 ```
 
 ### 茶馆 (locations, ★★, P5)
@@ -7252,18 +7503,16 @@ Shoulders slightly tense, vigilant gaze, eyes revealing subtle anxiety.
 Standing posture is reserved yet orderly, holding documents or records in hand.
 Dark gray background emphasizing composed demeanor.
 Front-facing half-body portrait, clear details, natural soft lighting.
-
-### B - 场景（仅1个场景）
 ```
 
 **中文：**
 ```
-战争后期，简陋的行政处理室，木质办公桌堆满文件和数据表格。
-行政官员坐于桌前，紧皱眉头，专注于手中的公文。
-周围昏暗的烛光或油灯照明，映射出仓促与紧张的氛围。
-背景墙面粗糙，隐隐可见战争留下的痕迹。
-色调以枯草黄 #8B7355 和深灰色为主，暗紫 #5B3A6B 点缀于细节。
-场景传达出长期压力下的秩序维持与行政职责的重负。
+行政官员，男性，中年，紧皱眉头，实际面容，忧虑神态。
+穿着枯草黄 #8B7355 色系服饰，肩章为暗紫 #5B3A6B，井井有条的行政制服。
+肩膀略显紧绷，目光警觉，眼神中透露不安。
+站立姿态拘谨而有秩序，手中持有公文或记录册。
+背景为深灰色调，突出人物的沉着气质。
+正面半身像，细节清晰，光线自然柔和。
 ```
 
 #### 2. 
@@ -7276,15 +7525,16 @@ Dim candlelight or oil lamp illumination around, casting shadows of urgency and 
 Rough walls in background, faint traces of war visible.
 Color palette dominated by dried grass yellow (#8B7355) and deep gray, accented with dark purple (#5B3A6B) in details.
 Scene conveys the burden of maintaining order and administrative responsibility under prolonged pressure.
+```
 
----
-
-## 附注
-
-- **角色用途**：马戈逸是战争背景下的行政管理典范，通过其角色展现后勤与秩序在战争中的重要性。
-- **创意方向**：重点突出其在ch52-ch54的压力演变，以及对职责执着的专业精神。
-- **视觉呈现**：枯草黄与暗紫的配色应贯穿所有视觉表现，强化其作为朱围庸势力行政者的身份认同。
-- **绘图禁区**：避免使用纯白色，避免柔弱或散漫的气质表现，确保其行政官员的严肃与秩序感始终清晰可见。
+**中文：**
+```
+战争后期，简陋的行政处理室，木质办公桌堆满文件和数据表格。
+行政官员坐于桌前，紧皱眉头，专注于手中的公文。
+周围昏暗的烛光或油灯照明，映射出仓促与紧张的氛围。
+背景墙面粗糙，隐隐可见战争留下的痕迹。
+色调以枯草黄 #8B7355 和深灰色为主，暗紫 #5B3A6B 点缀于细节。
+场景传达出长期压力下的秩序维持与行政职责的重负。
 ```
 
 ### 冯德友 (characters, ★, P5)
@@ -7322,13 +7572,11 @@ A military officer in dark gold uniform #DAA520 stands with unyielding posture i
 **English：**
 ```
 Young male police officer, approximately 30 years old, wearing a crisp dark blue police uniform (#001F3F) with black utility belt equipped with police credentials. Young face with alert eyes full of professional competence. Skin tone carries warm khaki-grass yellow (#8B7355) tone of human world. Police cap on head or short hair visible. Background is a light office or patrol car environment. Shoulders show royal blue (#4169E1) uniform detail and accents. Overall demeanor is capable yet composed, presenting standard young grassroots police image. Expression is professional yet humane, gaze directed forward with slight alertness.
-
-### B1. 场景：警务办公室同事互动
 ```
 
 **中文：**
 ```
-警务办公室内，刘默雨（不用真名）穿着深蓝制服坐在办公桌前，或与宋小仙同事站立交流。背景是办公室的日光灯照明，档案柜和警务文件可见。制服上的皇家蓝（#4169E1）在办公灯光下呈现出专业的冷色调。其肤色呈现枯草黄（#8B7355）的自然人间气息。姿态自然而职业，显示出年轻警察日常工作的平常感。无超自然元素，纯粹现代警务场景的真实性。整体光线明亮务实，体现基层警务的日常工作环境。
+年轻男性警察，约30岁，穿着笔挺的深蓝色警察制服（#001F3F），黑色腰带配备警用证件。面容年轻而警觉，眼神清晰充满专业感。肌肤带有枯草黄（#8B7355）的温暖人间气息。头戴警帽或裸露短发。背景为淡白的警务办公室或巡逻车环境。肩部可见皇家蓝（#4169E1）的制服配色和细节。整体气质干练而平和，呈现标准基层警察的年轻形象。表情职业而不失人情味，目光直视前方略显警惕。
 ```
 
 #### 2. 
@@ -7336,14 +7584,11 @@ Young male police officer, approximately 30 years old, wearing a crisp dark blue
 **English：**
 ```
 Inside a police office, the young officer (do not use real name) in dark blue uniform sits at a desk or stands talking with colleagues. Background shows office fluorescent lighting, file cabinets and police documents visible. Royal blue (#4169E1) on the uniform presents professional cool tones under office lighting. Skin tone displays natural khaki-grass yellow (#8B7355) of human world. Posture is natural and professional, showing everyday work of young police officer. No supernatural elements, pure modern police scene authenticity. Overall bright and practical lighting, embodying daily work environment of grassroots police.
+```
 
----
-
-**文档版本**：v1.0
-**更新日期**：2026-02-23
-**格式标准**：8章制角色圣经
-**适用范围**：年轻警察配角设定指南
-**出场限制**：仅第7章，无后续发展
+**中文：**
+```
+警务办公室内，刘默雨（不用真名）穿着深蓝制服坐在办公桌前，或与宋小仙同事站立交流。背景是办公室的日光灯照明，档案柜和警务文件可见。制服上的皇家蓝（#4169E1）在办公灯光下呈现出专业的冷色调。其肤色呈现枯草黄（#8B7355）的自然人间气息。姿态自然而职业，显示出年轻警察日常工作的平常感。无超自然元素，纯粹现代警务场景的真实性。整体光线明亮务实，体现基层警务的日常工作环境。
 ```
 
 ### 匿名纸条 (props, ★, P5)
@@ -7485,11 +7730,21 @@ The interior of a government administrative office. Multiple service windows lin
 Middle-aged and elderly retiree tour group ensemble portrait close-up: 30-50 diverse aged faces tightly arranged, deep wrinkles, sunburned or mottled complexion, eyes full of love for life and anticipation for travel, upturned smiling mouths, wearing sun hats, reading glasses, masks and travel accessories, warm color tone of dried grass yellow and earthy brown, background showing tourist scenic area or ancient ruins, overall atmosphere joyful warm and harmonious, detail emphasis: wrinkle texture, sun-damage marks, affectionate eyes, intimate proximity of huddling together, realistic oil painting style, rich lifestyle atmosphere.
 ```
 
+**中文：**
+```
+中老年退休旅游团群像肖像，30-50人的多样面孔特写密集排列：各种不同的老年和中年脸庞，皱纹深刻、晒黑或肤色斑驳，眼神充满对生活的热爱和旅行的期待，嘴角上扬的笑容，戴着防晒帽、老花镜、口罩等旅行配饰，色调温暖的枯草黄和棕土色，背景显示旅游景区或古迹，整体氛围欢乐温暖、其乐融融，细节强调：皱纹纹理、晒黑痕迹、亲切的眼神、互相靠近的亲密感，真实油画风格，生活气息浓厚。
+```
+
 #### 2. 
 
 **English：**
 ```
 Tour group 30-50 people after spiritual essence extraction ensemble portrait, vegetative state close-up: all faces displaying identical lifeless expression—eyes wide open but pupils turbid and vacant, mouths slightly agape in 0-shape, skin sickly grayish-white, lips blackened, hair dull and matted to scalp, eye whites covered with dark red blood vessels, facial muscles completely slack appearing corpse-like, entire group tightly arranged, color tone completely transformed from dried grass yellow to lifeless gray-white and dark purple, oppressive dim background, detail emphasis: vacant staring eyes, rapidly aged wrinkles, blackened lips, completely vitality-drained skin texture, realistic horror style, extremely oppressive and despairing atmosphere.
+```
+
+**中文：**
+```
+旅行团30-50人被夺精气后的群像肖像，植物人状态特写：所有面孔呈现完全相同的死寂表情——眼睛睁得很大但瞳孔浑浊无神、嘴巴微张呈0字型、皮肤病态灰白色、嘴唇发黑、头发失去光泽贴在头皮上、眼白布满暗红色血丝、脸部肌肉完全松弛显得像死人一样，整个群体排列紧密，色调从枯草黄完全转为死寂的灰白和暗紫，背景昏暗压抑，细节强调：瞪大的空洞眼神、快速衰老的皱纹、黑化的嘴唇、完全丧失生命力的肤质，真实恐怖风格，极度压抑绝望的气场。
 ```
 
 #### 3. 
@@ -7499,11 +7754,21 @@ Tour group 30-50 people after spiritual essence extraction ensemble portrait, ve
 Tour group collectively encountering five ancient evil spirits escape scene: 30-50 middle-aged and elderly people fleeing in disarray, pushing each other, collective screaming chaos, background ancient ruins or scenic area entrance in dim light, sky eerily darkening, ground covered with inexplicable dark purple mist spreading, some falling to ground, some mutually supporting attempting escape, some raising arms shielding eyes, all faces showing extreme terror with sweat and tears, clothing beginning to dishevel and slacken, color tone rapidly shifting from warm dried grass yellow to cool tones and dark purple, detail emphasis: clothing scattered from jostling, dust from falls, desperate arms raised skyward, suffocating feeling in crowded mass, encroaching sinister purple mist, extremely horror-filled tense visual impact.
 ```
 
+**中文：**
+```
+旅行团集体遭遇五名古代恶灵时的逃离场景：30-50个中老年人四散逃离、互相推搡、集体尖叫的混乱场景，背景是昏暗的古迹或景区入口，天空诡异地变暗，地面出现不可解释的暗紫色雾气蔓延，部分人跌倒在地、部分人互相扶持试图逃脱、部分人举起手臂遮挡眼睛，所有人的脸上都是极度的惊恐、汗水和泪水，衣着开始凌乱松垮，色调急速从温暖的枯草黄转变为冷色调和暗紫色，细节强调：被推搡导致衣着散乱、跌倒时的尘土、伸向高空的绝望双手、聚集的人群中的窒息感、逼近的诡异暗紫雾气，极度恐怖紧张的视觉冲击。
+```
+
 #### 4. 
 
 **English：**
 ```
 Tour group gradual recovery scene after drinking sacred spring: 30-50 people slowly awakening, lying on ground or sitting up, skin color gradually transforming from grayish-white to dried grass yellow, eyes progressively brightening from turbidity, some crying, some trembling, some mutually embracing for comfort, surroundings bathed in gentle blue-white healing light (sacred spring's curative radiance), background showing sunrise or moonlight, temperature visualized as warm golden rays, detail emphasis: progressive skin color restoration, eye-focusing process, tears and sweat, mutually supporting hands, clothing still bearing stains but gradually straightened, expression blending gratitude and sorrow from return to life at death's edge, realistic moving style, complex atmosphere interwoven with hope and despair.
+```
+
+**中文：**
+```
+旅行团饮用圣泉后的群体恢复场景：30-50个人缓慢苏醒，躺在地上或坐起身，肤色从灰白逐渐转为枯草黄色，眼神从浑浊逐步清亮，有人哭泣、有人颤抖、有人互相拥抱安慰，周围弥漫着柔和的蓝白光芒（圣泉的治愈光），背景是初升的朝阳或月光，温度视觉化为暖和的金色光线，细节强调：渐进式的肤色恢复、眼睛的聚焦过程、泪水和汗水、互相扶持的双手、衣着虽然仍有污渍但逐渐整理、从死亡边缘回归生命的庆幸和悲伤混合的表情，真实感人风格，希望与绝望交织的复杂气氛。
 ```
 
 ### 白思元 (characters, ★, P5)
@@ -7606,11 +7871,21 @@ A drunk middle-aged guard in khaki yellow uniform #8B7355 sits slouched in a dim
 A middle-aged male, approximately 45-55 years old, with a smooth and worldly appearance. Round or square face, sharp and experienced eyes, faint professional smile at the corners of the mouth. Skin tones yellowish from long-term restaurant environment, lacking luster but appearing warm. Medium build with slight middle-age weight gain, loose waistline, slightly bent posture showing habits of long-term service work. Wearing black vest and white dress shirt service uniform with dark apron. Rough hands, neatly trimmed nails with visible work marks, muscle lines showing long-term labor. Fine crow's feet at eye corners hinting at age and experience. Overall color palette dominated by dry grass yellow #8B7355, combined with dark gray and dark brown shadows. Warm lighting, muted background, no pure white elements. Demeanor smooth and professional, embodying occupational patina and life experience.
 ```
 
+**中文：**
+```
+一位中年男性，约45-55岁，面容圆滑世故。方脸或圆脸，眼神精明老练，嘴角带着淡淡的职业微笑。皮肤偏黄，因长期在餐厅环境中而缺乏光泽但显得温暖。身材中等略显微胖，腰线有所松弛，背部微弯显示长期服务工作的习惯。穿着黑色背心与白色衬衫的制服，搭配深色围裙。双手粗糙，指甲整洁但显示工作痕迹，肌肉线条显示长期劳作。眼角有细微鱼尾纹，暗示年龄与阅历。整体色调以枯草黄#8B7355为主，配合深灰、暗棕阴影。光线温暖，背景素雅，无纯白元素。气质圆滑得体，蕴含职业沧桑与人生阅历。
+```
+
 #### 2. 
 
 **English：**
 ```
 Warm interior of a restaurant, soft warm-colored lighting casting onto warm brown walls and wooden furniture. A middle-aged waiter Qi Nian-kang dressed in standard uniform of black vest, white dress shirt and dark gray apron, steadily holding a serving tray in his left hand, right hand holding a pen ready to take orders. His body leans slightly forward, displaying professional grace and caution. Eyes make contact with customers while maintaining professional distance, slight professional smile at the corners of mouth. Background shows blurred silhouettes of dining tables, dishes, and other diners. Overall color palette dominated by dry grass yellow #8B7355, warm brown and dark gray, creating an atmosphere of warmth with slight occupational weariness. Every detail of the character—steady hands, graceful posture, smooth expression—demonstrates the professional expertise and life experience of a seasoned waiter.
+```
+
+**中文：**
+```
+温暖的餐厅内部，柔和的暖色灯光洒在暖棕色的墙面与木制家具上。一位中年服务员齐年康身穿黑色背心白衬衫加深灰围裙的标准制服，左手稳稳端着托盘，右手拿笔准备记录订单。他身体微微前倾，表现出职业的灵活与谨慎。眼神与客人有接触但保持得体的距离感，嘴角带着淡淡的职业微笑。背景中可见餐桌、菜肴、其他用餐者的模糊身影。整体色调以枯草黄#8B7355、暖棕色和深灰为主，营造出温暖而略显疲倦的餐饮业氛围。人物的每一个细节——手的稳健、姿态的得体、表情的圆滑——都显示出资深服务员的专业素养与人生阅历。
 ```
 
 ### AA大学 (locations, , P5)
