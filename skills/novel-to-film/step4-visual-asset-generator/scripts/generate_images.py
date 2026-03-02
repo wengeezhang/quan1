@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
-generate_images.py — 调用 Seedream API 批量生成视觉资产图片
+generate_images.py — 调用火山引擎方舟 Seedream API 批量生成视觉资产图片
+
+使用纯 requests 调用 REST API，无需安装火山引擎 SDK。
 
 核心流程：
   1. 复用 extract_prompts.scan_bibles() 从圣经源文件提取结构化提示词
@@ -10,9 +12,6 @@ generate_images.py — 调用 Seedream API 批量生成视觉资产图片
   5. 支持断点续跑（已有图片的目录自动跳过）
 
 用法：
-    # 安装依赖（首次）
-    pip install volcenginesdkarkruntime --break-system-packages
-
     # 设置 API Key（环境变量）
     export ARK_API_KEY="your-api-key-here"
 
@@ -43,6 +42,12 @@ import logging
 from datetime import datetime
 from pathlib import Path
 
+try:
+    import requests
+except ImportError:
+    print("请先安装 requests: pip install requests")
+    sys.exit(1)
+
 # ---------------------------------------------------------------------------
 # 导入本地模块
 # ---------------------------------------------------------------------------
@@ -55,9 +60,9 @@ from bible_utils import count_images, IMAGE_EXTS
 # ---------------------------------------------------------------------------
 DEFAULT_BASE = os.path.join(os.path.dirname(__file__), "..", "..", "..", "..", "production")
 
-# 火山引擎方舟 API (中国区)
-DEFAULT_ARK_BASE_URL = "https://ark.cn-beijing.volces.com/api/v3"
-DEFAULT_MODEL = "doubao-seedream-4-0-250828"
+# 火山引擎方舟 REST API (中国区)
+DEFAULT_ARK_API_URL = "https://ark.cn-beijing.volces.com/api/v3/images/generations"
+DEFAULT_MODEL = "doubao-seedream-5-0-260128"
 DEFAULT_SIZE = "2K"          # "2K" | "4K" | "1024x1024" 等
 DEFAULT_SEED_BASE = 42       # 基础种子，每个元素+阶段偏移确保差异化但可复现
 DEFAULT_QPS_DELAY = 1.5      # 每次 API 调用间隔（秒），防限流
@@ -87,26 +92,11 @@ log = logging.getLogger("generate")
 
 
 # ---------------------------------------------------------------------------
-# API 客户端（延迟初始化，dry-run 时不需要）
+# API 调用（纯 requests，无需 SDK）
 # ---------------------------------------------------------------------------
-_client = None
-
-
-def get_client(base_url: str, api_key: str):
-    """延迟初始化 Ark SDK 客户端"""
-    global _client
-    if _client is None:
-        try:
-            from volcenginesdkarkruntime import Ark
-        except ImportError:
-            log.error("未安装 volcenginesdkarkruntime，请运行: pip install volcenginesdkarkruntime --break-system-packages")
-            sys.exit(1)
-        _client = Ark(base_url=base_url, api_key=api_key)
-    return _client
-
-
 def generate_one_image(
-    client,
+    api_url: str,
+    api_key: str,
     prompt: str,
     model: str,
     size: str,
@@ -114,24 +104,55 @@ def generate_one_image(
     output_path: str,
 ) -> bool:
     """
-    调用 Seedream API 生成单张图片并保存到磁盘。
+    调用 Seedream REST API 生成单张图片并保存到磁盘。
 
     返回 True=成功, False=失败
     """
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {api_key}",
+    }
+    payload = {
+        "model": model,
+        "prompt": prompt,
+        "size": size,
+        "seed": seed,
+        "response_format": "b64_json",
+        "watermark": False,
+    }
+
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            response = client.images.generate(
-                model=model,
-                prompt=prompt,
-                size=size,
-                seed=seed,
-                response_format="b64_json",
-                watermark=False,
+            resp = requests.post(
+                api_url,
+                headers=headers,
+                json=payload,
+                timeout=120,
             )
 
-            # 解码 base64 并保存
-            b64_data = response.data[0].b64_json
-            img_bytes = base64.b64decode(b64_data)
+            # HTTP 层错误
+            if resp.status_code != 200:
+                raise RuntimeError(f"HTTP {resp.status_code}: {resp.text[:200]}")
+
+            data = resp.json()
+
+            # 提取 base64 图片数据
+            img_data_list = data.get("data", [])
+            if not img_data_list:
+                raise RuntimeError(f"返回数据中无 data 字段: {json.dumps(data, ensure_ascii=False)[:200]}")
+
+            b64_data = img_data_list[0].get("b64_json", "")
+            if not b64_data:
+                # 尝试 url 格式
+                img_url = img_data_list[0].get("url", "")
+                if img_url:
+                    img_resp = requests.get(img_url, timeout=60)
+                    img_resp.raise_for_status()
+                    img_bytes = img_resp.content
+                else:
+                    raise RuntimeError("返回数据中无 b64_json 也无 url")
+            else:
+                img_bytes = base64.b64decode(b64_data)
 
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
             with open(output_path, "wb") as f:
@@ -204,7 +225,7 @@ def build_tasks(results: list, global_prefix: str, assets_root: str) -> list:
                 if global_prefix.lower()[:20] not in eng.lower()[:80]:
                     final_prompt = f"{global_prefix}\n{eng}"
 
-            # 确定输出路径
+            # 确定输出路径（Seedream 输出 JPEG）
             if elem_type == "characters":
                 # 第一个提示词通常是肖像
                 if idx == 0:
@@ -271,8 +292,9 @@ def main():
     parser.add_argument("--type", default=None, dest="elem_type", help="只生成指定类型 (characters/locations/props)")
     parser.add_argument("--dry-run", action="store_true", help="只输出计划，不调 API")
     parser.add_argument("--no-skip", action="store_true", help="不跳过已有图片的目录")
+    parser.add_argument("--limit", type=int, default=0, help="最多生成N张图片 (默认: 0=不限)")
     parser.add_argument("--delay", type=float, default=DEFAULT_QPS_DELAY, help=f"API 调用间隔秒数 (默认: {DEFAULT_QPS_DELAY})")
-    parser.add_argument("--ark-base-url", default=DEFAULT_ARK_BASE_URL, help="Ark API base URL")
+    parser.add_argument("--ark-api-url", default=DEFAULT_ARK_API_URL, help="方舟图片生成 API URL")
     args = parser.parse_args()
 
     base = os.path.abspath(args.base_dir)
@@ -306,6 +328,11 @@ def main():
         skipped = before - len(tasks)
         if skipped:
             log.info(f"跳过已有图片: {skipped} 个, 剩余: {len(tasks)} 个")
+
+    # ---- Step 4b: 限制数量 ----
+    if args.limit > 0 and len(tasks) > args.limit:
+        log.info(f"限制生成数量: {len(tasks)} → {args.limit}")
+        tasks = tasks[:args.limit]
 
     if not tasks:
         log.info("没有待生成的任务，全部完成！")
@@ -342,8 +369,6 @@ def main():
         log.error("未设置 ARK_API_KEY 环境变量！请运行: export ARK_API_KEY=your-key")
         sys.exit(1)
 
-    client = get_client(args.ark_base_url, api_key)
-
     total = len(tasks)
     success = 0
     failed = 0
@@ -359,7 +384,8 @@ def main():
         log.info(f"[{i}/{total}] {t['element']}/{t['stage_id']}{portrait_tag}")
 
         ok = generate_one_image(
-            client=client,
+            api_url=args.ark_api_url,
+            api_key=api_key,
             prompt=t["prompt_en"],
             model=args.model,
             size=args.size,

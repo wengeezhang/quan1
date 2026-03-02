@@ -68,7 +68,7 @@ python3 scaffold_assets.py [--base-dir /path/to/production] [--dry-run]
 **前置依赖**：
 
 ```bash
-pip install volcenginesdkarkruntime --break-system-packages
+pip install requests   # 大多数环境已预装
 export ARK_API_KEY="your-api-key-here"
 ```
 
@@ -109,7 +109,7 @@ python3 generate_images.py --type locations
 python3 generate_images.py
 
 # 指定模型版本和分辨率
-python3 generate_images.py --model doubao-seedream-4-5-251128 --size 4K
+python3 generate_images.py --model doubao-seedream-5-0-260128 --size 4K
 
 # 调整 API 调用间隔（默认 1.5s）
 python3 generate_images.py --delay 2.0
@@ -120,7 +120,7 @@ python3 generate_images.py --delay 2.0
 | 参数 | 默认值 | 说明 |
 |------|--------|------|
 | `--base-dir` | 自动定位 | production 目录路径 |
-| `--model` | `doubao-seedream-4-0-250828` | Seedream 模型 ID |
+| `--model` | `doubao-seedream-5-0-260128` | Seedream 模型 ID |
 | `--size` | `2K` | 图片尺寸（`2K` / `4K` / `1024x1024`） |
 | `--priority` | 全部 | 只生成指定优先级（`P0/P1` / `P2` / `P3` / `P4` / `P5`） |
 | `--element` | 全部 | 只生成指定元素名 |
