@@ -63,7 +63,7 @@ python3 scaffold_assets.py [--base-dir /path/to/production] [--dry-run]
 
 ### generate_images.py — 图片批量生成器
 
-调用火山引擎方舟 (Volcengine Ark) Seedream API，按优先级批量生成视觉资产图片并自动保存到对应目录。
+调用火山引擎方舟 (Volcengine Ark) Seedream API，支持两阶段角色生成，按优先级批量生成视觉资产图片。
 
 **前置依赖**：
 
@@ -76,43 +76,57 @@ export ARK_API_KEY="your-api-key-here"
 
 **输出**：生成的 `.png` 图片落盘到 `production/step4-assets/{type}/{name}/{stage_id}/` + 生成日志 `generation_log.jsonl`
 
+**两阶段角色生成**：
+
+角色图片分两阶段生成，确保外观一致性：
+
+- **Phase 1（文生图）**：生成角色基准肖像（正面半身像）+ 所有场景/道具。共 272 张。
+- **Phase 2（参考图生图）**：以基准肖像为参考图，生成角色的其余图片（其他视角肖像 + 各阶段场景图）。共 187 张。自动将基准肖像编码为 base64 传入 `image_urls` 字段。
+
+Phase 2 任务会自动检测基准肖像是否存在，未就绪的任务自动跳过并提示先跑 Phase 1。
+
 **核心流程**：
 
-1. 从 118 个圣经文件中提取 459 条提示词，构建生成任务队列
+1. 从 118 个圣经文件中提取 459 条提示词，标记 phase 和参考图路径
 2. 对未内嵌全局前缀的提示词，自动在 prompt 头部拼接 `Cinematic still, 2.39:1 widescreen, 35mm film grain...`
 3. 按优先级排序（P0/P1 角色肖像 → P2 主要场景 → P3 配角 → P4 道具 → P5 低优先级）
-4. 逐条调用 Seedream API，以 `b64_json` 格式接收图片，解码后直接写入 `.png`
-5. 断点续跑：已有图片的路径自动跳过，中断后重跑只生成缺失的部分
+4. Phase 1 纯文生图，Phase 2 传入基准肖像作为参考图
+5. 断点续跑：已有图片的路径自动跳过
 
 **关键特性**：
 
-- 可复现：每个提示词的 seed 基于元素名+序号确定性计算，同 prompt+seed 产出相同图片
+- 两阶段：先确认基准肖像满意，再批量生成，避免浪费
+- 可复现：每个提示词的 seed 基于元素名+序号确定性计算
 - 速率控制：默认 1.5s/张间隔 + 指数退避重试（最多 3 次）
-- 生成日志：每张图生成后写入 `generation_log.jsonl`，记录 timestamp、seed、model、成功/失败等
+- 生成日志：`generation_log.jsonl` 记录每张图的 phase、参考图路径、成功/失败等
 
-**用法**：
+**推荐工作流**：
 
 ```bash
-# 查看完整生成计划（不调 API，不花钱）
+# ① Phase 1: 生成基准肖像 + 场景 + 道具
+python3 generate_images.py --phase 1
+
+# ② 人工检查 _portrait/正面半身像.png，不满意的删掉重跑
+python3 generate_images.py --phase 1 --element 某角色 --no-skip
+
+# ③ 全部基准肖像 OK 后，Phase 2: 以肖像为参考图生成角色剩余图片
+python3 generate_images.py --phase 2
+```
+
+**其他用法**：
+
+```bash
+# 查看完整生成计划
 python3 generate_images.py --dry-run
 
-# 只生成最高优先级角色肖像（P0/P1，39 张）
-python3 generate_images.py --priority "P0/P1"
-
-# 只生成指定角色
-python3 generate_images.py --element 吴文顶
-
-# 只生成场景类型
-python3 generate_images.py --type locations
-
-# 全量生成（459 张，约 ¥115 / $16 @ $0.035/张）
+# 不分阶段全量生成（Phase 2 自动检测参考图）
 python3 generate_images.py
 
-# 指定模型版本和分辨率
-python3 generate_images.py --model doubao-seedream-5-0-260128 --size 4K
+# 只跑1张测试
+python3 generate_images.py --phase 1 --element 吴文顶 --limit 1
 
-# 调整 API 调用间隔（默认 1.5s）
-python3 generate_images.py --delay 2.0
+# 只跑指定优先级
+python3 generate_images.py --priority "P0/P1"
 ```
 
 **全部参数**：
@@ -122,13 +136,15 @@ python3 generate_images.py --delay 2.0
 | `--base-dir` | 自动定位 | production 目录路径 |
 | `--model` | `doubao-seedream-5-0-260128` | Seedream 模型 ID |
 | `--size` | `2K` | 图片尺寸（`2K` / `4K` / `1024x1024`） |
+| `--phase` | `0` (全部) | `1`=基准肖像+场景道具, `2`=角色参考图生图, `0`=全部 |
 | `--priority` | 全部 | 只生成指定优先级（`P0/P1` / `P2` / `P3` / `P4` / `P5`） |
 | `--element` | 全部 | 只生成指定元素名 |
 | `--type` | 全部 | 只生成指定类型（`characters` / `locations` / `props`） |
 | `--dry-run` | false | 只输出计划，不调 API |
 | `--no-skip` | false | 不跳过已有图片（强制重新生成） |
+| `--limit` | 0 (不限) | 最多生成 N 张图片 |
 | `--delay` | 1.5 | API 调用间隔秒数 |
-| `--ark-base-url` | `https://ark.cn-beijing.volces.com/api/v3` | 方舟 API 地址 |
+| `--ark-api-url` | `https://ark.cn-beijing.volces.com/api/v3/images/generations` | 方舟 API 地址 |
 
 ### build_index.py — 资产索引构建器
 
@@ -185,17 +201,17 @@ python3 scaffold_assets.py
 # → 272 directories
 
 # ③ 先 dry-run 确认计划
-python3 generate_images.py --dry-run
-# → 459 images to generate
+python3 generate_images.py --dry-run --phase 1
+# → 272 phase 1 tasks (基准肖像 + 场景 + 道具)
 
-# ④ 分批生成：先跑主角肖像
-python3 generate_images.py --priority "P0/P1"
+# ④ Phase 1: 生成基准肖像 + 场景 + 道具
+python3 generate_images.py --phase 1
 
-# ⑤ 跑主要场景
-python3 generate_images.py --priority P2
+# ⑤ 人工审查角色基准肖像，不满意的删掉重跑
+python3 generate_images.py --phase 1 --element 某角色 --no-skip
 
-# ⑥ 跑其余（配角、道具、低优先级）
-python3 generate_images.py
+# ⑥ Phase 2: 以基准肖像为参考图，生成角色剩余图片
+python3 generate_images.py --phase 2
 
 # ⑦ 构建索引
 python3 build_index.py
