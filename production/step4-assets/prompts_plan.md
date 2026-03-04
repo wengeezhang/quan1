@@ -9,10 +9,10 @@
 | 指标 | 数值 |
 |------|------|
 | 圣经文件总数 | 118 |
-| 提示词总数 | 458 |
+| 提示词总数 | 478 |
 | 缺少英文提示词 | 0 |
 | 缺少中文提示词 | 0 |
-| 未内含全局前缀（可动态拼接） | 49 |
+| 未内含全局前缀（可动态拼接） | 50 |
 | 无提示词的圣经 | 0 |
 
 ---
@@ -94,7 +94,7 @@
 | 天德城城墙 | locations | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
 | 小小顶 | characters | ★★★ | 1 (默认) | 4 | ✅ | ✅ | ✅ |
 | 智寻道 | characters | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ➕ |
-| 曹元艺 | characters | ★★★ | 3 (精致掩护期, 身份动摇期, 暴露对峙期) | 3 | ✅ | ✅ | ✅ |
+| 曹元艺 | characters | ★★★ | 3 (精致掩护期, 身份动摇期, 暴露对峙期) | 5 | ✅ | ✅ | ➕ |
 | 朱围庸住处 | locations | ★★★ | 1 (默认) | 3 | ✅ | ✅ | ✅ |
 | 江新成 | characters | ★★★ | 1 (默认) | 4 | ✅ | ✅ | ✅ |
 | 泡泡 | props | ★★★ | 1 (默认期) | 3 | ✅ | ✅ | ✅ |
@@ -147,20 +147,20 @@
 | 罗勇 | characters | ★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | 葛立 | characters | ★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
 | 齐年康 | characters | ★ | 1 (默认) | 2 | ✅ | ✅ | ➕ |
-| AA大学 | locations |  | 3 (校园侦察, 表面探查, 地下秘密) | 1 | ✅ | ✅ | ✅ |
+| AA大学 | locations |  | 3 (校园侦察, 表面探查, 地下秘密) | 3 | ✅ | ✅ | ✅ |
 | 千秋星岗 | locations |  | 2 (战斗期, 战败期) | 2 | ✅ | ✅ | ✅ |
 | 半山腰秘密仓库 | locations |  | 2 (秘密期, 发现后) | 2 | ✅ | ✅ | ✅ |
-| 卢老板餐馆 | locations |  | 3 (日常引入, 暗流涌动, 战争阴影) | 1 | ✅ | ✅ | ✅ |
-| 周庄 | locations |  | 3 (逃离与到达, 休整与连接, 危机前兆) | 1 | ✅ | ✅ | ✅ |
+| 卢老板餐馆 | locations |  | 3 (日常引入, 暗流涌动, 战争阴影) | 3 | ✅ | ✅ | ✅ |
+| 周庄 | locations |  | 3 (逃离与到达, 休整与连接, 危机前兆) | 3 | ✅ | ✅ | ✅ |
 | 少林寺 | locations |  | 1 (默认期) | 2 | ✅ | ✅ | ✅ |
 | 山谷旅行团被困 | locations |  | 2 (被困期, 救援期) | 2 | ✅ | ✅ | ✅ |
-| 望海河 | locations |  | 3 (河岸侦察, 夜间渡河, 对岸脱险) | 1 | ✅ | ✅ | ✅ |
-| 杨弘秘密实验室 | locations |  | 3 (秘密进入, 真相揭露, 最后对抗) | 1 | ✅ | ✅ | ✅ |
-| 清平镇 | locations |  | 3 (占领初期, 管制建立, 深层黑暗) | 1 | ✅ | ✅ | ✅ |
-| 白巨神兽的隐谷 | locations |  | 3 (隐谷发现, 兽的呈现, 困境始现) | 1 | ✅ | ✅ | ✅ |
-| 石岭关 | locations |  | 3 (防御准备, 激烈对抗, 英勇坚守) | 1 | ✅ | ✅ | ✅ |
+| 望海河 | locations |  | 3 (河岸侦察, 夜间渡河, 对岸脱险) | 3 | ✅ | ✅ | ✅ |
+| 杨弘秘密实验室 | locations |  | 3 (秘密进入, 真相揭露, 最后对抗) | 3 | ✅ | ✅ | ✅ |
+| 清平镇 | locations |  | 3 (占领初期, 管制建立, 深层黑暗) | 3 | ✅ | ✅ | ✅ |
+| 白巨神兽的隐谷 | locations |  | 3 (隐谷发现, 兽的呈现, 困境始现) | 3 | ✅ | ✅ | ✅ |
+| 石岭关 | locations |  | 3 (防御准备, 激烈对抗, 英勇坚守) | 3 | ✅ | ✅ | ✅ |
 | 老码头 | locations |  | 2 (初到期, 探索期) | 2 | ✅ | ✅ | ✅ |
-| 葛家堡 | locations |  | 3 (堡垒运作, 渗透激活, 内部崩坏) | 1 | ✅ | ✅ | ✅ |
+| 葛家堡 | locations |  | 3 (堡垒运作, 渗透激活, 内部崩坏) | 3 | ✅ | ✅ | ✅ |
 | 虎口镇 | locations |  | 2 (默认期, 投降后) | 2 | ✅ | ✅ | ✅ |
 | 黄阳镇 | locations |  | 2 (默认期, 战后) | 2 | ✅ | ✅ | ✅ |
 
@@ -183,6 +183,7 @@
 - 吴启思实验室 (locations)
 - 和寻灵 (characters)
 - 智寻道 (characters)
+- 曹元艺 (characters)
 - 皇宫 (locations)
 - 郝大川 (characters)
 - 丁路 (characters)
@@ -786,7 +787,7 @@ Cinematic still, 2.39:1 widescreen. A grand palace with golden domes catching th
 Cinematic still, 2.39:1 widescreen. 壮丽的宫殿，黄金穹顶在午后阳光下闪烁，对称的建筑与高耸的石柱。正式的气氛，清晰的阴影边界，衣着精致的贵族漫步在大理石走廊。墙上装饰着古典艺术品。完美的秩序与控制。暗金与暖白的色调。柔和的扩散光线。从低角度拍摄，强调宏伟与权力。
 ```
 
-#### 2. 提示词1：权力期 [权力期]
+#### 2. 提示词2：权力期 [权力期]
 
 **English：**
 ```
@@ -798,7 +799,7 @@ Cinematic still, 2.39:1 widescreen. Interior of aristocratic school, perfect row
 Cinematic still, 2.39:1 widescreen. 贵族学校内部，整齐排列的课桌，穿着制服的富家子弟坐得笔直。高挑的天花板装饰着复杂的图案。正午光线从高大的窗户倾泻而入，形成几何阴影。干净、有序、压抑的整洁。暗金与暖白的色调，点缀暗紫色。从走廊视角拍摄，显示严格的纪律。
 ```
 
-#### 3. 提示词1：权力期 [权力期]
+#### 3. 提示词3：权力期 [权力期]
 
 **English：**
 ```
@@ -810,7 +811,7 @@ Cinematic still, 2.39:1 widescreen. City walls at golden hour, imposing fortific
 Cinematic still, 2.39:1 widescreen. 城墙在黄金时刻，高耸的防御工事轮廓清晰。穿着制服的卫兵笔直站在城垛上。城墙外可以看到遥远的风景。视野清晰，安全与控制的感觉。暖金色光线投射长影。强调防御结构的坚固与永恒。
 ```
 
-#### 4. 提示词2：腐败期 [腐败期]
+#### 4. 提示词4：腐败期 [腐败期]
 
 **English：**
 ```
@@ -822,7 +823,7 @@ Cinematic still, 2.39:1 widescreen. Underground laboratory hidden beneath elegan
 Cinematic still, 2.39:1 widescreen. 隐藏在优雅建筑外表下的地下实验室。冷色荧光灯创造刺眼的阴影与不自然的苍白。复杂的机器与设备透露不祥意图。黑色瓷砖墙壁、不锈钢表面。苦难的痕迹隐藏在角落。压抑与隐蔽恐怖的气氛。冷白与暗紫色调。从狭窄的角度拍摄，幽闭感强烈。
 ```
 
-#### 5. 提示词2：腐败期 [腐败期]
+#### 5. 提示词5：腐败期 [腐败期]
 
 **English：**
 ```
@@ -834,7 +835,7 @@ Cinematic still, 2.39:1 widescreen. Aristocratic mansion at dusk, once opulent n
 Cinematic still, 2.39:1 widescreen. 贵族宅邸在黄昏时分，曾经奢华如今开始衰败。摇晃的烛光在褪色的壁画上投射不稳定的阴影。昂贵的家具积满灰尘。优雅外表下隐藏着腐败的感觉。门锁增多，内部像堡垒。色调从温暖的金色逐渐转变为病态的奶白色。不祥的、衰败的美。
 ```
 
-#### 6. 提示词2：腐败期 [腐败期]
+#### 6. 提示词6：腐败期 [腐败期]
 
 **English：**
 ```
@@ -846,7 +847,7 @@ Cinematic still, 2.39:1 widescreen. City marketplace at dusk showing cracks in s
 Cinematic still, 2.39:1 widescreen. 城市集市在黄昏时分，社会秩序出现裂缝。昏暗的光线，零散的火焰提供不均匀的照明。普通民众面带焦虑，低声交谈。压制的证据随处可见：被毁的店铺、武装人员、路障。被维护的中心区与被忽视的外围形成对比。色调：暗金逐渐褪色，点缀暗紫色。紧张感十足。
 ```
 
-#### 7. 提示词3：崩溃期 [崩溃期]
+#### 7. 提示词7：崩溃期 [崩溃期]
 
 **English：**
 ```
@@ -858,7 +859,7 @@ Cinematic still, 2.39:1 widescreen. City walls under siege, explosions and flame
 Cinematic still, 2.39:1 widescreen. 城墙遭受围攻，爆炸与火焰吞没防御工事。戏剧性的火光照亮烟雾弥漫的空气。防守者在瓦砾与废墟中绝望战斗。混乱与毁灭。色调：暗紫色的夜空、暗红与橙色火焰、灰色烟灰。从低角度拍摄，显示毁灭的规模与防守的徒劳。
 ```
 
-#### 8. 提示词3：崩溃期 [崩溃期]
+#### 8. 提示词8：崩溃期 [崩溃期]
 
 **English：**
 ```
@@ -870,7 +871,7 @@ Cinematic still, 2.39:1 widescreen. City burning at night, once-grand buildings 
 Cinematic still, 2.39:1 widescreen. 夜间的城市燃烧，曾经宏伟的建筑倒塌在火焰中。宫殿的黄金穹顶燃烧如葬礼的火堆。烟雾遮挡大部分细节，只能看到燃烧建筑的轮廓。压倒性的末日感。色调：暗紫黑色的夜空、暗红火焰、橙色余光、阴影。宽幅的建立镜头显示完全的破坏。
 ```
 
-#### 9. 提示词3：崩溃期 [崩溃期]
+#### 9. 提示词9：崩溃期 [崩溃期]
 
 **English：**
 ```
@@ -882,7 +883,7 @@ Cinematic still, 2.39:1 widescreen. Refugee camp within city ruins, makeshift sh
 Cinematic still, 2.39:1 widescreen. 城市废墟内的难民营，临时搭建的庇护所与零散的篝火。疲惫的脸孔被火光照亮，家人们紧紧依偎。曾经的贵族区如今挤满了绝望的幸存者。被摧毁的精美建筑与原始生存庇护所形成对比。色调：暗紫色的夜晚、橙色火光、暗红毁灭。近距离视角捕捉人类的痛苦。
 ```
 
-#### 10. 提示词3：崩溃期 [崩溃期]
+#### 10. 提示词10：崩溃期 [崩溃期]
 
 **English：**
 ```
@@ -1199,7 +1200,7 @@ A bustling coastal trading town during midday. Weathered wooden docks with boats
 一个沿海贸易小镇的正午时分。破旧的木制码头，渔船沿着栈道停泊，渔网铺散在石墩上。镇中心的市集广场被木板摊位密布，卖菜者和鱼贩的摊位形成深黑的阴影。建筑物呈褪色的枯草黄#8B7355，沿着泥土街道排列。人影在画面中往来穿梭——渔民、商人、镇民——带来了活力与热闹。海面反射刺眼的阳光，海鸥在上空盘旋。整体氛围拥挤、嘈杂、充满日常生命力。禁用纯白——枯草黄和棕色调主导画面。
 ```
 
-#### 2. 提示词1：繁忙期 [繁忙期]
+#### 2. 提示词2：繁忙期 [繁忙期]
 
 **English：**
 ```
@@ -1211,7 +1212,7 @@ Evening light falls across the town's market square. Long shadows of wooden stal
 傍晚光线洒落在镇子的市集广场。木制摊位投出长长的阴影。旧木仓库和住宅在从橙色渐变为深蓝#3A4A6B的天空衬托下呈现剪影。几盏油灯开始发出温暖的黄色光晕。海面平静，反射着暮光。一些人影缓慢穿过广场，朝向家园或餐馆走去。氛围从白日的混乱转为傍晚的宁静，带有一丝乡愁。温暖与冷硬的色调混合交织。
 ```
 
-#### 3. 提示词2：诡寂期 [诡寂期]
+#### 3. 提示词3：诡寂期 [诡寂期]
 
 **English：**
 ```
@@ -1223,7 +1224,7 @@ A coastal town at midday, yet the light feels drained. The sky is overcast and g
 沿海小镇的正午，但光线仿佛被吸干了。天空阴沉灰蒙，无法投出清晰的阴影。市集广场空荡荡的——摊位倒塌，商品散乱腐烂。人形傀儡在镇子各处无动于衷地站立，姿态诡异一致，眼睛睁得很大但无焦点。建筑物保留着枯草黄色调，但显得病态而褪色。海面呈灰绿色，不反射光线。整体基调诡异、静寂、压抑。深蓝#3A4A6B和暗紫#5B3A6B的色调渗入每个阴影。没有正常的人类活动——只有模糊的集体呼吸感。恐怖笼罩整个画面。
 ```
 
-#### 4. 提示词2：诡寂期 [诡寂期]
+#### 4. 提示词4：诡寂期 [诡寂期]
 
 **English：**
 ```
@@ -1235,7 +1236,7 @@ Night in the cursed town. Figures stand in rows facing the old wooden dock, thei
 诅咒小镇的夜晚。人形傀儡成排地面向老码头站立，它们的剪影在暗紫#5B3A6B的背景中几乎无法辨认。仅有的灯光（油灯）显得微弱而孤立，无法驱散周围的黑暗。夜晚的海呈绝对的黑色，毫不反射光线。某种难以名状的光芒仿佛从码头方向发出。画面中没有声音提示，但压抑的寂静被隐喻。镇民的集体呼吸——无形却能感知——充满整个氛围。一种难以名状的诡异感渗透整个场景。现实显得被腐蚀了。
 ```
 
-#### 5. 提示词3：要塞期 [要塞期]
+#### 5. 提示词5：要塞期 [要塞期]
 
 **English：**
 ```
@@ -1247,7 +1248,7 @@ A small coastal town transformed into a military stronghold. The market square i
 小镇被改造成军事要塞。市集广场现在被精确排列的军用帐篷占据，军旗飘扬。木制的防御工事和灰色#4A4A4A的堡垒结构占据前景。武装士兵在巡查或进行防御工程。原来的枯草黄建筑被军事基础设施遮挡并显得渺小。老码头被改建成带有加固木桩和物资堆积的军事登陆点。氛围是占领与控制——刻板、有序、压抑。冷硬的灰色和暗色调取代了温暖的土黄。旗帜、横幅和军事标识标记了这一变化。这不再是一个镇子；它是一个堡垒。
 ```
 
-#### 6. 提示词3：要塞期 [要塞期]
+#### 6. 提示词6：要塞期 [要塞期]
 
 **English：**
 ```
@@ -3696,7 +3697,7 @@ Cinematic still, 2.39:1 widescreen, the pinnacle of the pagoda—a perfectly geo
 电影截帧，2.39:1宽银幕，塔的顶端——一个由半透明紫色晶体组成的最小化、完美几何的平台，内部自发光。单个灵魂站在危险的平台上，被从上方投射的炽烈温暖光线照亮，与下方黑暗虚空形成极端对比，下方能看到整个塔的结构，层层递减的圆形。灵魂的形体几乎被压倒性的光源淹没成剪影。纯净、晶莹、超越感的氛围。灵魂救赎、转变的临界点、令人敬畏的宏大感。超细致、电影级杰作、幽灵般的恐怖之美。
 ```
 
-#### 5. 提示词4：默认 [默认]
+#### 5. 提示词5：默认 [默认]
 
 **English：**
 ```
@@ -3708,7 +3709,7 @@ Cinematic still, 2.39:1 widescreen, a spirit at the edge of a precarious platfor
 电影截帧，2.39:1宽银幕，灵魂站在下塔区最狭窄的平台边缘，周围是标记存在与虚空边界的微弱紫色能量墙。灵魂向下看，黑暗中的层级；向上看，无法穿透的黑暗。其自发光晕微弱，在压倒性黑暗中挣扎。绝对绝望的氛围，放弃与坚持的最后时刻。暮蓝与暗紫主导。体积阴影、幽闭的无限空间、存在性恐惧。
 ```
 
-#### 6. 提示词4：默认 [默认]
+#### 6. 提示词6：默认 [默认]
 
 **English：**
 ```
@@ -3906,7 +3907,7 @@ A bustling coastal town in midday sunlight. The central market square overflows 
 一个沿海小镇的正午阳光下。镇中心的市集广场被木板摊位密布，卖鱼的、菜贩、布匹商在此聚集。建筑物呈温暖的枯草黄#8B7355，沿着泥土街道排列，传统的瓦顶或茅顶。人影往来穿梭——渔民、商人、镇民——带来日常生活的活力与热闹。南侧码头渔船停靠，渔网铺散在石墩上。东侧客栈烟囱冒起炊烟。光线清晰温暖，在市集棚布下投出锐利的阴影。禁用纯白——土黄色和枯草黄主导整个画面。整体氛围热闹拥挤而安全。
 ```
 
-#### 2. 提示词1：市井期 [市井期]
+#### 2. 提示词2：市井期 [市井期]
 
 **English：**
 ```
@@ -3918,7 +3919,7 @@ Evening descends on a peaceful coastal town. Long shadows of market stalls stret
 傍晚降临一个宁静的沿海小镇。市集摊位投出长长的阴影。建筑物在从橙色渐变为深蓝的天空映衬下呈现剪影。油灯和蜡烛在家宅和客栈中点亮，透过窗户投出温暖的黄色光晕。一些人影缓慢移动——商人收摊、家族返家。海面平静，反射着暮光。氛围从白日的混乱转为傍晚的宁静，带有满足感和日常生活的温暖。
 ```
 
-#### 3. 提示词2：紧张期 [紧张期]
+#### 3. 提示词3：紧张期 [紧张期]
 
 **English：**
 ```
@@ -3930,7 +3931,7 @@ The same coastal town, but the atmosphere has shifted. The market is still busy,
 同一个沿海小镇，但氛围已经改变。市集仍然繁忙，但能量变得仓促和焦虑。人脸更加凝重，对话更加急促。天空呈现灰蒙的色调，光线变得更加生硬、更加无情。温暖的枯草黄#8B7355现在显得更加浑浊，几乎病态。人们在捆绑货物、封窗户、有目的地移动。陌生人——带来信息的人——站在人群中。客栈被陌生面孔充满。城门口的守卫显得更加警觉。安全感已经侵蚀；紧张感像风暴前的湿度一样笼罩在空气中。
 ```
 
-#### 4. 提示词2：紧张期 [紧张期]
+#### 4. 提示词4：紧张期 [紧张期]
 
 **English：**
 ```
@@ -3942,7 +3943,7 @@ Night in the anxious town. Fewer lights than before. The color palette has shift
 焦虑小镇的夜晚。灯火比之前更少。色调调色板已经转向更暗、更冷的色调——焦褐#2C1810渗入阴影中。油灯闪烁不定。成群的镇民在门口和窄街里紧急低语。大海是暗色且不安的，它的声音显得不祥。天空阴沉，挡住了星光。窗户被关闭或封板。客栈仍在发光，内部充满焦虑的低语声。城门在黑暗中显得沉重而令人压抑。感觉是一个小镇屏住呼吸，等待着某种不可避免而可怕的事情。
 ```
 
-#### 5. 提示词3：撤离期 [撤离期]
+#### 5. 提示词5：撤离期 [撤离期]
 
 **English：**
 ```
@@ -3954,7 +3955,7 @@ Dawn breaks on evacuation day. The market square, once bustling with commerce, i
 撤离日的破晓。曾经繁忙的市集广场现在是集结点。数百名镇民被组织成有序的队伍，背负着包裹和行李。临时的火把和油灯照亮黎明前的黑暗，光线反映在脸上是严肃的决心。城门敞开，通往安全和失落的门槛。建筑物保留着褪色的枯草黄#8B7355，但温暖已被焦褐#2C1810的深色取代。马车和驮畜被装满了物资。儿童保持安静，紧贴在父母身边。远处的海洋承诺逃脱。整体氛围是庄严的、目的明确的、令人心碎的——一个民族为了活着而离开家园。
 ```
 
-#### 6. 提示词3：撤离期 [撤离期]
+#### 6. 提示词6：撤离期 [撤离期]
 
 **English：**
 ```
@@ -3966,7 +3967,7 @@ The town after evacuation is complete. The market square is empty—abandoned st
 撤离完成后的小镇。市集广场空荡荡的——摊位被推倒，商品散乱腐烂。客栈沉寂，窗户漆黑。码头诡异地安静，渔船摇晃却无人照料。建筑物空洞地伫立，门被吹开。太阳投出长长的、忧伤的阴影。色调由褪色的棕色和焦褐#2C1810的深色阴影主导。远处的海洋冷漠而哀悼。没有人，没有活动，没有生命。只有风和被遗弃文明的缓慢衰落。天空灰蒙而压抑。这就是失落的样子——空洞、寂静、以及逐渐消逝的昔日生活的回声。
 ```
 
-#### 7. 提示词3：撤离期 [撤离期]
+#### 7. 提示词7：撤离期 [撤离期]
 
 **English：**
 ```
@@ -5159,7 +5160,7 @@ Cinematic still, 2.39:1 widescreen, full-body front-facing portrait of a Chinese
 电影感静帧，2.39:1宽银幕，一位50多岁中国女性的全身正面肖像，花白烫卷短发，脸上笑纹明显嘴角微笑温暖，体型微胖坚实暗示物理力量和韧性，双脚与肩同宽自然站立姿态，穿舒适的褪色枯草黄棕色棉衣（#8B7355为主色调）配实用围裙，双手自然垂于身侧显示日常劳作的痕迹，忠厚亲切的表情透出警觉的睿智眼神，白色中性背景，暖调均匀正面光强调健康的红润肤色和温暖气质。80%写实+20%超自然温暖风格强调内在力量，35mm胶片颗粒感，中高对比度
 ```
 
-#### 3. 提示词2：肖像-全身正面像
+#### 3. 提示词3：泉边安居期 [泉边安居期]
 
 **English：**
 ```
@@ -5171,7 +5172,7 @@ Cinematic still, 2.39:1 widescreen, cozy scene by a natural spring in rural Chin
 电影感静帧，2.39:1宽银幕，乡间泉水旁的温暖场景。简朴的居所，吴婶（花白烫卷短发、笑纹明显、温暖微笑），微胖但精神矍铄的身影忙碌于日常家务或招待来客。身穿舒适的棉衣（以枯草黄#8B7355为主的温暖色调）和实用围裙。柔和的自然光创造温暖阴影，以枯草黄、褐色为主的温暖色调强调乡村舒适感和家的温度。泉水清晰可见，隐约显现异象迹象——水面反光或雾气中有超自然元素微妙呈现，女性表情中显示出对异常的早期察觉。80%写实+20%幻想氛围，暗示隐藏的神秘。民间时代背景，居家与生活感浓厚，素色深色背景，温暖亲切的光线
 ```
 
-#### 4. 提示词2：肖像-全身正面像
+#### 4. 提示词4：逃难守护期 [逃难守护期]
 
 **English：**
 ```
@@ -5626,6 +5627,30 @@ Cinematic still, 2.39:1 widescreen, three-quarter view bust portrait of a middle
 ```
 
 #### 3. 提示词3：精致掩护期 [精致掩护期]
+
+**English：**
+```
+Li Honglong at the peak of his undercover operation - the perfect deep-cover spy in immaculate attire. Dark navy tailored suit (#1C3A47) with crisp high-quality white shirt, refined silk tie in muted blue, polished leather shoes reflecting power and taste. Complexion warm tan brown (#B8956A) meticulously maintained in well-lit official or upscale business setting. The mask of a sophisticated city official completely intact, displaying a warm calculated smile conveying power and absolute confidence in his position. Hair perfectly styled in light brown tones. Every detail of the disguise meticulously maintained without a single flaw. High saturation bright professional lighting emphasizing authority and trustworthiness. Cinematic still, 2.39:1 widescreen. 80% photorealistic + spy thriller aesthetic showing the apex of successful deception.
+```
+
+**中文：**
+```
+精致掩护期的李红龙——完美卧底的特务在巅峰状态。深海军蓝#1C3A47剪裁得体西装配洁白高级衬衫，柔和蓝色丝质领带，抛光皮鞋彰显品味与权力。精致棕色肤色#B8956A在光线充足的官方场所或高档商务环境中精心维护。精致城市官员的完整面具，展现温暖精心计算的微笑传达权力和对自身地位的绝对自信。浅棕色秀发完美打理。伪装的每个细节都精致无缺无任何漏洞。高饱和度明亮专业灯光强调权力与可信度。电影感静帧，2.39:1宽银幕。80%照片级写实+谍报悬疑美学展现成功欺骗的巅峰。
+```
+
+#### 4. 提示词4：身份动摇期 [身份动摇期]
+
+**English：**
+```
+The disguise beginning to crack - Li Honglong's refined appearance deteriorating as identity exposure approaches. Makeup state noticeably worsening with subtle imperfections, eyes scanning nervously left and right for possible escape routes, shoulders showing barely suppressed tension. Suit beginning to show signs of wear with loosened collar and rolled-up sleeves suggesting growing discomfort. The warm calculated smile turning rigid and unnatural, no longer fooling observers. Hands repeatedly rubbing the scar on inner left wrist (nervous tell), fingers displaying tremors of anxiety. Body showing tactical tension beneath the official veneer - weight shifted to balls of feet ready for rapid movement. Color palette: original tan brown (#B8956A) mixed with emerging pale undertones, suit color maintaining but fabric rumpled. Lighting begins shifting to cooler tones, saturation dropping as psychological pressure mounts. Cinematic still, 2.39:1 widescreen. 80% photorealistic, emphasizing the visible breakdown between two identities.
+```
+
+**中文：**
+```
+身份危机中伪装开始松动——李红龙精致的外貌在身份暴露逼近时逐渐恶化。化妆状态明显变差带细微不完美，眼神焦虑地左右扫视寻找可能的逃脱路线，肩膀显示勉强压制的紧张。西装开始显现磨损迹象领口松散袖子卷起暗示日益增长的不适感。温暖精心计算的微笑转变为僵硬和不自然不再能迷惑观察者。双手频繁摩擦左腕内侧疤痕（紧张表现）手指颤抖显露焦虑。身体在官员外表下显示战术性紧张——重心前移至脚掌准备快速运动。色调：原始棕色#B8956A混合浮现的苍白底色，西装颜色保持但布料起皱。光线开始转向冷色调，心理压力增加时饱和度下降。电影感静帧，2.39:1宽银幕。80%照片级写实强调两个身份间的可见崩裂。
+```
+
+#### 5. 提示词5：暴露对峙期 [暴露对峙期]
 
 **English：**
 ```
@@ -6599,7 +6624,7 @@ Cinematic still, 2.39:1 widescreen, dramatic sunset moment at coastal breakwater
 
 ### 天都山脉 (locations, ★★, P5)
 
-#### 1. 
+#### 1. 提示词1：默认期 [默认期]
 
 **English：**
 ```
@@ -6651,7 +6676,7 @@ Cinematic still, 2.39:1 widescreen, full-body reference of a 40+ year-old Chines
 
 ### 宁阁码头 (locations, ★★, P5)
 
-#### 1. 
+#### 1. 提示词1：默认期 [默认期]
 
 **English：**
 ```
@@ -7313,7 +7338,7 @@ In a dark hall, the ancient general (do not use real name) stands in dark suit, 
 
 ### 茶馆 (locations, ★★, P5)
 
-#### 1. 
+#### 1. 提示词1：默认期 [默认期]
 
 **English：**
 ```
@@ -7405,7 +7430,7 @@ A scene depicting the suffering of ordinary people in Dingda City during the lat
 
 ### 郝大川破败小屋 (locations, ★★, P5)
 
-#### 1. 
+#### 1. 提示词1：默认期 [默认期]
 
 **English：**
 ```
@@ -7467,7 +7492,7 @@ mood of confinement and despair, weathered texture detail, gritty aesthetic
 
 ### 集市 (locations, ★★, P5)
 
-#### 1. 
+#### 1. 提示词1：默认期 [默认期]
 
 **English：**
 ```
@@ -7632,7 +7657,7 @@ muted browns and creams, gritty cinematic texture, mood of discovery and urgency
 
 ### 巫方镇 (locations, ★, P5)
 
-#### 1. 
+#### 1. 提示词1：默认期 [默认期]
 
 **English：**
 ```
@@ -7697,7 +7722,7 @@ and jerky visible, natural outdoor light, weathered hand texture, desperate hung
 
 ### 户政室 (locations, ★, P5)
 
-#### 1. 
+#### 1. 提示词1：默认期 [默认期]
 
 **English：**
 ```
@@ -7771,13 +7796,9 @@ A county official in middle age with composed demeanor and formal attire. Fronta
 **中文：**
 ```
 中年县级官员的正面半身像，气质沉着，衣着规整。原有身份展现出公务员的稳重气象，着装符合官员身份。色彩采用枯草黄（#8B7355）代表人间官员属性。表情平静而疏离。代表被附身前的普通行政官员形象。
-
----
-
-## 十、场景提示词 - 精神病院场景
 ```
 
-#### 2. 提示词1：肖像-正面半身像
+#### 2. 提示词2：默认 [默认]
 
 **English：**
 ```
@@ -7787,11 +7808,6 @@ A mentally disturbed patient in a psychiatric hospital ward. The county official
 **中文：**
 ```
 精神病院病房内的失常患者。县官躯体显现附身后遗症：衣着凌乱、眼神呆滞、失去自制力。暗紫色（#5B3A6B）暗示超自然创伤。医院环保设施、冷调光线。姿态与表情传达精神彻底崩溃与身份丧失。
-
----
-
-*文件创建于：2026-02-23*
-*字数等级：★☆☆☆☆极低 | 格式：8章制结构*
 ```
 
 ### 罗勇 (characters, ★, P5)
@@ -7878,7 +7894,7 @@ Warm interior of a restaurant, soft warm-colored lighting casting onto warm brow
 
 ### AA大学 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：校园侦察 [校园侦察]
 
 **English：**
 ```
@@ -7890,9 +7906,33 @@ Cinematic still, 2.39:1 widescreen, university campus corrupted by occupation an
 电影级画面，2.39:1超宽屏，被占领和秘密实验污染的大学校园，现代学术建筑被改作军事设施，食堂被改装为配给中心配备工业机械，宿舍楼变成装有监控系统的军营，被污染的学术空间黑板被覆盖座位被清空，隐藏在阴影中通往地下实验室的入口，下降到深层地下设施中冷色科学照明，配备生命维持系统的实验舱室，数字人培育池，装有生物机械设备的无菌实验室，枯草黄与暗紫色调反映知识的腐蚀，冷白和青色科学光线营造非人类的冷漠，曾经的学术骄傲扭曲成伦理噩梦，强调从知识殿堂到科技恐怖的转变。
 ```
 
+#### 2. 提示词2：表面探查 [表面探查]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, military occupation of university campus surface level, food hall converted to industrial distribution center with heavy machinery and conveyor systems, dormitory rows transformed into barracks with cold fluorescent lighting and surveillance camera arrays, classrooms stripped bare with blackboards covered, desks removed, corridors patrolled by occupiers in tactical formation, hierarchical oppressive order maintained through constant surveillance, straw-yellow building facade contrasting with dark purple shadows of control, cold artificial white lighting overwhelming any natural warmth, military efficiency imposing itself on academic spaces, austere and dehumanizing transformation, occupiers moving methodically through corridors with weapons, every space monitored and controlled, the surface order hiding deeper horrors beneath, emphasize the contradiction between surface organization and underlying dread.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，占领者对大学校园表层的军事占领，食堂改装为配备重型机械和传送带系统的工业配给中心，宿舍楼变成装有冷色荧光灯和监控摄像头阵列的军营，教室被完全清空黑板被覆盖座位被移除，走廊中占领者以战术队形巡逻，通过持续监控维持等级制的压抑秩序，枯草黄的建筑立面与控制的暗紫阴影形成对比，冷白人工照明压倒任何自然温暖，军事效率对学术空间的强制改造，苛刻非人性的转变，占领者携武器有条不紊地在走廊中移动，每个空间都被监管控制，表层秩序隐藏深层恐怖，强调表面组织与潜伏恐惧之间的矛盾。
+```
+
+#### 3. 提示词3：地下秘密 [地下秘密]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, discovery of deep underground laboratory beneath corrupted campus, digital human cultivation tanks with suspended bodies submerged in luminous nutrient fluid, cyan-white cold scientific lighting illuminating sterile chamber, biomechanical equipment with intricate tube networks and electrode systems, life support machines with rhythmic mechanical operations, rows of containment vessels creating eerie bioluminescent glow, the ultimate ethical nightmare exposed, horrifying violation of human dignity transformed into experimental subjects, metal and glass infrastructure of technological horror, complete absence of warmth or humanity, cold fluorescent and cyan lighting creating utterly alien atmosphere, scientific apparatus arranged with meticulous precision, each tank containing tragedy and violation, the depth of corruption finally revealed, emphasize scientific sterility contrasted with moral devastation, the horror of technology turned against humanity.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，被污染校园下方深层地下实验室的发现，数字人培育池中悬浮在发光营养液中的躯体，青白冷色科学照明照亮无菌舱室，配备复杂管网和电极系统的生物机械设备，有节奏运转的生命维持机器，排列的容器产生诡异生物发光，终极伦理噩梦的曝露，人类尊严的骇人侵犯转化为实验对象，技术恐怖的金属玻璃基础设施，完全缺乏温暖和人性，冷荧光和青色照明营造完全陌生的气氛，科学器械以精确秩序排列，每个培育舱包含悲剧和侵犯，腐蚀的深度最终显露，强调科学无菌与道德毁灭的对比，技术对人类的恐怖反噬。
+```
+
 ### 千秋星岗 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：战斗期 [战斗期]
 
 **English：**
 ```
@@ -7904,7 +7944,7 @@ Cinematic still, 2.39:1 widescreen. Desolate battlefield of Qianqiu Star Hill. D
 电影质感静帧，2.39:1宽屏幅。千秋星岗荒凉战场。暗红血迹 #8B1A1A 标记断裂防线。焦褐大地 #2C1810 散布兵器与甲胄碎片。血红落日天空。辽阔空旷，战败寂静。电影级悲壮，战争墓地。
 ```
 
-#### 2. 
+#### 2. 提示词2：战败期 [战败期]
 
 **English：**
 ```
@@ -7918,7 +7958,7 @@ Cinematic still, 2.39:1 widescreen. Yang Hong standing amid ruins of broken fort
 
 ### 半山腰秘密仓库 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：秘密期 [秘密期]
 
 **English：**
 ```
@@ -7930,7 +7970,7 @@ Cinematic still, 2.39:1 widescreen. Secret underground cave storage on mountains
 电影质感静帧，2.39:1宽屏幅。山腰地下岩洞秘密仓库。苔绿石壁 #4A6741 与焦褐木制架子 #2C1810。天然泉水池晶莹。火把照亮整齐物资。神秘、庄严、受保护的氛围。黑暗笼罩光线外。
 ```
 
-#### 2. 
+#### 2. 提示词2：发现后 [发现后]
 
 **English：**
 ```
@@ -7944,7 +7984,7 @@ Cinematic still, 2.39:1 widescreen. Underground spring water flowing into ancien
 
 ### 卢老板餐馆 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：日常引入 [日常引入]
 
 **English：**
 ```
@@ -7956,9 +7996,33 @@ Cinematic still, 2.39:1 widescreen, humble old wooden restaurant interior, warm 
 电影级画面，2.39:1超宽屏，简陋老旧木制餐馆内部，温暖的油灯光与厨房火焰混合，简朴食客围坐在磨损的木桌前，烹饪蒸汽和烟雾从开放式厨房升起，整体呈现枯草黄与鞍褐的木质色调，显示岁月痕迹的粗糙木板墙，铜制餐具和陶土碗碟，简朴人情味的有序混乱，人物在吧台前进行低声交谈，日常套路中的亲密人类时刻，金色暖光与阴影形成对比，简朴但充满生活痕迹的空间，数十年服务的证据随处可见，背景通过小窗户显示街道，舒适却略显悲伤的气氛，强调温暖和隐藏在平凡之下的深度。
 ```
 
+#### 2. 提示词2：暗流涌动 [暗流涌动]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, restaurant interior surface appearing normal but intelligence exchanges occurring beneath, two figures in hushed conversation at wooden bar counter while regular patrons eat in foreground blurred out of focus, warm oil lamp casting golden glow across scene but shadows deeper in corners suggesting hidden activities, subtle coded gestures between conversing figures, meaningful eye contact and discreet hand movements, Lu Jing moving alert and observant between tables with calculated precision, atmosphere of surface warmth masking covert operations, straw-yellow and saddle-brown color palette creating intimate but tense mood, layered composition with foreground diners unaware of background intelligence exchange, kitchen fire glow mixing with lamplight, tension hidden beneath ordinary restaurant ambiance, emphasize duality of public daily routine concealing secret activities, warmth serving as camouflage.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，餐馆内部表面看似正常但情报交汇在下方进行，两个人物在木制吧台前进行低声交谈而普通食客在前景中模糊失焦，温暖的油灯投射金色光线穿过场景但角落阴影更深暗示隐藏活动，交谈人物间的微妙暗语手势，有意义的眼神接触和谨慎的手部动作，卢静在餐桌间以敏锐和谨慎的精准性移动，表层温暖气氛掩盖隐蔽操作，枯草黄与鞍褐色调创造亲密但紧张的情绪，分层构图前景食客浑然不觉背景情报交换，厨房火光与灯光混合，平凡餐馆氛围下隐藏的紧张，强调公众日常例行隐蔽秘密活动的二元性，温暖作为伪装手段。
+```
+
+#### 3. 提示词3：战争阴影 [战争阴影]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, restaurant's warmth fading as occupation approaches, unfamiliar faces appearing among regular patrons with suspicious demeanor, Lu boss's expression growing heavy with worry and exhaustion, windows showing signs of external disturbance, cold wind blowing through opened door disrupting warm interior comfort, oil lamp light dimming as if struggling against encroaching darkness, final warm moments before everything transforms, stark contrast emerging between remaining warmth of kitchen and encroaching cold from outside, wooden interior showing wear and vulnerability, last peaceful dinner before catastrophe, straw-yellow fading toward darker tones, saddle-brown shadows deepening and expanding, ordinary restaurant becoming fragile sanctuary, staff moving with quiet urgency beneath normal demeanor, customers unaware of approaching danger, emphasis on impending transformation and loss of innocence, the countdown to occupation rendered in visual language.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，餐馆温暖在占领接近时褪色，陌生面孔出现在常客中带着可疑的举止，卢老板的表情变得沉重充满忧虑和疲惫，窗户显示外界扰动的迹象，冷风吹过打开的门扰乱温暖的内部舒适，油灯光线变暗仿佛与逼近的黑暗对抗，灾难前的最后温暖时刻，厨房残留温暖与外界逼近的冷意形成鲜明对比，木制内部显露岁月痕迹和脆弱性，灾难前的最后平凡晚餐，枯草黄褪色朝更暗色调，鞍褐阴影加深扩展，普凡餐馆变成脆弱的避难所，员工在正常举止下以安静的急迫性移动，食客浑然不觉危险接近，强调迫在眉睫的转变和天真的丧失，占领的倒计时以视觉语言呈现。
+```
+
 ### 周庄 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：逃离与到达 [逃离与到达]
 
 **English：**
 ```
@@ -7970,9 +8034,33 @@ Cinematic still, 2.39:1 widescreen, remote mountain village hidden in isolation,
 电影级画面，2.39:1超宽屏，隐蔽在雾气中的偏远山村，古老的石屋散落在陡峭山坡，风化的板岩屋顶和苔藓覆盖的墙体，密集森林顶棚散落的斑驳阳光，村中心的古老石井聚集点，郁郁葱葱的绿色植被如同保护性拥抱围绕小村落，温暖的黄金时段光线照亮石墙建筑，人物在安静的避难所中休息，简陋庇护所内发光的篝火中的亲密时刻，时间似乎停滞的感受，人们以与自然缓慢的节奏共生，山谷沉寂仅被风和水声打破，远离冲突和混乱的庇护所，强调隐蔽安全感和短暂的宁静。
 ```
 
+#### 2. 提示词2：休整与连接 [休整与连接]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, safe haven moment in hidden mountain village, figures resting by glowing hearth inside simple ancient stone shelter, warm firelight casting dancing shadows on weathered walls, dappled sunlight streaming through small window creating soft golden light patterns across stone floor, intimate human connection in quiet sanctuary away from conflict, villagers sharing simple meal around communal fire with peaceful expressions, mountain silence and solitude creating sense of complete isolation from chaos, time standing still in this refuge, figures in relaxed postures showing recovery and healing, worn stone architecture providing protection, sense of belonging despite temporary nature, moss-covered walls and wooden beams adding timeless quality, yellow-green moss and straw-yellow warmth creating harmonious palette, golden firelight emphasizing intimacy and safety, emphasize restoration of humanity in sanctuary, the healing power of simple community and shared warmth.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，隐蔽山村中的安全避难时刻，人物在简陋古老石屋内燃烧的篝火旁休息，温暖的火焰光将舞动的阴影投在风化的墙体上，小窗户中洒落的斑驳阳光创造柔和的金色光线图案跨越石板地面，远离冲突的安静避难所中的亲密人类连接，村民以和平的表情围绕公共篝火分享简陋的食物，山谷的沉寂和孤独创造完全隔离于混乱的感受，时间在此庇护所中停滞，人物以放松姿态显示恢复和愈合，风化的石头建筑提供保护，尽管短暂但显示归属感，苔藓覆盖的墙体和木梁增加无时间感的品质，苔绿苔藓与枯草黄温暖创造和谐色调，金色火焰光强调亲密和安全，强调避难所中人性的恢复，简朴社群和共享温暖的愈合力量。
+```
+
+#### 3. 提示词3：危机前兆 [危机前兆]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, peace shattering as crisis signals arrive, villagers' expressions changing subtly from contentment to anxiety and dread, evening light darkening rapidly as if day surrendering to night prematurely, wind picking up through mountain pass with increasing intensity, figures appearing in doorways looking outward with visible concern and tension, warmth of village hearth beginning to fade as coldness enters, final look backward at sanctuary before forced departure becomes inevitable, warm golden tones shifting toward cooler hues, moss-green fading under advancing shadows, saddle-brown shadows deepening and spreading across stone surfaces, intimate sanctuary losing protective quality, atmosphere transforming from safe to vulnerable, ominous presence felt without being seen, the fragile peace cracking under external pressure, figures moving with quiet preparation for escape, emphasize loss of innocence and sanctuary, the moment hope begins to extinguish, visual language expressing inevitable upheaval.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，危机信号到达时宁静破碎，村民的表情从满足微妙变化为焦虑和恐惧，傍晚光线急速变暗仿佛白日提前向黑夜投降，风吹过山口以增加的强度，人物出现在门道中向外看去显示明显的关切和紧张，村庄篝火的温暖开始褪色当寒冷进入，被迫离开前的最后回顾避难所变得不可避免，温暖的金色色调向更冷的色调转变，苔绿在推进的阴影下褪色，鞍褐阴影加深在石表面扩展，亲密避难所失去保护特质，气氛从安全向脆弱转变，不见其形却感其在的不祥现象，脆弱的和平在外部压力下破裂，人物以安静的准备姿态为逃离做准备，强调无辜和避难所的丧失，希望开始熄灭的时刻，视觉语言表达不可避免的剧变。
+```
+
 ### 少林寺 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：默认期 [默认期]
 
 **English：**
 ```
@@ -7984,7 +8072,7 @@ Cinematic still, 2.39:1 widescreen. Ancient Shaolin temple nestled in misty moun
 电影质感静帧，2.39:1宽屏幅。古老少林寺隐于云雾山峰。鞍褐木梁与柱子 #6B4423 撑起宏伟建筑。暗金烛火 #DAA520 照亮神圣空间。云雾环绕屋顶。永恒、庄敬、神圣武术精神。
 ```
 
-#### 2. 
+#### 2. 提示词2：默认期 [默认期]
 
 **English：**
 ```
@@ -7998,7 +8086,7 @@ Cinematic still, 2.39:1 widescreen. Secret prayer chamber deep within temple. Ei
 
 ### 山谷旅行团被困 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：被困期 [被困期]
 
 **English：**
 ```
@@ -8010,7 +8098,7 @@ Cinematic still, 2.39:1 widescreen. Deep mountain valley near Niutai Mountain. S
 电影质感静帧，2.39:1宽屏幅。牛台山附近深山谷地。陡峭暮蓝石壁 #3A4A6B 逼近。苔绿枯死植被 #4A6741 铺满谷底。被困旅行团临时营地与篝火。刺骨寒风可见。绝望、孤立、生存氛围。狭窄黑暗天空。
 ```
 
-#### 2. 
+#### 2. 提示词2：救援期 [救援期]
 
 **English：**
 ```
@@ -8024,7 +8112,7 @@ Cinematic still, 2.39:1 widescreen. Stranded travelers huddled around small bonf
 
 ### 望海河 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：河岸侦察 [河岸侦察]
 
 **English：**
 ```
@@ -8036,9 +8124,33 @@ Cinematic still, 2.39:1 widescreen, treacherous river at night, destroyed bridge
 电影级画面，2.39:1超宽屏，深夜凶险的河流，毁坏的桥梁断墩从暗水中露出，紧急渡河场景配备绳索系统，狂暴的急流翻滚着白色浪花，月光映照的深蓝暮色调，身影在碎浪中成为剪影，临近森林笼罩焦褐阴影，敌军火把在远方河岸可见，水花在月光中飞溅，逃脱的紧张气氛，冷黑河水威胁涉水者，绳索在翻滚急流上绷紧，绝望和危险充满每一帧，明暗对比照明以河流为焦点，强调自由与被俘的屏障。
 ```
 
+#### 2. 提示词2：夜间渡河 [夜间渡河]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, desperate night river crossing in extreme peril, figures clinging desperately to rope stretched across raging turbulent rapids, moonlight barely penetrating thick storm clouds, inky dark churning water pulling violently at swimmers struggling against overwhelming current, white water turbulence erupting around broken bridge pilings, silhouettes of people fighting against fierce, relentless current, rope taut and straining under the weight of desperate souls, splash and spray catching fragments of faint moonlight, extreme tension and raw physical struggle against nature's overwhelming force, swimmers gasping and straining, water spray illuminated in pale silver light, deep twilight blue #3A4A6B dominant with dark brown #2C1810 riverbanks receding into shadow, the scene captures maximum danger during the crossing itself, primal survival instinct against impossible odds, every muscle tensed, every gesture screaming desperation, the rope the only lifeline between life and the abyss.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，绝望的夜间河流渡河，身体紧紧抓住绳索跨越狂怒湍急的急流，月光勉强穿过厚重的乌云，墨黑翻滚的河水猛烈冲击挣扎的游泳者，白色浪花在毁坏的桥墩周围炸裂，人影在凶险、无情的水流中搏斗，绳索在绝望灵魂的重量下绷紧而颤抖，水花和浪花捕捉到微弱月光的碎片，极端紧张与原始的身体搏斗对抗大自然的压倒性力量，游泳者呼吸急促、肌肉绷紧，水花在苍白银色光线中闪烁，深蓝暮色 #3A4A6B 主导，衬托深褐色河岸 #2C1810 消失在阴影中，场景捕捉渡河过程中最高危时刻，原始生存本能对抗不可能的困境，每块肌肉都绷紧，每个姿态都尖叫着绝望，绳索是生与死之间唯一的生命线。
+```
+
+#### 3. 提示词3：对岸脱险 [对岸脱险]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, final escape moment on eastern bank, last figures scrambling frantically up muddy bank, completely exhausted and drenched from harrowing river crossing, enemy torches suddenly appearing on distant western shore too late to intercept, the raging river now serving as divine protective barrier between survivors and pursuing enemies, arrows falling short into dark water, the futility of enemy pursuit visible in every frame, relief and exhaustion mixing intensely on survivors' faces, deep blue twilight night sky dominating the composition, destroyed bridge symbolizing the severed connection and no return, moonlight catching the survivors' drenched forms, the eastern shore rocky and precarious, the western shore a nightmare receding into darkness, foreground shows sprawled exhausted figures, middle ground shows pursuing enemies' distant torches, background shows the black abyss of separated lands, dominant colors deep blue #3A4A6B with warm orange enemy torchlight glowing from across the chasm, the moment when escape becomes reality, desperation transforming into cautious hope, the river as both salvation and barrier.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，对岸脱险的最终时刻，最后的人影疯狂地爬上泥泞的东岸河滩，从可怕的河流渡河中筋疲力尽和浑身湿透，敌军火把突然出现在遥远的西岸为时已晚，狂暴的河流如今成为神圣的保护屏障，隔绝幸存者与追兵，箭矢坠入黑暗河水无功而返，敌军追击的徒劳感充满画面每一帧，幸存者脸上混合着救赎感与筋疲力尽，深蓝暮色夜幕主导整体构图，毁坏的桥梁象征被切断的联系和无法回头，月光捕捉住浑身湿透的幸存者身形，东岸崎岖险要，西岸恶梦般消退在黑暗中，前景显示瘫倒的筋疲力尽的身影，中景是追兵的远方火把，背景是分隔两岸的黑暗深渊，主导色为深蓝 #3A4A6B，衬托远方敌军温暖的橙色火把在深渊对岸发光，逃脱变成现实的时刻，绝望转化为谨慎的希望，河流既是救赎也是屏障。
+```
+
 ### 杨弘秘密实验室 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：秘密进入 [秘密进入]
 
 **English：**
 ```
@@ -8050,9 +8162,33 @@ Cinematic still, 2.39:1 widescreen, sealed underground laboratory deep beneath c
 电影级画面，2.39:1超宽屏，城市地下深处密封的地下实验室，多个相连的实验舱室采用冷蓝紫色科学照明，透明的培育舱内悬浮着数字化人形生物在营养液中，监控屏幕显示无数数据流和生物特征读数，不锈钢表面和精确的医疗设备，机械臂和手术工具以临床精确排列，可见管道和电气连接的生命维持系统，拥有墙壁屏幕墙和闪烁指示灯的控制中心，遗传学和数字人类培育基础设施，非人性化的科学疯狂，令人寒栗的科技成就与伦理噩梦结合，深紫色阴影与临床青白色照明形成对比，密封隔离于上方的世界，强调冷酷的制度恐怖和被科学扭曲的人性。
 ```
 
+#### 2. 提示词2：真相揭露 [真相揭露]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, the complete horror of Yang Hong's laboratory fully revealed, massive archives displaying hundreds of failed experiments in meticulous detail, electronic walls covered with photographs and video records of all trials, Yang Hong's obsessive office scattered with notes revealing descending madness, multiple incubation tanks in various stages of development showing digital human progress and degradation, medical instruments stained with biological matter bearing witness to countless procedures, filing cabinets overflowing with DNA samples, organ preservation containers, tissue cultures, complete documented infrastructure of scientific atrocity laid bare without mercy, the systematic nature of the horror visible in the organization and scope, cold clinical lighting mixed with screen glow from data displays, skeletal remains and failed prototypes visible in corners, the methodical evil exposed in every corner, deep blue #3A4A6B and dark purple #5B3A6B dominating with cold fluorescent accents, the moment when the full scale of depravity becomes undeniable, documentation that proves the irreversible crossing of every ethical boundary, the technological achievement now revealed as pure monstrosity.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，杨弘实验室的完整恐怖被彻底揭露，巨大的档案库展示着数百项失败的实验细节，电子墙壁覆盖着所有试验的照片和视频记录，杨弘执着的办公室散落着笔记揭示着逐级递减的疯狂，多个处于不同发展阶段的培育舱显示数字人的进化和堕落，医疗设备上沾染着生物物质见证无数手术，档案柜爆满着DNA样本、器官保存容器、组织培养物，完整的科学暴行基础设施毫无怜悯地暴露，恐怖的系统性质在组织和规模的每一个层面都可见，冷酷的临床照明混合着数据屏幕的荧光色，骨骼残骸和失败的原型在角落可见，方法论的邪恶在每个角落曝光，深蓝色 #3A4A6B 和暗紫色 #5B3A6B 主导画面配合冷光荧光强调，完整邪恶规模变得不可否认的时刻，证明已越过每一条伦理界限的文件，科技成就如今被揭示为纯粹的怪物。
+```
+
+#### 3. 提示词3：最后对抗 [最后对抗]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, chaos erupts violently in the sealed underground laboratory, alarm systems activated with harsh flashing red emergency lights cutting through darkness, automated defense systems engaging with mechanical precision and lethal intent, heavy blast doors sealing corridors in rapid succession, figures running desperately through metallic hallways under pulsing red emergency lighting, emergency broadcast messages appearing on every monitor, the sealed underground world turning violently against intruders, dramatic confrontation between human will and technological control reaching its crescendo, possible destruction beginning with cracks and ruptures in the infrastructure, the laboratory becoming a deathtrap of its own making, red warning lights creating strobing shadows across metal surfaces, sprinkler systems activating in panic, emergency protocols cascading into chaos, figures caught between escape and containment systems, the technological nightmare now turned weapon against all, deep blue #3A4A6B with intense red alarm lighting cutting through dark purple #5B3A6B shadows, the moment when control becomes chaos, the system consuming itself, the final confrontation between humanity and the machinery of extinction.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，混乱在密封的地下实验室中暴力地爆发，警报系统激活发出刺耳的红色闪烁应急灯光穿过黑暗，自动防卫系统以机械精确和致命意图启动，沉重的防爆门在快速序列中密封走廊，身影在脉动的红色应急照明下绝望地奔跑经过金属走廊，紧急广播信息在每个监控屏幕上出现，密封的地下世界暴力地转向入侵者，人类意志与科技控制的戏剧性对抗达到顶点，基础设施可能开始出现毁坏伴随着裂缝和破裂，实验室成为自己制造的死亡陷阱，红色警告灯在金属表面投射出频闪阴影，喷淋系统在惊慌中启动，应急协议层叠式崩溃为混乱，身影被困于逃脱和遏制系统之间，科技噩梦如今转化为对所有人的武器，深蓝色 #3A4A6B 与强烈的红色警报灯穿过暗紫色 #5B3A6B 阴影，控制变成混乱的时刻，系统自我吞没，人类意志与灭绝机器之间的最后对抗。
+```
+
 ### 清平镇 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：占领初期 [占领初期]
 
 **English：**
 ```
@@ -8064,9 +8200,33 @@ Cinematic still, 2.39:1 widescreen, occupied coastal town, ancient granary repur
 电影级画面，2.39:1超宽屏，被占领的沿海小镇，古老的粮仓改为暗黑监狱，巨大的石墙投出深重阴影，拥挤的仓库内部充满绝望的被囚者，狭窄的通风口散入微弱光线，破败的木制结构和仓促建造的隔间，褪色的枯草黄墙壁与深紫黑暗形成对比，占领者旗帜在头顶飘扬，绝望和压迫的阴森氛围，潮湿浑浊的空气以雾霾呈现，生锈的铁链和粗陋的栅栏，被困者在阴影中的无力姿态，荒凉的海边背景与敌军舰队停泊港口，压抑的粗粝主义，去饱和色调，强调囚禁感和压迫统治。
 ```
 
+#### 2. 提示词2：管制建立 [管制建立]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, the granary methodically converted into an oppressive prison structure, ancient stone walls systematically divided into cage-like compartments with rigid precision, crowds of civilians being herded through heavily guarded entrance under watchful occupier soldiers, supply confiscation ongoing with methodical efficiency, occupier soldiers patrolling narrow corridors with weapons raised and ready, the town outside deteriorating visibly with looted shops reduced to empty shells, deserted streets bearing the scars of plunder, systematic control architecture visible in the meticulous organization of oppression, the granary's original wooden framework reinforced with metal bars and chains, layers of compartments stacked vertically creating warehouse-prison hybrid, faded straw-yellow #8B7355 walls fading progressively toward dark purple #5B3A6B shadows as depths increase, captured goods piled in strategic locations, occupation banners hanging heavily overhead, the moment when infrastructure becomes instrument of domination, human beings transformed into inventory, the transition from natural townscape to systematic dystopia, every architectural detail serving the machinery of control.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，粮仓被有组织地改建为压迫性监狱结构，古老的石墙以严格精确性系统地划分为笼舍式隔间，大量平民被赶过沉重看守的大门在占领者士兵的监视下，物资掠夺进行中具有方法论效率，占领者士兵在狭窄走廊巡逻手持武器随时准备，镇外的町景可见恶化伴随被掠夺的商铺变成空壳，废弃的街道承载掠夺的伤痕，系统控制架构在压迫的精致组织中可见，粮仓原始的木制框架加固着金属栅栏和铁链，层层隔间垂直堆叠创造仓库监狱混合体，褪色的枯草黄 #8B7355 墙壁随着深度逐渐消退向暗紫色 #5B3A6B 阴影，被夺取的物资堆积在战略位置，占领者旗帜沉重地悬挂在头顶，基础设施变成统治工具的时刻，人类被转化为库存清单，从自然町景向系统反乌托邦的过渡，每个建筑细节都服从控制机制。
+```
+
+#### 3. 提示词3：深层黑暗 [深层黑暗]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, the granary basement descending into living hell of extreme inhumanity, massive overcrowding in absolute darkness of deep underground chambers, barely any light penetrating narrow ventilation shafts creating suffocating blackness, disease and death visible on every surface and in every shadow, desperate figures pressed against stone walls in darkness, the absolute lowest point of human dignity reduced to mere survival, stale contaminated air visible as visible haze and particles, iron chains attached to crude concrete barriers, complete loss of hope crystallized in the postures of the condemned, skeletal figures barely distinguishable from darkness, emaciated bodies stacked in layers, the machinery of death operating with systematic inevitability, no resistance remains only surrender to fate, darkness so complete it becomes tangible, the absence of light corresponding to absence of all hope, dominated by dark purple #5B3A6B with minimal remaining faded straw-yellow #8B7355 present only as memory of what once was, the final stage of systematic dehumanization, where the distinction between person and corpse becomes academic, the moment when evil achieves its ultimate expression, silent screams frozen in darkness.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，粮仓地下室下沉到极端非人类的活地狱，绝对黑暗的深层地下舱室中的极度拥挤，勉强有光线透过狭窄通风轴创造窒息的黑暗，疾病和死亡在每个表面和阴影中可见，绝望的身影被压在黑暗中的石墙上，人类尊严的绝对最低点沦为纯粹的生存，变质的污浊空气以可见的雾霾和微粒呈现，铁链连接到粗陋的混凝土屏障，完全丧失希望体现在被判者的姿态，骨瘦如柴的身影勉强与黑暗分辨，萎缩的身体分层堆积，死亡的机制以系统的必然性运转，没有抵抗只有对宿命的投降，黑暗如此完全它变成有形，光的缺失对应所有希望的缺失，由暗紫色 #5B3A6B 主导仅有最少残留的褪色枯草黄 #8B7355 作为曾经的记忆，系统化非人类化的最终阶段，其中人与尸体的区别变成学术问题，邪恶达到终极表达的时刻，沉默的尖叫在黑暗中冻结。
+```
+
 ### 白巨神兽的隐谷 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：隐谷发现 [隐谷发现]
 
 **English：**
 ```
@@ -8078,9 +8238,33 @@ Cinematic still, 2.39:1 widescreen, hidden valley deep in mountain range, toweri
 电影级画面，2.39:1超宽屏，隐藏在山脉深处的秘密山谷，耸立的花岗岩悬崖包围孤立的圣地，原始的巨大石制烹饪大锅，直径六米，古老且风化，苔藓覆盖的地面和原始植被，谷中心显示被庞大生物踩踏的痕迹，神秘的白色毛发的巨型生物五到六米高雄伟而立，苔绿和焦褐的地球色调，谷顶开口投下的斑驳光线制造戏剧性的明暗对比，古老大锅升起的蒸汽飘散在雾气中，散落的骨骼碎片和石面刻痕诉说黑暗历史，完全的孤立和困囿，史前时代的气氛，生物和人类在异世空间的相遇，强调令人压倒的规模和古老神秘。
 ```
 
+#### 2. 提示词2：兽的呈现 [兽的呈现]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, hidden valley sanctuary, colossal white-furred ancient beast emerging from darkness, five to six meters tall, translucent white fur illuminated from above, massive creature materializing from shadow recesses, ground trembling beneath tremendous weight, overwhelming contrast between tiny human silhouette and immense prehistoric being, deep shadows and dappled overhead light streaming from valley opening above, moss green vegetation and dark brown cliff walls framing majestic terrifying creature, ethereal mist swirling around massive body, primal fear and awe amalgamated, beast's ancient intelligent eyes piercing through dimness, monumental presence dominating entire space, prehistoric atmosphere of first contact with unknowable ancient force, moment of revelation frozen in time, emphasize terrifying grandeur and absolute dominance.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，隐谷圣地，庞大的白毛古老生物从黑暗中浮现，五到六米高，半透明白色毛发从上方光线中显现，巨型生物从谷内黑暗深处现身，地面在其巨大体重下震颤，微小人类轮廓与巨大史前生物的压倒性对比，深邃阴影和从谷口上方投落的斑驳光线，苔绿植被和焦褐悬崖墙面衬托出这只宏伟而可怕的生物，诡异雾气绕缠其庞大身躯，原始恐惧与敬畏混合，古老而智慧的眼眸刺穿昏暗，庞然身躯主宰整个空间，远古首次接触不可知古老力量的气息，启示时刻凝固在永恒，强调可怕的宏伟和绝对主宰。
+```
+
+#### 3. 提示词3：困境始现 [困境始现]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, enclosed hidden valley, eerie standoff between human and colossal beast, mutual observation in oppressive silence, tiny human figure dwarfed by towering granite walls seventy to one hundred meters high, no escape route visible, vertical stone cliffs completely enclosing space, ancient stone cooking pot nearby dark historical evidence, beast's deep breathing creating visible condensation rising through misty air, unearthly equilibrium of two beings trapped together in primordial sanctuary, light from above creating dramatic chiaroscuro between illuminated and shadowed zones, moss green and dark brown tones dominating landscape, atmosphere of primordial entrapment, dawning realization of imprisonment crystallizing on human expression, ancient eyes watching with impossible intelligence, prehistoric stillness pregnant with unknown meaning, emphasize inescapable confinement and psychological weight of isolation.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，幽闭隐谷，人类与巨兽之间诡异的对峙，相互观察在压抑的寂静中，微小人类被七十到一百米高的花岗岩峭壁所矮化，无处逃脱，石壁垂直包围整个空间，古老石制大锅如黑暗历史证物躺在近处，兽的深沉呼吸产生可见冷凝气团升腾在雾气中，两个生物在史前圣地中共同被困的异世平衡，上方光线制造光影分明的戏剧性明暗，苔绿和焦褐色调支配景观，史前困囿的气氛，人类表情上浮现的被囚禁觉悟，古老的眼眸带着不可思议的智慧凝视，史前般的寂静满载未知含义，强调无法逃脱的幽闭感和孤立的心理重量。
+```
+
 ### 石岭关 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：防御准备 [防御准备]
 
 **English：**
 ```
@@ -8092,9 +8276,33 @@ Cinematic still, 2.39:1 widescreen, narrow mountain pass fortress under siege, s
 电影级画面，2.39:1超宽屏，狭窄山区关隘被围困，陡峭石阶梯，浓烟和大火弥漫，古老的油桶防御工事排列在狭窄的凸起处，焦褐色岁月沧桑的石墙，深红色火焰吞噬木制防线，战士的剪影在熊熊火焰中，散落的巨石用于防御，血迹斑驳的石面，灰烬和火星飘散空气，战术防线在进攻下分崩离析，绝望的身影守卫在狭窄的台阶，油火闪烁投出长长的阴影，山峦背景被浓烟笼罩，电影级战争摄影，粗粝写实主义，英勇的悲剧感，强调幽闭的纵深感和垂直危险。
 ```
 
+#### 2. 提示词2：激烈对抗 [激烈对抗]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, full-scale battle at mountain pass fortress, oil fires erupting along defense lines with massive flames consuming wooden barriers, boulders rolling down steep stone staircases crushing advancing enemy forces, thick smoke and fire obscuring narrow pass, warriors defending from multiple elevation levels simultaneously, arrows and weapons clashing in desperate combat, blood on stone surfaces telling story of sacrifice, oil barrel defenses deployed creating walls of flame, dark brown weathered stone walls contrasting with dark red flames and blood, chaotic dynamic lighting from multiple fire sources illuminating scene, narrow mountain pass transforming into furnace of war, brutal hand-to-hand combat on precarious stone steps, siege equipment and bodies littering multiple levels, emphasize intense violence and environmental weaponization.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，山区关隘要塞的全规模战役，油火沿防线爆燃产生巨大火焰吞没木制防线，巨石从陡峭石阶滚落压碎涌来的敌军，浓烟和火焰遮蔽狭窄关口，守军从多个高度同时防守，弓箭和兵器在绝望的搏斗中碰撞，血迹在石面讲述牺牲的故事，油桶防御被部署形成火焰之墙，焦褐色风化石墙与暗红火焰和血色形成对比，混乱的动态光影来自多个火焰源点照亮战场，狭窄的山区关口变成战争的炼狱，激烈的肉搏在危险的石阶上进行，围城装备和尸体散落多个平台，强调极端暴力和环境武器化。
+```
+
+#### 3. 提示词3：英勇坚守 [英勇坚守]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, desperate last stand at mountain fortress, defense lines breached at multiple critical points, exhausted warriors with blood-soaked armor making final stand on highest stone steps, oil and ammunition supplies completely exhausted, flames dying down gradually revealing devastation beneath, warrior silhouettes against fading fires in tragic heroic poses, narrow mountain pass littered with fallen defenders and debris, dawn or dusk light creating backlit silhouettes of remaining fighters, dark brown stone walls contrasting with dark red dying flames and extensive bloodstains, somber weight of sacrifice and doomed courage permeating scene, smoke clearing to reveal full human cost of defense, final moments of resistance frozen in time, bodies and broken weapons scattered across elevation, emphasize tragic nobility and ultimate sacrifice.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，山区堡垒的绝望最后坚守，防线在多处关键位置被突破，血衣浸身的疲惫战士在最高石阶上做最后的坚守，油料和弹药完全耗尽，火焰逐渐熄灭露出下方的满目疮痍，战士的轮廓在暗淡火光中摆出悲壮的英勇姿态，狭窄的山区关口被阵亡守军和碎片堆满，黎明或黄昏光线制造背光的剪影效果，焦褐石墙与暗红熄灭的火焰和广泛血迹形成对比，牺牲和必死之勇的沉重渗透全景，浓烟散去显露防守的完整人类代价，抵抗的最后时刻凝固在永恒，尸体和折断的兵器散落各个高度，强调悲壮的高洁和究极的牺牲。
+```
+
 ### 老码头 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：初到期 [初到期]
 
 **English：**
 ```
@@ -8106,7 +8314,7 @@ Cinematic still, 2.39:1 widescreen. Ancient harbor pier at dusk. Twilight blue w
 电影质感静帧，2.39:1宽屏幅。傍晚古老港口码头。暮蓝海水 #3A4A6B 反射落日光。风化焦褐木栈道 #2C1810 延伸入海。废弃仓库与灯塔剪影。海盐风可见。忧郁、怀旧、孤独氛围。永恒港口。
 ```
 
-#### 2. 
+#### 2. 提示词2：探索期 [探索期]
 
 **English：**
 ```
@@ -8120,7 +8328,7 @@ Cinematic still, 2.39:1 widescreen. Two figures stepping off ship onto wooden do
 
 ### 葛家堡 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：堡垒运作 [堡垒运作]
 
 **English：**
 ```
@@ -8132,9 +8340,33 @@ Cinematic still, 2.39:1 widescreen, mountain fortress in chaos, thick stone wall
 电影级画面，2.39:1超宽屏，山区堡垒陷入混乱，厚重石墙显示内部崩坏迹象，中央广场沦为暴力和无序，内部背叛正在上演，日光消逝而堡垒内火焰蔓延，身影在狭窄的石走廊中挣扎，木制大门碎裂被攻破，焦褐石构建筑显现裂纹，混乱蔓延穿过军事营地，尘埃和烟雾从广场升起，防御体系失效的证据，绝望的士兵试图通过被摧毁的大门逃脱，暗紫色阴影吞没曾经的坚固堡垒，特洛伊木马式渗透的后果，内部摧毁比外部围困更加致命，强调幽闭的石墙建筑变成死亡陷阱。
 ```
 
+#### 2. 提示词2：渗透激活 [渗透激活]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, moment of betrayal inside fortress, infiltrators simultaneously revealing themselves at multiple positions within stone walls, central courtyard erupting into sudden violent chaos, weapons armory being violently seized by hidden enemies, gate mechanisms being sabotaged by embedded traitors, defenders turning on each other in confusion and deadly suspicion, ordered military encampment transforming into anarchic violence within seconds, trust shattering visibly across soldier faces frozen mid-revelation, weapons drawn against former comrades, fires igniting across multiple points, dark brown stone fortress walls contrasting with dark purple shadows of betrayal spreading everywhere, dynamic firelight creating chaotic shifting shadows across space, confusion and violence mixing with architectural entrapment, emphasize sudden transformation from order to absolute chaos.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，堡垒内背叛的时刻，隐藏的渗透者在石墙内多个位置同时现身，中央广场爆发为突然的暴力混乱，武器库被隐匿敌人暴力夺取，大门机制被内应破坏，守军互相怀疑转身厮杀，秩序井然的军事营地在数秒内变成无序暴力，信任在士兵脸上可见地破裂，武器指向昔日战友，火焰在多处点燃，焦褐石堡与背叛蔓延的暗紫色阴影形成对比，动态火光投出混乱变化的阴影穿过空间，困惑和暴力混合建筑的囚禁感，强调秩序到绝对混乱的瞬间转变。
+```
+
+#### 3. 提示词3：内部崩坏 [内部崩坏]
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, fortress completely fallen from within, stone walls that once protected inhabitants now trapping desperate figures trying escape, command tower structure lost to flames and chaos, fire spreading relentlessly through internal structures and wooden buildings, bodies and debris scattered across central courtyard, claustrophobic stone architecture transforming into death trap, destroyed gates revealing no escape beyond, figures silhouetted against fires attempting futile escape, smoke rising thick from fortress interior obscuring sky, dark brown weathered stone walls contrasting with dark purple shadows and orange fire glow, complete collapse of military order and defense systems, fallen fortress becoming monument to internal destruction, final moments of defense chaos frozen in tragic frames, emphasize inescapable nature of internal collapse and architectural imprisonment.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，堡垒从内部彻底陷落，曾经保护的石墙现在囚禁试图逃脱的身影，指挥塔在火焰混乱中失陷，火焰无情蔓延穿过内部结构和木制建筑，尸体和碎片散落中央广场，幽闭的石壁建筑变成死亡陷阱，被摧毁的大门显露无路可逃，身影在火焰背光中尝试徒劳逃脱，浓烟从堡垒内升腾遮蔽天空，焦褐风化石墙与暗紫阴影和橙色火光形成对比，军事秩序和防御体系的完全瓦解，陷落的堡垒成为内部摧毁的纪念碑，防守混乱的最后时刻在悲剧画面中凝固，强调内部崩坏的不可逃脱和建筑的囚禁本质。
+```
+
 ### 虎口镇 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：默认期 [默认期]
 
 **English：**
 ```
@@ -8146,7 +8378,7 @@ Cinematic still, 2.39:1 widescreen. Coastal town square at dusk, dominated by wi
 电影质感静帧，2.39:1宽屏幅。傍晚海滨城镇广场，枯草黄建筑 #8B7355 投出暗紫阴影 #5B3A6B。厚重云层遮挡阳光。聚集的人群表现绝望与战败。背景可见大海，风吹棕榈树。废弃防线栅栏。冷色调，绝望氛围。
 ```
 
-#### 2. 
+#### 2. 提示词2：投降后 [投降后]
 
 **English：**
 ```
@@ -8160,7 +8392,7 @@ Cinematic still, 2.39:1 widescreen. Town leader standing before crowd in square,
 
 ### 黄阳镇 (locations, , P5)
 
-#### 1. 
+#### 1. 提示词1：默认期 [默认期]
 
 **English：**
 ```
@@ -8172,7 +8404,7 @@ Cinematic still, 2.39:1 widescreen. Coastal town engulfed in warfare chaos. With
 电影质感静帧，2.39:1宽屏幅。沿海城镇陷入战争混乱。枯草黄建筑 #8B7355 被暗红烈火 #8B1A1A 照亮。烟柱升起。多名士兵在废墟间交火。炮火爆炸闪光。海港受损。末日战争氛围。
 ```
 
-#### 2. 
+#### 2. 提示词2：战后 [战后]
 
 **English：**
 ```

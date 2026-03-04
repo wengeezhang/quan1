@@ -192,7 +192,7 @@
 
 ## 八、AI绘图提示词
 
-### 提示词1：默认
+### 提示词1：校园侦察
 
 **English：**
 ```
@@ -202,5 +202,29 @@ Cinematic still, 2.39:1 widescreen, university campus corrupted by occupation an
 **中文：**
 ```
 电影级画面，2.39:1超宽屏，被占领和秘密实验污染的大学校园，现代学术建筑被改作军事设施，食堂被改装为配给中心配备工业机械，宿舍楼变成装有监控系统的军营，被污染的学术空间黑板被覆盖座位被清空，隐藏在阴影中通往地下实验室的入口，下降到深层地下设施中冷色科学照明，配备生命维持系统的实验舱室，数字人培育池，装有生物机械设备的无菌实验室，枯草黄与暗紫色调反映知识的腐蚀，冷白和青色科学光线营造非人类的冷漠，曾经的学术骄傲扭曲成伦理噩梦，强调从知识殿堂到科技恐怖的转变。
+```
+
+### 提示词2：表面探查
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, military occupation of university campus surface level, food hall converted to industrial distribution center with heavy machinery and conveyor systems, dormitory rows transformed into barracks with cold fluorescent lighting and surveillance camera arrays, classrooms stripped bare with blackboards covered, desks removed, corridors patrolled by occupiers in tactical formation, hierarchical oppressive order maintained through constant surveillance, straw-yellow building facade contrasting with dark purple shadows of control, cold artificial white lighting overwhelming any natural warmth, military efficiency imposing itself on academic spaces, austere and dehumanizing transformation, occupiers moving methodically through corridors with weapons, every space monitored and controlled, the surface order hiding deeper horrors beneath, emphasize the contradiction between surface organization and underlying dread.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，占领者对大学校园表层的军事占领，食堂改装为配备重型机械和传送带系统的工业配给中心，宿舍楼变成装有冷色荧光灯和监控摄像头阵列的军营，教室被完全清空黑板被覆盖座位被移除，走廊中占领者以战术队形巡逻，通过持续监控维持等级制的压抑秩序，枯草黄的建筑立面与控制的暗紫阴影形成对比，冷白人工照明压倒任何自然温暖，军事效率对学术空间的强制改造，苛刻非人性的转变，占领者携武器有条不紊地在走廊中移动，每个空间都被监管控制，表层秩序隐藏深层恐怖，强调表面组织与潜伏恐惧之间的矛盾。
+```
+
+### 提示词3：地下秘密
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, discovery of deep underground laboratory beneath corrupted campus, digital human cultivation tanks with suspended bodies submerged in luminous nutrient fluid, cyan-white cold scientific lighting illuminating sterile chamber, biomechanical equipment with intricate tube networks and electrode systems, life support machines with rhythmic mechanical operations, rows of containment vessels creating eerie bioluminescent glow, the ultimate ethical nightmare exposed, horrifying violation of human dignity transformed into experimental subjects, metal and glass infrastructure of technological horror, complete absence of warmth or humanity, cold fluorescent and cyan lighting creating utterly alien atmosphere, scientific apparatus arranged with meticulous precision, each tank containing tragedy and violation, the depth of corruption finally revealed, emphasize scientific sterility contrasted with moral devastation, the horror of technology turned against humanity.
+```
+
+**中文：**
+```
+电影级画面，2.39:1超宽屏，被污染校园下方深层地下实验室的发现，数字人培育池中悬浮在发光营养液中的躯体，青白冷色科学照明照亮无菌舱室，配备复杂管网和电极系统的生物机械设备，有节奏运转的生命维持机器，排列的容器产生诡异生物发光，终极伦理噩梦的曝露，人类尊严的骇人侵犯转化为实验对象，技术恐怖的金属玻璃基础设施，完全缺乏温暖和人性，冷荧光和青色照明营造完全陌生的气氛，科学器械以精确秩序排列，每个培育舱包含悲剧和侵犯，腐蚀的深度最终显露，强调科学无菌与道德毁灭的对比，技术对人类的恐怖反噬。
 ```
 
