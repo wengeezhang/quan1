@@ -335,8 +335,7 @@ def write_plan(results: list, global_prefix: str, output_path: str):
             continue
         lines.append(f"### {r['name']} ({r['type']}, {'★' * r['stars']}, {r['priority']})\n")
         for idx, p in enumerate(r['prompts'], 1):
-            stage_tag = f" [{p['stage_id']}]" if p.get('stage_id') else ""
-            lines.append(f"#### {idx}. {p['title']}{stage_tag}\n")
+            lines.append(f"#### {idx}. {p['title']}\n")
             if p['english']:
                 lines.append("**English：**\n```")
                 lines.append(p['english'])
