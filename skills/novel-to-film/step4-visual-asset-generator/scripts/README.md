@@ -91,7 +91,7 @@ Phase 2 任务会自动检测基准肖像是否存在，未就绪的任务自动
 2. 对未内嵌全局前缀的提示词，自动在 prompt 头部拼接 `Cinematic still, 2.39:1 widescreen, 35mm film grain...`
 3. 按优先级排序（P0/P1 角色肖像 → P2 主要场景 → P3 配角 → P4 道具 → P5 低优先级）
 4. Phase 1 纯文生图，Phase 2 传入基准肖像作为参考图
-5. 断点续跑：已有图片的路径自动跳过
+5. 断点续跑：输出路径已有图片时自动跳过，中途中断后重跑只会生成剩余图片；加 `--no-skip` 可关闭此行为，强制覆盖重新生成
 
 **关键特性**：
 
@@ -106,7 +106,8 @@ Phase 2 任务会自动检测基准肖像是否存在，未就绪的任务自动
 # ① Phase 1: 生成基准肖像 + 场景 + 道具
 python3 generate_images.py --phase 1
 
-# ② 人工检查 _portrait/正面半身像.png，不满意的删掉重跑
+# ② 人工检查 _portrait/正面半身像.png，不满意则用 --no-skip 强制覆盖重新生成
+#    --no-skip 会关闭默认的断点续跑机制（跳过已有图片），强制调 API 重新生成并覆盖原文件
 python3 generate_images.py --phase 1 --element 某角色 --no-skip
 
 # ③ 全部基准肖像 OK 后，Phase 2: 以肖像为参考图生成角色剩余图片
@@ -141,7 +142,7 @@ python3 generate_images.py --priority "P0/P1"
 | `--element` | 全部 | 只生成指定元素名 |
 | `--type` | 全部 | 只生成指定类型（`characters` / `locations` / `props`） |
 | `--dry-run` | false | 只输出计划，不调 API |
-| `--no-skip` | false | 不跳过已有图片（强制重新生成） |
+| `--no-skip` | false | 关闭断点续跑，即使输出路径已有图片也强制覆盖重新生成。典型用途：基准肖像不满意时配合 `--element` 重跑指定角色 |
 | `--limit` | 0 (不限) | 最多生成 N 张图片 |
 | `--delay` | 1.5 | API 调用间隔秒数 |
 | `--ark-api-url` | `https://ark.cn-beijing.volces.com/api/v3/images/generations` | 方舟 API 地址 |
@@ -207,7 +208,7 @@ python3 generate_images.py --dry-run --phase 1
 # ④ Phase 1: 生成基准肖像 + 场景 + 道具
 python3 generate_images.py --phase 1
 
-# ⑤ 人工审查角色基准肖像，不满意的删掉重跑
+# ⑤ 人工审查角色基准肖像，不满意则 --no-skip 强制覆盖重新生成（无需手动删旧图）
 python3 generate_images.py --phase 1 --element 某角色 --no-skip
 
 # ⑥ Phase 2: 以基准肖像为参考图，生成角色剩余图片
