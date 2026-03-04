@@ -226,58 +226,20 @@
 ## 七、全局 Style Prompt 前缀
 
 以下 prompt 前缀在所有 Seedream/Seedance 生成时作为强制前缀使用。
-
-### 通用前缀（适用于所有生成）
+仅包含画面格式和胶片风格，不涉及内容描述（色彩、光影、服装、场景等由各圣经 prompt 自行控制）。
 
 **English：**
 ```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, muted earthy color palette with desaturated tones, natural side lighting with visible shadows, East Asian rural/small-town aesthetic, early 22nd century China with traditional architectural elements, medium-high contrast, cool blue-grey shadows, warm amber highlights, atmospheric haze, photorealistic with restrained supernatural elements
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic
 ```
 
 **中文：**
 ```
-电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，低饱和度的沉郁大地色调，自然侧光并带有可见阴影，东亚乡镇美学，22世纪初的中国融合传统建筑元素，中高对比度，冷蓝灰色阴影，暖琥珀色高光，大气雾霭感，写实为主搭配克制的超自然元素
-```
-
-### 角色生成前缀（通用前缀 + 以下追加）
-
-**English：**
-```
-detailed facial features with natural skin texture and pores, weathered appearance with signs of hardship, traditional Chinese clothing in muted browns and greys, natural fabric textures (cotton, linen, rough wool), asymmetric composition with environmental negative space
-```
-
-**中文：**
-```
-细致的面部特征，自然的皮肤纹理与毛孔，饱经风霜的沧桑外表，暗沉棕灰色系的中式传统服饰，天然面料质感（棉、麻、粗毛），非对称构图并留有环境负空间
-```
-
-### 场景生成前缀（通用前缀 + 以下追加）
-
-**English：**
-```
-deep environmental storytelling, layered depth with foreground elements (branches, doorframes, mist), natural material textures (rough stone, aged wood, weathered brick), moss and water stains on surfaces, volumetric atmospheric effects (fog, dust particles, smoke), wide establishing shot with human figures as scale reference
-```
-
-**中文：**
-```
-深度环境叙事，多层纵深并带有前景元素（树枝、门框、雾气），天然材质纹理（粗糙石材、老旧木头、风化砖墙），表面可见苔藓与水渍，体积感大气效果（雾、尘埃颗粒、烟），大远景建立镜头以人物作为尺度参照
-```
-
-### 特效/超自然生成前缀（通用前缀 + 以下追加）
-
-**English：**
-```
-restrained supernatural glow (not flashy or comic-book style), bioluminescent quality, soft-edged light emanation with rapid falloff, purple-blue spectral palette for spirits, cool desaturated environment surrounding the supernatural light source, eerie and unsettling rather than spectacular, practical lighting interaction (supernatural light casts real shadows and illuminates nearby surfaces)
-```
-
-**中文：**
-```
-克制的超自然光效（非炫目漫画风格），生物发光质感，柔边光晕且快速衰减，灵魂使用紫蓝色光谱，超自然光源周围环境冷色去饱和，诡异不安而非壮观华丽，物理化光照交互（超自然光投射真实阴影并照亮附近表面）
+电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格
 ```
 
 **使用说明**：
 
-- 通用前缀为强制项，所有生成必须包含
-- 类型前缀按生成对象选择追加，不可替换通用前缀
-- 各元素圣经中的具体描述（角色外貌、场景细节等）拼接在前缀之后
-- 前缀总长度（通用+类型）控制在 80 词以内，避免稀释具体提示词的效果
+- 全局前缀仅包含画面格式和胶片风格，不涉及任何内容描述
+- 色彩、光影、服装、场景氛围、超自然效果等全部由各圣经 prompt 自行控制
+- 前缀在 API 调用时动态拼接到圣经 prompt 之前

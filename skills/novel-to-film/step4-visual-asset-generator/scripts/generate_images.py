@@ -420,7 +420,7 @@ def main():
                 ref_tag = f" [参考图:{ref_exists}]"
             print(f"  [{t['type']}] {t['element']}/{t['stage_id']}{portrait_tag}{phase_tag}{ref_tag}")
             print(f"    → {t['output_path']}")
-            print(f"    prompt: {t['prompt_en'][:80]}...")
+            print(f"    prompt: {t['prompt_en']}")
             if t["ref_portrait_path"]:
                 print(f"    ref: {t['ref_portrait_path']}")
             print()

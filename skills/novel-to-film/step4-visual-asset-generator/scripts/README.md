@@ -34,6 +34,8 @@
 
 **输出**：`production/step4-assets/prompts_plan.md`
 
+**`prompts_plan.md` 的定位**：仅供人工查看的提示词总览报告，不参与图片生成流程。`generate_images.py` 在生成时直接调用 `scan_bibles()` 实时读取圣经原文件，不依赖此文件。
+
 **功能**：
 - 扫描并解析中英双语提示词对（标准格式：`**English：**` 在前，`**中文：**` 在后）
 - 校验全局 Style Prefix 是否内含
@@ -63,7 +65,7 @@ python3 scaffold_assets.py [--base-dir /path/to/production] [--dry-run]
 
 ### generate_images.py — 图片批量生成器
 
-调用火山引擎方舟 (Volcengine Ark) Seedream API，支持两阶段角色生成，按优先级批量生成视觉资产图片。
+调用火山引擎方舟 (Volcengine Ark) Seedream API，支持三阶段生成，按优先级批量生成视觉资产图片。
 
 **前置依赖**：
 
@@ -76,26 +78,25 @@ export ARK_API_KEY="your-api-key-here"
 
 **输出**：生成的 `.png` 图片落盘到 `production/step4-assets/{type}/{name}/{stage_id}/` + 生成日志 `generation_log.jsonl`
 
-**两阶段角色生成**：
+**三阶段生成**：
 
-角色图片分两阶段生成，确保外观一致性：
-
-- **Phase 1（文生图）**：生成角色基准肖像（正面半身像）+ 所有场景/道具。共 272 张。
-- **Phase 2（参考图生图）**：以基准肖像为参考图，生成角色的其余图片（其他视角肖像 + 各阶段场景图）。共 187 张。自动将基准肖像编码为 base64 传入 `image_urls` 字段。
+- **Phase 1（角色基准肖像）**：生成角色正面半身像（纯文生图）。人工审核满意后进入 Phase 2。
+- **Phase 2（角色参考图生图）**：以基准肖像为参考图，生成角色的其余图片（其他视角肖像 + 各阶段场景图）。自动将基准肖像编码为 base64 传入 `image` 字段。
+- **Phase 3（场景 + 道具）**：生成所有场景和道具图片（纯文生图）。与 Phase 1/2 独立，可并行。
 
 Phase 2 任务会自动检测基准肖像是否存在，未就绪的任务自动跳过并提示先跑 Phase 1。
 
 **核心流程**：
 
-1. 从 118 个圣经文件中提取 459 条提示词，标记 phase 和参考图路径
-2. 对未内嵌全局前缀的提示词，自动在 prompt 头部拼接 `Cinematic still, 2.39:1 widescreen, 35mm film grain...`
+1. 调用 `scan_bibles()` 直接从圣经原文件中提取提示词，标记 phase 和参考图路径
+2. 对未内嵌全局前缀的提示词，自动在 prompt 头部拼接全局前缀（仅画面格式：`Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic`）
 3. 按优先级排序（P0/P1 角色肖像 → P2 主要场景 → P3 配角 → P4 道具 → P5 低优先级）
-4. Phase 1 纯文生图，Phase 2 传入基准肖像作为参考图
+4. Phase 1/3 纯文生图，Phase 2 传入基准肖像作为参考图
 5. 断点续跑：输出路径已有图片时自动跳过，中途中断后重跑只会生成剩余图片；加 `--no-skip` 可关闭此行为，强制覆盖重新生成
 
 **关键特性**：
 
-- 两阶段：先确认基准肖像满意，再批量生成，避免浪费
+- 三阶段：Phase 1 角色基准肖像 → Phase 2 角色参考图生图 → Phase 3 场景+道具，各阶段可独立运行
 - 可复现：每个提示词的 seed 基于元素名+序号确定性计算
 - 速率控制：默认 1.5s/张间隔 + 指数退避重试（最多 3 次）
 - 生成日志：`generation_log.jsonl` 记录每张图的 phase、参考图路径、成功/失败等
@@ -103,15 +104,17 @@ Phase 2 任务会自动检测基准肖像是否存在，未就绪的任务自动
 **推荐工作流**：
 
 ```bash
-# ① Phase 1: 生成基准肖像 + 场景 + 道具
+# ① Phase 1: 生成角色基准肖像
 python3 generate_images.py --phase 1
 
 # ② 人工检查 _portrait/正面半身像.png，不满意则用 --no-skip 强制覆盖重新生成
-#    --no-skip 会关闭默认的断点续跑机制（跳过已有图片），强制调 API 重新生成并覆盖原文件
 python3 generate_images.py --phase 1 --element 某角色 --no-skip
 
 # ③ 全部基准肖像 OK 后，Phase 2: 以肖像为参考图生成角色剩余图片
 python3 generate_images.py --phase 2
+
+# ④ Phase 3: 生成场景和道具（可与 Phase 1/2 并行）
+python3 generate_images.py --phase 3
 ```
 
 **其他用法**：
@@ -137,7 +140,7 @@ python3 generate_images.py --priority "P0/P1"
 | `--base-dir` | 自动定位 | production 目录路径 |
 | `--model` | `doubao-seedream-5-0-260128` | Seedream 模型 ID |
 | `--size` | `2K` | 图片尺寸（`2K` / `4K` / `1024x1024`） |
-| `--phase` | `0` (全部) | `1`=基准肖像+场景道具, `2`=角色参考图生图, `0`=全部 |
+| `--phase` | `0` (全部) | `1`=角色基准肖像, `2`=角色参考图生图, `3`=场景+道具, `0`=全部 |
 | `--priority` | 全部 | 只生成指定优先级（`P0/P1` / `P2` / `P3` / `P4` / `P5`） |
 | `--element` | 全部 | 只生成指定元素名 |
 | `--type` | 全部 | 只生成指定类型（`characters` / `locations` / `props`） |
@@ -202,10 +205,9 @@ python3 scaffold_assets.py
 # → 272 directories
 
 # ③ 先 dry-run 确认计划
-python3 generate_images.py --dry-run --phase 1
-# → 272 phase 1 tasks (基准肖像 + 场景 + 道具)
+python3 generate_images.py --dry-run
 
-# ④ Phase 1: 生成基准肖像 + 场景 + 道具
+# ④ Phase 1: 生成角色基准肖像
 python3 generate_images.py --phase 1
 
 # ⑤ 人工审查角色基准肖像，不满意则 --no-skip 强制覆盖重新生成（无需手动删旧图）
@@ -214,9 +216,12 @@ python3 generate_images.py --phase 1 --element 某角色 --no-skip
 # ⑥ Phase 2: 以基准肖像为参考图，生成角色剩余图片
 python3 generate_images.py --phase 2
 
-# ⑦ 构建索引
+# ⑦ Phase 3: 生成场景和道具（可与上面并行）
+python3 generate_images.py --phase 3
+
+# ⑧ 构建索引
 python3 build_index.py
 
-# ⑧ 校验完整性
+# ⑨ 校验完整性
 python3 validate_assets.py
 ```
