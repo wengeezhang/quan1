@@ -138,11 +138,13 @@ def generate_one_image(
         "watermark": False,
     }
 
-    # 如果提供了参考图，加入 image_urls 字段（图生图模式）
+    # 如果提供了参考图，加入 image 字段（图生图模式）
+    # 注意：火山方舟 Seedream 官方 API 的图生图字段名是 "image"（数组），
+    #       而非 "image_urls"。传入 base64 data URI 数组。
     if ref_image_path and os.path.exists(ref_image_path):
         try:
             data_uri = load_ref_image_as_data_uri(ref_image_path)
-            payload["image_urls"] = [data_uri]
+            payload["image"] = [data_uri]
             log.info(f"  📎 使用参考图: {os.path.basename(ref_image_path)}")
         except Exception as e:
             log.warning(f"  ⚠️ 读取参考图失败: {e}，退回文生图模式")
