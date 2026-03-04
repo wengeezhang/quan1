@@ -78,11 +78,14 @@ def _collect_block(lines: list, i: int, stop_patterns: list) -> tuple:
 def extract_prompt_blocks(text: str) -> list:
     """
     提取所有中英双语提示词对。
-    支持多种格式：
+    标题只有两种形式：
+      ### 提示词N：肖像-{视角}    — 角色肖像 (stage_id=None)
+      ### 提示词N：{stage_id}     — 阶段场景
+
+    内容格式：
       A: **English：** 后换行 + ``` 代码块 ```
       B: **English：** 后换行 + 纯文本
       C: **English：** 同行内联内容
-      D: ### English Prompts 章节 + **阶段标题** + code blocks（美女榕格式）
     返回 [{ "title": str, "english": str, "chinese": str, "stage_id": str|None }, ...]
     """
     prompts = []
@@ -90,6 +93,7 @@ def extract_prompt_blocks(text: str) -> list:
     i = 0
     current_title = ""
     current_stage = None
+    in_prompt_section = False  # 是否已进入 AI 绘图提示词章节
 
     # 终止模式列表
     stop_pats = [
@@ -101,83 +105,25 @@ def extract_prompt_blocks(text: str) -> list:
     while i < len(lines):
         line = lines[i]
 
-        # ---- 捕获提示词标题行 ----
-        # 支持多种格式：
-        #   ### 提示词N：xxx          — 旧格式（道具/场景部分圣经）
-        #   ### 阶段：灵魂期          — 角色阶段场景提示词，stage_id = "灵魂期"
-        #   ### 肖像：正面半身像       — 角色肖像提示词，stage_id = None（属于 _portrait）
-        #   ### 肖像：正面半身像（活泼少女期）— 带阶段的肖像，stage_id = None（仍属于 _portrait）
-        if re.match(r'^###\s*提示词', line):
-            current_title = line.strip('#').strip()
-            for part in re.split(r'[：:—\-]', current_title):
-                part = part.strip()
-                if part and not re.match(r'^提示词\d*', part):
-                    current_stage = part
-                    break
-        elif re.match(r'^###\s*阶段[：:]', line):
-            current_title = line.strip('#').strip()
-            # "阶段：灵魂期" → stage_id = "灵魂期"
-            # "阶段：危机母亲期（病床守护）" → stage_id = "危机母亲期"
-            m_stage = re.match(r'阶段[：:]\s*(.+)', current_title)
-            if m_stage:
-                raw = m_stage.group(1).strip()
-                # 去除括号中的补充说明，只保留 stage_id
-                current_stage = re.split(r'[（(]', raw)[0].strip()
-        elif re.match(r'^###\s*肖像[：:]', line):
-            current_title = line.strip('#').strip()
-            # 肖像提示词不属于任何阶段，归入 _portrait
-            current_stage = None
+        # ---- 检测是否进入 AI 绘图提示词章节 ----
+        if re.match(r'^##\s.*AI绘图提示词', line):
+            in_prompt_section = True
+            current_stage = None  # 进入新章节时重置
 
-        # ---- 格式D: ### English Prompts 章节（美女榕等特殊格式）----
-        elif re.match(r'^###\s*English\s+Prompts?', line, re.I):
-            i += 1
-            while i < len(lines):
-                l = lines[i]
-                # 遇到中文 Prompts 章节或下一个 ## 标题 → 停止
-                if re.match(r'^###\s*(中文|Chinese)\s+Prompts?', l, re.I) or re.match(r'^##\s', l):
-                    i -= 1
-                    break
-                # **阶段标题** 后跟 code block = 一个提示词
-                stage_title = re.match(r'^\*\*(.+?)\*\*', l)
-                if stage_title:
-                    stage_name = stage_title.group(1).strip()
-                    # 提取 stage_id：从标题中尝试获取阶段信息
-                    sid = None
-                    for part in re.split(r'[：:（()）]', stage_name):
-                        part = part.strip()
-                        if part and not re.match(r'^(基础|通用|阶段)', part):
-                            sid = part
-                            break
-                    i += 1
-                    eng_text, i = _collect_block(lines, i, stop_pats + [r'^\*\*'])
-                    if eng_text:
-                        prompts.append({
-                            "title": stage_name,
-                            "english": eng_text,
-                            "chinese": "",
-                            "stage_id": sid or stage_name,
-                        })
-                i += 1
-            # 然后尝试找 ### 中文 Prompts 章节
-            i += 1
-            if i < len(lines) and re.match(r'^###\s*(中文|Chinese)\s+Prompts?', lines[i], re.I):
-                i += 1
-                prompt_idx = 0
-                while i < len(lines):
-                    l = lines[i]
-                    if re.match(r'^##\s', l):
-                        i -= 1
-                        break
-                    stage_title = re.match(r'^\*\*(.+?)\*\*', l)
-                    if stage_title:
-                        i += 1
-                        chn_text, i = _collect_block(lines, i, stop_pats + [r'^\*\*'])
-                        if chn_text and prompt_idx < len(prompts):
-                            prompts[prompt_idx]["chinese"] = chn_text
-                        prompt_idx += 1
-                    i += 1
-            else:
-                i -= 1  # 回退
+        # ---- 捕获提示词标题行 ----
+        # 严格只有两种形式（已全部规范化）：
+        #   ### 提示词N：肖像-{视角}    — 角色肖像，stage_id = None
+        #   ### 提示词N：{stage_id}     — 阶段场景
+        if re.match(r'^###\s*提示词\s*\d+\s*[：:]', line):
+            in_prompt_section = True
+            current_title = line.strip('#').strip()
+            m = re.match(r'提示词\s*\d+\s*[：:]\s*(.+)', current_title)
+            if m:
+                content = m.group(1).strip()
+                if content.startswith('肖像'):
+                    current_stage = None
+                else:
+                    current_stage = content
 
         # ---- 格式A/B/C: **English：** 标签 ----
         else:

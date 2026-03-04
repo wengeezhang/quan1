@@ -192,11 +192,15 @@
 
 ## 八、AI绘图提示词
 
-```
-**English：** Cinematic still, 2.39:1 widescreen, university campus corrupted by occupation and secret experimentation, modern academic buildings repurposed as military installation, food hall converted to distribution center with industrial machinery, dormitory rows transformed into barracks with surveillance systems, contaminated learning spaces with blackboards covered and seats removed, hidden entrance to underground laboratory in shadows, descent into deep underground facility with cold scientific lighting, experimental chambers with life support systems, digital human cultivation tanks, sterile laboratories with biomechanical equipment, straw-yellow and dark purple color scheme reflecting corruption of knowledge, cold white and cyan scientific lighting creating inhumane atmosphere, former pride of academia twisted into ethical nightmare, emphasize transformation from intellectual sanctuary to technological horror.
+### 提示词1：默认
 
-**中文：** 电影级画面，2.39:1超宽屏，被占领和秘密实验污染的大学校园，现代学术建筑被改作军事设施，食堂被改装为配给中心配备工业机械，宿舍楼变成装有监控系统的军营，被污染的学术空间黑板被覆盖座位被清空，隐藏在阴影中通往地下实验室的入口，下降到深层地下设施中冷色科学照明，配备生命维持系统的实验舱室，数字人培育池，装有生物机械设备的无菌实验室，枯草黄与暗紫色调反映知识的腐蚀，冷白和青色科学光线营造非人类的冷漠，曾经的学术骄傲扭曲成伦理噩梦，强调从知识殿堂到科技恐怖的转变。
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, university campus corrupted by occupation and secret experimentation, modern academic buildings repurposed as military installation, food hall converted to distribution center with industrial machinery, dormitory rows transformed into barracks with surveillance systems, contaminated learning spaces with blackboards covered and seats removed, hidden entrance to underground laboratory in shadows, descent into deep underground facility with cold scientific lighting, experimental chambers with life support systems, digital human cultivation tanks, sterile laboratories with biomechanical equipment, straw-yellow and dark purple color scheme reflecting corruption of knowledge, cold white and cyan scientific lighting creating inhumane atmosphere, former pride of academia twisted into ethical nightmare, emphasize transformation from intellectual sanctuary to technological horror.
 ```
 
----
+**中文：**
+```
+电影级画面，2.39:1超宽屏，被占领和秘密实验污染的大学校园，现代学术建筑被改作军事设施，食堂被改装为配给中心配备工业机械，宿舍楼变成装有监控系统的军营，被污染的学术空间黑板被覆盖座位被清空，隐藏在阴影中通往地下实验室的入口，下降到深层地下设施中冷色科学照明，配备生命维持系统的实验舱室，数字人培育池，装有生物机械设备的无菌实验室，枯草黄与暗紫色调反映知识的腐蚀，冷白和青色科学光线营造非人类的冷漠，曾经的学术骄傲扭曲成伦理噩梦，强调从知识殿堂到科技恐怖的转变。
+```
 
