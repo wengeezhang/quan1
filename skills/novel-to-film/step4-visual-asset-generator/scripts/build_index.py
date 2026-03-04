@@ -148,22 +148,15 @@ def generate_index(base_dir: str, output_path: str):
                 continue
             info = prop_bibles.get(name, {'stars': 0, 'stages': {}})
 
-            # 检查是否有子目录（有阶段的道具）
-            subs = [s for s in os.listdir(name_dir) if os.path.isdir(os.path.join(name_dir, s))]
-            if subs:
-                for sub in sorted(subs):
-                    sub_dir = os.path.join(name_dir, sub)
-                    chapter = info['stages'].get(sub, '—')
-                    img_count = count_images(sub_dir)
-                    rel_path = f"props/{name}/{sub}/"
-                    lines.append(f"| {name} | {sub} | {chapter} | {rel_path} | {img_count} |")
-                    total_images += img_count
-                    total_assets += 1
-            else:
-                # 无阶段，图片直接在道具名目录下
-                img_count = count_images(name_dir)
-                rel_path = f"props/{name}/"
-                lines.append(f"| {name} | — | — | {rel_path} | {img_count} |")
+            # 所有道具统一有阶段注册表（至少"默认期"），结构与场景一致
+            for sub in sorted(os.listdir(name_dir)):
+                sub_dir = os.path.join(name_dir, sub)
+                if not os.path.isdir(sub_dir):
+                    continue
+                chapter = info['stages'].get(sub, '—')
+                img_count = count_images(sub_dir)
+                rel_path = f"props/{name}/{sub}/"
+                lines.append(f"| {name} | {sub} | {chapter} | {rel_path} | {img_count} |")
                 total_images += img_count
                 total_assets += 1
 

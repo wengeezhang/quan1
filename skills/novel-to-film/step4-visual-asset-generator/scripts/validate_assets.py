@@ -20,7 +20,7 @@ from pathlib import Path
 # 导入共享工具函数
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from bible_utils import count_stars, extract_stages, has_stage_registry, count_images, BIBLE_DIRS, IMAGE_EXTS
+from bible_utils import count_stars, extract_stages, count_images, BIBLE_DIRS, IMAGE_EXTS
 
 
 DEFAULT_BASE = os.path.join(os.path.dirname(__file__), "..", "..", "..", "..", "production")
@@ -107,7 +107,6 @@ def validate(base_dir: str) -> bool:
                 name = fname.replace('.md', '')
                 stars = count_stars(text)
                 stages = extract_stages(text)
-                has_reg = has_stage_registry(text)
 
                 if elem_type == "characters":
                     # 检查 _portrait/
@@ -150,25 +149,16 @@ def validate(base_dir: str) -> bool:
                             report.error(f"缺少目录: locations/{name}/{sid}/")
 
                 elif elem_type == "props":
-                    if has_reg and stages:
-                        for sid in stages:
-                            total_expected += 1
-                            sid_dir = os.path.join(assets_root, "props", name, sid)
-                            if os.path.isdir(sid_dir):
-                                total_found += 1
-                                if count_images(sid_dir) == 0:
-                                    empty_dirs += 1
-                            else:
-                                report.error(f"缺少目录: props/{name}/{sid}/")
-                    else:
+                    # 所有道具统一有阶段注册表（至少"默认期"），与场景/角色一致
+                    for sid in (stages or ['默认期']):
                         total_expected += 1
-                        prop_dir = os.path.join(assets_root, "props", name)
-                        if os.path.isdir(prop_dir):
+                        sid_dir = os.path.join(assets_root, "props", name, sid)
+                        if os.path.isdir(sid_dir):
                             total_found += 1
-                            if count_images(prop_dir) == 0:
+                            if count_images(sid_dir) == 0:
                                 empty_dirs += 1
                         else:
-                            report.error(f"缺少目录: props/{name}/")
+                            report.error(f"缺少目录: props/{name}/{sid}/")
 
     report.ok(f"目录覆盖率: {total_found}/{total_expected}")
     if empty_dirs > 0:

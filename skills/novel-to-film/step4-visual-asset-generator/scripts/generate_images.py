@@ -272,11 +272,8 @@ def build_tasks(results: list, global_prefix: str, assets_root: str) -> list:
                 is_portrait = False
                 phase = 1
                 ref_path = None
-            else:  # props
-                if stage_id:
-                    out_path = os.path.join(type_dir, stage_id, f"{idx:02d}.png")
-                else:
-                    out_path = os.path.join(type_dir, f"{idx:02d}.png")
+            else:  # props — 所有道具统一有阶段注册表（至少"默认期"）
+                out_path = os.path.join(type_dir, stage_id or "默认期", f"{idx:02d}.png")
                 is_portrait = False
                 phase = 1
                 ref_path = None

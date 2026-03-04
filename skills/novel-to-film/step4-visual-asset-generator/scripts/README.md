@@ -55,7 +55,7 @@ python3 extract_prompts.py [--base-dir /path/to/production]
 **目录结构规则**：
 - 角色：`characters/{角色名}/_portrait/` + `characters/{角色名}/{stage_id}/`
 - 场景：`locations/{场景名}/{stage_id}/`
-- 道具：`props/{道具名}/{stage_id}/`（有阶段注册表）或 `props/{道具名}/`（无阶段）
+- 道具：`props/{道具名}/{stage_id}/`（所有道具统一有阶段注册表，无状态变化的为"默认期"）
 
 ```bash
 python3 scaffold_assets.py [--base-dir /path/to/production] [--dry-run]
