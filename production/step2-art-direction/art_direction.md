@@ -230,12 +230,12 @@
 
 **English：**
 ```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. 
 ```
 
 **中文：**
 ```
-电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格
+电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。
 ```
 
 **使用说明**：
