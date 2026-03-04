@@ -101,7 +101,12 @@ def extract_prompt_blocks(text: str) -> list:
     while i < len(lines):
         line = lines[i]
 
-        # ---- 捕获提示词标题行 (### 提示词N：xxx) ----
+        # ---- 捕获提示词标题行 ----
+        # 支持多种格式：
+        #   ### 提示词N：xxx          — 旧格式（道具/场景部分圣经）
+        #   ### 阶段：灵魂期          — 角色阶段场景提示词，stage_id = "灵魂期"
+        #   ### 肖像：正面半身像       — 角色肖像提示词，stage_id = None（属于 _portrait）
+        #   ### 肖像：正面半身像（活泼少女期）— 带阶段的肖像，stage_id = None（仍属于 _portrait）
         if re.match(r'^###\s*提示词', line):
             current_title = line.strip('#').strip()
             for part in re.split(r'[：:—\-]', current_title):
@@ -109,6 +114,19 @@ def extract_prompt_blocks(text: str) -> list:
                 if part and not re.match(r'^提示词\d*', part):
                     current_stage = part
                     break
+        elif re.match(r'^###\s*阶段[：:]', line):
+            current_title = line.strip('#').strip()
+            # "阶段：灵魂期" → stage_id = "灵魂期"
+            # "阶段：危机母亲期（病床守护）" → stage_id = "危机母亲期"
+            m_stage = re.match(r'阶段[：:]\s*(.+)', current_title)
+            if m_stage:
+                raw = m_stage.group(1).strip()
+                # 去除括号中的补充说明，只保留 stage_id
+                current_stage = re.split(r'[（(]', raw)[0].strip()
+        elif re.match(r'^###\s*肖像[：:]', line):
+            current_title = line.strip('#').strip()
+            # 肖像提示词不属于任何阶段，归入 _portrait
+            current_stage = None
 
         # ---- 格式D: ### English Prompts 章节（美女榕等特殊格式）----
         elif re.match(r'^###\s*English\s+Prompts?', line, re.I):
