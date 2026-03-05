@@ -193,6 +193,19 @@ def get_global_prefix(base_dir: str) -> str:
     return ""
 
 
+def extract_identity_anchor(text: str) -> str:
+    """从角色圣经中提取身份锚点（Identity Anchor）的英文部分。
+
+    锚点位于 '### 身份锚点 / Identity Anchor' 下方，格式为:
+      > **EN:** <anchor text>
+    返回空字符串表示未找到。
+    """
+    m = re.search(r'###\s*身份锚点.*?>\s*\*\*EN:\*\*\s*([^\n]+)', text, re.S)
+    if m:
+        return m.group(1).strip()
+    return ""
+
+
 # ---------------------------------------------------------------------------
 # 主逻辑
 # ---------------------------------------------------------------------------
@@ -219,6 +232,7 @@ def scan_bibles(base_dir: str):
                 stages = extract_stages(text)
                 prompts = extract_prompt_blocks(text)
                 priority = PRIORITY_MAP.get(elem_type, {}).get(stars, "P5")
+                identity_anchor = extract_identity_anchor(text) if elem_type == "characters" else ""
 
                 # 子目录（配角/群像等）
                 sub = os.path.relpath(root, bible_dir)
@@ -248,6 +262,7 @@ def scan_bibles(base_dir: str):
                     "has_chinese": all(p['chinese'] for p in prompts),
                     "prefix_ok": prefix_ok,
                     "has_inline_prefix": has_inline_prefix,
+                    "identity_anchor": identity_anchor,
                     "source": fpath,
                 })
 

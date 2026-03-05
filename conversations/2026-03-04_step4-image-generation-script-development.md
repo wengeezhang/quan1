@@ -102,6 +102,79 @@ python3 validate_assets.py
 - generate_images.py 的 `build_tasks()` 输出路径为 `{element}/{stage_id}/prompt_{N}.png`，N 保证唯一
 - 如果强制在标题中加场景描述（如 `默认-全景`），会打破严格两种形式的规则
 
+### 10. 三阶段重构（Phase 拆分）
+
+- 原 Phase 1 包含角色基准肖像 + 场景 + 道具，过于混杂
+- 拆分为三阶段：Phase 1 = 角色基准肖像，Phase 2 = 角色参考图生图，**Phase 3 = 场景 + 道具**
+- `--phase` 参数从 `choices=[0,1,2]` 扩展为 `choices=[0,1,2,3]`
+- dry-run 摘要和运行时日志同步更新
+
+### 11. 全局前缀精简（art_direction.md 第七章）
+
+**问题**：生成的角色肖像面部轮廓和肤色过于相似，角色之间缺乏辨识度。
+
+**根因分析**：
+- `get_global_prefix()` 返回的通用前缀过于具体，包含"weathered appearance"、"traditional Chinese clothing in muted browns and greys"、"muted earthy color palette"等内容描述
+- 这些内容描述本应由各角色圣经自行控制，全局前缀不应干涉
+- 即使区分了角色/场景/超自然三类前缀，角色通用前缀本身仍包含同质化描述（所有角色都"weathered"、都穿"muted browns"），无法解决差异化问题
+
+**解决方案**：将 art_direction.md 第七章精简为仅 5 个纯格式关键词：
+```
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic
+```
+删除了角色前缀、场景前缀、超自然前缀的全部内容描述。色彩、光影、服装、氛围等全部交由各圣经 prompt 自行控制。
+
+**随后清理**：从 118 个圣经文件中删除了所有内嵌的 `Cinematic still, 2.39:1 widescreen, ` 和 `电影感静帧，2.39:1宽银幕，` 前缀（共 70 个文件，270+149 处），因为全局前缀现在由 `generate_images.py` 在 API 调用时动态拼接。
+
+### 12. 角色身份锚点系统（Identity Anchor）— 核心架构决策
+
+**问题**：即使精简了全局前缀，生成的角色肖像仍然面部相似。文生图模型在缺乏强差异化特征时，会收敛到"默认亚洲中年男性"的均值脸。
+
+**方案设计**（三步机制）：
+
+**第一步：角色区分矩阵**。用一张表强制规定每个角色在 6 个维度上的唯一组合——年龄段、体型、脸型、发型、肤色、标志性特征。任何两个角色不能在 3 个以上维度重合。这张表本身就是一个校验工具。
+
+**第二步：身份锚点（Identity Anchor）**。从矩阵中提炼出每个角色一句话的"视觉指纹"（英文+中文各一行，最多 25 词），作为硬约束，在该角色的**每一条** prompt 最前面前置，优先级高于全局前缀和场景描述。
+
+**第三步：脚本层保障**。`generate_images.py` 在拼接 prompt 时，自动从角色圣经中提取身份锚点并前置。
+
+**最终 Prompt 拼接顺序**：`[身份锚点] + [全局前缀] + [圣经原始 Prompt]`
+
+**实施结果**：
+- 53 个角色全部写入身份锚点（位于各圣经"外貌与形态"章节顶部的 `### 身份锚点 / Identity Anchor` 子节）
+- `extract_prompts.py` 新增 `extract_identity_anchor()` 函数
+- `generate_images.py` 的 `build_tasks()` 为角色类型自动前置锚点
+- 生成文件：`identity_anchors.json`（结构化数据）、`identity_anchors.md`（6 维矩阵 + 碰撞检查）
+
+**锚点对比示例**（展示差异化效果）：
+- 宋小仙：`Athletic lean man, 30-35, piercing narrow eyes like a deep well, sharp angular face, relentless analytical bearing`
+- 朱围庸：`Stocky powerful man, 30-40, deep sunken eyes with piercing gaze, thick black sword brows, squared strong jaw, sun-darkened weathered skin, cold immobile face`
+- 李仁：`Weathered old farmer, late 50s, gaunt angular face with deep wrinkles, receding grey-white short hair, dark leathery sun-baked skin, thick black brows over piercing strategist eyes, stooped laborer posture`
+- 杨弘：`Imposing military commander, 50s, tall powerful frame, close-cropped iron-grey hair, deep scar across left jawline, hawk nose, cold calculating narrow eyes, ramrod-straight military posture`
+- 老吴：`Aged fisherman, 70s, gaunt hollow cheeks, wispy white beard, deep-set weary eyes, weathered leather skin, labor-marked gnarled hands`
+
+**设计决策的核心洞察**：
+> 文生图模型的"均值脸"问题不能靠删除干扰信息（全局前缀精简）来解决，必须靠**主动注入差异化信号**（身份锚点）来打破。两者是互补的：前者减少同质化拉力，后者增加差异化推力。
+
+### 13. 资产画廊（gallery.html）
+
+- 静态 HTML 资产预览页，内嵌 JSON 数据（Python 脚本注入）
+- 分类筛选（角色/场景/道具）、状态筛选（全部/已生成/待生成）、灯箱查看
+- 深色前卫 UI，响应式布局
+
+## 关键文件变更（本轮追加）
+
+- `scripts/generate_images.py` — 三阶段重构 + 身份锚点拼接
+- `scripts/extract_prompts.py` — 新增 `extract_identity_anchor()` + `scan_bibles()` 返回 `identity_anchor` 字段
+- `scripts/README.md` — 三阶段文档 + Prompt 拼接顺序 + 关联文件说明
+- `step2-art-direction/art_direction.md` — 第七章精简为纯格式前缀
+- `step3-bibles/identity_anchors.json` — 53 个角色锚点数据
+- `step3-bibles/identity_anchors.md` — 6 维区分矩阵 + 碰撞检查
+- 53 个角色圣经 — 各自新增 `### 身份锚点 / Identity Anchor` 子节
+- 118 个圣经文件 — 清除内嵌的 `Cinematic still` 前缀
+- `step4-assets/gallery.html` — 新增资产预览页
+
 ## 待办
 - 用户正在分批执行 Phase 1 生成
 - Phase 2 尚未开始（等 Phase 1 全部基准肖像确认后）
+- 待删除 7 个错位资产目录（天德城、定达国都、恶灵区、泊岗镇、牛台山、美女榕-location、美女榕-props），用户控制时机

@@ -232,6 +232,7 @@ def build_tasks(results: list, global_prefix: str, assets_root: str) -> list:
         stars = r["stars"]
         has_prefix = r.get("has_inline_prefix", True)
         sub_dir = r.get("sub_dir", "")
+        identity_anchor = r.get("identity_anchor", "")
 
         # 基础输出目录
         type_dir = os.path.join(assets_root, elem_type, elem_name)
@@ -252,6 +253,10 @@ def build_tasks(results: list, global_prefix: str, assets_root: str) -> list:
             if not has_prefix and global_prefix:
                 if global_prefix.lower()[:20] not in eng.lower()[:80]:
                     final_prompt = f"{global_prefix}\n{eng}"
+
+            # 角色身份锚点：前置到 prompt 最前面，确保角色外貌差异化
+            if identity_anchor and elem_type == "characters":
+                final_prompt = f"{identity_anchor}. {final_prompt}"
 
             # 确定输出路径 & phase & 参考图
             if elem_type == "characters":

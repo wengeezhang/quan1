@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>榕泉 — Step 4 视觉资产总览</title>
+<style>
+  /* ── Reset & Base ── */
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --bg: #0a0a0c; --surface: #141418; --surface2: #1c1c22;
+    --border: #2a2a32; --text: #e8e8ec; --text2: #8888a0;
+    --accent: #6366f1; --accent2: #818cf8; --accent-glow: rgba(99,102,241,.15);
+    --radius: 12px; --transition: .25s cubic-bezier(.4,0,.2,1);
+  }
+  html { font-size: 15px; }
+  body {
+    font-family: -apple-system, "SF Pro Display", "Noto Sans SC", "Helvetica Neue", sans-serif;
+    background: var(--bg); color: var(--text); min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header ── */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,10,12,.82); backdrop-filter: blur(20px) saturate(1.6);
+    border-bottom: 1px solid var(--border); padding: 0 2rem;
+  }
+  .header-inner {
+    max-width: 1400px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .logo { display: flex; align-items: center; gap: .6rem; }
+  .logo-icon {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--accent), #a855f7);
+    display: grid; place-items: center; font-weight: 700; font-size: 14px; color:#fff;
+  }
+  .logo h1 { font-size: 1.15rem; font-weight: 600; letter-spacing: -.02em; }
+  .logo span { color: var(--text2); font-weight: 400; font-size: .85rem; margin-left: .4rem; }
+
+  .stats {
+    display: flex; gap: 1.5rem; font-size: .82rem; color: var(--text2);
+  }
+  .stats strong { color: var(--accent2); font-weight: 600; }
+
+  /* ── Filter Bar ── */
+  .filter-bar {
+    max-width: 1400px; margin: 1.5rem auto 0; padding: 0 2rem;
+    display: flex; gap: .5rem; flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: .45rem 1rem; border-radius: 99px; font-size: .82rem;
+    border: 1px solid var(--border); background: transparent;
+    color: var(--text2); cursor: pointer; transition: var(--transition);
+    font-family: inherit;
+  }
+  .filter-btn:hover { border-color: var(--accent); color: var(--text); }
+  .filter-btn.active {
+    background: var(--accent); border-color: var(--accent);
+    color: #fff; box-shadow: 0 0 16px var(--accent-glow);
+  }
+
+  /* ── Grid ── */
+  .container { max-width: 1400px; margin: 0 auto; padding: 1.5rem 2rem 4rem; }
+
+  .category-section { margin-bottom: 2.5rem; }
+  .category-header {
+    display: flex; align-items: center; gap: .6rem;
+    margin-bottom: 1rem; padding-bottom: .5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .category-icon {
+    width: 28px; height: 28px; border-radius: 6px;
+    display: grid; place-items: center; font-size: 14px;
+  }
+  .cat-characters .category-icon { background: rgba(239,68,68,.15); color: #ef4444; }
+  .cat-locations .category-icon { background: rgba(34,197,94,.15); color: #22c55e; }
+  .cat-props .category-icon { background: rgba(234,179,8,.15); color: #eab308; }
+  .category-header h2 { font-size: 1rem; font-weight: 600; }
+  .category-header .count { color: var(--text2); font-size: .8rem; font-weight: 400; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  /* ── Card ── */
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); overflow: hidden;
+    transition: var(--transition); cursor: pointer; position: relative;
+  }
+  .card:hover {
+    border-color: var(--accent); transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0,0,0,.4), 0 0 0 1px var(--accent);
+  }
+  .card-img {
+    aspect-ratio: 3/4; width: 100%; object-fit: cover;
+    background: var(--surface2); display: block;
+  }
+  .card-empty {
+    aspect-ratio: 3/4; width: 100%;
+    background: var(--surface2);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: var(--text2); font-size: .75rem; gap: .4rem;
+  }
+  .card-empty-icon { font-size: 1.6rem; opacity: .3; }
+  .card-info { padding: .65rem .75rem; }
+  .card-name { font-size: .85rem; font-weight: 600; line-height: 1.3; }
+  .card-meta { font-size: .72rem; color: var(--text2); margin-top: .2rem; }
+  .card-badge {
+    position: absolute; top: .5rem; right: .5rem; padding: .15rem .5rem;
+    border-radius: 99px; font-size: .65rem; font-weight: 600;
+    backdrop-filter: blur(8px);
+  }
+  .badge-has { background: rgba(99,102,241,.7); color:#fff; }
+  .badge-empty { background: rgba(255,255,255,.1); color: var(--text2); }
+
+  /* ── Stage chips ── */
+  .stage-chips { display: flex; flex-wrap: wrap; gap: .25rem; margin-top: .4rem; }
+  .stage-chip {
+    font-size: .62rem; padding: .1rem .4rem; border-radius: 4px;
+    background: var(--surface2); color: var(--text2); border: 1px solid var(--border);
+  }
+
+  /* ── Lightbox ── */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 999;
+    background: rgba(0,0,0,.92); backdrop-filter: blur(24px);
+    display: none; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity .3s;
+  }
+  .lightbox.show { display: flex; opacity: 1; }
+  .lightbox-close {
+    position: absolute; top: 1.2rem; right: 1.5rem;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
+    color: #fff; font-size: 1.2rem; cursor: pointer;
+    display: grid; place-items: center; transition: var(--transition);
+  }
+  .lightbox-close:hover { background: rgba(255,255,255,.15); }
+  .lightbox-content { text-align: center; max-width: 90vw; }
+  .lightbox-content img {
+    max-height: 80vh; max-width: 85vw; border-radius: 8px;
+    box-shadow: 0 24px 64px rgba(0,0,0,.6);
+  }
+  .lightbox-caption {
+    margin-top: 1rem; font-size: 1rem; font-weight: 500;
+  }
+  .lightbox-sub { color: var(--text2); font-size: .82rem; margin-top: .3rem; }
+
+  /* ── Empty state ── */
+  .empty-state {
+    text-align: center; padding: 4rem 1rem; color: var(--text2);
+  }
+  .empty-state-icon { font-size: 3rem; margin-bottom: 1rem; opacity: .3; }
+
+  /* ── Toggle ── */
+  .view-toggle {
+    display: flex; gap: .3rem; background: var(--surface);
+    border: 1px solid var(--border); border-radius: 8px; padding: 3px;
+  }
+  .view-btn {
+    padding: .35rem .7rem; border-radius: 6px; font-size: .78rem;
+    border: none; background: transparent; color: var(--text2);
+    cursor: pointer; transition: var(--transition); font-family: inherit;
+  }
+  .view-btn.active { background: var(--accent); color: #fff; }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .header-inner { flex-wrap: wrap; height: auto; padding: .8rem 0; gap: .5rem; }
+    .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .7rem; }
+    .filter-bar, .container { padding-left: 1rem; padding-right: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">泉</div>
+      <h1>榕泉 <span>Step 4 视觉资产</span></h1>
+    </div>
+    <div style="display:flex; align-items:center; gap:1.2rem;">
+      <div class="stats">
+        <span>资产 <strong id="stat-total">-</strong></span>
+        <span>已生成 <strong id="stat-done">-</strong></span>
+        <span>待生成 <strong id="stat-pending">-</strong></span>
+      </div>
+      <div class="view-toggle">
+        <button class="view-btn active" data-view="all" title="全部">全部</button>
+        <button class="view-btn" data-view="done" title="已生成">已生成</button>
+        <button class="view-btn" data-view="empty" title="待生成">待生成</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="filter-bar" id="filterBar"></div>
+<div class="container" id="gallery"></div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <div class="lightbox-content">
+    <img id="lb-img" src="" alt="">
+    <div class="lightbox-caption" id="lb-caption"></div>
+    <div class="lightbox-sub" id="lb-sub"></div>
+  </div>
+</div>
+
+<script>
+// ── Data injection via build script ──
+// This will be populated by scanning the directory structure
+const ASSET_DATA = [{"category": "characters", "name": "丁路", "stages": ["正常期", "被附身期"], "images": []}, {"category": "characters", "name": "于崇宝", "stages": ["默认"], "images": []}, {"category": "characters", "name": "于永智", "stages": ["默认"], "images": []}, {"category": "characters", "name": "于永龙", "stages": ["默认"], "images": []}, {"category": "characters", "name": "五名古代恶灵", "stages": ["默认"], "images": []}, {"category": "characters", "name": "元刚智刚", "stages": ["元刚初生期", "智刚觉醒期"], "images": []}, {"category": "characters", "name": "冯德友", "stages": ["默认"], "images": []}, {"category": "characters", "name": "刘振", "stages": ["卢老板傀儡期", "流浪汉宿体期"], "images": []}, {"category": "characters", "name": "刘默雨", "stages": ["默认"], "images": []}, {"category": "characters", "name": "卢卫寿", "stages": ["傀儡期", "精明老板期"], "images": []}, {"category": "characters", "name": "卢静", "stages": ["危机母亲期", "活泼少女期", "独立寡妇期"], "images": []}, {"category": "characters", "name": "向天志", "stages": ["倦怠转折期", "沉稳国主期", "虚君沦落期"], "images": []}, {"category": "characters", "name": "吴启思", "stages": ["默认"], "images": []}, {"category": "characters", "name": "吴婶", "stages": ["泉边安居期", "逃难守护期"], "images": []}, {"category": "characters", "name": "吴文顶", "stages": ["决裂逃亡期", "初到泊岗期", "成家立业期", "抗战热血期", "沉疴临终期", "灵魂期"], "images": [{"path": "characters/吴文顶/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "和寻灵", "stages": ["默认"], "images": []}, {"category": "characters", "name": "威刚", "stages": ["元神降世期", "潜伏仆人期", "神力初显期"], "images": [{"path": "characters/威刚/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "宁国红", "stages": ["默认"], "images": []}, {"category": "characters", "name": "宋小仙", "stages": ["伪装潜伏期", "便装追踪期", "奔走联络期", "执法终局期", "民警执勤期", "神使斡旋期", "谋士征战期"], "images": [{"path": "characters/宋小仙/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "封", "stages": ["默认"], "images": []}, {"category": "characters", "name": "小周", "stages": ["失魂受难期", "康复证人期", "抵抗军战士期", "旅行者期"], "images": [{"path": "characters/小周/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "小小顶", "stages": ["默认"], "images": []}, {"category": "characters", "name": "旅行团群像", "stages": ["默认"], "images": []}, {"category": "characters", "name": "智寻道", "stages": ["默认"], "images": []}, {"category": "characters", "name": "曹元艺", "stages": ["暴露对峙期", "精致掩护期", "身份动摇期"], "images": []}, {"category": "characters", "name": "朱围庸", "stages": ["乞丐潜行期", "泊岗蛰伏期", "灵魂期", "红甲决战期", "统帅衰颓期", "起兵崛起期", "轮回归途期", "辗转附身期"], "images": [{"path": "characters/朱围庸/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "李仁", "stages": ["乞丐还阳期", "军师征战期", "哀兵决战期", "归魂期", "恶灵期", "老农重生期"], "images": [{"path": "characters/李仁/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "杜金标", "stages": ["默认"], "images": []}, {"category": "characters", "name": "杨伯礼", "stages": ["毁容前", "毁容后"], "images": []}, {"category": "characters", "name": "杨弘", "stages": ["无冕之王期", "暴君独裁期", "末路穷途期", "铁血将军期"], "images": [{"path": "characters/杨弘/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "江新成", "stages": ["默认"], "images": []}, {"category": "characters", "name": "泊岗镇1200居民", "stages": ["默认"], "images": []}, {"category": "characters", "name": "温伯封", "stages": ["默认"], "images": []}, {"category": "characters", "name": "灵尤", "stages": ["山巅躁兽期", "战场凶兽期", "隐谷幼兽期"], "images": [{"path": "characters/灵尤/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "灵王", "stages": ["默认"], "images": []}, {"category": "characters", "name": "灵闽", "stages": ["默认"], "images": []}, {"category": "characters", "name": "熊大宝", "stages": ["默认"], "images": []}, {"category": "characters", "name": "王轻无", "stages": ["默认"], "images": []}, {"category": "characters", "name": "白巨", "stages": ["囚徒启悟期", "山巅守望期", "族长全家期"], "images": [{"path": "characters/白巨/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "白思元", "stages": ["默认"], "images": []}, {"category": "characters", "name": "罗勇", "stages": ["默认"], "images": []}, {"category": "characters", "name": "老吴", "stages": ["伪装潜入期", "山居重生期", "抵抗军师期", "泉断衰败期", "蛰伏协助期"], "images": [{"path": "characters/老吴/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "胡酹", "stages": ["倦将征战期", "恶灵期", "悍将崛起期", "殒命期", "还阳适应期"], "images": []}, {"category": "characters", "name": "苏伟力", "stages": ["默认"], "images": []}, {"category": "characters", "name": "葛有利", "stages": ["默认"], "images": []}, {"category": "characters", "name": "葛立", "stages": ["默认"], "images": []}, {"category": "characters", "name": "裘万财", "stages": ["傀儡期", "恶霸期"], "images": []}, {"category": "characters", "name": "郑伟玉", "stages": ["默认"], "images": []}, {"category": "characters", "name": "郝大川", "stages": ["默认"], "images": []}, {"category": "characters", "name": "郭云成", "stages": ["默认"], "images": []}, {"category": "characters", "name": "马戈逸", "stages": ["默认"], "images": []}, {"category": "characters", "name": "黄亮伟", "stages": ["商贾兴盛期", "抵抗军支柱期", "被遣离场期", "遗志守护期"], "images": []}, {"category": "characters", "name": "齐年康", "stages": ["默认"], "images": []}, {"category": "locations", "name": "AA大学", "stages": ["地下秘密", "校园侦察", "表面探查"], "images": []}, {"category": "locations", "name": "上神界", "stages": ["默认"], "images": []}, {"category": "locations", "name": "凤廊山脉", "stages": ["默认"], "images": []}, {"category": "locations", "name": "北岸新码头", "stages": ["默认"], "images": []}, {"category": "locations", "name": "十八层塔", "stages": ["默认"], "images": []}, {"category": "locations", "name": "千秋星岗", "stages": ["战斗期", "战败期"], "images": []}, {"category": "locations", "name": "半山腰秘密仓库", "stages": ["发现后", "秘密期"], "images": []}, {"category": "locations", "name": "卢老板餐馆", "stages": ["战争阴影", "日常引入", "暗流涌动"], "images": []}, {"category": "locations", "name": "县城破庙", "stages": ["默认"], "images": []}, {"category": "locations", "name": "吴启思实验室", "stages": ["默认"], "images": []}, {"category": "locations", "name": "周庄", "stages": ["休整与连接", "危机前兆", "逃离与到达"], "images": []}, {"category": "locations", "name": "城主府", "stages": ["默认"], "images": []}, {"category": "locations", "name": "天德城", "stages": ["大本营期", "沦陷期", "繁华期"], "images": []}, {"category": "locations", "name": "天德城城墙", "stages": ["默认"], "images": []}, {"category": "locations", "name": "天都山脉", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "宁阁码头", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "定达国都", "stages": ["崩溃期", "权力期", "腐败期"], "images": []}, {"category": "locations", "name": "小顶天德城住所", "stages": ["默认"], "images": []}, {"category": "locations", "name": "少林寺", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "山谷旅行团被困", "stages": ["救援期", "被困期"], "images": []}, {"category": "locations", "name": "巫方镇", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "恶灵区", "stages": ["决战期", "唤醒期", "战后期", "默认期"], "images": []}, {"category": "locations", "name": "户政室", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "望海河", "stages": ["夜间渡河", "对岸脱险", "河岸侦察"], "images": []}, {"category": "locations", "name": "朱围庸住处", "stages": ["默认"], "images": []}, {"category": "locations", "name": "杨弘秘密实验室", "stages": ["最后对抗", "真相揭露", "秘密进入"], "images": []}, {"category": "locations", "name": "永安镇", "stages": ["市井期", "撤离期", "紧张期"], "images": []}, {"category": "locations", "name": "永安镇会议厅", "stages": ["默认"], "images": []}, {"category": "locations", "name": "永安镇客栈", "stages": ["默认"], "images": []}, {"category": "locations", "name": "江新成宅邸", "stages": ["默认"], "images": []}, {"category": "locations", "name": "泊岗镇", "stages": ["繁忙期", "要塞期", "诡寂期"], "images": []}, {"category": "locations", "name": "清平镇", "stages": ["占领初期", "深层黑暗", "管制建立"], "images": []}, {"category": "locations", "name": "温伯封府邸", "stages": ["默认"], "images": []}, {"category": "locations", "name": "牛台山", "stages": ["回归期", "宁静期", "守护期", "战略期"], "images": []}, {"category": "locations", "name": "白巨神兽的隐谷", "stages": ["兽的呈现", "困境始现", "隐谷发现"], "images": []}, {"category": "locations", "name": "皇宫", "stages": ["默认"], "images": []}, {"category": "locations", "name": "石岭关", "stages": ["激烈对抗", "英勇坚守", "防御准备"], "images": []}, {"category": "locations", "name": "美女榕", "stages": ["默认"], "images": []}, {"category": "locations", "name": "老吴山间小屋", "stages": ["默认"], "images": []}, {"category": "locations", "name": "老码头", "stages": ["初到期", "探索期"], "images": []}, {"category": "locations", "name": "茶馆", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "荣康城", "stages": ["渗透期", "防御期", "陷落期"], "images": []}, {"category": "locations", "name": "葛家堡", "stages": ["内部崩坏", "堡垒运作", "渗透激活"], "images": []}, {"category": "locations", "name": "虎口镇", "stages": ["投降后", "默认期"], "images": []}, {"category": "locations", "name": "郝大川破败小屋", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "集市", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "黄阳镇", "stages": ["战后", "默认期"], "images": []}, {"category": "props", "name": "仙人掌", "stages": ["默认期"], "images": []}, {"category": "props", "name": "分割带", "stages": ["默认期"], "images": []}, {"category": "props", "name": "匿名纸条", "stages": ["默认期"], "images": []}, {"category": "props", "name": "十八层塔", "stages": ["默认期"], "images": []}, {"category": "props", "name": "大蒜", "stages": ["默认期"], "images": []}, {"category": "props", "name": "干柿子与肉干", "stages": ["默认期"], "images": []}, {"category": "props", "name": "数字人躯体", "stages": ["注魂期", "空壳期"], "images": []}, {"category": "props", "name": "水晶棒", "stages": ["默认期"], "images": []}, {"category": "props", "name": "泉水", "stages": ["默认期"], "images": []}, {"category": "props", "name": "泡泡", "stages": ["默认期"], "images": []}, {"category": "props", "name": "泥垛子建筑", "stages": ["默认期"], "images": []}, {"category": "props", "name": "灵魂收集容器", "stages": ["默认期"], "images": []}, {"category": "props", "name": "电磁枪", "stages": ["默认期"], "images": []}, {"category": "props", "name": "红领巾", "stages": ["默认期"], "images": []}, {"category": "props", "name": "美女榕", "stages": ["完好期", "断根期"], "images": []}, {"category": "props", "name": "观音庙神水", "stages": ["默认期"], "images": []}, {"category": "props", "name": "铁链", "stages": ["默认期"], "images": []}, {"category": "props", "name": "黑布阵", "stages": ["默认期"], "images": []}];
+
+// ── Scan directory at load time (static fallback) ──
+// Since this is a static HTML opened via file://, we embed data at build time.
+// The HTML ships with a <script id="data"> block.
+
+const data = ASSET_DATA || JSON.parse(document.getElementById('asset-data')?.textContent || '[]');
+
+// ── State ──
+let activeCategory = 'all';
+let activeView = 'all';
+
+// ── Render ──
+function render() {
+  const gallery = document.getElementById('gallery');
+  const categories = { characters: [], locations: [], props: [] };
+  const catLabels = { characters: '角色', locations: '场景', props: '道具' };
+  const catIcons = { characters: '👤', locations: '🏔', props: '🔮' };
+
+  data.forEach(d => {
+    if (categories[d.category]) categories[d.category].push(d);
+  });
+
+  let html = '';
+  let totalAll = 0, totalDone = 0;
+
+  for (const [cat, items] of Object.entries(categories)) {
+    if (activeCategory !== 'all' && activeCategory !== cat) continue;
+
+    const filtered = items.filter(item => {
+      if (activeView === 'done') return item.images.length > 0;
+      if (activeView === 'empty') return item.images.length === 0;
+      return true;
+    });
+
+    totalAll += items.length;
+    totalDone += items.filter(i => i.images.length > 0).length;
+
+    if (filtered.length === 0) continue;
+
+    html += `<div class="category-section cat-${cat}">
+      <div class="category-header">
+        <div class="category-icon">${catIcons[cat]}</div>
+        <h2>${catLabels[cat]}</h2>
+        <span class="count">${filtered.length} 项</span>
+      </div>
+      <div class="grid">`;
+
+    filtered.forEach(item => {
+      const hasImg = item.images.length > 0;
+      const mainImg = hasImg ? item.images[0] : null;
+      const badge = hasImg
+        ? `<div class="card-badge badge-has">${item.images.length} 张</div>`
+        : `<div class="card-badge badge-empty">待生成</div>`;
+
+      html += `<div class="card" ${hasImg ? `onclick="openLightbox('${mainImg.path}','${item.name}','${mainImg.label}')"` : ''}>`;
+
+      if (hasImg) {
+        html += `<img class="card-img" src="${mainImg.path}" alt="${item.name}" loading="lazy">`;
+      } else {
+        html += `<div class="card-empty"><div class="card-empty-icon">◻</div><span>暂无图片</span></div>`;
+      }
+
+      html += badge;
+      html += `<div class="card-info"><div class="card-name">${item.name}</div>`;
+      html += `<div class="card-meta">${item.stages.length} 个阶段</div>`;
+
+      if (item.stages.length > 0 && item.stages.length <= 6) {
+        html += `<div class="stage-chips">${item.stages.map(s => `<span class="stage-chip">${s}</span>`).join('')}</div>`;
+      }
+
+      html += `</div></div>`;
+    });
+
+    html += `</div></div>`;
+  }
+
+  if (!html) {
+    html = `<div class="empty-state"><div class="empty-state-icon">◻</div><p>当前筛选条件下无资产</p></div>`;
+  }
+
+  gallery.innerHTML = html;
+  document.getElementById('stat-total').textContent = totalAll;
+  document.getElementById('stat-done').textContent = totalDone;
+  document.getElementById('stat-pending').textContent = totalAll - totalDone;
+}
+
+function buildFilters() {
+  const bar = document.getElementById('filterBar');
+  const cats = [
+    { key: 'all', label: '全部' },
+    { key: 'characters', label: '👤 角色' },
+    { key: 'locations', label: '🏔 场景' },
+    { key: 'props', label: '🔮 道具' },
+  ];
+  bar.innerHTML = cats.map(c =>
+    `<button class="filter-btn ${c.key === activeCategory ? 'active' : ''}" data-cat="${c.key}">${c.label}</button>`
+  ).join('');
+
+  bar.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeCategory = btn.dataset.cat;
+      bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render();
+    });
+  });
+}
+
+// View toggle
+document.querySelectorAll('.view-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    activeView = btn.dataset.view;
+    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    render();
+  });
+});
+
+// Lightbox
+function openLightbox(src, name, label) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb-caption').textContent = name;
+  document.getElementById('lb-sub').textContent = label;
+  lb.classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('show');
+  document.body.style.overflow = '';
+}
+document.getElementById('lightbox').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeLightbox();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// ── Init ──
+buildFilters();
+render();
+</script>
+
+
+</body>
+</html>

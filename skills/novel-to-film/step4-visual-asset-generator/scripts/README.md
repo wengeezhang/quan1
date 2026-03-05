@@ -86,13 +86,24 @@ export ARK_API_KEY="your-api-key-here"
 
 Phase 2 任务会自动检测基准肖像是否存在，未就绪的任务自动跳过并提示先跑 Phase 1。
 
+**Prompt 拼接顺序**（最终发送给 API 的 prompt 由三层拼接）：
+
+```
+[身份锚点 Identity Anchor] + [全局前缀 Global Prefix] + [圣经原始 Prompt]
+```
+
+- **身份锚点**：从角色圣经 `### 身份锚点 / Identity Anchor` 提取，仅角色类型有。包含年龄、体型、脸型、标志性特征等视觉指纹，确保不同角色生成图片有明显外貌差异。锚点数据的总表在 `step3-bibles/identity_anchors.json` 和 `identity_anchors.md`（详见下方"关联文件"一节）。
+- **全局前缀**：从 `art_direction.md` 第七章提取，仅含画面格式（`Cinematic still, 2.39:1 widescreen, 35mm...`），不涉及内容描述。
+- **圣经原始 Prompt**：圣经第九章中各提示词的 English 代码块内容。
+
 **核心流程**：
 
-1. 调用 `scan_bibles()` 直接从圣经原文件中提取提示词，标记 phase 和参考图路径
-2. 对未内嵌全局前缀的提示词，自动在 prompt 头部拼接全局前缀（仅画面格式：`Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic`）
-3. 按优先级排序（P0/P1 角色肖像 → P2 主要场景 → P3 配角 → P4 道具 → P5 低优先级）
-4. Phase 1/3 纯文生图，Phase 2 传入基准肖像作为参考图
-5. 断点续跑：输出路径已有图片时自动跳过，中途中断后重跑只会生成剩余图片；加 `--no-skip` 可关闭此行为，强制覆盖重新生成
+1. 调用 `scan_bibles()` 直接从圣经原文件中提取提示词、身份锚点，标记 phase 和参考图路径
+2. 对角色类型，在 prompt 最前面拼接身份锚点
+3. 对未内嵌全局前缀的提示词，拼接全局前缀
+4. 按优先级排序（P0/P1 角色肖像 → P2 主要场景 → P3 配角 → P4 道具 → P5 低优先级）
+5. Phase 1/3 纯文生图，Phase 2 传入基准肖像作为参考图
+6. 断点续跑：输出路径已有图片时自动跳过，中途中断后重跑只会生成剩余图片；加 `--no-skip` 可关闭此行为，强制覆盖重新生成
 
 **关键特性**：
 
@@ -186,6 +197,40 @@ python3 build_index.py [--base-dir /path/to/production]
 ```bash
 python3 validate_assets.py [--base-dir /path/to/production]
 ```
+
+## 关联文件（production/step3-bibles/）
+
+以下文件不在 scripts 目录中，但与图片生成流程直接相关：
+
+### identity_anchors.json — 角色身份锚点数据
+
+53 个角色的身份锚点（Identity Anchor）结构化数据。`extract_prompts.py` 的 `extract_identity_anchor()` 函数从各角色圣经中逐文件提取锚点，此 JSON 文件是批量生成时的参考总表。
+
+格式：`{ "角色名": { "anchor_en": "...", "anchor_cn": "..." } }`
+
+### identity_anchors.md — 角色区分矩阵与锚点总览
+
+人可读的文档，包含：
+
+1. **6 维区分矩阵**：按年龄段、体型、脸型、发型、肤色、标志性特征 6 个维度为每个角色分配唯一组合，确保任意两个角色至少在 3 个维度上不同。
+2. **全部 53 个角色的身份锚点**（中英文），按主角/配角/群像分组。
+3. **碰撞检查结果**：验证矩阵中无重复组合。
+
+此文件在新增角色或修改角色外貌时应同步更新，以保持差异化约束。
+
+### 各角色圣经中的 `### 身份锚点 / Identity Anchor`
+
+每个角色圣经的"外貌与形态"章节（第三章）顶部都有此子节，格式：
+
+```markdown
+### 身份锚点 / Identity Anchor
+
+> **EN:** Athletic lean man, 30-35, piercing narrow eyes...
+>
+> **CN:** 精干瘦长男子，三十多岁，狭长眼眸深邃如井...
+```
+
+`generate_images.py` 在生成时自动提取 EN 锚点并前置到该角色的所有 prompt 最前面，确保模型每次生图都优先理解该角色的独特外貌特征。
 
 ## 通用参数
 
