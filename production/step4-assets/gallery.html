@@ -139,18 +139,37 @@
     width: 40px; height: 40px; border-radius: 50%;
     background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
     color: #fff; font-size: 1.2rem; cursor: pointer;
-    display: grid; place-items: center; transition: var(--transition);
+    display: grid; place-items: center; transition: var(--transition); z-index: 10;
   }
   .lightbox-close:hover { background: rgba(255,255,255,.15); }
-  .lightbox-content { text-align: center; max-width: 90vw; }
+  .lightbox-content { text-align: center; max-width: 90vw; position: relative; }
   .lightbox-content img {
     max-height: 80vh; max-width: 85vw; border-radius: 8px;
-    box-shadow: 0 24px 64px rgba(0,0,0,.6);
+    box-shadow: 0 24px 64px rgba(0,0,0,.6); transition: opacity .2s;
   }
   .lightbox-caption {
     margin-top: 1rem; font-size: 1rem; font-weight: 500;
   }
   .lightbox-sub { color: var(--text2); font-size: .82rem; margin-top: .3rem; }
+  .lightbox-counter {
+    color: var(--accent2); font-size: .75rem; margin-top: .25rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .lb-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
+    color: #fff; font-size: 1.2rem; cursor: pointer;
+    display: grid; place-items: center; transition: var(--transition);
+  }
+  .lb-nav:hover { background: rgba(255,255,255,.2); }
+  .lb-nav.hide { display: none; }
+  .lb-prev { left: -60px; }
+  .lb-next { right: -60px; }
+  @media (max-width: 768px) {
+    .lb-prev { left: 8px; }
+    .lb-next { right: 8px; }
+  }
 
   /* ── Empty state ── */
   .empty-state {
@@ -208,22 +227,18 @@
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
   <div class="lightbox-content">
+    <button class="lb-nav lb-prev" id="lb-prev" onclick="lbNav(-1)">‹</button>
+    <button class="lb-nav lb-next" id="lb-next" onclick="lbNav(1)">›</button>
     <img id="lb-img" src="" alt="">
     <div class="lightbox-caption" id="lb-caption"></div>
     <div class="lightbox-sub" id="lb-sub"></div>
+    <div class="lightbox-counter" id="lb-counter"></div>
   </div>
 </div>
 
+<script src="gallery_data.js"></script>
 <script>
-// ── Data injection via build script ──
-// This will be populated by scanning the directory structure
-const ASSET_DATA = [{"category": "characters", "name": "丁路", "stages": ["正常期", "被附身期"], "images": []}, {"category": "characters", "name": "于崇宝", "stages": ["默认"], "images": []}, {"category": "characters", "name": "于永智", "stages": ["默认"], "images": []}, {"category": "characters", "name": "于永龙", "stages": ["默认"], "images": []}, {"category": "characters", "name": "五名古代恶灵", "stages": ["默认"], "images": []}, {"category": "characters", "name": "元刚智刚", "stages": ["元刚初生期", "智刚觉醒期"], "images": []}, {"category": "characters", "name": "冯德友", "stages": ["默认"], "images": []}, {"category": "characters", "name": "刘振", "stages": ["卢老板傀儡期", "流浪汉宿体期"], "images": []}, {"category": "characters", "name": "刘默雨", "stages": ["默认"], "images": []}, {"category": "characters", "name": "卢卫寿", "stages": ["傀儡期", "精明老板期"], "images": []}, {"category": "characters", "name": "卢静", "stages": ["危机母亲期", "活泼少女期", "独立寡妇期"], "images": []}, {"category": "characters", "name": "向天志", "stages": ["倦怠转折期", "沉稳国主期", "虚君沦落期"], "images": []}, {"category": "characters", "name": "吴启思", "stages": ["默认"], "images": []}, {"category": "characters", "name": "吴婶", "stages": ["泉边安居期", "逃难守护期"], "images": []}, {"category": "characters", "name": "吴文顶", "stages": ["决裂逃亡期", "初到泊岗期", "成家立业期", "抗战热血期", "沉疴临终期", "灵魂期"], "images": [{"path": "characters/吴文顶/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "和寻灵", "stages": ["默认"], "images": []}, {"category": "characters", "name": "威刚", "stages": ["元神降世期", "潜伏仆人期", "神力初显期"], "images": [{"path": "characters/威刚/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "宁国红", "stages": ["默认"], "images": []}, {"category": "characters", "name": "宋小仙", "stages": ["伪装潜伏期", "便装追踪期", "奔走联络期", "执法终局期", "民警执勤期", "神使斡旋期", "谋士征战期"], "images": [{"path": "characters/宋小仙/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "封", "stages": ["默认"], "images": []}, {"category": "characters", "name": "小周", "stages": ["失魂受难期", "康复证人期", "抵抗军战士期", "旅行者期"], "images": [{"path": "characters/小周/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "小小顶", "stages": ["默认"], "images": []}, {"category": "characters", "name": "旅行团群像", "stages": ["默认"], "images": []}, {"category": "characters", "name": "智寻道", "stages": ["默认"], "images": []}, {"category": "characters", "name": "曹元艺", "stages": ["暴露对峙期", "精致掩护期", "身份动摇期"], "images": []}, {"category": "characters", "name": "朱围庸", "stages": ["乞丐潜行期", "泊岗蛰伏期", "灵魂期", "红甲决战期", "统帅衰颓期", "起兵崛起期", "轮回归途期", "辗转附身期"], "images": [{"path": "characters/朱围庸/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "李仁", "stages": ["乞丐还阳期", "军师征战期", "哀兵决战期", "归魂期", "恶灵期", "老农重生期"], "images": [{"path": "characters/李仁/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "杜金标", "stages": ["默认"], "images": []}, {"category": "characters", "name": "杨伯礼", "stages": ["毁容前", "毁容后"], "images": []}, {"category": "characters", "name": "杨弘", "stages": ["无冕之王期", "暴君独裁期", "末路穷途期", "铁血将军期"], "images": [{"path": "characters/杨弘/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "江新成", "stages": ["默认"], "images": []}, {"category": "characters", "name": "泊岗镇1200居民", "stages": ["默认"], "images": []}, {"category": "characters", "name": "温伯封", "stages": ["默认"], "images": []}, {"category": "characters", "name": "灵尤", "stages": ["山巅躁兽期", "战场凶兽期", "隐谷幼兽期"], "images": [{"path": "characters/灵尤/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "灵王", "stages": ["默认"], "images": []}, {"category": "characters", "name": "灵闽", "stages": ["默认"], "images": []}, {"category": "characters", "name": "熊大宝", "stages": ["默认"], "images": []}, {"category": "characters", "name": "王轻无", "stages": ["默认"], "images": []}, {"category": "characters", "name": "白巨", "stages": ["囚徒启悟期", "山巅守望期", "族长全家期"], "images": [{"path": "characters/白巨/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "白思元", "stages": ["默认"], "images": []}, {"category": "characters", "name": "罗勇", "stages": ["默认"], "images": []}, {"category": "characters", "name": "老吴", "stages": ["伪装潜入期", "山居重生期", "抵抗军师期", "泉断衰败期", "蛰伏协助期"], "images": [{"path": "characters/老吴/_portrait/正面半身像.png", "label": "肖像 · 正面半身像"}]}, {"category": "characters", "name": "胡酹", "stages": ["倦将征战期", "恶灵期", "悍将崛起期", "殒命期", "还阳适应期"], "images": []}, {"category": "characters", "name": "苏伟力", "stages": ["默认"], "images": []}, {"category": "characters", "name": "葛有利", "stages": ["默认"], "images": []}, {"category": "characters", "name": "葛立", "stages": ["默认"], "images": []}, {"category": "characters", "name": "裘万财", "stages": ["傀儡期", "恶霸期"], "images": []}, {"category": "characters", "name": "郑伟玉", "stages": ["默认"], "images": []}, {"category": "characters", "name": "郝大川", "stages": ["默认"], "images": []}, {"category": "characters", "name": "郭云成", "stages": ["默认"], "images": []}, {"category": "characters", "name": "马戈逸", "stages": ["默认"], "images": []}, {"category": "characters", "name": "黄亮伟", "stages": ["商贾兴盛期", "抵抗军支柱期", "被遣离场期", "遗志守护期"], "images": []}, {"category": "characters", "name": "齐年康", "stages": ["默认"], "images": []}, {"category": "locations", "name": "AA大学", "stages": ["地下秘密", "校园侦察", "表面探查"], "images": []}, {"category": "locations", "name": "上神界", "stages": ["默认"], "images": []}, {"category": "locations", "name": "凤廊山脉", "stages": ["默认"], "images": []}, {"category": "locations", "name": "北岸新码头", "stages": ["默认"], "images": []}, {"category": "locations", "name": "十八层塔", "stages": ["默认"], "images": []}, {"category": "locations", "name": "千秋星岗", "stages": ["战斗期", "战败期"], "images": []}, {"category": "locations", "name": "半山腰秘密仓库", "stages": ["发现后", "秘密期"], "images": []}, {"category": "locations", "name": "卢老板餐馆", "stages": ["战争阴影", "日常引入", "暗流涌动"], "images": []}, {"category": "locations", "name": "县城破庙", "stages": ["默认"], "images": []}, {"category": "locations", "name": "吴启思实验室", "stages": ["默认"], "images": []}, {"category": "locations", "name": "周庄", "stages": ["休整与连接", "危机前兆", "逃离与到达"], "images": []}, {"category": "locations", "name": "城主府", "stages": ["默认"], "images": []}, {"category": "locations", "name": "天德城", "stages": ["大本营期", "沦陷期", "繁华期"], "images": []}, {"category": "locations", "name": "天德城城墙", "stages": ["默认"], "images": []}, {"category": "locations", "name": "天都山脉", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "宁阁码头", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "定达国都", "stages": ["崩溃期", "权力期", "腐败期"], "images": []}, {"category": "locations", "name": "小顶天德城住所", "stages": ["默认"], "images": []}, {"category": "locations", "name": "少林寺", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "山谷旅行团被困", "stages": ["救援期", "被困期"], "images": []}, {"category": "locations", "name": "巫方镇", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "恶灵区", "stages": ["决战期", "唤醒期", "战后期", "默认期"], "images": []}, {"category": "locations", "name": "户政室", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "望海河", "stages": ["夜间渡河", "对岸脱险", "河岸侦察"], "images": []}, {"category": "locations", "name": "朱围庸住处", "stages": ["默认"], "images": []}, {"category": "locations", "name": "杨弘秘密实验室", "stages": ["最后对抗", "真相揭露", "秘密进入"], "images": []}, {"category": "locations", "name": "永安镇", "stages": ["市井期", "撤离期", "紧张期"], "images": []}, {"category": "locations", "name": "永安镇会议厅", "stages": ["默认"], "images": []}, {"category": "locations", "name": "永安镇客栈", "stages": ["默认"], "images": []}, {"category": "locations", "name": "江新成宅邸", "stages": ["默认"], "images": []}, {"category": "locations", "name": "泊岗镇", "stages": ["繁忙期", "要塞期", "诡寂期"], "images": []}, {"category": "locations", "name": "清平镇", "stages": ["占领初期", "深层黑暗", "管制建立"], "images": []}, {"category": "locations", "name": "温伯封府邸", "stages": ["默认"], "images": []}, {"category": "locations", "name": "牛台山", "stages": ["回归期", "宁静期", "守护期", "战略期"], "images": []}, {"category": "locations", "name": "白巨神兽的隐谷", "stages": ["兽的呈现", "困境始现", "隐谷发现"], "images": []}, {"category": "locations", "name": "皇宫", "stages": ["默认"], "images": []}, {"category": "locations", "name": "石岭关", "stages": ["激烈对抗", "英勇坚守", "防御准备"], "images": []}, {"category": "locations", "name": "美女榕", "stages": ["默认"], "images": []}, {"category": "locations", "name": "老吴山间小屋", "stages": ["默认"], "images": []}, {"category": "locations", "name": "老码头", "stages": ["初到期", "探索期"], "images": []}, {"category": "locations", "name": "茶馆", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "荣康城", "stages": ["渗透期", "防御期", "陷落期"], "images": []}, {"category": "locations", "name": "葛家堡", "stages": ["内部崩坏", "堡垒运作", "渗透激活"], "images": []}, {"category": "locations", "name": "虎口镇", "stages": ["投降后", "默认期"], "images": []}, {"category": "locations", "name": "郝大川破败小屋", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "集市", "stages": ["默认期"], "images": []}, {"category": "locations", "name": "黄阳镇", "stages": ["战后", "默认期"], "images": []}, {"category": "props", "name": "仙人掌", "stages": ["默认期"], "images": []}, {"category": "props", "name": "分割带", "stages": ["默认期"], "images": []}, {"category": "props", "name": "匿名纸条", "stages": ["默认期"], "images": []}, {"category": "props", "name": "十八层塔", "stages": ["默认期"], "images": []}, {"category": "props", "name": "大蒜", "stages": ["默认期"], "images": []}, {"category": "props", "name": "干柿子与肉干", "stages": ["默认期"], "images": []}, {"category": "props", "name": "数字人躯体", "stages": ["注魂期", "空壳期"], "images": []}, {"category": "props", "name": "水晶棒", "stages": ["默认期"], "images": []}, {"category": "props", "name": "泉水", "stages": ["默认期"], "images": []}, {"category": "props", "name": "泡泡", "stages": ["默认期"], "images": []}, {"category": "props", "name": "泥垛子建筑", "stages": ["默认期"], "images": []}, {"category": "props", "name": "灵魂收集容器", "stages": ["默认期"], "images": []}, {"category": "props", "name": "电磁枪", "stages": ["默认期"], "images": []}, {"category": "props", "name": "红领巾", "stages": ["默认期"], "images": []}, {"category": "props", "name": "美女榕", "stages": ["完好期", "断根期"], "images": []}, {"category": "props", "name": "观音庙神水", "stages": ["默认期"], "images": []}, {"category": "props", "name": "铁链", "stages": ["默认期"], "images": []}, {"category": "props", "name": "黑布阵", "stages": ["默认期"], "images": []}];
-
-// ── Scan directory at load time (static fallback) ──
-// Since this is a static HTML opened via file://, we embed data at build time.
-// The HTML ships with a <script id="data"> block.
-
-const data = ASSET_DATA || JSON.parse(document.getElementById('asset-data')?.textContent || '[]');
+const data = typeof ASSET_DATA !== 'undefined' ? ASSET_DATA : [];
 
 // ── State ──
 let activeCategory = 'all';
@@ -272,7 +287,8 @@ function render() {
         ? `<div class="card-badge badge-has">${item.images.length} 张</div>`
         : `<div class="card-badge badge-empty">待生成</div>`;
 
-      html += `<div class="card" ${hasImg ? `onclick="openLightbox('${mainImg.path}','${item.name}','${mainImg.label}')"` : ''}>`;
+      const imgJson = hasImg ? encodeURIComponent(JSON.stringify(item.images)) : '';
+      html += `<div class="card" ${hasImg ? `onclick="openLightbox('${item.name}','${imgJson}')"` : ''}>`;
 
       if (hasImg) {
         html += `<img class="card-img" src="${mainImg.path}" alt="${item.name}" loading="lazy">`;
@@ -336,23 +352,57 @@ document.querySelectorAll('.view-btn').forEach(btn => {
   });
 });
 
-// Lightbox
-function openLightbox(src, name, label) {
-  const lb = document.getElementById('lightbox');
-  document.getElementById('lb-img').src = src;
-  document.getElementById('lb-caption').textContent = name;
-  document.getElementById('lb-sub').textContent = label;
-  lb.classList.add('show');
+// Lightbox (multi-image)
+let lbImages = [];
+let lbIndex = 0;
+let lbName = '';
+
+function openLightbox(name, imgJson) {
+  lbImages = JSON.parse(decodeURIComponent(imgJson));
+  lbName = name;
+  lbIndex = 0;
+  lbShow();
+  document.getElementById('lightbox').classList.add('show');
   document.body.style.overflow = 'hidden';
 }
+
+function lbShow() {
+  const img = lbImages[lbIndex];
+  document.getElementById('lb-img').src = img.path;
+  document.getElementById('lb-caption').textContent = lbName;
+  document.getElementById('lb-sub').textContent = img.label;
+  const counter = document.getElementById('lb-counter');
+  if (lbImages.length > 1) {
+    counter.textContent = `${lbIndex + 1} / ${lbImages.length}`;
+    counter.style.display = '';
+  } else {
+    counter.style.display = 'none';
+  }
+  document.getElementById('lb-prev').classList.toggle('hide', lbIndex === 0);
+  document.getElementById('lb-next').classList.toggle('hide', lbIndex === lbImages.length - 1);
+}
+
+function lbNav(dir) {
+  const next = lbIndex + dir;
+  if (next < 0 || next >= lbImages.length) return;
+  lbIndex = next;
+  lbShow();
+}
+
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('show');
   document.body.style.overflow = '';
 }
+
 document.getElementById('lightbox').addEventListener('click', e => {
   if (e.target === e.currentTarget) closeLightbox();
 });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('show')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') lbNav(-1);
+  if (e.key === 'ArrowRight') lbNav(1);
+});
 
 // ── Init ──
 buildFilters();

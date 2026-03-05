@@ -260,13 +260,13 @@ CN: `年长兄长，五十多岁，面相精细方正，眼神清澈锐利，黑
 - Face Shape: square
 - Hair: short-neat
 - Skin Tone: bronze/dark
-- Signature Mark: younger brother bearing, rugged angular face, intense deep eyes with spiritual shimmer, broad muscular shoulders, raw powerful spiritual sensitivity
+- Signature Mark: younger brother bearing, rugged angular face, deep-set piercing dark eyes, broad muscular shoulders, bronze weathered skin with scar textures
 
 **Identity Anchor / 身份锚点：**
 
-EN: `Younger brother, 45-50, rugged angular face, intense eyes with spiritual glow shimmer, stocky muscular shoulders, raw powerful spiritual sensitivity presence`
+EN: `Younger brother, 45-50, rugged angular face, deep-set piercing dark eyes, stocky muscular shoulders, bronze weathered skin with scar textures, tousled black short hair`
 
-CN: `年轻兄弟，四十五至五十岁，面相粗粝棱角，目光深邃锐利带灵性光晕，壮硕肌肉，原始强大灵敏`
+CN: `年轻兄弟，四十五至五十岁，面相粗粝棱角，深邃锐利的深色眼眸，壮硕肌肉肩膀，古铜色风化皮肤有刀疤纹理，蓬乱黑色短发`
 
 ---
 
