@@ -178,6 +178,7 @@ production/step4-assets/
 ```
 
 **验证要点**：
+- **图中是否出现人物**（包括人物正面、背影、剪影、人群、人体局部）——如出现则判为不合格，需重新生成或在 negative prompt 中加入 `no people, no figures, no characters, no human silhouettes`
 - 色彩基调是否在全局 Art Direction 定义的范围内
 - 光影风格是否与场景圣经第四章（光影与氛围）的描述一致
 - 空间比例是否合理（建筑高度、通道宽度等）
