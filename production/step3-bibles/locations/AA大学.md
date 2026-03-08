@@ -2,23 +2,18 @@
 
 ## 一、基本信息
 
-| 维度 | 信息 |
+| 属性 | 描述 |
 |------|------|
-| **场景名称** | AA大学 |
-| **故事章节** | 第53-55章（主要） |
-| **故事功能** | 秘密实验地、科技威胁、伦理困境的象征 |
-| **地理位置** | 荣康城内、大城市中心地带 |
-| **场景规模** | 大型（校园综合体，包含多栋建筑） |
-| **时间跨度** | 多日（深入探索） |
-
-| 维度 | 信息 |
-|------|------|
-| **氛围关键词** | 学术 → 军事化 → 秘密实验、冷酷科技 |
-| **主色系** | 枯草黄 #8B7355 + 暗紫 #5B3A6B |
-| **禁用颜色** | 纯白 #FFFFFF |
-| **空间特征** | 校园建筑、食堂、宿舍、地下实验室 |
-| **战术要素** | 20000渗透者占据、军事化占领、秘密研究 |
-| **视觉质感** | 冰冷、科技感、被污染的学术空间 |
+| **场景名** | AA大学 |
+| **所属区域** | 荣康城内 |
+| **场景类型** | 实景；室外（校园）与室内（食堂、宿舍、地下实验室）混合 |
+| **空间尺度** | 校园占地约20万平方米，建筑群错落分布，宿舍楼4-5栋，地下实验室纵深100米+ |
+| **首次出现** | 第53章 |
+| **覆盖章节** | ch53-ch55，出现章数 4 |
+| **重要性** | ★★★☆☆ |
+| **关联角色** | 马戈逸、朱亮、吴启思、20000名被困者 |
+| **关联事件** | 20000被困者安置、吴启思数字人实验、灵魂转移实验成功 |
+| **叙事功能** | 朱围庸内应大军的隐蔽基地；科技与超自然的碰撞点；战争与伦理的灰色地带 |
 
 ---
 
@@ -26,205 +21,156 @@
 
 | stage_id | 阶段描述 | 章节范围 | 视觉变化摘要 |
 |----------|---------|---------|------------|
-| 校园侦察 | 敌占阶段 | ch53 | 潜入校园、发现占领痕迹、20000渗透者布防 |
-| 表面探查 | 军事占领 | ch53-54 | 食堂、宿舍、教室的军事化改造 |
-| 地下秘密 | 科技恐怖 | ch54-55 | 发现地下实验室、数字人制造设施、伦理灾难 |
+| 默认 | 校园与实验室 | ch53-ch55 | 空荡校园被20000人占据，转变为军营状；地下实验室冰冷科技风格 |
+
+> AA大学在ch53-ch55期间，校园建筑本身保持完整。人口流入（20000被困者）与秩序建立是叙事事件，不涉及物理破坏或改造。地下实验室的冷白科技氛围与校园的学术风格形成视觉对比，但这些差异由分镜阶段控制。
 
 ---
 
 ## 三、空间结构与地理
 
-**校园外观：**
-- 现代大学校园，多栋建筑分散在开阔地
-- 草坪、林荫道、喷泉等校园景观（现已破坏）
-- 校门已被占领者掌控，布设防御工事
-- 教室楼、宿舍楼、食堂、图书馆、科技楼等多栋建筑
+### 俯瞰布局
 
-**主要建筑：**
+```
+              ┌──────────┐
+              │ 校门与警卫│
+              └────┬─────┘
+         ┌────────┼────────┐
+      ┌─────┐  ┌──────┐  ┌─────┐
+      │食堂 │  │教学楼│  │图书馆
+      └─────┘  └──────┘  └─────┘
+         │        │        │
+      ┌──────────────────┐
+      │   操场/空地      │
+      └──────────────────┘
+         │        │        │
+      ┌─────┐  ┌──────┐  ┌─────┐
+      │宿舍1│  │宿舍2 │  │宿舍3│
+      │(1500人)│ │(1500人)│ │宿舍4│
+      └─────┘  └──────┘  └─────┘
+         │
+    ┌─────────────┐
+    │地下实验室入口
+    │(西侧地下)
+    └─────────────┘
+```
 
-**食堂建筑：**
-- 大型中央食堂，两层楼，可容纳数千人
-- 厨房设施被占领者改装为食品控制中心
-- 餐厅区域改为集合地或监视点
-- 储藏室变成武器库
+### 纵深与层次
 
-**宿舍区：**
-- 多栋宿舍楼，原为学生住所
-- 现被占领者改为军营和关押点
-- 房间被分隔和重组，安装了监控
-- 走廊布设哨卡，行动受限
+- **前景**：校门前石板广场、围墙基座
+- **中景**：主干道穿过校园，建筑群散布两侧，绿化带（疏落）
+- **远景**：远端宿舍楼轮廓、围墙与荣康城建筑天际线
 
-**教室楼：**
-- 原本的教室被改为办公室或集合场所
-- 黑板和讲台被清空或覆盖
-- 教室空间显得空洞而被污染
-- 隐蔽的地下入口在某个教室隐藏
+### 关键地点
 
-**地下实验室：**
-- 位于校园地下深处，原为研究设施
-- 多间实验室，装备有科技设施
-- 培养舱、数据中心、生命维持系统
-- 隔离室和防护措施
-- 监禁区：关押的人体或实验对象
-- 逃脱困难：多道门禁，监控无死角
-- 中央控制室：操纵所有实验的场所
+**食堂**：大型餐厅，可容纳千人进食。ch53中20000人在此解决温饱。长条形就餐桌，简陋灶火，天花木梁暴露。后厨有食物储备间。
 
-**关键位置：**
-- 校园中心广场：集合点和处刑点
-- 校图书馆：可能的监视总部
-- 科技楼：进入地下实验室的主要通道
-- 地下实验室深处：秘密的核心
+**宿舍楼群**：4-5栋4-5层高的建筑，每层走廊长，房间密集。ch53-55期间被占用作为20000人的"军营"。房间内简陋床铺排列，无隔间。
 
-**周边环境：**
-- 校园被高墙或铁丝网围绕
-- 外面是荣康城繁华区域（形成对比）
-- 逃脱路线困难，易被追击
+**教学楼**：3-4栋中等高度建筑，教室改作办公与会议室。马戈逸与朱亮的指挥部可设于此。
+
+**操场/空地**：校园中央的大片平地，原为学生运动场所。被占据期间成为巡逻与集合的区域。
+
+**地下实验室**：西侧地下，纵深100米+，分多个密闭分区。吴启思的数字人研究设施所在。冷白LED灯光、玻璃隔间、精密设备。与校园地上的学术风格形成强烈对比。
+
+### 出入口与通道
+
+1. **正校门**——唯一的公开出入口，有岗哨驻守与围墙隔离
+2. **后门**——东侧隐蔽出口，供应运补物资用
+3. **地下通道**——连接地下实验室与教学楼地下的隐蔽通道
+4. **宿舍楼梯**——内部垂直通行，便于快速集合
+
+### 标志物/视觉锚点
+
+- **校门前的青石牌**——刻有"AA大学"字样，标识场景身份
+- **操场旗杆**——校园的中心标志物（原有，现仅有杆无旗）
+- **地下实验室霓虹指示灯**——冷白科技风格的视觉标识，与地上形成对比
 
 ---
 
 ## 四、光影与氛围
 
-**光线设置：**
-- 校园日间：刺眼的阳光与青草绿的对比（如果还有植被）
-- 室内：日光透过窗户，但被占领的布局遮挡大部分光线
-- 食堂和宿舍：人工照明压倒自然光，显得昏黄或冷白
-- 地下实验室：完全人工光源，多数为冷色（青白色）和仪器指示灯
+### 基础光影方案
 
-**氛围营造：**
-- 枯草黄 #8B7355 的建筑和家具显得陈旧、被污染
-- 暗紫 #5B3A6B 在室内阴影和地下空间蔓延
-- 食堂的工业化布局破坏了原本的温暖感
-- 实验室的冷色光制造出非人类的冷漠
+- **校园（地上）**：自然日光，侧光为主；阴天时光线均匀柔和
+- **宿舍与食堂**：日光经窗户入射，室内偏暗（能源不足）；少量火把补光
+- **地下实验室**：完全人造冷白LED光（5600K-6500K），无自然光，高对比度
+- **色温对比**：校园偏暖（4500K-5500K），地下极冷（6000K+）
 
-**情绪基调：**
-- 初期：被污染的校园的不适应感
-- 中期：秩序下的压抑和不自由
-- 后期：科技恐怖和对人性的绝望
+### 色彩基调
+
+| 色名 | HEX | 用途 |
+|------|-----|------|
+| 校园灰绿 | #7A8A6B | 校舍与老化设施的主色 |
+| 宿舍脏白 | #C8C8B8 | 拥挤房间的基调色 |
+| 实验室冷白 | #E8E8F8 | 地下科研设施的冷色 |
+| 科技蓝 | #4169E1 | 实验设备的指示光与屏幕色 |
+
+### 氛围参数
+
+- **校园**：沉闷、被占领感，人口稠密但压抑，光线昏暗
+- **宿舍**：拥挤、军营式秩序、能源欠缺的疲惫感
+- **地下实验室**：冷酷、超脱、科学理性与伦理灰色交织
+- **空气质感**：校园通风不足，人多气闷；地下密闭、恒温、人工
 
 ---
 
 ## 五、声景与感官
 
-**听觉元素：**
-- 校园日常（被破坏的）：鸟鸣已消失，仅有人工噪音
-- 占领者的声音：脚步声、命令声、无线电通信
-- 食堂：机械的进餐声、装卸食物的声响
-- 宿舍：压抑的寂静或被监视的窃窃私语
-- 地下实验室：机器运转声、生命维持系统的嗡鸣、电子设备的滴滴声
-- 不祥的重低音（大功率设备运作）
-
-**嗅觉与触觉：**
-- 校园：混合的刺激气味（消毒液、金属、电子设备）
-- 食堂：食物变质的气味（被强制供应的食物）
-- 宿舍：人体汗臭和消毒液混合
-- 地下实验室：化学试剂、医疗消毒液、金属和塑料的气味
-- 冷空调的不自然凉意
-- 金属、玻璃和塑料的冰冷触感
-
-**动态感受：**
-- 被监控的不安感
-- 工业化和非人性的氛围
-- 对死亡和痛苦的微妙感知
+- **环境底噪**：20000人日常活动的嘈杂（脚步、低语、器具碰撞）；地下实验室的机器嗡鸣
+- **标志性声音**：食堂就餐的碗筷声、宿舍集合哨音、地下设备运转的电流声
+- **触觉/温度/嗅觉**：校园人群的体温与汗酸味、宿舍的闷热与霉味、实验室的冷气与消毒液气味
 
 ---
 
 ## 六、场景演变轨迹
 
-**学术校园时期（背景）：**
-- 原本的AA大学是知识殿堂
-- 学生、教授、开放的学术氛围
-- 现在只存在于记忆和破坏的痕迹中
+AA大学在ch53-ch55的全部出现中，建筑与空间结构完全不变。20000被困者的进驻与组织建立是人事变化，不是物理破坏。
 
-**占领初期（53章前）：**
-- 占领者进入校园，大规模驻扎
-- 20000渗透者迅速完成军事化改造
-- 学术标志被覆盖，秩序被重塑
-- 校园变成军事要塞
-
-**表面管制（53-54章）：**
-- 食堂变成配给中心，集中供应
-- 宿舍变成军营，纪律严厉
-- 教室变成办公室或审讯室
-- 校园看似井然有序，实则压制沉重
-
-**地下真相（54-55章）：**
-- 地下实验室的秘密逐步揭露
-- 数字人制造的恐怖现实
-- 伦理的彻底沦陷
-- 整个校园成为邪恶的象征
-
-**最终状态：**
-- 校园不再是知识的殿堂
-- 而是科技恐怖和人类绝望的代名词
+地下实验室的氛围（冷白科技风）与校园的氛围（学术废弃风）形成的对比，源于功能与美学的差异，而非时间的推移或破坏。两个区域的视觉风格差异由分镜阶段呈现。
 
 ---
 
 ## 七、镜头预案
 
-**校园进入镜头：**
-- 远景：校园全景，占领者旗帜和防御工事
-- 校门镜头：通过卡点、哨兵的检查
-- 广场镜头：曾经的学生聚集点现在荒凉或被驻扎
+### 标志性构图
 
-**表面探查镜头：**
-- 食堂镜头：工业化的食物配给、排队的人群
-- 宿舍镜头：压抑的房间、监控摄像头、被监视的瞬间
-- 教室镜头：黑板被覆盖、座位被清空、被污染的学术空间
-- 走廊镜头：占领者的巡逻、被限制的行动
+- **校园鸟瞰**：从高处俯拍校园全貌，20000人散布在操场与建筑之间，展现占领与秩序共存的诡异和谐
+- **地下实验室近景**：冷白灯光下，数字人躺在实验台上，周围是精密仪器与玻璃隔间，形成科技与伦理的冲突画面
+- **宿舍走廊透视**：从走廊尽头看向两侧密集房间，层层相同的房门创造压迫的纵深感
 
-**发现和进入镜头：**
-- 隐蔽入口的发现：细节特写、小心翼翼的接近
-- 下降镜头：通过楼梯或电梯下降，光线逐渐改变
-- 实验室大门：厚重的防护门、电子锁、警告标志
+### 空间限制与注意事项
 
-**实验室内部镜头：**
-- 走廊镜头：冷色光线、机器运转、诡异的寂静
-- 观察室镜头：透过玻璃看到实验设施、培养舱、生命维持系统
-- 被囚者镜头：痛苦或非人的生物状态
-- 控制室镜头：监控屏幕、数据流、权力的象征
-
-**对比镜头：**
-- 原本校园的痕迹 vs 现在的占领景象
-- 学术的记忆 vs 科技的恐怖
-- 上层（表面秩序） vs 地下（真实邪恶）
+- 校园开放空间无遮挡，大景别易出现空荡感，需通过人物密度或天气营造氛围
+- 地下实验室受冷白LED限制，需避免暖色光源，防止科技感破坏
+- 宿舍楼道狭窄，不适合宽角机位
 
 ---
 
 ## 八、AI绘图提示词
 
-### 提示词1：校园侦察
+### 提示词1：默认-校园全景
 
 **English：**
 ```
-university campus corrupted by occupation and secret experimentation, modern academic buildings repurposed as military installation, food hall converted to distribution center with industrial machinery, dormitory rows transformed into barracks with surveillance systems, contaminated learning spaces with blackboards covered and seats removed, hidden entrance to underground laboratory in shadows, descent into deep underground facility with cold scientific lighting, experimental chambers with life support systems, digital human cultivation tanks, sterile laboratories with biomechanical equipment, straw-yellow and dark purple color scheme reflecting corruption of knowledge, cold white and cyan scientific lighting creating inhumane atmosphere, former pride of academia twisted into ethical nightmare, emphasize transformation from intellectual sanctuary to technological horror.
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Aerial view of a university campus now converted into a massive temporary settlement. A sprawling campus of 200,000 square meters with grey-concrete #7A8A6B buildings scattered across a flattened landscape. Multiple 4-5-story dormitory buildings stand in rows, their windows empty. A large central plaza and overgrown athletic field occupy the middle. Educational buildings and a canteen structure the perimeter. The grounds are now filled with people—thousands visible, some standing, some walking, some sitting in groups—creating an ant-like density without chaos. Pathways between buildings are worn. Grey overcast daylight falls evenly across the entire campus, creating a monochromatic, melancholic atmosphere. In the distance, the surrounding city walls are visible, boxing in the space. Mood: occupied, controlled, hopeless. No people, no figures, no characters, no human silhouettes [EXCEPT for distant crowd silhouettes].
 ```
 
 **中文：**
 ```
-电影级画面，2.39:1超宽屏，被占领和秘密实验污染的大学校园，现代学术建筑被改作军事设施，食堂被改装为配给中心配备工业机械，宿舍楼变成装有监控系统的军营，被污染的学术空间黑板被覆盖座位被清空，隐藏在阴影中通往地下实验室的入口，下降到深层地下设施中冷色科学照明，配备生命维持系统的实验舱室，数字人培育池，装有生物机械设备的无菌实验室，枯草黄与暗紫色调反映知识的腐蚀，冷白和青色科学光线营造非人类的冷漠，曾经的学术骄傲扭曲成伦理噩梦，强调从知识殿堂到科技恐怖的转变。
+电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。俯瞰一座被改为临时收容地的大学校园。占地20万平方米，灰混凝土#7A8A6B建筑散落其间。多栋4-5层高的宿舍楼排成行列，窗户空洞。中央大片空地与老旧运动场占据校心。教学楼与食堂建筑界定外围。校园内密集分布着人群——数千人可见，有的站立、有的行走、有的聚集而坐——形成蚁群般的高密度但无混乱。建筑间的通道被踩出痕迹。灰色阴云天均匀洒下日光，整个校园呈现单调沉郁的氛围。远景可见环绕的城墙，将空间框限。氛围：被占领、被控制、绝望。无人物、无人影、无角色、无人体剪影。
 ```
 
-### 提示词2：表面探查
+---
+
+### 提示词2：默认-地下实验室
 
 **English：**
 ```
-military occupation of university campus surface level, food hall converted to industrial distribution center with heavy machinery and conveyor systems, dormitory rows transformed into barracks with cold fluorescent lighting and surveillance camera arrays, classrooms stripped bare with blackboards covered, desks removed, corridors patrolled by occupiers in tactical formation, hierarchical oppressive order maintained through constant surveillance, straw-yellow building facade contrasting with dark purple shadows of control, cold artificial white lighting overwhelming any natural warmth, military efficiency imposing itself on academic spaces, austere and dehumanizing transformation, occupiers moving methodically through corridors with weapons, every space monitored and controlled, the surface order hiding deeper horrors beneath, emphasize the contradiction between surface organization and underlying dread.
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Interior of a high-tech underground laboratory, 100+ meters deep in confined chambers. Walls are stark white and antiseptic, lit by cold blue-white #E8E8F8 LED panels recessed into the ceiling, creating shadowless, clinically harsh illumination. Multiple glass-walled partitions divide the space into sterile zones. On stainless steel examination tables, pale humanoid figures—numbers indicating "digital persons"—lie motionless. Around them, precision scientific equipment: monitors glowing with #4169E1 data streams, scanning devices, containment pods. Metal cabinets and cable runs line the walls. The air is still, temperature-controlled, devoid of sound except the faint electrical hum. Atmosphere: cold, objective, morally ambiguous, scientifically meticulous. A stark contrast to the chaotic campus above. No people, no figures, no characters, no human silhouettes.
 ```
 
 **中文：**
 ```
-电影级画面，2.39:1超宽屏，占领者对大学校园表层的军事占领，食堂改装为配备重型机械和传送带系统的工业配给中心，宿舍楼变成装有冷色荧光灯和监控摄像头阵列的军营，教室被完全清空黑板被覆盖座位被移除，走廊中占领者以战术队形巡逻，通过持续监控维持等级制的压抑秩序，枯草黄的建筑立面与控制的暗紫阴影形成对比，冷白人工照明压倒任何自然温暖，军事效率对学术空间的强制改造，苛刻非人性的转变，占领者携武器有条不紊地在走廊中移动，每个空间都被监管控制，表层秩序隐藏深层恐怖，强调表面组织与潜伏恐惧之间的矛盾。
+电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。高科技地下实验室内景，纵深100米+的密闭分区。墙面绝对白净与防菌，冷蓝白#E8E8F8的LED灯嵌入天花，投射出无影的刺眼临床光线。玻璃隔间将空间分割成多个无菌区。不锈钢检验台上，数个苍白的人形物体——编号标记为"数字人"——静卧不动。周围环绕精密科研设备：屏幕发出#4169E1的数据流，扫描装置、隔离舱、冷却管路。金属柜与电缆沿墙布设。空气静止，恒温，除轻微电流嗡鸣外无声。氛围：冷酷、客观、道德模糊、科学严谨。与上方混乱校园形成极端对比。无人物、无人影、无角色、无人体剪影。
 ```
-
-### 提示词3：地下秘密
-
-**English：**
-```
-discovery of deep underground laboratory beneath corrupted campus, digital human cultivation tanks with suspended bodies submerged in luminous nutrient fluid, cyan-white cold scientific lighting illuminating sterile chamber, biomechanical equipment with intricate tube networks and electrode systems, life support machines with rhythmic mechanical operations, rows of containment vessels creating eerie bioluminescent glow, the ultimate ethical nightmare exposed, horrifying violation of human dignity transformed into experimental subjects, metal and glass infrastructure of technological horror, complete absence of warmth or humanity, cold fluorescent and cyan lighting creating utterly alien atmosphere, scientific apparatus arranged with meticulous precision, each tank containing tragedy and violation, the depth of corruption finally revealed, emphasize scientific sterility contrasted with moral devastation, the horror of technology turned against humanity.
-```
-
-**中文：**
-```
-电影级画面，2.39:1超宽屏，被污染校园下方深层地下实验室的发现，数字人培育池中悬浮在发光营养液中的躯体，青白冷色科学照明照亮无菌舱室，配备复杂管网和电极系统的生物机械设备，有节奏运转的生命维持机器，排列的容器产生诡异生物发光，终极伦理噩梦的曝露，人类尊严的骇人侵犯转化为实验对象，技术恐怖的金属玻璃基础设施，完全缺乏温暖和人性，冷荧光和青色照明营造完全陌生的气氛，科学器械以精确秩序排列，每个培育舱包含悲剧和侵犯，腐蚀的深度最终显露，强调科学无菌与道德毁灭的对比，技术对人类的恐怖反噬。
-```
-
