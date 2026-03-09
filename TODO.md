@@ -9,6 +9,28 @@
   - 状态：待结合更多信息和知识后定夺
   - 影响范围：`character-writing-bible/SKILL.md` 中 B 板块规范 + 所有已生成的角色圣经（目前仅 `朱围庸.md`）
 
+## Character Skill - director_preference 机制
+
+- [ ] **新增脚本：init_director_preference**
+  - 遍历每个角色文件夹，生成 `director_preference` 文件
+  - 初始内容固定为：`暂无，请从原始小说中提取。`
+
+- [ ] **调整 character skill 流程**
+  - 先运行上述脚本，确保每个角色有 director_preference 文件
+  - 生成角色圣经时的优先级：
+    1. director_preference 有导演填写的内容 → **以导演填写为准**
+    2. director_preference 为默认值（暂无）→ **从小说原始文件中提取**
+    3. 小说中也没有 / 导演想自己指定 → **用预填写模板**
+
+- [ ] **可选：预填写脚本**
+  - 当小说缺失或导演想自定义时，用脚本预填写结构化模板：
+    ```
+    发型：
+    脸型：
+    衣着：
+    ```
+  - 导演填写后，角色圣经以此为准
+
 ## 待修复
 
 - [ ] **人物外貌区分度保障 → 需导演人工介入选角**
