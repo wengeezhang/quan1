@@ -36,7 +36,7 @@ Seedance 2.0 的 image-to-video 模式以一张静态图片为起点，生成 8-
 1. 先读 `art_direction.md` 第七章，提取全局 style prompt 前缀——这是所有 prompt 的固定开头
 2. 读 `asset_index.md`，建立"角色+stage_id → 参考图路径"的快速查找索引
 3. 读 `shot_list.md`，统计总镜头数，识别需要连续性处理的镜头对
-4. 按场次顺序读取分镜脚本，逐镜头执行 prompt 翻译和生成
+4. 脚本预处理（classify + assemble）生成 `prompt_assembly.json`，再由 Claude 对话逐批次翻译 Layer 3
 
 ## 输出
 
@@ -422,36 +422,40 @@ step7 继续:
 | P3 | 场景建立镜头（每个场次的第一个镜头） | 确定场次的视觉基调 |
 | P4 | 其余镜头 | 按场次顺序 |
 
-### 第三步：逐镜头 Prompt 翻译与生成
+### 第三步：Prompt 翻译（Layer 3 生成）
 
 **仅对需要生成锚点帧的镜头执行**（链头镜头 + 独立镜头 + 正反打镜头）。链内镜头跳过。
 
-对每个需要生成的镜头执行以下子流程：
+此步骤分为两个阶段：
+
+**阶段 A：脚本预处理**（`classify_shots.py` + `assemble_prompts.py`）
+
+脚本自动完成所有确定性工作，输出 `prompt_assembly.json`，每条记录包含：
+- Layer 1（全局 style prefix）、Layer 2（景别+机位英文术语）、Layer 4（负面提示词）
+- 参考图路径 + 权重
+- 中文画面描述原文（foreground_cn / midground_cn / background_cn / frozen_moment_cn）
+- Layer 3 留空（`layer3_visual_content: ""`）
+
+**阶段 B：Claude 对话翻译**
+
+在 Claude Desktop（Cowork 模式）中，逐批次读取 `prompt_assembly.json`，将中文画面描述翻译为英文 Seedream prompt，回写到 `layer3_visual_content` 字段。翻译遵循本文"Prompt 工程"章节的四层规则。
+
+### 第三步续：逐镜头生成
+
+Layer 3 填充完成后，对每个锚点帧镜头执行生成：
 
 ```
-0. 检查该镜头是否为链内镜头 → 是 → 跳过（由 step7 提供首帧）
+1. 从 prompt_assembly.json 读取完整 prompt（Layer 1 + 2 + 3 + Negative）
       ↓
-1. 读取分镜脚本中该镜头的完整描述
+2. 收集参考图（肖像锚点 + 阶段参考 + 场景参考）
       ↓
-2. 提取"画面描述"段落 → 翻译为英文画面内容（层次三）
+3. 执行 Seedream 生成（3-5 张候选）
       ↓
-3. 提取"动态描述"段落 → 确定首帧的冻结时刻（第 0 秒状态）
+4. 候选筛选：一致性评估 + 构图匹配 + 光影氛围
       ↓
-4. 提取景别、机位 → 翻译为英文术语（层次二）
+5. 选中最佳 → 存入 step6-keyframes/{场次}/{镜号}_first.png
       ↓
-5. 组装完整 prompt: 层次一 + 层次二 + 层次三 + Negative
-      ↓
-6. 读取"元素标注"→ 通过 asset_index.md 查找参考图路径
-      ↓
-7. 根据景别选择参考图权重
-      ↓
-8. 执行 Seedream 生成（3-5 张候选）
-      ↓
-9. 候选筛选：一致性评估 + 构图匹配 + 光影氛围
-      ↓
-10. 选中最佳 → 存入 step6-keyframes/{场次}/{镜号}_first.png
-      ↓
-11. 记录 prompt 和生成参数 → {镜号}_prompt.md
+6. 记录 prompt 和生成参数 → {镜号}_prompt.md
 ```
 
 ### 第四步：正反打空间一致性验证

@@ -3,7 +3,7 @@
 generate_keyframes.py — 调用 Seedream API 批量生成锚点首帧图
 
 核心功能：
-1. 读取 prompt_assembly_translated.json（已翻译的完整 prompt）
+1. 读取 prompt_assembly.json（含已翻译的 Layer 3）
 2. 组装最终 prompt（Layer 1 + Layer 2 + Layer 3 + Negative）
 3. 收集参考图路径
 4. 调用 Seedream API 生成图片（每个镜头 3-5 张候选）
@@ -273,7 +273,7 @@ def write_prompt_record(assembly: dict, final_prompt: str, negative: str,
 def main():
     parser = argparse.ArgumentParser(description="调用 Seedream API 批量生成锚点首帧图")
     parser.add_argument("--base-dir", default=DEFAULT_BASE, help="production 目录")
-    parser.add_argument("--input", default=None, help="prompt_assembly_translated.json 路径")
+    parser.add_argument("--input", default=None, help="prompt_assembly.json 路径")
     parser.add_argument("--model", default=DEFAULT_MODEL, help=f"Seedream 模型 (默认: {DEFAULT_MODEL})")
     parser.add_argument("--size", default=DEFAULT_SIZE, help=f"图片尺寸 (默认: {DEFAULT_SIZE})")
     parser.add_argument("--candidates", type=int, default=1, help="每镜头生成候选数 (默认: 1)")
@@ -286,7 +286,7 @@ def main():
     args = parser.parse_args()
 
     base = os.path.abspath(args.base_dir)
-    input_path = args.input or os.path.join(base, "step6-keyframes", "prompt_assembly_translated.json")
+    input_path = args.input or os.path.join(base, "step6-keyframes", "prompt_assembly.json")
     output_dir = os.path.join(base, "step6-keyframes")
     assets_root = os.path.join(base, "step4-assets")
 
