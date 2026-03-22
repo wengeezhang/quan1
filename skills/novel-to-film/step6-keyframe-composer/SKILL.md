@@ -438,14 +438,14 @@ step7 继续:
 
 **阶段 B：Claude 对话翻译**
 
-在 Claude Desktop（Cowork 模式）中，逐批次读取 `prompt_assembly.json`，将中文画面描述翻译为英文 Seedream prompt，回写到 `layer3_visual_content` 字段。翻译遵循本文"Prompt 工程"章节的四层规则。
+在 Claude Desktop（Cowork 模式）中，逐批次读取 `prompt_assembly.json` 中的中文画面描述，翻译为英文 Seedream prompt，输出到独立文件 `layer3_translations.json`（`shot_id → 英文 prompt` 的映射表）。`prompt_assembly.json` 保持不变（Layer 3 留空），翻译结果单独存储便于审核。翻译遵循本文"Prompt 工程"章节的四层规则。
 
 ### 第三步续：逐镜头生成
 
-Layer 3 填充完成后，对每个锚点帧镜头执行生成：
+`generate_keyframes.py` 运行时自动合并 `prompt_assembly.json`（骨架）+ `layer3_translations.json`（翻译），对每个锚点帧镜头执行生成：
 
 ```
-1. 从 prompt_assembly.json 读取完整 prompt（Layer 1 + 2 + 3 + Negative）
+1. 合并 prompt 骨架与 Layer 3 翻译，读取完整 prompt（Layer 1 + 2 + 3 + Negative）
       ↓
 2. 收集参考图（肖像锚点 + 阶段参考 + 场景参考）
       ↓

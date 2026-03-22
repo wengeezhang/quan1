@@ -287,21 +287,40 @@ def main():
 
     base = os.path.abspath(args.base_dir)
     input_path = args.input or os.path.join(base, "step6-keyframes", "prompt_assembly.json")
+    translations_path = os.path.join(base, "step6-keyframes", "layer3_translations.json")
     output_dir = os.path.join(base, "step6-keyframes")
     assets_root = os.path.join(base, "step4-assets")
 
-    # 1. 加载已翻译的 prompt
+    # 1. 加载 prompt 骨架
     if not os.path.exists(input_path):
         log.error(f"输入文件不存在: {input_path}")
-        log.error("请先运行: python3 translate_prompts.py")
+        log.error("请先运行: python3 assemble_prompts.py")
         sys.exit(1)
 
     with open(input_path, 'r', encoding='utf-8') as f:
         assemblies = json.load(f)
+    log.info(f"加载 {len(assemblies)} 个 prompt 骨架")
 
-    # 过滤有 Layer 3 翻译的
+    # 2. 加载 Layer 3 翻译并合并
+    if not os.path.exists(translations_path):
+        log.error(f"翻译文件不存在: {translations_path}")
+        log.error("请先在 Claude Desktop 对话中生成 layer3_translations.json")
+        sys.exit(1)
+
+    with open(translations_path, 'r', encoding='utf-8') as f:
+        translations = json.load(f)
+    log.info(f"加载 {len(translations)} 条 Layer 3 翻译")
+
+    # 合并：将翻译写入 assembly 的 layer3_visual_content
+    merged = 0
+    for a in assemblies:
+        l3 = translations.get(a["shot_id"], "")
+        if l3:
+            a["layer3_visual_content"] = l3
+            merged += 1
+
     ready = [a for a in assemblies if a.get("layer3_visual_content")]
-    log.info(f"加载 {len(assemblies)} 个 prompt, 其中 {len(ready)} 个已翻译")
+    log.info(f"合并完成: {merged} 条翻译已注入, {len(ready)} 个 prompt 就绪")
 
     # 2. 过滤
     tasks = ready

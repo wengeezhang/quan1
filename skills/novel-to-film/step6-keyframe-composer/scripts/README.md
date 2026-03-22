@@ -21,11 +21,12 @@
 ┌─────────────────────┐
 │ Claude 对话生成       │  在 Claude Desktop 对话中，逐批次将
 │ (替代 translate_     │  中文画面描述翻译为英文 Layer 3
-│  prompts.py)         │  输出: 直接回写 prompt_assembly.json
+│  prompts.py)         │  输出: layer3_translations.json
 └────────┬────────────┘
          ▼
 ┌──────────────────┐
-│ generate_keyframes│  调用 Seedream API 批量生成锚点帧
+│ generate_keyframes│  合并 prompt_assembly + translations，
+│                   │  调用 Seedream API 批量生成锚点帧
 │                   │  输出: step6-keyframes/{SC}/{镜号}_first.png + _prompt.md
 └────────┬─────────┘
          ▼
@@ -60,8 +61,9 @@ python3 assemble_prompts.py
 python3 assemble_prompts.py --dry-run      # 只看计划
 
 # 3. 翻译画面描述（Claude 对话生成，见下方说明）
-#    在 Claude Desktop 对话中下达指令，Claude 读取 prompt_assembly.json，
-#    逐批次生成 layer3_visual_content，直接回写到 prompt_assembly.json。
+#    在 Claude Desktop 对话中下达指令，Claude 读取 prompt_assembly.json 中的
+#    中文画面描述，逐批次生成英文 Layer 3，输出到 layer3_translations.json。
+#    prompt_assembly.json 保持不变（Layer 3 留空）。
 #    无需 API key，无需运行 translate_prompts.py。
 
 # 4. 生成锚点帧（需要 Seedream API）
@@ -125,9 +127,11 @@ python3 validate_keyframes.py
 
 ### 4a. Claude 对话生成 Layer 3（当前方案）
 
-在 Claude Desktop（Cowork 模式）中，由 Claude 直接读取 `prompt_assembly.json`，逐批次将中文画面描述翻译为英文 Seedream prompt，回写到每条记录的 `layer3_visual_content` 字段。
+在 Claude Desktop（Cowork 模式）中，由 Claude 直接读取 `prompt_assembly.json` 中的中文画面描述，逐批次翻译为英文 Seedream prompt，输出到独立文件 `layer3_translations.json`。
 
-**翻译规则**（与原脚本一致）：
+`prompt_assembly.json` 保持不变（`layer3_visual_content` 留空），翻译结果单独存储，便于审核和版本管理。`generate_keyframes.py` 运行时自动合并两个文件。
+
+**翻译规则**：
 - 冻结时刻：取 `frozen_moment_cn`，描述第 0 秒的静态画面
 - 空间分层：foreground → midground → background
 - 光影具体化：将模糊描述转为具体的光源方向、色温、阴影方向
@@ -135,16 +139,27 @@ python3 validate_keyframes.py
 - 目标长度：80-150 词
 - 输出结构：[主体+姿态] + [服装/道具] + [环境] + [光影] + [氛围]
 
+**输出文件**：`layer3_translations.json`（`shot_id → 英文 prompt` 的映射表）
+
+```json
+{
+  "SC001-001": "Foreground: stainless steel queue barriers...",
+  "SC002-001": "Dining table edge occupies the bottom...",
+  ...
+}
+```
+
 **工作流程**：
 1. 用户在 Claude Desktop 对话中下达"翻译第 N-M 条"指令
-2. Claude 读取对应条目的 `foreground_cn` / `midground_cn` / `background_cn` / `frozen_moment_cn`
-3. Claude 生成英文 prompt，写入 `layer3_visual_content` 字段
-4. 保存回 `prompt_assembly.json`（原地更新，幂等）
+2. Claude 读取 `prompt_assembly.json` 中对应条目的 `foreground_cn` / `midground_cn` / `background_cn` / `frozen_moment_cn`
+3. Claude 生成英文 prompt，写入 `layer3_translations.json`
+4. `generate_keyframes.py` 运行时自动读取两个文件并合并
 
 ### 5. `generate_keyframes.py` — 锚点帧生成（需要 Seedream API）
 
-调用火山引擎方舟 Seedream API 批量生成：
+读取 `prompt_assembly.json`（骨架）+ `layer3_translations.json`（翻译），运行时自动合并，然后调用 Seedream API 批量生成：
 
+- 合并 Layer 3 翻译到 prompt 骨架
 - 组装最终 prompt（Layer 1 + 2 + 3 + Negative）
 - 收集参考图（肖像锚点 + 阶段参考 + 场景参考）
 - 调用 API 生成图片
@@ -182,7 +197,8 @@ production/
 ├── step5-storyboard/storyboard/SC*.md       ← 分镜脚本（输入）
 └── step6-keyframes/                         ← 输出
     ├── shot_classification.json             ← 镜头分类
-    ├── prompt_assembly.json                 ← prompt（含 Layer 3，由 Claude 对话回写）
+    ├── prompt_assembly.json                 ← prompt 骨架（Layer 3 留空）
+    ├── layer3_translations.json            ← Layer 3 翻译（shot_id → 英文 prompt）
     ├── keyframe_index.md                    ← 锚点帧索引（step7 输入）
     ├── generation_log.jsonl                 ← 生成日志
     └── SC{NNN}/
