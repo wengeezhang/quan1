@@ -30,7 +30,7 @@ Seedance 2.0 的 image-to-video 模式以一张静态图片为起点，生成 8-
 - `production/step5-storyboard/event-previs/`——事件预可视化概念图（复杂场面的视觉锚点）
 - `production/step4-assets/asset_index.md`——资产索引（stage_id → 参考图路径）
 - `production/step4-assets/`——视觉资产库（实际参考图文件）
-- `production/step2-art-direction/art_direction.md`——全局视觉风格定义（全局 style prompt 前缀）
+- `production/step2-visual-design/art_direction.md`——全局视觉风格定义（全局 style prompt 前缀）
 
 **研究方法**：
 1. 先读 `art_direction.md` 第七章，提取全局 style prompt 前缀——这是所有 prompt 的固定开头

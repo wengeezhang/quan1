@@ -154,7 +154,7 @@ python3 validate_keyframes.py
 
 ```
 production/
-├── step2-art-direction/art_direction.md     ← 全局 style prefix
+├── step2-visual-design/art_direction.md     ← 全局 style prefix
 ├── step4-assets/asset_index.md              ← 参考图索引
 ├── step4-assets/{type}/{name}/{stage}/      ← 实际参考图
 ├── step5-storyboard/storyboard/SC*.md       ← 分镜脚本（输入）

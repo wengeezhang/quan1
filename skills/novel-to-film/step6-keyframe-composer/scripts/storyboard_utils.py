@@ -408,7 +408,7 @@ def get_global_style_prefix(base_dir: str = None) -> str:
     """从 art_direction.md 提取全局 style prompt 前缀"""
     if base_dir is None:
         base_dir = DEFAULT_BASE
-    art_path = os.path.join(base_dir, "step2-art-direction", "art_direction.md")
+    art_path = os.path.join(base_dir, "step2-visual-design", "art_direction.md")
     if not os.path.exists(art_path):
         return ""
     with open(art_path, 'r', encoding='utf-8') as f:

@@ -36,7 +36,7 @@ description: 将小说转化为可拍摄/可生成的分镜脚本。经过事件
 - `production/step3-bibles/locations/` 下的全部场景圣经（第二章：阶段注册表）
 - `production/step3-bibles/props/` 下的道具圣经（如有阶段注册表）
 - `production/step4-assets/asset_index.md`——资产索引（角色/场景/道具的 stage_id → 参考图路径）
-- `production/step2-art-direction/art_direction.md`——全局视觉风格定义（光影、色彩、构图偏好）
+- `production/step2-visual-design/art_direction.md`——全局视觉风格定义（光影、色彩、构图偏好）
 
 **研究方法**：
 1. 先读 `asset_index.md`，明确可用的视觉资产范围——没有参考图的元素，分镜中不可标注

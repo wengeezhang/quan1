@@ -28,7 +28,7 @@ from bible_utils import count_stars, extract_stages, BIBLE_DIRS
 # ---------------------------------------------------------------------------
 DEFAULT_BASE = os.path.join(os.path.dirname(__file__), "..", "..", "..", "..", "production")
 
-ART_DIRECTION = "step2-art-direction/art_direction.md"
+ART_DIRECTION = "step2-visual-design/art_direction.md"
 
 # 优先级映射（SKILL.md 定义）
 PRIORITY_MAP = {

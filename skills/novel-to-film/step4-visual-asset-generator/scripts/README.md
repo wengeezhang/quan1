@@ -30,7 +30,7 @@
 
 从全部 Step 3 圣经（角色/场景/道具）中批量提取 AI 绘图提示词，输出结构化的生成计划。
 
-**输入**：`production/step3-bibles/` 下所有 `.md` 圣经文件 + `step2-art-direction/art_direction.md`
+**输入**：`production/step3-bibles/` 下所有 `.md` 圣经文件 + `step2-visual-design/art_direction.md`
 
 **输出**：`production/step4-assets/prompts_plan.md`
 

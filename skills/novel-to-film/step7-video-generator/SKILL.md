@@ -36,7 +36,7 @@ description: 将每个镜头的首帧图+参考图+运动提示词输入 Seedanc
 - `production/step5-storyboard/shot_list.md`——镜头表（运镜方式、时长的快速总览）
 - `production/step4-assets/asset_index.md`——资产索引（参考图路径）
 - `production/step4-assets/`——视觉资产库（角色肖像、阶段参考图）
-- `production/step2-art-direction/art_direction.md`——全局视觉风格定义
+- `production/step2-visual-design/art_direction.md`——全局视觉风格定义
 
 **首帧来源规则**：
 - **帧类型为"独立锚点""链头锚点""正反打锚点"**的镜头 → 首帧来自 step6 的 `{镜号}_first.png`
