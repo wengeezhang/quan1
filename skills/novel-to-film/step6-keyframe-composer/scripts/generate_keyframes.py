@@ -3,12 +3,15 @@
 generate_keyframes.py — 调用 Seedream API 批量生成锚点首帧图
 
 核心功能：
-1. 读取 prompt_assembly.json（含已翻译的 Layer 3）
-2. 组装最终 prompt（Layer 1 + Layer 2 + Layer 3 + Negative）
+1. 读取 prompt_assembly.json，直接使用 layer3_source_cn（分镜脚本画面描述）作为 Layer 3
+2. 组装最终 prompt（Layer 1 + Layer 2 + Layer 3 中文画面描述 + Negative）
 3. 收集参考图路径
-4. 调用 Seedream API 生成图片（每个镜头 3-5 张候选）
+4. 调用 Seedream API 生成图片
 5. 保存到 step6-keyframes/{场次}/{镜号}_first.png
 6. 生成 {镜号}_prompt.md 记录文件
+
+说明：Seedream 原生支持中文，直接使用分镜脚本的画面描述比英文翻译效果更好，
+翻译过程会丢失场景细节。layer3_translations.json 不再需要。
 
 用法：
     export ARK_API_KEY="your-api-key"
@@ -98,9 +101,9 @@ def assemble_final_prompt(assembly: dict) -> str:
     if assembly.get("layer2_shot_spec"):
         parts.append(assembly["layer2_shot_spec"])
 
-    # Layer 3: 翻译后的画面内容
-    if assembly.get("layer3_visual_content"):
-        parts.append(assembly["layer3_visual_content"])
+    # Layer 3: 中文画面描述（直接使用分镜脚本原文，Seedream 原生支持中文）
+    if assembly.get("layer3_source_cn"):
+        parts.append(assembly["layer3_source_cn"])
 
     return ", ".join(parts)
 
@@ -224,17 +227,12 @@ def write_prompt_record(assembly: dict, final_prompt: str, negative: str,
         "",
         "## 完整 Prompt",
         "",
-        "### Positive (English)",
+        "### Positive（完整拼接）",
         "```",
         final_prompt,
         "```",
         "",
-        "### Positive (中文)",
-        "```",
-        assembly.get("layer3_source_cn", "")[:500],
-        "```",
-        "",
-        "### Negative (English)",
+        "### Negative",
         "```",
         negative,
         "```",
@@ -287,11 +285,10 @@ def main():
 
     base = os.path.abspath(args.base_dir)
     input_path = args.input or os.path.join(base, "step6-keyframes", "prompt_assembly.json")
-    translations_path = os.path.join(base, "step6-keyframes", "layer3_translations.json")
     output_dir = os.path.join(base, "step6-keyframes")
     assets_root = os.path.join(base, "step4-assets")
 
-    # 1. 加载 prompt 骨架
+    # 1. 加载 prompt_assembly.json（直接使用 layer3_source_cn 作为 Layer 3）
     if not os.path.exists(input_path):
         log.error(f"输入文件不存在: {input_path}")
         log.error("请先运行: python3 assemble_prompts.py")
@@ -299,28 +296,9 @@ def main():
 
     with open(input_path, 'r', encoding='utf-8') as f:
         assemblies = json.load(f)
-    log.info(f"加载 {len(assemblies)} 个 prompt 骨架")
 
-    # 2. 加载 Layer 3 翻译并合并
-    if not os.path.exists(translations_path):
-        log.error(f"翻译文件不存在: {translations_path}")
-        log.error("请先在 Claude Desktop 对话中生成 layer3_translations.json")
-        sys.exit(1)
-
-    with open(translations_path, 'r', encoding='utf-8') as f:
-        translations = json.load(f)
-    log.info(f"加载 {len(translations)} 条 Layer 3 翻译")
-
-    # 合并：将翻译写入 assembly 的 layer3_visual_content
-    merged = 0
-    for a in assemblies:
-        l3 = translations.get(a["shot_id"], "")
-        if l3:
-            a["layer3_visual_content"] = l3
-            merged += 1
-
-    ready = [a for a in assemblies if a.get("layer3_visual_content")]
-    log.info(f"合并完成: {merged} 条翻译已注入, {len(ready)} 个 prompt 就绪")
+    ready = [a for a in assemblies if a.get("layer3_source_cn")]
+    log.info(f"加载 {len(assemblies)} 个 prompt 骨架, {len(ready)} 个含画面描述")
 
     # 2. 过滤
     tasks = ready
@@ -349,10 +327,16 @@ def main():
         for a in tasks[:5]:
             final = assemble_final_prompt(a)
             negative = assemble_negative_prompt(a)
+            ref_paths = []
+            for ref in a.get("ref_images", []):
+                img_path = find_first_image(ref["ref_path"], assets_root)
+                ref_paths.append(f"    {ref['purpose']}: {ref['ref_path']} → {'✅' if img_path else '❌ 未找到'}")
             print(f"--- {a['shot_id']} ---")
-            print(f"  Prompt: {final[:120]}...")
-            print(f"  Negative: {negative[:80]}...")
-            print(f"  参考图: {len(a.get('ref_images', []))} 个")
+            print(f"  Prompt:\n    {final}")
+            print(f"  Negative:\n    {negative}")
+            print(f"  参考图 ({len(a.get('ref_images', []))} 个):")
+            for rp in ref_paths:
+                print(rp)
             print(f"  输出: {output_dir}/{a['scene_id']}/{a['shot_id']}_first.png\n")
         return
 

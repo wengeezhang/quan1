@@ -1,6 +1,6 @@
 ---
 name: keyframe-composer
-description: 为镜头生成锚点首帧图（keyframe），作为 Seedance 2.0 image-to-video 的起点。核心职责包括：从分镜脚本的导演描述翻译为 Seedream image prompt、通过 asset_index.md 查找并组装参考图、识别连续性链并仅为链头和独立镜头生成首帧（链内后续镜头的首帧由 step7 从视频实际尾帧提取）、执行生成并验证一致性。
+description: 为镜头生成锚点首帧图（keyframe），作为 Seedance 2.0 image-to-video 的起点。核心职责包括：直接使用分镜脚本的中文画面描述（layer3_source_cn）作为 Seedream image prompt（因 Seedream 原生支持中文，翻译会丧失细节）、通过 asset_index.md 查找并组装参考图、识别连续性链并仅为链头和独立镜头生成首帧（链内后续镜头的首帧由 step7 从视频实际尾帧提取）、执行生成并验证一致性。
 ---
 
 # 首帧合成
@@ -13,13 +13,13 @@ Seedance 2.0 的 image-to-video 模式以一张静态图片为起点，生成 8-
 
 在好莱坞制作流程中，本阶段对应 **Layout / Pre-lighting** 阶段——在正式"拍摄"（视频生成）之前，为每个镜头精确设定画面构图、角色位置、光影方案。区别在于：传统流程中这一步的产出是 3D 预览或灯光测试图；AI 制作流中，这一步的产出就是最终画面的起始帧——它同时承担了"预览"和"定稿"的双重角色。
 
-**本阶段的核心职责之一是 prompt 工程**。step5 的分镜脚本以导演语言（中文叙事）描述画面意图，但 Seedream 需要的是结构化的英文图片生成提示词。本阶段负责将"导演想要什么"翻译成"Seedream 应该生成什么"——这个翻译过程不是简单的中译英，而是涉及冻结时刻选择、参考图权重调配、负面提示词补充等一系列技术决策。**所有 prompt 必须中英双语输出**——英文版用于 Seedream 生成，中文版（英文版的直译）用于人工审核和导演确认。
+**本阶段的核心职责是 prompt 工程**。step5 的分镜脚本以导演语言（中文叙事）描述画面意图。Seedream 原生支持中文，因此本阶段**直接使用分镜脚本中的中文画面描述（layer3_source_cn）作为 Layer 3 内容**，配合全局风格前缀、镜头技术参数和负面提示词完成 prompt 组装——无需翻译。这样做的好处是避免英文翻译过程中丧失中文叙事的细节和意蕴。Prompt 工程的核心技术决策（冻结时刻选择、参考图权重调配、负面提示词补充）仍然是本阶段的责任。
 
 ## 核心原则
 
 1. **首帧即定稿**——首帧图不是"草稿"或"预览"，它就是最终视频的第一帧。角色面貌、构图、光影、色彩在首帧中必须达到最终品质
 2. **一致性压倒一切**——同一角色在第 1 个镜头和第 200 个镜头中必须长得一样。一致性通过三重机制保障：肖像锚点（`_portrait/`）→ 阶段参考图（`{stage_id}/`）→ prompt 中的角色描述一致
-3. **prompt 是桥梁**——本阶段的核心技术能力是将 step5 的导演意图准确翻译为 Seedream 可执行的 image prompt，同时注入全局风格前缀和参考图约束
+3. **prompt 是桥梁**——本阶段的核心技术能力是将 step5 的导演意图（中文描述）直接组装为 Seedream 可执行的 image prompt，同时注入全局风格前缀和参考图约束
 4. **锚点帧思维**——step6 只为连续性链的**第一个镜头**和所有**独立镜头**生成首帧（称为"锚点帧"）。连续性链内部后续镜头的首帧由 step7 从前一镜头视频的实际尾帧提取，确保连续性基于真实画面而非想象画面
 5. **参考图是锚**——每个包含角色的镜头，都必须将该角色的肖像（`_portrait/`）和阶段参考图（`{stage_id}/`）作为 Seedream 的参考输入。没有参考图的角色镜头 = 失控的一致性
 
@@ -36,7 +36,7 @@ Seedance 2.0 的 image-to-video 模式以一张静态图片为起点，生成 8-
 1. 先读 `art_direction.md` 第七章，提取全局 style prompt 前缀——这是所有 prompt 的固定开头
 2. 读 `asset_index.md`，建立"角色+stage_id → 参考图路径"的快速查找索引
 3. 读 `shot_list.md`，统计总镜头数，识别需要连续性处理的镜头对
-4. 脚本预处理（classify + assemble）生成 `prompt_assembly.json`，再由 Claude 对话逐批次翻译 Layer 3
+4. 脚本预处理（classify + assemble）生成 `prompt_assembly.json`，其中 Layer 3 直接使用分镜脚本的中文画面描述（layer3_source_cn）
 
 ## 输出
 
@@ -114,42 +114,39 @@ photorealistic rendering, atmospheric haze
 
 ### 层次三：画面内容（Visual Content）
 
-来源：step5 分镜脚本的"画面描述"段落。
+来源：step5 分镜脚本的"画面描述"段落（layer3_source_cn）。
 
-这是翻译工作量最大的部分。需要将中文叙事描述转化为 Seedream 的结构化英文描述，遵循以下子结构：
+本阶段**直接使用分镜脚本的中文画面描述作为 Layer 3 内容**，无需翻译为英文。这样做的原因是：
+
+1. **Seedream 原生支持中文**——能直接识别和处理中文提示词
+2. **避免信息丧失**——中文叙事的细节、意蕴和文化背景在翻译过程中容易丧失
+3. **提高效率**——省去翻译步骤
+
+分镜脚本的画面描述应遵循以下结构：
 
 ```
 [主体] + [动作/姿态] + [服装/道具] + [环境] + [光影] + [氛围]
 ```
 
-**翻译规则**：
+**编写规则**（供 step5 分镜脚本的参考）：
 
-1. **角色描述不用真名**——使用通用描述（如 `a sturdy Chinese man in his 30s`），真名只在元素标注中用于查找参考图
-2. **冻结时刻**——从分镜的"动态描述"中提取第 0 秒的状态作为首帧画面。如果分镜的动态描述是"0-3s：角色站在码头边一动不动；3-7s：缓缓转身"，那首帧应该是"角色站在码头边一动不动"的画面
-3. **空间层次明确**——前景（foreground）、中景（midground）、背景（background）必须分别描述
-4. **光影具体化**——"氛围感的光影"不够，需要写成 `golden hour side lighting from the left, long shadows stretching right, warm rim light on the character's silhouette`
-5. **色彩具体化**——尽可能使用具体色彩词而非抽象描述（`deep burgundy robe` 而非 `dark robe`）
+1. **角色描述的具体性**——使用通用描述（如 "一个三十多岁粗壮的中国男人"），而非特定的人名，因为名字只用于查找参考图
+2. **冻结时刻**——提取第 0 秒的状态作为首帧画面。如果动态描述是"0-3s：角色站在码头边一动不动；3-7s：缓缓转身"，那画面描述应该是"角色站在码头边一动不动"
+3. **空间层次明确**——前景、中景、背景应分别描述
+4. **光影具体化**——避免抽象表述，用具体的方向、色温、强度描述（如 "光源从画面左侧低角度打入（黄昏侧光），长影子向右延伸，温暖逆光勾勒轮廓"）
+5. **色彩具体化**——尽可能使用具体色彩词而非抽象描述（"深靛蓝长衫" 而非 "深色衣服"）
 
-**翻译示例**：
+**范例**：
 
 ```
-step5 画面描述（中文）:
-  "画面前景是朱围庸的背影，他身着深色长衫站在破旧码头边缘，
+step5 分镜脚本的画面描述（中文原文）:
+  "画面前景是朱围庸的背影，他身着深靛蓝长衫站在破旧木制码头边缘，
    海风吹起衫角。中景是空旷的海面，远景是灰蒙蒙的天际线。
    光源从画面左侧低角度打入（黄昏侧光），长影子向右延伸。
-   视觉焦点在朱围庸微微低垂的头部轮廓。"
+   温暖的逆光勾勒着男人微微低垂的头部轮廓。
+   视觉焦点在朱围庸的深色身影，整体弥漫着孤独感伤的氛围。"
 
-      ↓ 翻译
-
-Prompt 层次三:
-  a sturdy Chinese man seen from behind, wearing a dark indigo
-  long robe, standing at the edge of a weathered wooden dock,
-  wind lifting the hem of his robe, head slightly bowed;
-  midground: calm empty sea stretching to the horizon;
-  background: hazy overcast skyline;
-  golden hour side lighting from the left casting long shadows
-  to the right, warm rim light outlining the man's silhouette;
-  melancholic solitary atmosphere
+此段文字直接作为 Prompt Layer 3 内容传入 Seedream
 ```
 
 ### 层次四：负面提示词（Negative Prompt）
@@ -185,11 +182,11 @@ negative: full body visible, wide landscape, distant view
 每个镜头的完整 prompt 按以下顺序组装：
 
 ```
-[层次一：全局风格前缀]
-[层次二：景别 + 机位角度]
-[层次三：画面内容（主体 + 动作 + 服装 + 环境 + 光影 + 氛围）]
+[层次一：全局风格前缀（中文或英文均可，取决于 Art Direction）]
+[层次二：景别 + 机位角度（英文术语）]
+[层次三：画面内容（直接使用分镜脚本的中文描述，无需翻译）]
 
-Negative: [全局负面] + [场景特定负面]
+Negative: [全局负面提示词（中文描述）] + [场景特定负面提示词]
 
 Reference images:
   - 角色肖像锚点: {_portrait/正面半身像.png} (consistency anchor)
@@ -211,24 +208,14 @@ Reference images:
 
 ## 完整 Prompt
 
-### Positive (English)
+### Positive
 \```
-{层次一 + 层次二 + 层次三 的完整组装（英文）}
-\```
-
-### Positive (中文)
-\```
-{上述英文 Positive prompt 的中文直译}
+{层次一 + 层次二 + 层次三 的完整组装（以中文为主）}
 \```
 
-### Negative (English)
+### Negative
 \```
-{全局负面 + 场景特定负面（英文）}
-\```
-
-### Negative (中文)
-\```
-{上述英文 Negative prompt 的中文直译}
+{全局负面 + 场景特定负面（中文描述）}
 \```
 
 ## 参考图
@@ -422,40 +409,39 @@ step7 继续:
 | P3 | 场景建立镜头（每个场次的第一个镜头） | 确定场次的视觉基调 |
 | P4 | 其余镜头 | 按场次顺序 |
 
-### 第三步：Prompt 翻译（Layer 3 生成）
+### 第三步：Prompt 组装与逐镜头生成
 
 **仅对需要生成锚点帧的镜头执行**（链头镜头 + 独立镜头 + 正反打镜头）。链内镜头跳过。
 
-此步骤分为两个阶段：
-
-**阶段 A：脚本预处理**（`classify_shots.py` + `assemble_prompts.py`）
+**脚本预处理**（`classify_shots.py` + `assemble_prompts.py`）
 
 脚本自动完成所有确定性工作，输出 `prompt_assembly.json`，每条记录包含：
 - Layer 1（全局 style prefix）、Layer 2（景别+机位英文术语）、Layer 4（负面提示词）
 - 参考图路径 + 权重
-- 中文画面描述原文（foreground_cn / midground_cn / background_cn / frozen_moment_cn）
-- Layer 3 留空（`layer3_visual_content: ""`）
+- 中文画面描述原文（layer3_source_cn，直接来自 step5 分镜脚本）
 
-**阶段 B：Claude 对话翻译**
+**逐镜头生成**
 
-在 Claude Desktop（Cowork 模式）中，逐批次读取 `prompt_assembly.json` 中的中文画面描述，翻译为英文 Seedream prompt，输出到独立文件 `layer3_translations.json`（`shot_id → 英文 prompt` 的映射表）。`prompt_assembly.json` 保持不变（Layer 3 留空），翻译结果单独存储便于审核。翻译遵循本文"Prompt 工程"章节的四层规则。
-
-### 第三步续：逐镜头生成
-
-`generate_keyframes.py` 运行时自动合并 `prompt_assembly.json`（骨架）+ `layer3_translations.json`（翻译），对每个锚点帧镜头执行生成：
+`generate_keyframes.py` 运行时读取 `prompt_assembly.json`，对每个锚点帧镜头执行生成：
 
 ```
-1. 合并 prompt 骨架与 Layer 3 翻译，读取完整 prompt（Layer 1 + 2 + 3 + Negative）
+1. 读取 prompt_assembly.json 中该镜头的完整数据
+   - Layer 1（全局风格前缀）
+   - Layer 2（景别 + 机位角度）
+   - Layer 3（layer3_source_cn，分镜脚本中的中文画面描述）
+   - Layer 4（负面提示词）
       ↓
-2. 收集参考图（肖像锚点 + 阶段参考 + 场景参考）
+2. 组装完整 prompt（Layer 1 + 2 + 3，Negative 部分单独列出）
       ↓
-3. 执行 Seedream 生成（3-5 张候选）
+3. 收集参考图（肖像锚点 + 阶段参考 + 场景参考）
       ↓
-4. 候选筛选：一致性评估 + 构图匹配 + 光影氛围
+4. 执行 Seedream 生成（3-5 张候选，使用中文 prompt）
       ↓
-5. 选中最佳 → 存入 step6-keyframes/{场次}/{镜号}_first.png
+5. 候选筛选：一致性评估 + 构图匹配 + 光影氛围
       ↓
-6. 记录 prompt 和生成参数 → {镜号}_prompt.md
+6. 选中最佳 → 存入 step6-keyframes/{场次}/{镜号}_first.png
+      ↓
+7. 记录 prompt 和生成参数 → {镜号}_prompt.md
 ```
 
 ### 第四步：正反打空间一致性验证
@@ -611,7 +597,7 @@ in a low ponytail, wearing a fitted dark grey tunic
 | 未记录生成参数 | 后续相似镜头无法参考，重新生成时无法复现 | 每个镜头都写 prompt 记录文件 |
 | 多角色镜头为所有角色设最高权重 | Seedream 参考图冲突，生成质量下降 | 只为前 2-3 个角色设参考图，其余用 prompt |
 | 首帧图分辨率不一致 | 阶段7视频生成时画面质量参差不齐 | 全片统一分辨率 |
-| 未校验 prompt 英文质量 | 语法错误或歧义导致 Seedream 误解意图 | 翻译后通读一遍英文 prompt |
+| layer3_source_cn 描述不够具体 | Seedream 无法准确理解画面意图 | 确保分镜脚本的画面描述包含具体的光影、色彩、空间层次 |
 
 ## 质量标准
 

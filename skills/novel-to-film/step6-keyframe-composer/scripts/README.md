@@ -14,18 +14,13 @@
 └────────┬────────┘
          ▼
 ┌─────────────────┐
-│ assemble_prompts │  拼接 Layer 1/2/4 + 参考图，Layer 3 留空
+│ assemble_prompts │  拼接 Layer 1/2/4 + 参考图
+│                  │  Layer 3 直接使用中文画面描述（layer3_source_cn）
 │                  │  输出: prompt_assembly.json
 └────────┬────────┘
          ▼
-┌─────────────────────┐
-│ Claude 对话生成       │  在 Claude Desktop 对话中，逐批次将
-│ (替代 translate_     │  中文画面描述翻译为英文 Layer 3
-│  prompts.py)         │  输出: layer3_translations.json
-└────────┬────────────┘
-         ▼
 ┌──────────────────┐
-│ generate_keyframes│  合并 prompt_assembly + translations，
+│ generate_keyframes│  读取 prompt_assembly.json
 │                   │  调用 Seedream API 批量生成锚点帧
 │                   │  输出: step6-keyframes/{SC}/{镜号}_first.png + _prompt.md
 └────────┬─────────┘
@@ -60,21 +55,16 @@ python3 classify_shots.py --stats          # 只看统计
 python3 assemble_prompts.py
 python3 assemble_prompts.py --dry-run      # 只看计划
 
-# 3. 翻译画面描述（Claude 对话生成，见下方说明）
-#    在 Claude Desktop 对话中下达指令，Claude 读取 prompt_assembly.json 中的
-#    中文画面描述，逐批次生成英文 Layer 3，输出到 layer3_translations.json。
-#    prompt_assembly.json 保持不变（Layer 3 留空）。
-#    无需 API key，无需运行 translate_prompts.py。
-
-# 4. 生成锚点帧（需要 Seedream API）
+# 3. 生成锚点帧（需要 Seedream API）
+#    prompt_assembly.json 中 Layer 3 已直接包含中文画面描述（layer3_source_cn）
 python3 generate_keyframes.py
 python3 generate_keyframes.py --dry-run    # 只看计划
 python3 generate_keyframes.py --limit 5    # 只生成 5 个
 
-# 5. 生成索引
+# 4. 生成索引
 python3 build_keyframe_index.py
 
-# 6. 校验
+# 5. 校验
 python3 validate_keyframes.py
 ```
 
@@ -108,59 +98,32 @@ python3 validate_keyframes.py
 
 ### 3. `assemble_prompts.py` — Prompt 组装
 
-为每个 step6 需生成的镜头组装半成品 prompt：
+为每个 step6 需生成的镜头组装完整 prompt：
 
 - Layer 1：全局 style prefix（固定文本）
 - Layer 2：景别 + 机位英文术语（查表）
-- Layer 3：**留空**（待翻译填充）
+- Layer 3：**中文画面描述**（layer3_source_cn，直接来自分镜脚本的 foreground/midground/background + frozen_moment）
 - Layer 4：全局 + 场景特定负面提示词
 - 参考图：从 asset_index.md 查找路径 + 按景别计算权重
 
-同时提取中文画面描述原文（foreground/midground/background + frozen_moment）作为翻译源。
+**说明**：Layer 3 直接使用中文描述，无需翻译。Seedream 原生支持中文，保留原文避免翻译过程中丧失场景细节。
 
-### 4. `translate_prompts.py` — Prompt 翻译（已废弃）
+### 4. 脚本已移除：`translate_prompts.py` 和 `layer3_translations.json`
 
-> **已废弃**：此脚本需要 Anthropic API key。当前改用 Claude Desktop 对话模式直接生成 Layer 3。
-> 脚本保留作为备用方案，如果后续获得 API key 可重新启用。
+> **已移除**：不再需要翻译步骤。
+>
+> 原方案：通过 Claude Desktop 对话或 API 调用将中文画面描述翻译为英文。
+>
+> **新方案的原因**：
+> - Seedream 原生支持中文输入
+> - 保留中文原文避免翻译过程中丧失细节描写
+> - 简化工作流程，减少中间步骤
 
-原设计：调用 Claude API 将中文画面描述翻译为 Seedream 结构化英文 prompt。
+### 4. `generate_keyframes.py` — 锚点帧生成（需要 Seedream API）
 
-### 4a. Claude 对话生成 Layer 3（当前方案）
+读取 `prompt_assembly.json`（已包含中文 Layer 3），然后调用 Seedream API 批量生成：
 
-在 Claude Desktop（Cowork 模式）中，由 Claude 直接读取 `prompt_assembly.json` 中的中文画面描述，逐批次翻译为英文 Seedream prompt，输出到独立文件 `layer3_translations.json`。
-
-`prompt_assembly.json` 保持不变（`layer3_visual_content` 留空），翻译结果单独存储，便于审核和版本管理。`generate_keyframes.py` 运行时自动合并两个文件。
-
-**翻译规则**：
-- 冻结时刻：取 `frozen_moment_cn`，描述第 0 秒的静态画面
-- 空间分层：foreground → midground → background
-- 光影具体化：将模糊描述转为具体的光源方向、色温、阴影方向
-- 色彩具体化：使用具体英文色名（`deep burgundy` 而非 `dark`）
-- 目标长度：80-150 词
-- 输出结构：[主体+姿态] + [服装/道具] + [环境] + [光影] + [氛围]
-
-**输出文件**：`layer3_translations.json`（`shot_id → 英文 prompt` 的映射表）
-
-```json
-{
-  "SC001-001": "Foreground: stainless steel queue barriers...",
-  "SC002-001": "Dining table edge occupies the bottom...",
-  ...
-}
-```
-
-**工作流程**：
-1. 用户在 Claude Desktop 对话中下达"翻译第 N-M 条"指令
-2. Claude 读取 `prompt_assembly.json` 中对应条目的 `foreground_cn` / `midground_cn` / `background_cn` / `frozen_moment_cn`
-3. Claude 生成英文 prompt，写入 `layer3_translations.json`
-4. `generate_keyframes.py` 运行时自动读取两个文件并合并
-
-### 5. `generate_keyframes.py` — 锚点帧生成（需要 Seedream API）
-
-读取 `prompt_assembly.json`（骨架）+ `layer3_translations.json`（翻译），运行时自动合并，然后调用 Seedream API 批量生成：
-
-- 合并 Layer 3 翻译到 prompt 骨架
-- 组装最终 prompt（Layer 1 + 2 + 3 + Negative）
+- 组装最终 prompt（Layer 1 + 2 + 中文 Layer 3 + Negative）
 - 收集参考图（肖像锚点 + 阶段参考 + 场景参考）
 - 调用 API 生成图片
 - 保存到 `step6-keyframes/{场次}/{镜号}_first.png`
@@ -168,7 +131,7 @@ python3 validate_keyframes.py
 
 支持断点续跑、速率控制、重试机制。
 
-### 6. `build_keyframe_index.py` — 索引生成
+### 5. `build_keyframe_index.py` — 索引生成
 
 扫描实际文件，输出 `keyframe_index.md`（step7 核心输入），包含：
 
@@ -177,7 +140,7 @@ python3 validate_keyframes.py
 - 正反打序列清单
 - 逐镜头索引（帧类型 + 路径 + 链关系 + 生成状态）
 
-### 7. `validate_keyframes.py` — 完整性校验
+### 6. `validate_keyframes.py` — 完整性校验
 
 5 项校验：
 
@@ -197,8 +160,7 @@ production/
 ├── step5-storyboard/storyboard/SC*.md       ← 分镜脚本（输入）
 └── step6-keyframes/                         ← 输出
     ├── shot_classification.json             ← 镜头分类
-    ├── prompt_assembly.json                 ← prompt 骨架（Layer 3 留空）
-    ├── layer3_translations.json            ← Layer 3 翻译（shot_id → 英文 prompt）
+    ├── prompt_assembly.json                 ← prompt 骨架（Layer 3 含中文画面描述）
     ├── keyframe_index.md                    ← 锚点帧索引（step7 输入）
     ├── generation_log.jsonl                 ← 生成日志
     └── SC{NNN}/
@@ -208,7 +170,8 @@ production/
 
 ## 设计原则
 
-1. **60% 脚本 + 30% LLM + 10% Seedream** — 将确定性逻辑（解析、分类、拼接、编排）用脚本完成，创作性翻译由 Claude 对话直接完成（替代原 API 调用方案）
-2. **复用 step4 模式** — API 调用、重试、断点续跑等逻辑与 step4 generate_images.py 一致
-3. **中间产物可审查** — 每一步都有 JSON 输出，可以人工审核后再进入下一步
-4. **幂等 & 断点续跑** — 所有脚本默认跳过已有结果，可安全重跑；Claude 对话生成同理，已有 layer3_visual_content 的条目跳过
+1. **保留中文原文** — Layer 3 直接使用分镜脚本中的中文画面描述（layer3_source_cn），无需翻译。Seedream 原生支持中文，保留原文避免翻译过程中丧失细节
+2. **80% 脚本 + 20% Seedream** — 将确定性逻辑（解析、分类、拼接、编排）用脚本完成，调用 Seedream API 生成图像
+3. **复用 step4 模式** — API 调用、重试、断点续跑等逻辑与 step4 generate_images.py 一致
+4. **中间产物可审查** — 每一步都有 JSON 输出，可以人工审核后再进入下一步
+5. **幂等 & 断点续跑** — 所有脚本默认跳过已有结果，可安全重跑

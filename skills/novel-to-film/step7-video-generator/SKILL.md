@@ -1,6 +1,6 @@
 ---
 name: video-generator
-description: 将每个镜头的首帧图+参考图+运动提示词输入 Seedance 2.0 生成 8-15 秒视频片段。核心职责包括：从分镜脚本的导演动态描述翻译为 Seedance motion prompt、组装多模态输入包（首帧+参考图+文本）、选择生成模式（First Frame / Full Reference）、执行生成并验证质量与一致性。对于连续性链，step7 内部运行反馈循环：从视频实际尾帧提取下一镜头的首帧，实现基于真实画面的帧级连续性；当链内某镜头质量过差时，执行链条中断处理，回退到 step6 请求新锚点帧。
+description: 将每个镜头的首帧图+参考图+运动提示词输入 Seedance 2.0 生成 8-15 秒视频片段。核心职责包括：从分镜脚本的导演动态描述和运镜方式组装为 Seedance motion prompt、组装多模态输入包（首帧+参考图+文本）、选择生成模式（First Frame / Full Reference）、执行生成并验证质量与一致性。对于连续性链，step7 内部运行反馈循环：从视频实际尾帧提取下一镜头的首帧，实现基于真实画面的帧级连续性；当链内某镜头质量过差时，执行链条中断处理，回退到 step6 请求新锚点帧。
 ---
 
 # 视频生成
@@ -14,7 +14,7 @@ description: 将每个镜头的首帧图+参考图+运动提示词输入 Seedanc
 在好莱坞制作流程中，这对应 **Principal Photography（主摄影/拍摄）** 阶段——一切准备就绪，开机拍摄。区别在于：传统流程中"拍摄"由摄影师和演员完成；AI 制作流中，"拍摄"由 Seedance 2.0 根据首帧图 + 运动提示词 + 参考图自动生成。
 
 **本阶段的核心技术挑战有四个**：
-1. **Motion Prompt 工程**——将 step5 的中文导演动态描述翻译为 Seedance 可执行的英文运动指令，这与 step6 的 Image Prompt 工程是同构但不同的翻译任务。**所有 motion prompt 必须中英双语输出**——英文版用于 Seedance 生成，中文版（英文版的直译）用于人工审核和导演确认
+1. **Motion Prompt 工程**——将 step5 的中文导演动态描述和运镜方式结构化为 Seedance 可执行的运动指令。由于 Seedance 的动作生成涉及复杂的物理和时间轴，需要清晰的运动描述；可根据 Seedance 的最新支持情况选择使用中文或英文运动提示词。推荐在必要时进行中英双语记录以便审核和调整
 2. **生成模式选择**——Seedance 2.0 支持多种模式（First Frame / Full Reference），每个镜头需要根据画面复杂度选择最合适的模式
 3. **连续性反馈循环**——连续性链内部的镜头不再由 step6 提供首帧，而是由 step7 从前一镜头视频的实际尾帧提取。这要求 step7 按严格的依赖顺序逐镜头生成，并在每个视频生成后提取尾帧用于下一镜头
 4. **运动质量控制与链条中断**——AI 生成的运动可能出现质量问题，而在连续性链中，一个低质量视频的尾帧会污染后续所有镜头。需要建立质量评估标准、链条中断阈值和回退到 step6 的机制
@@ -23,7 +23,7 @@ description: 将每个镜头的首帧图+参考图+运动提示词输入 Seedanc
 
 1. **首帧是基准**——视频的画面质量上限已被 step6 的首帧锁定。本阶段的工作是"让画面正确地动起来"，而不是修正首帧中的任何问题。如果首帧有问题，必须回到 step6 修正，不可在本阶段尝试弥补
 2. **运动克制**——AI 视频生成对大幅度、快速、复杂的运动容易失控。宁可让动作比分镜描述稍慢、稍小，也不要让画面崩溃。如有需要，可在 step8 后期通过加速或剪辑节奏调整来弥补
-3. **prompt 是桥梁**——与 step6 相同，本阶段需要将 step5 的导演意图翻译为 AI 工具的技术语言，但翻译目标从"静态画面"变为"运动过程"
+3. **prompt 是桥梁**——与 step6 类似，本阶段需要将 step5 的导演意图（动态描述 + 运镜方式）转化为 Seedance 可执行的运动指令。不同于 step6 直接使用中文图片描述，step7 可根据 Seedance 的语言支持灵活选择中文或英文运动提示词
 4. **模式匹配场景**——不同类型的镜头适合不同的 Seedance 生成模式。选错模式会导致运动质量大幅下降
 5. **一致性仍是生命线**——视频片段中的角色面貌必须与首帧一致，不能在运动过程中"变脸"。参考图注入是防止变脸的关键手段
 
@@ -47,7 +47,7 @@ description: 将每个镜头的首帧图+参考图+运动提示词输入 Seedanc
 1. 先读 `keyframe_index.md`，明确总镜头数、连续性链结构（哪些镜头有 step6 锚点帧，哪些需要 step7 自行提供）
 2. 读 `shot_list.md`，总览全部镜头的运镜和时长
 3. 规划生成顺序：连续性链必须按链内顺序逐个生成，独立镜头可并行
-4. 按场次顺序读取分镜脚本，逐镜头执行 motion prompt 翻译和生成
+4. 按场次顺序读取分镜脚本，逐镜头组装 motion prompt 并执行生成
 
 ## 输出
 
@@ -123,7 +123,7 @@ production/step7-clips/
 | 描述对象 | 静止画面（第 0 秒） | 运动过程（0-Ns） |
 | 核心内容 | 构图、光影、色彩、空间 | 动作、运镜、速度、节奏 |
 | 来源段落 | step5"画面描述" | step5"动态描述"+"运镜方式" |
-| 输出语言 | 英文，名词/形容词为主 | 英文，动词/副词为主 |
+| 输出语言 | 中文（直接使用，不翻译） | 中文或英文（根据 Seedance 支持情况灵活选择） |
 | 时间轴 | 无（冻结时刻） | 有（按秒描述变化） |
 
 ### Motion Prompt 结构
@@ -134,23 +134,30 @@ production/step7-clips/
 
 来源：step5 镜头表的"运镜方式"字段。
 
-将 step5 的中文运镜术语翻译为 Seedance 识别的英文指令：
+直接使用 step5 中文运镜术语或进行结构化描述，根据 Seedance 对中文运动指令的支持情况选择输出语言。推荐保留中文术语以便导演理解和审核：
 
-| step5 中文 | Motion Prompt | 补充参数 |
-|-----------|--------------|---------|
-| 固定 | `static camera, locked shot` | — |
-| 推（Dolly In） | `camera slowly dollies in` | `slow` / `steady` |
-| 拉（Dolly Out） | `camera slowly dollies out` | `slow` / `revealing` |
-| 摇（Pan） | `camera pans [left/right]` | `smooth pan` |
-| 跟（Tracking） | `camera tracks the character, following movement` | `steady tracking` |
-| 升（Crane Up） | `camera cranes up, rising` | `smooth crane` |
-| 降（Crane Down） | `camera descends, craning down` | `smooth descent` |
-| 环绕（Orbit） | `camera slowly orbits around the subject` | `360 orbit` / `partial orbit` |
-| 手持 | `handheld camera, slight shake` | `documentary style` |
-| 变焦推 | `camera zooms in` | `slow zoom` |
-| 变焦拉 | `camera zooms out` | `slow zoom out` |
+| step5 中文 | Motion Prompt 参考（中文） | 运动速度关键词 |
+|-----------|----------------------|--------------|
+| 固定 | 镜头固定，画面锁定 | — |
+| 推（Dolly In） | 摄像机缓缓向前推进 | `缓缓` / `平稳` |
+| 拉（Dolly Out） | 摄像机缓缓向后拉开 | `缓缓` / `逐渐揭示` |
+| 摇（Pan） | 摄像机左右摇摆 | `平稳摇摆` |
+| 跟（Tracking） | 摄像机跟随角色移动 | `稳定跟随` |
+| 升（Crane Up） | 摄像机缓缓上升 | `平稳上升` |
+| 降（Crane Down） | 摄像机缓缓下降 | `平稳下降` |
+| 环绕（Orbit） | 摄像机环绕主体旋转 | `缓缓环绕` / `部分旋转` |
+| 手持 | 手持摄像机，轻微晃动 | `纪录片风格` |
+| 变焦推 | 镜头缓缓推近 | `缓缓推近` |
+| 变焦拉 | 镜头缓缓拉开 | `缓缓拉开` |
 
 **运镜速度关键词**：
+
+中文：
+- 慢速：`缓缓`、`轻轻`、`逐渐`
+- 中速：`稳定地`、`平稳地`
+- 快速：`迅速`、`快速`（慎用——快速运镜容易导致画面撕裂）
+
+英文：
 - 慢速：`slowly`, `gently`, `gradually`
 - 中速：`steadily`, `smoothly`
 - 快速：`quickly`, `rapidly`, `swiftly`（慎用——快速运镜容易导致画面撕裂）
@@ -159,17 +166,17 @@ production/step7-clips/
 
 来源：step5 分镜脚本的"动态描述"段落。
 
-将角色/道具/环境的中文动作描述翻译为英文运动指令：
+直接使用或结构化整理中文动态描述。根据 Seedance 对中文运动指令的支持情况，可选择保留中文或转化为结构化的英文指令：
 
-**翻译规则**：
+**编写规则**（适用于中文和英文）：
 
-1. **动词优先**——Motion prompt 的核心是动词，不是名词。`the man walks` 比 `a walking man` 更有效
-2. **速度和力度要明确**——`slowly raises his hand` vs `quickly raises his hand` 会产生完全不同的运动
-3. **角色不用真名**——与 step6 一致，使用通用描述（`the man`, `the woman`, `the figure`）
-4. **分阶段描述**——与 step5 动态描述的时间轴对应，用 `then` / `after that` / `gradually` 等连接词串联
+1. **动词优先**——Motion prompt 的核心是动词，不是名词。"男人行走" 比 "一个行走的男人" 更有效
+2. **速度和力度要明确**——"缓缓抬起手臂" vs "快速抬起手臂" 会产生完全不同的运动
+3. **角色不用真名**——与 step6 一致，使用通用描述（"男人"、"女人"、"身影"）
+4. **分阶段描述**——与 step5 动态描述的时间轴对应，用"然后"/"接着"/"逐渐"等连接词串联
 5. **环境运动也要描述**——风吹树叶、水面波纹、火焰跳动，这些环境动态对画面生动感至关重要
 
-**翻译示例**：
+**中文示例**（直接使用 step5 的动态描述）：
 
 ```
 step5 动态描述（中文）:
@@ -177,9 +184,11 @@ step5 动态描述（中文）:
   3-7s: 他缓缓抬起右手，从怀中取出一个小瓷瓶，举到眼前端详
   7-10s: 他握紧瓷瓶，手臂缓缓放下，目光投向远处海面
 
-      ↓ 翻译
+✓ 此段文字可直接作为 Motion Prompt 部分二使用（若 Seedance 支持中文）
 
-Motion Prompt（部分二）:
+如需转化为英文（当前模型要求），则进行结构化翻译：
+
+Motion Prompt（部分二 - 英文）:
   the man stands still at the dock edge, his robe gently
   fluttering in the sea breeze; then he slowly raises his
   right hand, pulling a small white porcelain bottle from
@@ -454,7 +463,7 @@ step7 执行流程:
 | P3 | 简单运动镜头（固定机位+微动） | 成功率高，快速推进 |
 | P4 | 复杂运动镜头 | 可能需要降级处理，放到最后 |
 
-### 第三步：逐镜头 Motion Prompt 翻译与生成
+### 第三步：逐镜头 Motion Prompt 组装与生成
 
 对每个镜头执行以下子流程（连续性链内镜头必须按顺序逐个执行）：
 
@@ -468,13 +477,13 @@ step7 执行流程:
       ↓
 3. 评估运动复杂度 → 确定是否需要降级处理
       ↓
-4. 翻译运镜方式 → 部分一（Camera Motion）
+4. 组织运镜方式 → 部分一（Camera Motion）
       ↓
-5. 翻译动态描述 → 部分二（Subject Motion）
+5. 组织动态描述 → 部分二（Subject Motion）
       ↓
 6. 提取音效提示 + Art Direction 风格 → 部分三（Mood & Style）
       ↓
-7. 组装完整 motion prompt
+7. 组装完整 motion prompt（选择中文或英文，根据 Seedance 支持情况）
       ↓
 8. 确定生成模式（First Frame / Full Reference）
       ↓

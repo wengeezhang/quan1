@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-assemble_prompts.py — 为每个锚点帧组装半成品 Prompt
+assemble_prompts.py — 为每个锚点帧组装完整 Prompt
 
 核心功能：
 1. 读取 shot_classification.json（由 classify_shots.py 生成）
 2. 对每个 step6_generates=true 的镜头：
    - 拼接 Layer 1（全局 style prefix）
    - 拼接 Layer 2（景别 + 机位角度英文术语）
-   - Layer 3 留空占位（待 translate_prompts.py 填充）
+   - Layer 3 直接使用中文画面描述（layer3_source_cn，无需翻译）
    - 拼接 Layer 4（全局负面提示词 + 场景特定负面提示词）
    - 查找参考图路径 + 计算权重
-3. 输出 prompt_assembly.json（translate_prompts.py 的输入）
+3. 输出 prompt_assembly.json（generate_keyframes.py 的输入，已包含完整中文 Layer 3）
 
 用法：
     python3 assemble_prompts.py [--base-dir /path/to/production]
@@ -157,8 +157,8 @@ def assemble_one_prompt(shot_data: dict, global_prefix: str, asset_index: dict,
         "scene_id": "SC001",
         "layer1_global_prefix": "cinematic, dark fantasy, ...",
         "layer2_shot_spec": "full shot, slightly high angle",
-        "layer3_visual_content": "",  ← 留空，待 translate_prompts.py 填充
-        "layer3_source_cn": "...",    ← 中文画面描述原文（翻译用）
+        "layer3_visual_content": "...",  ← 直接填充中文画面描述（无需翻译）
+        "layer3_source_cn": "...",    ← 中文画面描述原文
         "frozen_moment_cn": "...",    ← 冻结时刻中文原文
         "foreground_cn": "...",
         "midground_cn": "...",
@@ -184,7 +184,7 @@ def assemble_one_prompt(shot_data: dict, global_prefix: str, asset_index: dict,
     angle_en = translate_angle(shot_data.get("angle", ""))
     layer2 = f"{scale_en}, {angle_en}"
 
-    # Layer 3: 留空 — 中文原文作为翻译源
+    # Layer 3: 直接使用中文原文
     layer3_source = shot_data.get("visual_desc", "")
     frozen_moment = shot_data.get("frozen_moment", "")
     foreground = shot_data.get("foreground", "")
@@ -202,7 +202,7 @@ def assemble_one_prompt(shot_data: dict, global_prefix: str, asset_index: dict,
         "scene_id": shot_data.get("scene_id", ""),
         "layer1_global_prefix": layer1,
         "layer2_shot_spec": layer2,
-        "layer3_visual_content": "",  # 待填充
+        "layer3_visual_content": layer3_source,  # 直接使用中文描述（Seedream 原生支持中文）
         "layer3_source_cn": layer3_source,
         "frozen_moment_cn": frozen_moment,
         "foreground_cn": foreground,
