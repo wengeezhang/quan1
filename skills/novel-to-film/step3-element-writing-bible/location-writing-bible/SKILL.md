@@ -11,7 +11,7 @@ description: 为单个场景/地点编写完整的场景圣经——面向影视
 
 在好莱坞制作流程中，场景圣经对应的是 **Location Bible / Set Bible**——它是美术部门（Production Design）、灯光部门（Lighting/Gaffer）、摄影部门（Cinematography）和后期视效（VFX）共同的参考底本。一个合格的场景圣经必须让读者"走进"这个空间：看到它的结构，感受到它的光线，听到它的声音，嗅到它的气味。
 
-本技能的上游是 `film-elements-extractor` 产出的场景清单（`production/step1-extraction/locations.md`）以及全局视觉风格定义（`production/step2-visual-design/art_direction.md`）。每一个重要性 ★★★★★ 或 ★★★★☆ 的场景，都需要用本技能编写一份场景圣经。
+本技能的上游是 `film-elements-extractor` 产出的场景清单（`production/step1-extraction/locations.md`）、导演视觉设定（`production/step2-visual-design/director_vision.md`）以及全局视觉风格定义（`production/step2-visual-design/art_direction.md`）。每一个重要性 ★★★★★ 或 ★★★★☆ 的场景，都需要用本技能编写一份场景圣经。
 
 **服务对象**：美术指导（Production Designer）、概念设计师、灯光师、摄影指导（DP）、分镜师、AI绘图工程师、特效团队、剪辑师（用于匹配场景基调）。
 
@@ -27,17 +27,24 @@ description: 为单个场景/地点编写完整的场景圣经——面向影视
 ## 输入
 
 - `production/step1-extraction/locations.md` 中该场景的基本信息（名称、空间特征、氛围关键词、章节范围）
+- `production/step2-visual-design/director_vision.md` — 导演视觉设定（场景的视觉偏好、参考图、光线氛围、特殊要求）
 - `production/step2-visual-design/art_direction.md`——全局视觉风格定义（色彩体系、光影规范、时代质感）
 - `chapters/` 下该场景覆盖的全部章节原文（`*.md`）
 - `chapters/` 下对应的摘要文件（`*_summary.md`、`*_summary_simple.md`）——快速定位场景出现的段落
 - 已完成的场景圣经作为风格参考
 
 **研究方法**：
-1. 先读 `production/step1-extraction/locations.md` 确认场景的章节范围和基本信息
+0. 先读 `production/step2-visual-design/director_vision.md` 中该场景的设定，确认导演是否有视觉偏好、参考图、光线氛围、层次结构等特殊要求
+1. 读 `production/step1-extraction/locations.md` 确认场景的章节范围和基本信息
 2. 读 `production/step2-visual-design/art_direction.md` 明确全局视觉约束
 3. 通读该场景覆盖范围内的所有 `*_summary.md` 文件，定位场景出现的章节和上下文
 4. 回到原文 `*.md` 补充空间细节（尺度描写、建筑描写、自然环境描写、光线描写、声音描写等）
 5. 参考已有场景圣经的格式和深度
+
+**优先级规则**：编写场景圣经时，严格按以下优先级确定视觉设定：
+```
+导演视觉设定（director_vision.md） > 小说原文描写 > 模型自主补全
+```
 
 ## 输出
 
