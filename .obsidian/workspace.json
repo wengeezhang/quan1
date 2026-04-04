@@ -11,10 +11,14 @@
             "id": "100ad00033af63f2",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "skills/novel-to-film/step2-visual-design/art-direction/SKILL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SKILL"
             }
           }
         ]
@@ -178,6 +182,8 @@
   },
   "active": "100ad00033af63f2",
   "lastOpenFiles": [
+    "HUMAN_INTERVENTION.md",
+    "chapters/part1_chapter5_character.md",
     "skills/novel-to-film/step1-film-elements-extractor/SKILL.md"
   ]
 }
