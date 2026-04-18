@@ -102,6 +102,20 @@ Portrait of a Chinese young man around 30 years old with a soft round-square fac
 
 ---
 
+### 刘振
+
+**English：**
+```
+Portrait of a Chinese young man around 29 inhabiting a vagrant's body — rugged features with an undercurrent of hidden menace. Rough dark skin, unkempt black hair, weathered face showing hard street life. Eyes appear dull and homeless but occasionally flash with ancient predatory intelligence. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位约29岁中国年轻男性半身像，寄居在流浪汉躯体中——粗犷面容下暗藏隐秘的威胁。粗糙偏黑肤色，凌乱黑发，风霜面容显示艰苦街头生活。眼神表面浑浊如流浪汉，但偶尔闪过古老的掠食者智慧。白色背景，柔和均匀光线，肩部以上构图。
+```
+
+---
+
 ### 卢卫寿
 
 **English：**
@@ -172,6 +186,20 @@ Portrait of a Chinese elderly woman around 65 years old with an elegant oval fac
 
 ---
 
+### 和寻灵
+
+**English：**
+```
+Portrait of a massive divine being of pure golden radiance — the upper portion of a formless yet vaguely humanoid silhouette within blinding golden glow. Brilliant warm gold light emanates from its core, pulsing with supreme authority and cosmic power. The light is so intense that detailed features are impossible to discern — only the overwhelming sense of a supreme deity's presence. White background, soft even lighting, upper body framing.
+```
+
+**中文：**
+```
+一个巨大的纯金色光辉神圣存在的半身像——在耀眼金色光芒中无定形但隐约暗示人形轮廓的上半部分。灿烂温暖的金色光芒从核心辐射，脉动着至高权威和宇宙力量。光芒如此强烈以至于无法辨清细节——只有至高神灵存在的压倒性感受。白色背景，柔和均匀光线，上半身构图。
+```
+
+---
+
 ### 威刚
 
 **English：**
@@ -228,6 +256,20 @@ Portrait of a Chinese young man around 30 years old with a square hard-angled fa
 
 ---
 
+### 智寻道
+
+**English：**
+```
+Portrait of a massive divine being of dark blue lightning energy — the upper portion of a formless entity radiating cold electric power. Deep blue-purple radiance crackles with visible lightning arcs and electrical discharge. Within the storming energy form, faint animal totemic shapes flicker — dragon silhouettes, qilin outlines, beast-spirit motifs suggesting dominion over the animal realm. White background, soft even lighting, upper body framing.
+```
+
+**中文：**
+```
+一个巨大的暗蓝色闪电能量神圣存在的半身像——无定形存在体散发冷冽电能的上半部分。深蓝紫色光辉伴随可见的闪电弧和电光放射。在风暴般的能量形态中，隐约闪烁动物图腾形状——龙的轮廓、麒麟的影子、兽灵纹样暗示对兽界的统治。白色背景，柔和均匀光线，上半身构图。
+```
+
+---
+
 ### 曹元艺
 
 **English：**
@@ -252,6 +294,20 @@ Portrait of a Chinese man around 45 years old with a square, firm jawline and pr
 **中文：**
 ```
 一位约45岁中国男性的正面半身像，方脸硬朗，下颌有力，眉骨突出，散发沉着的军事谋士气场。黝黑健康的肤色源于多年户外生活，额头有因习惯性深思而形成的皱纹。深邃的眼窝中目光异常锐利、有穿透力——这是角色的定义特征，传达冷静的智慧和战略洞察力。浓黑眉毛，鼻梁挺直有力，薄唇紧实，嘴角线条果断。黑色短发整齐干练，鬓角微有灰丝。上背微驼暗示劳作经历，但眼神和气度透露出隐藏的权威。穿着简素的深色立领上衣，干净低调。表情沉着而警觉，如同一个正在评估每个细节的思考者。肩部以上半身像构图。柔和均匀光线强调眼神的锐利。白色背景。写实电影感风格，面部细节精致。
+```
+
+---
+
+### 杜金标
+
+**English：**
+```
+Portrait of a Chinese town mayor over 50, thin wiry build with sharp decisive eyes. Lean serious face with black-gray short neat hair. Wearing proper formal official attire, meticulous and rule-abiding. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位50多岁中国镇长半身像，精瘦干练体型，锐利果断的眼神。瘦长严肃面容，黑灰短发整齐。穿着规矩正式的官服，一丝不苟。白色背景，柔和均匀光线，肩部以上构图。
 ```
 
 ---
@@ -284,6 +340,20 @@ Portrait of a Chinese military general around 45 years old with a long rectangul
 
 ---
 
+### 江新成
+
+**English：**
+```
+Portrait of a Chinese city mayor around 50, slightly overweight official build. Round-square face with thinning hair combed neatly to cover sparse patches, sharp decisive eyes of an administrator. Wearing formal official attire, neat and proper. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位约50岁中国城市市长半身像，微胖的官员体型。圆方脸，稀疏头发整齐梳理掩盖稀少处，锐利果断的行政官员眼神。穿着正式官员服装，整洁规矩。白色背景，柔和均匀光线，肩部以上构图。
+```
+
+---
+
 ### 温伯封
 
 **English：**
@@ -308,6 +378,20 @@ Portrait of a massive aggressive mythical beast, same species as its father but 
 **中文：**
 ```
 一位巨大暴烈神兽的正面半身像，与父亲同族但散发暴力爆发性的力量。5-6米高，肩膀更宽，四肢更粗壮有力。白色长毛狂野竖立四散如暴怒的鬃毛——混乱、不驯、根根张扬。面部完全漆黑，永远带着暴怒、挑衅、攻击性的表情。尖锐敌意的眼睛燃烧着狂暴和挑战。尖长耳朵因愤怒向后贴伏。这个生物体现了纯粹的毁灭力量——一个狂暴的神灵。上半身像。强烈戏剧性光线强调狂野毛发纹理和凶猛表情。深色背景。写实电影感风格。
+```
+
+---
+
+### 灵闽
+
+**English：**
+```
+Portrait of a gentle mythical beast, same species as its fierce brother but with softer rounded body lines. White long fur smooth and neatly groomed — orderly and gentle. Jet-black face with curious friendly expression tinged with shyness, warm trusting eyes full of wonder. Tall pointed ears upright and attentive. White background, soft even lighting, head and upper body framing.
+```
+
+**中文：**
+```
+一位温柔神兽的半身像，与凶猛兄长同族但身体线条更柔和圆润。白色长毛顺滑整洁——有序而温柔。漆黑面部带好奇友善的表情略带羞怯，温和信任的眼睛充满对世界的好奇。尖长耳朵直立而专注。白色背景，柔和均匀光线，头部及上半身构图。
 ```
 
 ---
@@ -354,6 +438,34 @@ Portrait of a young Chinese man around 25 years old with a broad square jaw and 
 
 ---
 
+### 葛有利
+
+**English：**
+```
+Portrait of a young Chinese resistance fighter around 25 with a handsome hardened face showing battle experience beyond his years. Determined fierce eyes, strong jaw, dark tanned skin with possible minor scars. Black short hair. Simple military attire with combat wear. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位约25岁中国年轻抵抗军战士半身像，英俊但经过战场硬化的面容展示超越年龄的战斗经验。坚毅刚烈的眼神，有力下颌，偏黑日晒肤色可能有浅伤疤。黑色短发。简素军装带战斗磨损。白色背景，柔和均匀光线，肩部以上构图。
+```
+
+---
+
+### 裘万财
+
+**English：**
+```
+Portrait of a Chinese middle-aged local bully around 45, slightly overweight with a puffed-up arrogant bearing. Round plump face with small shrewd domineering eyes, perpetual sneer. Wearing flashy expensive but tasteless clothing, conspicuous thick gold chain necklace, gaudy gold rings on multiple fingers. Black short hair slicked back with pomade. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位约45岁中国地方恶霸半身像，微胖带膨胀的傲慢姿态。圆胖脸，精明霸道的小眼睛，永远的冷笑。穿着花哨昂贵但品味俗气的衣服，显眼的粗金项链，多个手指戴浮夸金戒指。黑色短发抹发油梳向后。白色背景，柔和均匀光线，肩部以上构图。
+```
+
+---
+
 ### 郝大川
 
 **English：**
@@ -378,6 +490,20 @@ Portrait of a Chinese military commander around 47 years old with a long square 
 **中文：**
 ```
 一位约47岁中国军事指挥官的正面半身像，方长脸，面容沉着稳重，散发老练的军事权威。浓眉微灰，中等深邃的眼睛带着冷静分析的目光——老兵守卫者的沉着审视。鼻梁挺直，薄唇紧实。古铜色肤色，额头有压力纹，眼角有鱼尾纹，右脸颊有一道约3cm的浅伤疤——过往战斗的印记。黑色军人短发带有可见灰丝。穿戴有实战痕迹的军甲或军装。表情沉着、坚毅、警觉——一位在巨大压力下可靠的指挥官。肩部以上半身像构图。柔和均匀光线。白色背景。写实电影感风格，面部细节精致。
+```
+
+---
+
+### 马戈逸
+
+**English：**
+```
+Portrait of a Chinese administrative official around 40 with a tense worried face and habitually furrowed brow. Thin build, anxious but organized eyes constantly calculating logistics. Black short neat hair. Dark formal administrative clothing. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位约40岁中国行政官员半身像，紧绷忧虑的面容，习惯性紧蹙的眉头。偏瘦体型，焦虑但有条理的眼神不断计算后勤。黑色整齐短发。深色正式行政服装。白色背景，柔和均匀光线，肩部以上构图。
 ```
 
 ---
@@ -411,6 +537,34 @@ Portrait of a young Chinese man around 25 years old with a round-square friendly
 
 ---
 
+### 冯德友
+
+**English：**
+```
+Portrait of a Chinese military instructor around 50 with a disciplined scholarly-military face, weathered complexion, steady unbroken eyes maintaining dignity even in captivity. Black-gray short military hair. Military uniform with battle wear. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位约50岁中国军事教官半身像，有纪律的学者型军人面容，风霜面色，即使被俘仍保持尊严的沉稳眼神。黑灰军人短发。军装带战损痕迹。白色背景，柔和均匀光线，肩部以上构图。
+```
+
+---
+
+### 刘默雨
+
+**English：**
+```
+Portrait of a young Chinese police officer around 28 with an open friendly face and honest bright eyes. Average athletic build. Black short regulation hair. Wearing police uniform. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位约28岁中国年轻警察半身像，开朗友善的面容，正直明亮的眼神。中等运动员体型。黑色规范短发。穿着警察制服。白色背景，柔和均匀光线，肩部以上构图。
+```
+
+---
+
 ### 宁国红
 
 **English：**
@@ -421,6 +575,20 @@ Portrait of a Chinese man around 45 but appearing much older, with a deeply line
 **中文：**
 ```
 一位约45岁但看起来更老的中国男性正面半身像，深刻皱纹的憔悴面容显示极度恐惧的摧残。颧骨突出，面颊凹陷，空洞恐惧的眼睛带绝望目光。灰白凌乱头发。灰白病态肤色。穿着皱巴破旧衣物。表情带深层恐惧和崩溃的精神——一个被所见之事摧毁的人。肩部以上。白色背景。写实电影感风格。
+```
+
+---
+
+### 封
+
+**English：**
+```
+Portrait of a semi-transparent grey-white humanoid spirit — the upper body and head region of an ancient soul thousands of years old. The face is extremely blurred, almost featureless, yet the silhouette carries unmistakable ancient gravitas. Body outline is stable with unusually sharp well-defined edges resembling tree rings. Overall tone is grey-white with a deep bronze-gray (#8B6914) tint, darker and more muted than other spirits. The luminescence is faint but remarkably steady, like an ancient flame refusing to die. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一个半透明灰白色人形灵魂的半身像——数千年古老灵魂的上半身和头部区域。面部极为模糊，几乎看不清五官，但轮廓散发不可否认的古老庄严。身体轮廓稳定，边缘异常清晰锐利如同年轮纹路。整体色调灰白底色带深古铜灰色调（#8B6914），比其他灵魂更暗更沉。散发的荧光微弱但异常稳定，如同一盏拒绝熄灭的远古灯火。白色背景，柔和均匀光线，肩部以上构图。
 ```
 
 ---
@@ -439,6 +607,34 @@ Portrait of a young Chinese man in his late 20s, fit and agile build. Alert, eag
 
 ---
 
+### 灵王
+
+**English：**
+```
+Portrait of an underworld bureaucratic official with stern rigid features exuding institutional authority without true insight. Stiff formal expression rarely changing, eyes that appear commanding but lack real depth or wisdom. Wearing elaborate formal underworld official robes with dark tones and hierarchical insignia. Ethereal cold lighting suggesting the underworld realm. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位阴间官僚的半身像，严肃刻板的面容散发体制性的权威但缺乏真正的洞察力。僵硬的正式表情很少变化，看似威严但缺乏真正深度和智慧的眼睛。穿着阴间官员的正式华服，深色调带等级标识。空灵冷光暗示阴间领域。白色背景，柔和均匀光线，肩部以上构图。
+```
+
+---
+
+### 熊大宝
+
+**English：**
+```
+Portrait of a Chinese young man around 28 with a round chubby face and sturdy powerful build. Round head, plump cheeks with an honest simple expression tinged with fear and shock. Bright round eyes. Dark tanned healthy skin. Black short hair. Wearing plain civilian clothing slightly worn from hardship. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位约28岁中国年轻男性半身像，圆脸胖乎乎，健壮有力的体型。圆圆的脑袋，丰满面颊带着憨厚朴实但染有恐惧和震惊的表情。圆而明亮的眼睛。偏黑健康肤色。黑色短发。穿着朴素平民衣物略有磨损。白色背景，柔和均匀光线，肩部以上构图。
+```
+
+---
+
 ### 王轻无
 
 **English：**
@@ -453,6 +649,34 @@ Portrait of a Chinese military officer around 38 years old with a thin stern fac
 
 ---
 
+### 白思元
+
+**English：**
+```
+Portrait of a Chinese county official around 45 with a square upright face and proper authoritative features. Honest clear eyes, neat black hair. Wearing formal official attire. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位约45岁中国县官半身像，方正端正的面容带正派权威感。正直清明的眼神，整齐黑发。穿着正式官员服装。白色背景，柔和均匀光线，肩部以上构图。
+```
+
+---
+
+### 罗勇
+
+**English：**
+```
+Portrait of a Chinese military officer around 30 with an ordinary but alert face and sharp observant eyes. Medium solid build. Black short hair. Dark military attire. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位约30岁中国军事指挥官半身像，普通但机警的面容，敏锐观察的眼神。中等结实体型。黑色短发。深色军装。白色背景，柔和均匀光线，肩部以上构图。
+```
+
+---
+
 ### 苏伟力
 
 **English：**
@@ -463,4 +687,46 @@ Portrait of a Chinese man around 37 with a narrow square face and cold hard feat
 **中文：**
 ```
 一位约37岁中国男性正面半身像，方窄脸冷硬面容。冰冷算计的眼神带危险的平静。有力下颌线，薄唇呈中性线。偏黑肤色，黑色利落短发。深色功能性衣物。表情无情绪而致命专注——静止中的沉默杀手。肩部以上。白色背景。写实电影感风格。
+```
+
+---
+
+### 葛立
+
+**English：**
+```
+Portrait of a Chinese middle-aged soldier around 37, stocky sturdy build, ordinary friendly face with talkative animated expression. Average features, warm approachable eyes. Black short hair. Military guard uniform. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位约37岁中国中年士兵半身像，健壮结实体型，普通亲和的面容带话多生动的表情。普通五官，温暖亲和的眼神。黑色短发。军事守卫制服。白色背景，柔和均匀光线，肩部以上构图。
+```
+
+---
+
+### 郑伟玉
+
+**English：**
+```
+Portrait of a Chinese young man around 30 with a shrewd clever face and quick intelligent eyes. Medium athletic build. Dark short hair. Wearing plain gray civilian clothing. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位约30岁中国年轻男性半身像，精明机灵的面容，灵活聪慧的眼神。中等精干体型。黑色短发。穿着朴素灰色平民衣物。白色背景，柔和均匀光线，肩部以上构图。
+```
+
+---
+
+### 齐年康
+
+**English：**
+```
+Portrait of a Chinese restaurant waiter around 40 with a round shrewd face and streetwise worldly expression. Small clever eyes, plump cheeks. Slightly overweight build. Wearing restaurant service attire. White background, soft even lighting, shoulders-up framing.
+```
+
+**中文：**
+```
+一位约40岁中国餐馆服务员半身像，圆润精明的面容带市井世故表情。小而机灵的眼睛，丰满面颊。微胖体型。穿着餐馆服务员装束。白色背景，柔和均匀光线，肩部以上构图。
 ```

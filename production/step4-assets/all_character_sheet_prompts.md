@@ -1,5 +1,6 @@
 # 全部角色 Character Sheet 提示词
 
+
 ## 主角
 
 ### 吴文顶
@@ -42,7 +43,6 @@ Character design reference sheet on light off-white background. Left section (1/
 角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。身高175cm，体格壮实肌肉结实但不笨重，肩宽背厚。方脸深邃黑眸，表情沉稳克制。黑色短发鬓角灰丝。穿深炭灰色长袖立领外套配深色长裤，简素深色布鞋。站姿挺拔自信但不张扬，双臂自然垂于身侧。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
 ```
 
----
 
 ## 配角
 
@@ -98,6 +98,20 @@ Character design reference sheet on light off-white background. Left section (1/
 **中文：**
 ```
 角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。身高约175厘米，匀称但缺乏肌肉线条的体型——一个从未使用过的全新身体。圆方脸带茫然困惑的眼神，完美光滑的白皙皮肤。黑色整齐短发。穿着简素浅色T恤和素色裤子。以笨拙不确定的姿态站立，肩膀微微缩起，双臂无力垂挂——一个不知道如何驾驭自己身体的存在。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
+### 刘振
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A Chinese young man around 29 inhabiting a vagrant's body — rugged features with an undercurrent of hidden menace. Rough dark skin, unkempt black hair. Thin wiry build in tattered dirty clothing. Eyes appear dull but flash with ancient predatory intelligence. Standing with a deceptively slouched posture hiding coiled readiness. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。约29岁中国年轻男性，寄居在流浪汉躯体中——粗犷面容下暗藏隐秘的威胁。粗糙偏黑肤色，凌乱黑发。瘦削结实体型穿着破烂脏污衣物。眼神表面浑浊但闪过古老掠食者智慧。以看似颓废但实际蕴藏蓄势的姿态站立。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
 ```
 
 ---
@@ -172,6 +186,20 @@ Character design reference sheet on light off-white background. Left section (1/
 
 ---
 
+### 和寻灵
+
+**English：**
+```
+Divine entity design reference sheet on light off-white background. Left section (1/3 width): close-up of the upper portion, showing the intense golden radiance and vaguely humanoid silhouette within the blinding glow. Right section (2/3 width): three full-form views of the same divine being arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines. A massive divine being of pure golden radiance, formless yet suggesting a vaguely humanoid silhouette. Brilliant warm gold light emanating from its core in all directions, pulsing with supreme authority. Light so intense that features are impossible to discern. All views show the exact same divine entity with perfectly consistent radiance intensity, golden color tone, silhouette shape, and luminous aura. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+神圣存在设定图，浅米白色背景。左侧区域（约1/3宽度）：上半部分近景，展示强烈金色光辉和耀眼光芒中隐约的人形轮廓。右侧区域（约2/3宽度）：同一神圣存在三个全形视角水平排列——正面、面朝右的正侧面、背面——有淡色水平参考线对齐。巨大的纯金色光辉神圣存在，无定形但隐约暗示人形轮廓。灿烂温暖的金色光芒从核心向四面八方辐射，脉动着至高权威。光芒强烈以至于无法辨清细节。所有视角展示同一神圣存在，光辉强度、金色色调、轮廓形状、发光光晕完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
 ### 威刚
 
 **English：**
@@ -228,6 +256,20 @@ Character design reference sheet on light off-white background. Left section (1/
 
 ---
 
+### 智寻道
+
+**English：**
+```
+Divine entity design reference sheet on light off-white background. Left section (1/3 width): close-up of the upper portion, showing the dark blue lightning energy and flickering animal totemic shapes within. Right section (2/3 width): three full-form views of the same divine being arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines. A massive divine being of dark blue lightning energy, radiating cold electric power. Deep blue-purple radiance crackling with lightning arcs and electrical discharge. Faint animal totemic shapes within — dragon silhouettes, qilin outlines, beast-spirit motifs. Primal natural force mixed with cosmic authority. All views show the exact same divine entity with perfectly consistent lightning energy intensity, blue-purple color tone, totemic motifs, and electrical aura. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+神圣存在设定图，浅米白色背景。左侧区域（约1/3宽度）：上半部分近景，展示暗蓝色闪电能量和其中闪烁的动物图腾形状。右侧区域（约2/3宽度）：同一神圣存在三个全形视角水平排列——正面、面朝右的正侧面、背面——有淡色水平参考线对齐。巨大的暗蓝色闪电能量神圣存在，散发冷冽电能。深蓝紫色光辉伴随闪电弧和电光放射。其中隐约闪烁动物图腾——龙的轮廓、麒麟的影子、兽灵纹样。原始自然之力混合宇宙权威。所有视角展示同一神圣存在，闪电能量强度、蓝紫色调、图腾纹样、电光光晕完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
 ### 曹元艺
 
 **English：**
@@ -252,6 +294,20 @@ Character design reference sheet on light off-white background. Left section (1/
 **中文：**
 ```
 角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。身高约170厘米，精干偏瘦体型，上背微驼。方脸，眉骨突出，深邃锐利的眼神，黝黑肤色，浓黑眉毛，薄唇紧实。黑色短发整齐，鬓角微灰。穿着简素的深色立领上衣配深色裤子，实用低调的军事风格便装。双手背于身后以谋士沉思姿态站立，表情沉着而带有算计。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
+### 杜金标
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A Chinese town mayor over 50, thin wiry build. Lean serious face with sharp decisive eyes. Black-gray short neat hair. Proper formal official attire, meticulous and rule-abiding. Standing with rigid administrative posture. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。50多岁中国镇长，精瘦干练体型。瘦长严肃面容，锐利果断的眼神。黑灰短发整齐。规矩正式的官服，一丝不苟。以刚正的行政官姿态站立。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
 ```
 
 ---
@@ -284,6 +340,20 @@ Character design reference sheet on light off-white background. Left section (1/
 
 ---
 
+### 江新成
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A Chinese city mayor around 50, slightly overweight official build. Round-square face with thinning hair combed neatly to cover sparse patches, sharp decisive eyes of an administrator. Formal official attire, neat and proper. Standing with authoritative administrative posture. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。约50岁中国城市市长，微胖的官员体型。圆方脸，稀疏头发整齐梳理掩盖稀少处，锐利果断的行政官员眼神。正式官员服装，整洁规矩。以有权威的行政官姿态站立。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
 ### 温伯封
 
 **English：**
@@ -308,6 +378,20 @@ Character design reference sheet on light off-white background. Left section (1/
 **中文：**
 ```
 角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。与父亲同族但散发暴力爆发性的力量。5-6米高，肩膀更宽，四肢更粗壮有力。白色长毛狂野竖立四散如暴怒的鬃毛——混乱、不驯、根根张扬。面部完全漆黑，永远带着暴怒、挑衅、攻击性的表情。尖锐敌意的眼睛燃烧着狂暴和挑战。尖长耳朵因愤怒向后贴伏。这个生物体现了纯粹的毁灭力量——一个狂暴的神灵。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
+### 灵闽
+
+**English：**
+```
+Creature design reference sheet on light off-white background. Left section (1/3 width): close-up of the head and upper body, showing detailed facial features — jet-black face, curious friendly eyes, tall pointed ears. Right section (2/3 width): three full-body views of the same mythical beast arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, torso midpoint, and paw levels. A gentle mythical beast with softer rounded body lines than its fierce sibling. White long fur smooth and neatly groomed. Jet-black hairless face with curious friendly expression tinged with shyness, warm trusting eyes. Tall pointed ears upright. Standing with gentle cautious posture, body language open and innocent. All views show the exact same creature with perfectly consistent fur texture, face markings, ear shape, and proportions. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+生物设定图，浅米白色背景。左侧区域（约1/3宽度）：头部及上半身近景，展示面部细节——漆黑面部、好奇友善的眼神、尖长耳朵。右侧区域（约2/3宽度）：同一神兽三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、躯干中点线、爪部线处有淡色水平参考线对齐。温柔神兽，比凶猛兄长身体线条更柔和圆润。白色长毛顺滑整洁。漆黑无毛面部带好奇友善表情略带羞怯，温和信任的眼睛。尖长耳朵直立。以温和谨慎的姿态站立，身体语言开放纯真。所有视角展示同一生物，毛发质感、面部标记、耳朵形状、比例完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
 ```
 
 ---
@@ -354,6 +438,34 @@ Character design reference sheet on light off-white background. Left section (1/
 
 ---
 
+### 葛有利
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A young Chinese resistance fighter around 25, athletic warrior build. Handsome hardened face with determined fierce eyes, strong jaw, dark tanned skin with possible minor scars. Black short hair. Simple military attire with combat wear. Standing with ready combative stance — a young leader forged in battle. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。约25岁中国年轻抵抗军战士，精壮战士体型。英俊硬朗面容，坚毅刚烈的眼神，有力下颌，偏黑日晒肤色可能有浅伤疤。黑色短发。简素军装带战斗磨损。以蓄势的战斗姿态站立——一位在战火中锻造的年轻领袖。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
+### 裘万财
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A Chinese middle-aged local bully around 45, slightly overweight with swagger. Round plump face, small shrewd domineering eyes, perpetual sneer. Black short hair slicked back with pomade. Flashy expensive but tasteless clothing, thick gold chain necklace, gaudy gold rings on multiple fingers. Standing with legs wide apart in a swaggering entitled stance, chin raised, chest puffed — a small-town tyrant who owns the place. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。约45岁中国地方恶霸，微胖带大摇大摆的姿态。圆胖脸，精明霸道的小眼睛，永远的冷笑。黑色短发抹发油梳向后。花哨昂贵但俗气的衣服，粗金项链，多个手指戴浮夸金戒指。双腿大开以跋扈姿态站立，下巴抬起，胸膛挺出——一个拥有地盘的小镇暴君。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
 ### 郝大川
 
 **English：**
@@ -382,6 +494,20 @@ Character design reference sheet on light off-white background. Left section (1/
 
 ---
 
+### 马戈逸
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A Chinese administrative official around 40, thin build. Tense worried face with habitually furrowed brow, anxious but organized eyes constantly calculating logistics. Black short neat hair. Dark formal administrative clothing. Standing with tense controlled posture — a man perpetually managing crises. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。约40岁中国行政官员，偏瘦体型。紧绷忧虑的面容，习惯性紧蹙的眉头，焦虑但有条理的眼神不断计算后勤。黑色整齐短发。深色正式行政服装。以紧绷控制的姿态站立——一个永远在管理危机的人。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
 ### 黄亮伟
 
 **English：**
@@ -394,7 +520,6 @@ Character design reference sheet on light off-white background. Left section (1/
 角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。圆方脸，温和善良的面容。微胖但精神饱满的体型。自然浓眉，真诚明亮的眼睛带真挚温暖和朴素的商业眼光。鼻梁适中，嘴唇适中带习惯性的和善微笑。常年海上经商的风霜古铜面色。黑色短发梳理整齐。穿着有品味的休闲商务装——面料讲究但不张扬。表情温暖、真诚、可靠。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
 ```
 
----
 
 ## 群像
 
@@ -408,6 +533,34 @@ Character design reference sheet on light off-white background. Left section (1/
 **中文：**
 ```
 角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。圆方脸亲和面容，健康的户外肤色。明亮开朗的眼睛，自然眉毛，温暖亲和的微笑。古铜色的导游日晒肤色。黑色整齐短发。穿着户外冲锋衣或运动装。表情温暖、有活力、年轻。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
+### 冯德友
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A Chinese military instructor around 50, medium lean disciplined build. Scholarly-military face, weathered complexion, steady unbroken eyes maintaining dignity. Black-gray short military hair. Military uniform with battle wear. Standing with ramrod military posture despite circumstances. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。约50岁中国军事教官，中等精干有纪律的体型。学者型军人面容，风霜面色，沉稳不屈保持尊严的眼神。黑灰军人短发。军装带战损痕迹。以笔直军人姿态站立不论处境。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
+### 刘默雨
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A young Chinese police officer around 28 with an open friendly face and honest bright eyes. Average athletic build. Black short regulation hair. Police uniform. Standing with proper alert posture. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。约28岁中国年轻警察，开朗友善的面容，正直明亮的眼神。中等运动员体型。黑色规范短发。警察制服。以规范警觉的姿态站立。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
 ```
 
 ---
@@ -426,6 +579,20 @@ Character design reference sheet on light off-white background. Left section (1/
 
 ---
 
+### 封
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up of the upper body from shoulders up, showing the blurred featureless face and stable sharp-edged outline. Right section (2/3 width): three full-body views of the same spirit arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A semi-transparent grey-white humanoid spirit, noticeably taller and more solid than surrounding spirit forms. Face extremely blurred, almost featureless, yet silhouette carries ancient gravitas. Body outline stable with sharp well-defined edges resembling tree rings — thousands of years etched into its form. Grey-white tone with deep bronze-gray (#8B6914) tint. Faint but steady luminescence. All views show the exact same spirit with perfectly consistent translucency, outline sharpness, color tone, and proportions. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景，展示模糊无五官的面部和稳定锐利的轮廓边缘。右侧区域（约2/3宽度）：同一灵魂三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。半透明灰白色人形灵魂，明显比周围灵魂更高大更凝实。面部极为模糊几乎看不清五官，但轮廓散发古老庄严。身体轮廓稳定，边缘清晰锐利如年轮纹路——数千年存在刻蚀在其形态上。灰白底色带深古铜灰色调（#8B6914）。微弱但稳定的荧光。所有视角展示同一灵魂，半透明度、轮廓锐利度、色调、比例完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
 ### 朱亮
 
 **English：**
@@ -436,6 +603,34 @@ Character design reference sheet on light off-white background. Left section (1/
 **中文：**
 ```
 角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。一位25-30岁的中国年轻男性。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
+### 灵王
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. An underworld bureaucratic official with stern rigid features, stiff formal expression, eyes commanding but lacking depth. Elaborate formal underworld official robes in dark tones with hierarchical insignia. Standing with rigid bureaucratic posture, hands clasped behind back — the embodiment of institutional inflexibility. Ethereal cold lighting suggesting the underworld realm. All views show the exact same character with perfectly consistent face, build, robes, and insignia. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。阴间官僚，严肃刻板面容，僵硬正式表情，看似威严但缺乏深度的眼神。阴间官员正式华服，深色调带等级标识。以刻板的官僚姿态站立，双手背后——体制僵化的化身。空灵冷光暗示阴间领域。所有视角展示同一角色，面貌、体型、华服、标识完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
+### 熊大宝
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A Chinese young man around 28 with a round chubby face and sturdy powerful build. Round head, plump cheeks with honest simple expression. Bright round eyes. Dark tanned healthy skin. Black short hair. Plain civilian clothing slightly worn from hardship. Standing with a sturdy grounded stance despite visible emotional distress. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。约28岁中国年轻男性，圆脸胖乎乎，健壮有力体型。圆圆脑袋，丰满面颊带憨厚朴实表情。圆而明亮的眼睛。偏黑健康肤色。黑色短发。朴素平民衣物略有磨损。以结实扎实的姿态站立，尽管明显有情绪困扰。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
 ```
 
 ---
@@ -454,6 +649,34 @@ Character design reference sheet on light off-white background. Left section (1/
 
 ---
 
+### 白思元
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A Chinese county official around 45 with a square upright face and proper authoritative features. Honest clear eyes, neat black hair. Medium build with proper official bearing. Formal official attire. Standing with dignified proper posture. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。约45岁中国县官，方正端正的面容带正派权威感。正直清明的眼神，整齐黑发。中等身材端正官员体态。正式官员服装。以端正规矩的姿态站立。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
+### 罗勇
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A Chinese military officer around 30 with an ordinary but alert face and sharp observant eyes. Medium solid build. Black short hair. Dark military attire. Standing with alert ready posture. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。约30岁中国军事指挥官，普通但机警的面容，敏锐观察的眼神。中等结实体型。黑色短发。深色军装。以警觉蓄势的姿态站立。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
 ### 苏伟力
 
 **English：**
@@ -467,3 +690,43 @@ Character design reference sheet on light off-white background. Left section (1/
 ```
 
 ---
+
+### 葛立
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A Chinese middle-aged soldier around 37, stocky sturdy build, ordinary friendly face with talkative animated expression. Average features, warm approachable eyes. Black short hair. Military guard uniform. Standing with relaxed casual military posture. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。约37岁中国中年士兵，健壮结实体型，普通亲和的面容带话多生动的表情。普通五官，温暖亲和的眼神。黑色短发。军事守卫制服。以放松随意的军人姿态站立。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
+### 郑伟玉
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A Chinese young man around 30 with a shrewd clever face and quick intelligent eyes. Medium athletic build. Dark short hair. Plain gray civilian clothing. Standing with alert street-smart posture. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。约30岁中国年轻男性，精明机灵的面容，灵活聪慧的眼神。中等精干体型。黑色短发。朴素灰色平民衣物。以警觉机灵的姿态站立。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
+
+---
+
+### 齐年康
+
+**English：**
+```
+Character design reference sheet on light off-white background. Left section (1/3 width): close-up portrait from shoulders up, showing detailed facial features. Right section (2/3 width): three full-body views of the same character arranged horizontally — front view, side profile facing right, and rear view — with faint horizontal alignment guidelines at head, shoulder, waist, and knee levels. A Chinese restaurant waiter around 40 with a round shrewd face and streetwise worldly expression. Small clever eyes, plump cheeks. Slightly overweight build. Restaurant service attire. Standing with attentive service posture. All views show the exact same person with perfectly consistent face, build, hair, and clothing. Light off-white background, even studio lighting. Photorealistic cinematic style.
+```
+
+**中文：**
+```
+角色设定图，浅米白色背景。左侧区域（约1/3宽度）：肩部以上近景肖像，展示面部细节。右侧区域（约2/3宽度）：同一角色三个全身视角水平排列——正面、面朝右的正侧面、背面——头顶线、肩线、腰线、膝线处有淡色水平参考线对齐。约40岁中国餐馆服务员，圆润精明的面容带市井世故表情。小而机灵的眼睛，丰满面颊。微胖体型。餐馆服务员装束。以殷勤服务的姿态站立。所有视角展示同一个人，面貌、体型、发型、服装完全一致。浅米白色背景，均匀摄影棚灯光。写实电影感风格。
+```
