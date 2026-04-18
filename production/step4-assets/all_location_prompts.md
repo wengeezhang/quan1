@@ -2,7 +2,7 @@
 
 ### AA大学
 
-#### 默认-校园全景
+#### 默认
 
 **English：**
 ```
@@ -18,7 +18,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 上神界
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -34,7 +34,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 凤廊山脉
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -50,7 +50,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 北岸新码头
 
-#### 默认-新码头全貌
+#### 默认
 
 **English：**
 ```
@@ -66,7 +66,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 十八层塔
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -82,7 +82,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 千秋星岗
 
-#### 默认-整体外观
+#### 默认
 
 **English：**
 ```
@@ -98,7 +98,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 半山腰秘密仓库
 
-#### 默认-洞穴仓库全貌
+#### 默认
 
 **English：**
 ```
@@ -114,7 +114,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 卢老板餐馆
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -130,7 +130,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 县城破庙
 
-#### 默认-破庙全景
+#### 默认
 
 **English：**
 ```
@@ -146,7 +146,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 吴启思实验室
 
-#### 默认-实验室全景
+#### 默认
 
 **English：**
 ```
@@ -162,7 +162,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 周庄
 
-#### 默认-山村全貌
+#### 默认
 
 **English：**
 ```
@@ -178,7 +178,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 城主府
 
-#### 默认-城主府全景
+#### 默认
 
 **English：**
 ```
@@ -194,7 +194,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 天德城
 
-#### 繁华期-全景
+#### 繁华期
 
 **English：**
 ```
@@ -206,7 +206,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。俯瞰一座约10万人口的内陆大城市，高大城墙围合全城——城墙保留古代形制但采用现代化升级材质，表面平整加固而非传统砖石。城墙上无瞭望塔或传统防御工事（近未来时代）。城内保留历史悠久的中国城市格局——棋盘式街道、院落式建筑群——但建筑明显经过现代化改造：传统弧形屋脊与当代立面并存，老砖墙上有现代玻璃与金属的加建。宽阔的主干道贯穿商业中心，两侧商铺餐馆融合传统与现代美学。城市繁忙兴旺，沐浴在温暖的晨光中。色调以枯草黄#8B7355传统元素、现代灰色调的改造表面、鞍褐#6B4423木质结构为主。晴朗天空，视野通透，充满活力的都市氛围。无人物、无人影、无角色、无人体剪影。
 ```
 
-#### 沦陷期-全景
+#### 沦陷期
 
 **English：**
 ```
@@ -222,7 +222,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 天德城城墙
 
-#### 默认-城墙全貌
+#### 默认
 
 **English：**
 ```
@@ -238,7 +238,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 天都山脉
 
-#### 默认-整体外观
+#### 默认
 
 **English：**
 ```
@@ -254,7 +254,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 宁阁码头
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -270,7 +270,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 定达国都
 
-#### 默认期-全景
+#### 默认期
 
 **English：**
 ```
@@ -282,7 +282,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。俯瞰一座宏伟的国家首都，最高权力的所在地。城市保留古代中国帝都的格局——宽阔笔直的御道两侧高墙，通向保留古代皇宫形制但经现代化改造的国家行政建筑群（现代材质、玻璃元素、近未来建筑细节）。城墙内的城市融合古代棋盘式格局与现代基础设施——传统弧形屋脊与流线型现代加建并存。御道形成戏剧性的消失点透视。明亮的自然日光赋予城市温暖而威严的光线。色调以枯草黄#8B7355传统表面、暗金#DAA520行政建筑点缀、焦褐#2C1810城墙为主。权力、秩序与帝都威严的氛围。无人物、无人影、无角色、无人体剪影。
 ```
 
-#### 围城期-全景
+#### 围城期
 
 **English：**
 ```
@@ -298,7 +298,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 小顶天德城住所
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -314,7 +314,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 少林寺
 
-#### 默认-整体外观
+#### 默认
 
 **English：**
 ```
@@ -328,9 +328,9 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ---
 
-### 山谷
+### 山谷（旅行团被困）
 
-#### 默认-整体外观
+#### 默认
 
 **English：**
 ```
@@ -346,7 +346,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 巫方镇
 
-#### 默认-整体外观
+#### 默认
 
 **English：**
 ```
@@ -362,7 +362,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 恶灵区
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -378,7 +378,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 户政室
 
-#### 默认-整体外观
+#### 默认
 
 **English：**
 ```
@@ -394,7 +394,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 望海河
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -410,7 +410,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 朱围庸住处
 
-#### 默认-密议室全景
+#### 默认
 
 **English：**
 ```
@@ -426,7 +426,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 杨弘秘密实验室
 
-#### 默认-实验室全貌
+#### 默认
 
 **English：**
 ```
@@ -442,7 +442,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 永安镇
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -458,7 +458,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 永安镇会议厅
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -474,7 +474,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 永安镇客栈
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -490,7 +490,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 江新成宅邸
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -506,7 +506,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 泊岗镇
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -522,7 +522,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 清平镇
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -538,7 +538,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 温伯封府邸
 
-#### 默认-府邸全景
+#### 默认
 
 **English：**
 ```
@@ -554,7 +554,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 牛台山
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -570,7 +570,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 白巨神兽的隐谷
 
-#### 默认-隐谷全貌
+#### 默认
 
 **English：**
 ```
@@ -586,7 +586,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 皇宫
 
-#### 默认-正殿全景
+#### 默认
 
 **English：**
 ```
@@ -602,7 +602,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 石岭关
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -618,7 +618,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 美女榕
 
-#### 默认-全貌
+#### 默认
 
 **English：**
 ```
@@ -634,7 +634,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 老吴山间小屋
 
-#### 默认-全貌
+#### 默认
 
 **English：**
 ```
@@ -650,7 +650,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 老码头
 
-#### 默认-老码头全貌
+#### 默认
 
 **English：**
 ```
@@ -666,7 +666,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 茶馆
 
-#### 默认-茶馆内景
+#### 默认
 
 **English：**
 ```
@@ -682,7 +682,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 荣康城
 
-#### 默认期-全景
+#### 默认期
 
 **English：**
 ```
@@ -694,7 +694,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。俯瞰全国最大城市，70万人口，被壮观的双层城墙体系围合——外城墙与更高的内城墙，均保留古代中国城防形制但采用现代化升级材质。壮观的20米宽中央大道环绕在双层城墙之间，每500米矗立一座8米高的纪念石牌坊，铭刻千年历史。城市保留古代格局但有明显现代化改造痕迹——传统院落式建筑与当代立面并存，历史街道格局配现代基础设施。内城墙内建筑密集。曲河从城西侧流过。明亮自然日光，晴朗天空，繁忙的大都市氛围。色调以枯草黄#8B7355传统元素、现代灰色调、焦褐#2C1810城墙为主。无人物、无人影、无角色、无人体剪影。
 ```
 
-#### 陷落期-全景
+#### 陷落期
 
 **English：**
 ```
@@ -710,7 +710,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 葛家堡
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -726,7 +726,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 虎口镇
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -742,7 +742,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 郝大川小屋
 
-#### 默认-整体外观
+#### 默认
 
 **English：**
 ```
@@ -756,9 +756,9 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ---
 
-### 集市
+### 集市（朱围庸逃脱处）
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
@@ -774,7 +774,7 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 黄阳镇
 
-#### 默认-全景
+#### 默认
 
 **English：**
 ```
