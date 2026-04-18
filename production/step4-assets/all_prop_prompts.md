@@ -1,40 +1,26 @@
 # 全部道具提示词
 
-### 大蒜
+### 仙人掌
 
-#### 大蒜军粮场景
+#### 默认
+
 
 **English：**
 ```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Close-up of fresh garlic bulbs arranged among military field rations in a rough canvas bag, natural papery white skin with brown dried layers, organic texture. Warm枯草黄 (#8B7355) ambient tone, 鞍褐 (#6B4423) canvas material, harsh overhead light casting deep shadows. Near-future military aesthetic, gritty and utilitarian, no glamorization.
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Wide angle view of a giant cactus growing on a rocky cliff edge, approximately 4-5 meters tall, 苔绿 (#4A6741) thick fleshy stems with dense golden-brown spines. Rocky cliff face surrounding, dramatic depth perspective looking down. Harsh afternoon sunlight casting sharp spine shadows. 枯草黄 (#8B7355) rock tones, dusty mountain atmosphere, near-future rural Chinese mountain setting, tension and survival moment.
 ```
 
 **中文：**
 ```
-电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。新鲜大蒜球茎特写，与军用野战口粮一同装于粗糙帆布袋中，自然纸质白色外皮与褐色干皮层，有机质感。枯草黄（#8B7355）环境色调，鞍褐（#6B4423）帆布材质，顶部强光投射深影。近未来军事美学，粗粝实用，无浪漫化处理。
-```
-
----
-
-### 电磁枪
-
-#### 默认-单体展示
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. A sleek futuristic handheld weapon displayed on a neutral surface. White high-polymer composite shell with smooth seamless surface and rounded edges, reminiscent of Star Wars blaster aesthetics. The barrel features a wide flat rectangular emitter port (not a round barrel) with a faint blue LED ring around the edge. Ergonomic curved grip in white with grey non-slip texture strips. A slim LED status bar runs along the side of the body, glowing soft blue. An integrated electronic aiming slot sits on top — no traditional iron sights. Overall length approximately 50-60cm. Clean, minimal, sci-fi military design in pristine white. Studio lighting, plain grey background. No people, no figures.
-```
-
-**中文：**
-```
-电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。一件流线型未来主义手持武器陈列于中性表面上。白色高分子复合材质外壳，表面光滑无接缝，边缘圆润，参考星球大战爆能枪美学。枪口为宽扁矩形散射口（非圆形枪管），边缘有淡蓝色LED指示灯环。符合人体工学的弧形握把，白色主体配灰色防滑纹路。枪身侧面一条细长LED状态条亮柔和蓝光。顶部一体化电子瞄准槽，无传统准星。全长约50-60cm。洁净、极简、科幻军用设计，纯白色。摄影棚灯光，灰色素背景。无人物。
+电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。宽景展现山崖边缘的巨大仙人掌，约4-5米高，苔绿（#4A6741）肉厚茎秆配密集金褐色刺毛。周围岩壁环绕，俯视纵深感强烈。午后强光投射锋利刺影。枯草黄（#8B7355）岩石色调，尘雾山区氛围，近未来中国山区环境，紧张的生存瞬间。
 ```
 
 ---
 
 ### 分割带
 
-#### 分割带飞行切割
+#### 默认
+
 
 **English：**
 ```
@@ -48,121 +34,10 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ---
 
-### 干柿子与肉干
-
-#### 干粮特写
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Extreme close-up of dried persimmons and jerky laid on rough hemp cloth, dark red persimmons with white frost coating, brown-red jerky with salt crystals on surface. Worn fabric in 枯草黄 (#8B7355) tone. Natural soft light, warm muted earth tones, raw organic texture, gritty survival mood.
-```
-
-**中文：**
-```
-电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。干柿子与肉干极近景特写，铺于粗糙麻布上，暗红干柿配白霜覆盖，褐红肉干表面盐白结晶清晰可见。枯草黄（#8B7355）色调布料。自然柔光，温暖黯淡的土色调，原生有机质感，粗粝生存情绪。
-```
-
----
-
-### 观音庙神水
-
-#### 观音庙神水与木桶
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Close-up of an ancient wooden bucket filled with clear mountain spring water, no supernatural glow — the water looks completely ordinary and crystalline. Aged wood in 焦褐 (#2C1810) with copper bands patinated green, moss traces on interior. 苔绿 (#4A6741) ambient from surrounding mountain temple environment. Natural light, sacred but understated atmosphere, near-future rural China aesthetic.
-```
-
-**中文：**
-```
-电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。古老木桶装满清澈山泉水的特写，水无任何超自然光效——外观完全如普通清冽山泉。桶身焦褐色（#2C1810），铜制环箍泛铜绿，内壁有苔藓痕迹。苔绿（#4A6741）环境色来自周围山寺。自然光线，神圣但内敛的氛围，近未来中国乡村美学。
-```
-
----
-
-### 黑布阵
-
-#### 默认-战场部署
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. A massive wall of black fabric stretching for kilometers across an open battlefield plain, approximately 3-4 meters tall. The black cloth barrier is supported by wooden poles at regular intervals, creating an imposing continuous curtain. The fabric ripples and billows slightly in the wind, creating wave-like movement along its length. The stark black surface contrasts sharply against the bright natural daylight of the open field. The barrier appears impenetrable to vision — completely opaque. Warm mustard-brown #8B7355 earth tones of the battlefield contrast with the absolute black of the cloth wall. An ingeniously simple yet imposing military tactic made physical. No people, no figures, no characters, no human silhouettes.
-```
-
-**中文：**
-```
-电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。一道巨大的黑色布幔横跨开阔战场平原延绵数公里，高约3-4米。黑色布幔由等距木杆支撑，形成连续不断的壮观帷幕。布面在风中微微飘动翻涌，沿全长产生波浪状运动。纯黑色表面与开阔战场的明亮自然光形成强烈对比。屏障对视线完全不透明。枯草黄#8B7355色调的战场大地与绝对黑色的布墙形成反差。极简却震撼的军事战术实体化。无人物、无人影、无角色、无人体剪影。
-```
-
----
-
-### 红领巾
-
-#### 红领巾特写
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Extreme close-up of a worn red cotton scarf tied loosely around a neck, dark red (#8B1A1A) fabric with visible weave texture, soft folds and wrinkles, weathered edges with subtle dirt marks. Natural daylight, muted earth tone color grading, 焦褐 (#2C1810) shadow tones. Isolated against soft blurred near-future checkpoint background, emotional weight in simplicity.
-```
-
-**中文：**
-```
-电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。暗红（#8B1A1A）棉布红领巾特写，系于脖颈处，清晰纺织纹理与布料褶皱，磨损的边缘与细微污渍。自然日光，黯淡土色调，焦褐（#2C1810）阴影。背景虚化的近未来检查站，简朴中的情感分量。
-```
-
----
-
-### 灵魂收集容器
-
-#### 灵魂收集容器
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Close-up of a dark purple (#5B3A6B) supernatural soul collection container held in steady hands, rough metallic texture, spherical form. Semi-translucent observation window reveals faintly flickering grey-white semi-transparent humanoid silhouettes within — souls of fallen warriors. Cold ethereal mist surrounds the artifact. 暮蓝 (#3A4A6B) atmospheric tone, desaturated color grading, mystical but grounded near-future military aesthetic.
-```
-
-**中文：**
-```
-电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。暗紫色（#5B3A6B）超自然灵魂收集容器特写，被双手稳稳握持，粗糙金属质感，球形外观。半透明观察窗内可见微弱闪烁的灰白色半透明人形轮廓——阵亡战士的灵魂。冷冽虚幻雾气环绕器物。暮蓝（#3A4A6B）氛围色调，去饱和调色，神秘但扎实的近未来军事美学。
-```
-
----
-
-### 美女榕
-
-#### 默认-全貌
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. An ancient banyan tree of immense age standing beside a crystal-clear mountain stream approximately 2 meters wide. The tree requires two people to embrace its trunk — bark deeply furrowed like aged skin (#2C1810), covered in moss and lichen. An enormous umbrella-shaped canopy of dense dark-green (#4A6741) foliage dominates the upper frame. Aerial roots hang downward. The most striking feature: the exposed aerial root system spreading across the ground gracefully forms the silhouette of a reclining woman — some roots extend into the clear stream water like a woman's legs. Dappled sunlight filters through the canopy, casting scattered light on the sculptural roots and abundant wild flowers blooming along both stream banks. Serene natural beauty with an undercurrent of uncanny mystery. No people, no figures, no characters, no human silhouettes.
-```
-
-**中文：**
-```
-电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。一棵古老巨型榕树矗立于约2米宽的清澈山间溪流旁。树干需两人合抱，树皮沟壑纵横如老人皮肤（#2C1810），覆盖苔藓与地衣。巨大的伞形树冠枝叶繁茂，深绿色（#4A6741）占据画面上方。气根垂下。最显著的视觉特征：裸露的气生根在地表盘错交织，婉约地形成一个美女的轮廓，有一些根系深入溪水中像美女的两条腿。斑驳阳光透过树冠，洒在雕塑般的树根与两岸盛开的野花上。宁静自然之美中暗藏诡异神秘。无人物、无人影、无角色、无人体剪影。
-```
-
----
-
-### 泥垛子建筑
-
-#### 泥垛子建筑外观
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Wide shot of a rammed earth cottage on a mountain hillside — yellow clay walls mixed with straw, visible layered tamping texture, pine timber beam structure, thatched grass roof with moss patches. A separate small kitchen building stands nearby. 焦褐 (#2C1810) and 鞍褐 (#6B4423) tones dominate. Harsh golden hour light, broken wooden window frames, isolated lonely dwelling in near-future rural Chinese mountain setting.
-```
-
-**中文：**
-```
-电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。山坡上泥垛子小屋远景——黄色粘土混合稻草的夯土墙，清晰的分层夯筑纹理，松木梁架结构，茅草屋顶覆盖青苔。旁边有独立的小厨房建筑。焦褐（#2C1810）和鞍褐（#6B4423）主色调。金色时段强光，破损木窗框，近未来中国山区孤立冷清的居所。
-```
-
----
-
 ### 匿名纸条
 
-#### 匿名纸条特写
+#### 默认
+
 
 **English：**
 ```
@@ -176,41 +51,10 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ---
 
-### 泡泡
-
-#### 泡泡困敌
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. A massive translucent divine bubble, approximately 20 meters in diameter, trapping a large armored beast and rider within. Surface shimmers with prismatic iridescence and soft rainbow gradients. Core radiates ethereal golden luminescence (#DAA520), delicate flowing patterns within the semi-transparent membrane. Pure white (#F5F5DC) and cornsilk (#FFF8DC) palette. Interior wisps of divine mist swirling. Enclosed figures slightly distorted by the curved surface. Dark atmospheric background, supernatural intensity.
-```
-
-**中文：**
-```
-电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。一枚约20米直径的巨大半透明神圣泡泡，困住大型装甲灵兽与骑手。表面闪烁棱镜般的彩虹色渐变。核心散发缥缈金色荧光（#DAA520），半透明膜质内有细微流纹。纯白（#F5F5DC）与暖白（#FFF8DC）主色调。内部灵气轻雾旋动。被困身影因弧面略显扭曲。暗色大气背景，超自然高强度。
-```
-
----
-
-### 泉水
-
-#### 默认-十里花溪
-
-**English：**
-```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. A crystal-clear mountain stream approximately 2 meters wide flowing down a subtropical mountainside. The streambed is lined with large dark-green stones (#1A3A2E). Both banks are overflowing with abundant wild flowers in full bloom — a profusion of colorful blossoms forming a spectacular floral corridor alongside the stream. Pine, cedar, and bamboo trees form a lush canopy overhead, dappled sunlight filtering through leaves onto the flower-lined banks and sparkling water surface. The water is perfectly transparent, indistinguishable from ordinary mountain spring water — no supernatural glow, no unusual color, just pristine natural clarity. Moss-green #4A6741 vegetation, charcoal-brown #2C1810 earth tones. Serene, idyllic mountain stream atmosphere. No people, no figures, no characters, no human silhouettes.
-```
-
-**中文：**
-```
-电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。一条约2米宽的清澈山间溪流沿亚热带山体流下。溪床布满大块黑绿色石头（#1A3A2E）。两岸各种野花开得极为茂盛——缤纷的花朵繁花夹道，形成壮观的花卉走廊。松木、杉木、竹林形成茂密的树冠，斑驳阳光透过枝叶洒在繁花与粼粼水面上。水质完全透明，与普通山泉水无法区分——没有超自然发光、没有异常颜色，只有纯净的自然清澈。苔绿#4A6741植被，焦褐#2C1810土色调。宁静优美的山间溪谷氛围。无人物、无人影、无角色、无人体剪影。
-```
-
----
-
 ### 十八层塔
 
-#### 默认-全貌
+#### 默认
+
 
 **English：**
 ```
@@ -224,9 +68,44 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ---
 
+### 大蒜
+
+#### 默认
+
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Close-up of fresh garlic bulbs arranged among military field rations in a rough canvas bag, natural papery white skin with brown dried layers, organic texture. Warm枯草黄 (#8B7355) ambient tone, 鞍褐 (#6B4423) canvas material, harsh overhead light casting deep shadows. Near-future military aesthetic, gritty and utilitarian, no glamorization.
+```
+
+**中文：**
+```
+电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。新鲜大蒜球茎特写，与军用野战口粮一同装于粗糙帆布袋中，自然纸质白色外皮与褐色干皮层，有机质感。枯草黄（#8B7355）环境色调，鞍褐（#6B4423）帆布材质，顶部强光投射深影。近未来军事美学，粗粝实用，无浪漫化处理。
+```
+
+---
+
+### 干柿子与肉干
+
+#### 默认
+
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Extreme close-up of dried persimmons and jerky laid on rough hemp cloth, dark red persimmons with white frost coating, brown-red jerky with salt crystals on surface. Worn fabric in 枯草黄 (#8B7355) tone. Natural soft light, warm muted earth tones, raw organic texture, gritty survival mood.
+```
+
+**中文：**
+```
+电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。干柿子与肉干极近景特写，铺于粗糙麻布上，暗红干柿配白霜覆盖，褐红肉干表面盐白结晶清晰可见。枯草黄（#8B7355）色调布料。自然柔光，温暖黯淡的土色调，原生有机质感，粗粝生存情绪。
+```
+
+---
+
 ### 数字人躯体
 
-#### 未激活-实验室
+#### 未激活
+
 
 **English：**
 ```
@@ -242,7 +121,8 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ### 水晶棒
 
-#### 默认-单体展示
+#### 默认
+
 
 **English：**
 ```
@@ -256,9 +136,146 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ---
 
+### 泉水
+
+#### 默认
+
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. A crystal-clear mountain stream approximately 2 meters wide flowing down a subtropical mountainside. The streambed is lined with large dark-green stones (#1A3A2E). Both banks are overflowing with abundant wild flowers in full bloom — a profusion of colorful blossoms forming a spectacular floral corridor alongside the stream. Pine, cedar, and bamboo trees form a lush canopy overhead, dappled sunlight filtering through leaves onto the flower-lined banks and sparkling water surface. The water is perfectly transparent, indistinguishable from ordinary mountain spring water — no supernatural glow, no unusual color, just pristine natural clarity. Moss-green #4A6741 vegetation, charcoal-brown #2C1810 earth tones. Serene, idyllic mountain stream atmosphere. No people, no figures, no characters, no human silhouettes.
+```
+
+**中文：**
+```
+电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。一条约2米宽的清澈山间溪流沿亚热带山体流下。溪床布满大块黑绿色石头（#1A3A2E）。两岸各种野花开得极为茂盛——缤纷的花朵繁花夹道，形成壮观的花卉走廊。松木、杉木、竹林形成茂密的树冠，斑驳阳光透过枝叶洒在繁花与粼粼水面上。水质完全透明，与普通山泉水无法区分——没有超自然发光、没有异常颜色，只有纯净的自然清澈。苔绿#4A6741植被，焦褐#2C1810土色调。宁静优美的山间溪谷氛围。无人物、无人影、无角色、无人体剪影。
+```
+
+---
+
+### 泡泡
+
+#### 默认
+
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. A massive translucent divine bubble, approximately 20 meters in diameter, trapping a large armored beast and rider within. Surface shimmers with prismatic iridescence and soft rainbow gradients. Core radiates ethereal golden luminescence (#DAA520), delicate flowing patterns within the semi-transparent membrane. Pure white (#F5F5DC) and cornsilk (#FFF8DC) palette. Interior wisps of divine mist swirling. Enclosed figures slightly distorted by the curved surface. Dark atmospheric background, supernatural intensity.
+```
+
+**中文：**
+```
+电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。一枚约20米直径的巨大半透明神圣泡泡，困住大型装甲灵兽与骑手。表面闪烁棱镜般的彩虹色渐变。核心散发缥缈金色荧光（#DAA520），半透明膜质内有细微流纹。纯白（#F5F5DC）与暖白（#FFF8DC）主色调。内部灵气轻雾旋动。被困身影因弧面略显扭曲。暗色大气背景，超自然高强度。
+```
+
+---
+
+### 泥垛子建筑
+
+#### 默认
+
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Wide shot of a rammed earth cottage on a mountain hillside — yellow clay walls mixed with straw, visible layered tamping texture, pine timber beam structure, thatched grass roof with moss patches. A separate small kitchen building stands nearby. 焦褐 (#2C1810) and 鞍褐 (#6B4423) tones dominate. Harsh golden hour light, broken wooden window frames, isolated lonely dwelling in near-future rural Chinese mountain setting.
+```
+
+**中文：**
+```
+电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。山坡上泥垛子小屋远景——黄色粘土混合稻草的夯土墙，清晰的分层夯筑纹理，松木梁架结构，茅草屋顶覆盖青苔。旁边有独立的小厨房建筑。焦褐（#2C1810）和鞍褐（#6B4423）主色调。金色时段强光，破损木窗框，近未来中国山区孤立冷清的居所。
+```
+
+---
+
+### 灵魂收集容器
+
+#### 默认
+
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Close-up of a dark purple (#5B3A6B) supernatural soul collection container held in steady hands, rough metallic texture, spherical form. Semi-translucent observation window reveals faintly flickering grey-white semi-transparent humanoid silhouettes within — souls of fallen warriors. Cold ethereal mist surrounds the artifact. 暮蓝 (#3A4A6B) atmospheric tone, desaturated color grading, mystical but grounded near-future military aesthetic.
+```
+
+**中文：**
+```
+电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。暗紫色（#5B3A6B）超自然灵魂收集容器特写，被双手稳稳握持，粗糙金属质感，球形外观。半透明观察窗内可见微弱闪烁的灰白色半透明人形轮廓——阵亡战士的灵魂。冷冽虚幻雾气环绕器物。暮蓝（#3A4A6B）氛围色调，去饱和调色，神秘但扎实的近未来军事美学。
+```
+
+---
+
+### 电磁枪
+
+#### 默认
+
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. A sleek futuristic handheld weapon displayed on a neutral surface. White high-polymer composite shell with smooth seamless surface and rounded edges, reminiscent of Star Wars blaster aesthetics. The barrel features a wide flat rectangular emitter port (not a round barrel) with a faint blue LED ring around the edge. Ergonomic curved grip in white with grey non-slip texture strips. A slim LED status bar runs along the side of the body, glowing soft blue. An integrated electronic aiming slot sits on top — no traditional iron sights. Overall length approximately 50-60cm. Clean, minimal, sci-fi military design in pristine white. Studio lighting, plain grey background. No people, no figures.
+```
+
+**中文：**
+```
+电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。一件流线型未来主义手持武器陈列于中性表面上。白色高分子复合材质外壳，表面光滑无接缝，边缘圆润，参考星球大战爆能枪美学。枪口为宽扁矩形散射口（非圆形枪管），边缘有淡蓝色LED指示灯环。符合人体工学的弧形握把，白色主体配灰色防滑纹路。枪身侧面一条细长LED状态条亮柔和蓝光。顶部一体化电子瞄准槽，无传统准星。全长约50-60cm。洁净、极简、科幻军用设计，纯白色。摄影棚灯光，灰色素背景。无人物。
+```
+
+---
+
+### 红领巾
+
+#### 默认
+
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Extreme close-up of a worn red cotton scarf tied loosely around a neck, dark red (#8B1A1A) fabric with visible weave texture, soft folds and wrinkles, weathered edges with subtle dirt marks. Natural daylight, muted earth tone color grading, 焦褐 (#2C1810) shadow tones. Isolated against soft blurred near-future checkpoint background, emotional weight in simplicity.
+```
+
+**中文：**
+```
+电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。暗红（#8B1A1A）棉布红领巾特写，系于脖颈处，清晰纺织纹理与布料褶皱，磨损的边缘与细微污渍。自然日光，黯淡土色调，焦褐（#2C1810）阴影。背景虚化的近未来检查站，简朴中的情感分量。
+```
+
+---
+
+### 美女榕
+
+#### 默认
+
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. An ancient banyan tree of immense age standing beside a crystal-clear mountain stream approximately 2 meters wide. The tree requires two people to embrace its trunk — bark deeply furrowed like aged skin (#2C1810), covered in moss and lichen. An enormous umbrella-shaped canopy of dense dark-green (#4A6741) foliage dominates the upper frame. Aerial roots hang downward. The most striking feature: the exposed aerial root system spreading across the ground gracefully forms the silhouette of a reclining woman — some roots extend into the clear stream water like a woman's legs. Dappled sunlight filters through the canopy, casting scattered light on the sculptural roots and abundant wild flowers blooming along both stream banks. Serene natural beauty with an undercurrent of uncanny mystery. No people, no figures, no characters, no human silhouettes.
+```
+
+**中文：**
+```
+电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。一棵古老巨型榕树矗立于约2米宽的清澈山间溪流旁。树干需两人合抱，树皮沟壑纵横如老人皮肤（#2C1810），覆盖苔藓与地衣。巨大的伞形树冠枝叶繁茂，深绿色（#4A6741）占据画面上方。气根垂下。最显著的视觉特征：裸露的气生根在地表盘错交织，婉约地形成一个美女的轮廓，有一些根系深入溪水中像美女的两条腿。斑驳阳光透过树冠，洒在雕塑般的树根与两岸盛开的野花上。宁静自然之美中暗藏诡异神秘。无人物、无人影、无角色、无人体剪影。
+```
+
+---
+
+### 观音庙神水
+
+#### 默认
+
+
+**English：**
+```
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Close-up of an ancient wooden bucket filled with clear mountain spring water, no supernatural glow — the water looks completely ordinary and crystalline. Aged wood in 焦褐 (#2C1810) with copper bands patinated green, moss traces on interior. 苔绿 (#4A6741) ambient from surrounding mountain temple environment. Natural light, sacred but understated atmosphere, near-future rural China aesthetic.
+```
+
+**中文：**
+```
+电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。古老木桶装满清澈山泉水的特写，水无任何超自然光效——外观完全如普通清冽山泉。桶身焦褐色（#2C1810），铜制环箍泛铜绿，内壁有苔藓痕迹。苔绿（#4A6741）环境色来自周围山寺。自然光线，神圣但内敛的氛围，近未来中国乡村美学。
+```
+
+---
+
 ### 铁链
 
-#### 铁链囚禁
+#### 默认
+
 
 **English：**
 ```
@@ -272,16 +289,17 @@ Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contras
 
 ---
 
-### 仙人掌
+### 黑布阵
 
-#### 山崖仙人掌
+#### 默认
+
 
 **English：**
 ```
-Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. Wide angle view of a giant cactus growing on a rocky cliff edge, approximately 4-5 meters tall, 苔绿 (#4A6741) thick fleshy stems with dense golden-brown spines. Rocky cliff face surrounding, dramatic depth perspective looking down. Harsh afternoon sunlight casting sharp spine shadows. 枯草黄 (#8B7355) rock tones, dusty mountain atmosphere, near-future rural Chinese mountain setting, tension and survival moment.
+Cinematic still, 2.39:1 widescreen, 35mm film grain texture, medium-high contrast, photorealistic. A massive wall of black fabric stretching for kilometers across an open battlefield plain, approximately 3-4 meters tall. The black cloth barrier is supported by wooden poles at regular intervals, creating an imposing continuous curtain. The fabric ripples and billows slightly in the wind, creating wave-like movement along its length. The stark black surface contrasts sharply against the bright natural daylight of the open field. The barrier appears impenetrable to vision — completely opaque. Warm mustard-brown #8B7355 earth tones of the battlefield contrast with the absolute black of the cloth wall. An ingeniously simple yet imposing military tactic made physical. No people, no figures, no characters, no human silhouettes.
 ```
 
 **中文：**
 ```
-电影质感剧照，2.39:1宽幅画面，35mm胶片颗粒，中高对比度，照片级写实。宽景展现山崖边缘的巨大仙人掌，约4-5米高，苔绿（#4A6741）肉厚茎秆配密集金褐色刺毛。周围岩壁环绕，俯视纵深感强烈。午后强光投射锋利刺影。枯草黄（#8B7355）岩石色调，尘雾山区氛围，近未来中国山区环境，紧张的生存瞬间。
+电影感静帧，2.39:1宽银幕画幅，35mm胶片颗粒质感，中高对比度，写实风格。一道巨大的黑色布幔横跨开阔战场平原延绵数公里，高约3-4米。黑色布幔由等距木杆支撑，形成连续不断的壮观帷幕。布面在风中微微飘动翻涌，沿全长产生波浪状运动。纯黑色表面与开阔战场的明亮自然光形成强烈对比。屏障对视线完全不透明。枯草黄#8B7355色调的战场大地与绝对黑色的布墙形成反差。极简却震撼的军事战术实体化。无人物、无人影、无角色、无人体剪影。
 ```
