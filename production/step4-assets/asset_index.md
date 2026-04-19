@@ -3,295 +3,233 @@
 > 本文件由阶段4（视觉资产生成）产出，是阶段5（分镜脚本）和阶段6（首帧合成）查找参考图的核心映射表。
 > 分镜脚本中标注"角色名(阶段: {stage_id})"后, 直接在本表中查找对应的参考图路径。
 
-> 生成时间: 2026-03-05 23:58
+> 生成时间: 2026-04-19 10:24
+
+**目录结构**（扁平化）：
+- `characters/{name}/{name}_肖像.png` — 正面半身像
+- `characters/{name}/{name}_三视图.png` — Character Sheet
+- `characters/{name}/{name}_{stage_id}.png` — 阶段图
+- `locations/{name}/{name}_{stage_id}.png`
+- `props/{name}/{name}_{stage_id}.png`
 
 ## 角色资产
 
-| 角色名 | 类型 | stage_id | 章节范围 | 参考图路径 | 图片数 |
-|--------|------|----------|---------|-----------|--------|
-| 丁路 | 肖像 | — | — | characters/丁路/_portrait/ | 1 |
-| 丁路 | 阶段 | 正常期 | ch4前期 | characters/丁路/正常期/ | 0 |
-| 丁路 | 阶段 | 被附身期 | ch4中期-ch6 | characters/丁路/被附身期/ | 1 |
-| 于崇宝 | 肖像 | — | — | characters/于崇宝/_portrait/ | 2 |
-| 于崇宝 | 阶段 | 默认 | ch61-ch66 | characters/于崇宝/默认/ | 1 |
-| 于永智 | 肖像 | — | — | characters/于永智/_portrait/ | 2 |
-| 于永智 | 阶段 | 默认 | ch61-ch63 | characters/于永智/默认/ | 1 |
-| 于永龙 | 肖像 | — | — | characters/于永龙/_portrait/ | 2 |
-| 于永龙 | 阶段 | 默认 | ch61-ch66 | characters/于永龙/默认/ | 1 |
-| 五名古代恶灵 | 肖像 | — | — | characters/五名古代恶灵/_portrait/ | 1 |
-| 五名古代恶灵 | 阶段 | 默认 | ch30- | characters/五名古代恶灵/默认/ | 1 |
-| 元刚智刚 | 肖像 | — | — | characters/元刚智刚/_portrait/ | 2 |
-| 元刚智刚 | 阶段 | 元刚初生期 | ch61-ch62上 | characters/元刚智刚/元刚初生期/ | 3 |
-| 元刚智刚 | 阶段 | 智刚觉醒期 | ch62中-ch63 | characters/元刚智刚/智刚觉醒期/ | 1 |
-| 冯德友 | 肖像 | — | — | characters/冯德友/_portrait/ | 2 |
-| 冯德友 | 阶段 | 默认 | ch55 | characters/冯德友/默认/ | 0 |
-| 刘振 | 肖像 | — | — | characters/刘振/_portrait/ | 1 |
-| 刘振 | 阶段 | 卢老板傀儡期 | ch31-ch33 | characters/刘振/卢老板傀儡期/ | 3 |
-| 刘振 | 阶段 | 流浪汉宿体期 | ch30 | characters/刘振/流浪汉宿体期/ | 1 |
-| 刘默雨 | 肖像 | — | — | characters/刘默雨/_portrait/ | 1 |
-| 刘默雨 | 阶段 | 默认 | ch7 | characters/刘默雨/默认/ | 1 |
-| 卢卫寿 | 肖像 | — | — | characters/卢卫寿/_portrait/ | 3 |
-| 卢卫寿 | 阶段 | 傀儡期 | ch31-ch33 | characters/卢卫寿/傀儡期/ | 1 |
-| 卢卫寿 | 阶段 | 精明老板期 | ch12-ch30 | characters/卢卫寿/精明老板期/ | 1 |
-| 卢静 | 肖像 | — | — | characters/卢静/_portrait/ | 1 |
-| 卢静 | 阶段 | 危机母亲期 | ch26-ch57 | characters/卢静/危机母亲期/ | 2 |
-| 卢静 | 阶段 | 活泼少女期 | ch15-ch25 | characters/卢静/活泼少女期/ | 1 |
-| 卢静 | 阶段 | 独立寡妇期 | ch58-ch60 | characters/卢静/独立寡妇期/ | 2 |
-| 向天志 | 肖像 | — | — | characters/向天志/_portrait/ | 3 |
-| 向天志 | 阶段 | 倦怠转折期 | ch56-ch62 | characters/向天志/倦怠转折期/ | 1 |
-| 向天志 | 阶段 | 沉稳国主期 | ch44-ch55 | characters/向天志/沉稳国主期/ | 1 |
-| 向天志 | 阶段 | 虚君沦落期 | ch63-ch70 | characters/向天志/虚君沦落期/ | 1 |
-| 吴启思 | 肖像 | — | — | characters/吴启思/_portrait/ | 2 |
-| 吴启思 | 阶段 | 默认 | ch53-ch71 | characters/吴启思/默认/ | 1 |
-| 吴婶 | 肖像 | — | — | characters/吴婶/_portrait/ | 2 |
-| 吴婶 | 阶段 | 泉边安居期 | ch1-ch43 | characters/吴婶/泉边安居期/ | 1 |
-| 吴婶 | 阶段 | 逃难守护期 | ch44-ch60 | characters/吴婶/逃难守护期/ | 1 |
-| 吴文顶 | 肖像 | — | — | characters/吴文顶/_portrait/ | 6 |
-| 吴文顶 | 阶段 | 决裂逃亡期 | ch26-ch33 | characters/吴文顶/决裂逃亡期/ | 1 |
-| 吴文顶 | 阶段 | 初到泊岗期 | ch10-ch15 | characters/吴文顶/初到泊岗期/ | 1 |
-| 吴文顶 | 阶段 | 成家立业期 | ch16-ch25 | characters/吴文顶/成家立业期/ | 1 |
-| 吴文顶 | 阶段 | 抗战热血期 | ch34-ch56 | characters/吴文顶/抗战热血期/ | 1 |
-| 吴文顶 | 阶段 | 沉疴临终期 | ch57 | characters/吴文顶/沉疴临终期/ | 1 |
-| 吴文顶 | 阶段 | 灵魂期 | ch58, ch71 | characters/吴文顶/灵魂期/ | 1 |
-| 和寻灵 | 肖像 | — | — | characters/和寻灵/_portrait/ | 2 |
-| 和寻灵 | 阶段 | 默认 | ch64-ch65 | characters/和寻灵/默认/ | 1 |
-| 威刚 | 肖像 | — | — | characters/威刚/_portrait/ | 4 |
-| 威刚 | 阶段 | 元神降世期 | ch69-ch70 | characters/威刚/元神降世期/ | 1 |
-| 威刚 | 阶段 | 潜伏仆人期 | ch66-ch67 | characters/威刚/潜伏仆人期/ | 1 |
-| 威刚 | 阶段 | 神力初显期 | ch68 | characters/威刚/神力初显期/ | 1 |
-| 宁国红 | 肖像 | — | — | characters/宁国红/_portrait/ | 2 |
-| 宁国红 | 阶段 | 默认 | ch19-ch20 | characters/宁国红/默认/ | 1 |
-| 宋小仙 | 肖像 | — | — | characters/宋小仙/_portrait/ | 6 |
-| 宋小仙 | 阶段 | 伪装潜伏期 | ch28-ch32 | characters/宋小仙/伪装潜伏期/ | 1 |
-| 宋小仙 | 阶段 | 便装追踪期 | ch10-ch27 | characters/宋小仙/便装追踪期/ | 1 |
-| 宋小仙 | 阶段 | 奔走联络期 | ch33-ch36 | characters/宋小仙/奔走联络期/ | 1 |
-| 宋小仙 | 阶段 | 执法终局期 | ch66-ch71 | characters/宋小仙/执法终局期/ | 1 |
-| 宋小仙 | 阶段 | 民警执勤期 | ch5-ch9 | characters/宋小仙/民警执勤期/ | 1 |
-| 宋小仙 | 阶段 | 神使斡旋期 | ch54-ch65 | characters/宋小仙/神使斡旋期/ | 1 |
-| 宋小仙 | 阶段 | 谋士征战期 | ch37-ch53 | characters/宋小仙/谋士征战期/ | 1 |
-| 封 | 肖像 | — | — | characters/封/_portrait/ | 1 |
-| 封 | 阶段 | 默认 | ch3 | characters/封/默认/ | 1 |
-| 小周 | 肖像 | — | — | characters/小周/_portrait/ | 4 |
-| 小周 | 阶段 | 失魂受难期 | ch5-ch7 | characters/小周/失魂受难期/ | 1 |
-| 小周 | 阶段 | 康复证人期 | ch8-ch32 | characters/小周/康复证人期/ | 1 |
-| 小周 | 阶段 | 抵抗军战士期 | ch33-ch48 | characters/小周/抵抗军战士期/ | 1 |
-| 小周 | 阶段 | 旅行者期 | ch4 | characters/小周/旅行者期/ | 1 |
-| 小小顶 | 肖像 | — | — | characters/小小顶/_portrait/ | 1 |
-| 小小顶 | 阶段 | 默认 | ch59-ch60 | characters/小小顶/默认/ | 3 |
-| 旅行团群像 | 肖像 | — | — | characters/旅行团群像/_portrait/ | 1 |
-| 旅行团群像 | 阶段 | 默认 | ch4- | characters/旅行团群像/默认/ | 3 |
-| 智寻道 | 肖像 | — | — | characters/智寻道/_portrait/ | 2 |
-| 智寻道 | 阶段 | 默认 | ch64-ch65 | characters/智寻道/默认/ | 1 |
-| 曹元艺 | 肖像 | — | — | characters/曹元艺/_portrait/ | 2 |
-| 曹元艺 | 阶段 | 暴露对峙期 | ch54后-ch55 | characters/曹元艺/暴露对峙期/ | 1 |
-| 曹元艺 | 阶段 | 精致掩护期 | ch51-ch53 | characters/曹元艺/精致掩护期/ | 1 |
-| 曹元艺 | 阶段 | 身份动摇期 | ch54前半 | characters/曹元艺/身份动摇期/ | 1 |
-| 朱围庸 | 肖像 | — | — | characters/朱围庸/_portrait/ | 6 |
-| 朱围庸 | 阶段 | 乞丐潜行期 | ch8-ch9 | characters/朱围庸/乞丐潜行期/ | 1 |
-| 朱围庸 | 阶段 | 泊岗蛰伏期 | ch10-ch33 | characters/朱围庸/泊岗蛰伏期/ | 1 |
-| 朱围庸 | 阶段 | 灵魂期 | ch3 | characters/朱围庸/灵魂期/ | 1 |
-| 朱围庸 | 阶段 | 红甲决战期 | ch66-ch69 | characters/朱围庸/红甲决战期/ | 1 |
-| 朱围庸 | 阶段 | 统帅衰颓期 | ch47-ch65 | characters/朱围庸/统帅衰颓期/ | 1 |
-| 朱围庸 | 阶段 | 起兵崛起期 | ch34-ch46 | characters/朱围庸/起兵崛起期/ | 1 |
-| 朱围庸 | 阶段 | 轮回归途期 | ch70-ch71 | characters/朱围庸/轮回归途期/ | 1 |
-| 朱围庸 | 阶段 | 辗转附身期 | ch4-ch7 | characters/朱围庸/辗转附身期/ | 1 |
-| 李仁 | 肖像 | — | — | characters/李仁/_portrait/ | 4 |
-| 李仁 | 阶段 | 乞丐还阳期 | ch17-ch23 | characters/李仁/乞丐还阳期/ | 1 |
-| 李仁 | 阶段 | 军师征战期 | ch34-ch50 | characters/李仁/军师征战期/ | 1 |
-| 李仁 | 阶段 | 哀兵决战期 | ch51-ch69 | characters/李仁/哀兵决战期/ | 1 |
-| 李仁 | 阶段 | 归魂期 | ch70-ch71 | characters/李仁/归魂期/ | 1 |
-| 李仁 | 阶段 | 恶灵期 | ch3-ch16 | characters/李仁/恶灵期/ | 1 |
-| 李仁 | 阶段 | 老农重生期 | ch24-ch33 | characters/李仁/老农重生期/ | 1 |
-| 杜金标 | 肖像 | — | — | characters/杜金标/_portrait/ | 1 |
-| 杜金标 | 阶段 | 默认 | ch37-ch39 | characters/杜金标/默认/ | 1 |
-| 杨伯礼 | 肖像 | — | — | characters/杨伯礼/_portrait/ | 1 |
-| 杨伯礼 | 阶段 | 毁容前 | 整洁衣着→精美发型→完整面容，目光傲慢 | characters/杨伯礼/毁容前/ | 1 |
-| 杨伯礼 | 阶段 | 毁容后 | 面部创伤→部分肢体伤痕→惊恐与愤怒交织的目光 | characters/杨伯礼/毁容后/ | 2 |
-| 杨弘 | 肖像 | — | — | characters/杨弘/_portrait/ | 4 |
-| 杨弘 | 阶段 | 无冕之王期 | ch51-ch56 | characters/杨弘/无冕之王期/ | 1 |
-| 杨弘 | 阶段 | 暴君独裁期 | ch57-ch64 | characters/杨弘/暴君独裁期/ | 1 |
-| 杨弘 | 阶段 | 末路穷途期 | ch65-ch70 | characters/杨弘/末路穷途期/ | 1 |
-| 杨弘 | 阶段 | 铁血将军期 | ch45-ch50 | characters/杨弘/铁血将军期/ | 1 |
-| 江新成 | 肖像 | — | — | characters/江新成/_portrait/ | 2 |
-| 江新成 | 阶段 | 默认 | ch41-ch43 | characters/江新成/默认/ | 2 |
-| 泊岗镇1200居民 | 肖像 | — | — | characters/泊岗镇1200居民/_portrait/ | 1 |
-| 泊岗镇1200居民 | 阶段 | 默认 | ch34 | characters/泊岗镇1200居民/默认/ | 1 |
-| 温伯封 | 肖像 | — | — | characters/温伯封/_portrait/ | 3 |
-| 温伯封 | 阶段 | 默认 | ch14-ch20 | characters/温伯封/默认/ | 2 |
-| 灵尤 | 肖像 | — | — | characters/灵尤/_portrait/ | 4 |
-| 灵尤 | 阶段 | 山巅躁兽期 | ch10-ch55 | characters/灵尤/山巅躁兽期/ | 1 |
-| 灵尤 | 阶段 | 战场凶兽期 | ch56-ch69 | characters/灵尤/战场凶兽期/ | 1 |
-| 灵尤 | 阶段 | 隐谷幼兽期 | ch9 | characters/灵尤/隐谷幼兽期/ | 1 |
-| 灵王 | 肖像 | — | — | characters/灵王/_portrait/ | 1 |
-| 灵王 | 阶段 | 默认 | ch8 | characters/灵王/默认/ | 1 |
-| 灵闽 | 肖像 | — | — | characters/灵闽/_portrait/ | 2 |
-| 灵闽 | 阶段 | 默认 | ch9 | characters/灵闽/默认/ | 1 |
-| 熊大宝 | 肖像 | — | — | characters/熊大宝/_portrait/ | 1 |
-| 熊大宝 | 阶段 | 默认 | ch38 | characters/熊大宝/默认/ | 1 |
-| 王轻无 | 肖像 | — | — | characters/王轻无/_portrait/ | 1 |
-| 王轻无 | 阶段 | 默认 | ch50-ch56 | characters/王轻无/默认/ | 1 |
-| 白巨 | 肖像 | — | — | characters/白巨/_portrait/ | 4 |
-| 白巨 | 阶段 | 囚徒启悟期 | ch9（后半）-ch38 | characters/白巨/囚徒启悟期/ | 1 |
-| 白巨 | 阶段 | 山巅守望期 | ch39-ch69 | characters/白巨/山巅守望期/ | 1 |
-| 白巨 | 阶段 | 族长全家期 | ch9（前半） | characters/白巨/族长全家期/ | 1 |
-| 白思元 | 肖像 | — | — | characters/白思元/_portrait/ | 1 |
-| 白思元 | 阶段 | 默认 | ch7 | characters/白思元/默认/ | 1 |
-| 罗勇 | 肖像 | — | — | characters/罗勇/_portrait/ | 1 |
-| 罗勇 | 阶段 | 默认 | ch35 | characters/罗勇/默认/ | 0 |
-| 老吴 | 肖像 | — | — | characters/老吴/_portrait/ | 4 |
-| 老吴 | 阶段 | 伪装潜入期 | ch28-ch33 | characters/老吴/伪装潜入期/ | 1 |
-| 老吴 | 阶段 | 山居重生期 | ch1-ch9 | characters/老吴/山居重生期/ | 1 |
-| 老吴 | 阶段 | 抵抗军师期 | ch34-ch47 | characters/老吴/抵抗军师期/ | 1 |
-| 老吴 | 阶段 | 泉断衰败期 | ch48-ch60 | characters/老吴/泉断衰败期/ | 1 |
-| 老吴 | 阶段 | 蛰伏协助期 | ch10-ch27 | characters/老吴/蛰伏协助期/ | 1 |
-| 胡酹 | 肖像 | — | — | characters/胡酹/_portrait/ | 4 |
-| 胡酹 | 阶段 | 倦将征战期 | ch47-ch68 | characters/胡酹/倦将征战期/ | 1 |
-| 胡酹 | 阶段 | 恶灵期 | ch3-ch16 | characters/胡酹/恶灵期/ | 1 |
-| 胡酹 | 阶段 | 悍将崛起期 | ch27-ch46 | characters/胡酹/悍将崛起期/ | 1 |
-| 胡酹 | 阶段 | 殒命期 | ch69 | characters/胡酹/殒命期/ | 1 |
-| 胡酹 | 阶段 | 还阳适应期 | ch17-ch26 | characters/胡酹/还阳适应期/ | 1 |
-| 苏伟力 | 肖像 | — | — | characters/苏伟力/_portrait/ | 1 |
-| 苏伟力 | 阶段 | 默认 | ch35-ch71 | characters/苏伟力/默认/ | 1 |
-| 葛有利 | 肖像 | — | — | characters/葛有利/_portrait/ | 1 |
-| 葛有利 | 阶段 | 默认 | — | characters/葛有利/默认/ | 1 |
-| 葛立 | 肖像 | — | — | characters/葛立/_portrait/ | 2 |
-| 葛立 | 阶段 | 默认 | ch64 | characters/葛立/默认/ | 0 |
-| 裘万财 | 肖像 | — | — | characters/裘万财/_portrait/ | 2 |
-| 裘万财 | 阶段 | 傀儡期 | ch13后半-ch29 | characters/裘万财/傀儡期/ | 1 |
-| 裘万财 | 阶段 | 恶霸期 | ch12-ch13前半 | characters/裘万财/恶霸期/ | 1 |
-| 郑伟玉 | 肖像 | — | — | characters/郑伟玉/_portrait/ | 2 |
-| 郑伟玉 | 阶段 | 默认 | ch67-ch68 | characters/郑伟玉/默认/ | 0 |
-| 郝大川 | 肖像 | — | — | characters/郝大川/_portrait/ | 2 |
-| 郝大川 | 阶段 | 默认 | ch20-ch26 | characters/郝大川/默认/ | 3 |
-| 郭云成 | 肖像 | — | — | characters/郭云成/_portrait/ | 2 |
-| 郭云成 | 阶段 | 默认 | ch48-ch55 | characters/郭云成/默认/ | 1 |
-| 马戈逸 | 肖像 | — | — | characters/马戈逸/_portrait/ | 1 |
-| 马戈逸 | 阶段 | 默认 | ch52 | characters/马戈逸/默认/ | 1 |
-| 黄亮伟 | 肖像 | — | — | characters/黄亮伟/_portrait/ | 4 |
-| 黄亮伟 | 阶段 | 商贾兴盛期 | ch11-ch33 | characters/黄亮伟/商贾兴盛期/ | 1 |
-| 黄亮伟 | 阶段 | 抵抗军支柱期 | ch41-ch57 | characters/黄亮伟/抵抗军支柱期/ | 1 |
-| 黄亮伟 | 阶段 | 被遣离场期 | ch34-ch40 | characters/黄亮伟/被遣离场期/ | 1 |
-| 黄亮伟 | 阶段 | 遗志守护期 | ch58-ch67 | characters/黄亮伟/遗志守护期/ | 1 |
-| 齐年康 | 肖像 | — | — | characters/齐年康/_portrait/ | 1 |
-| 齐年康 | 阶段 | 默认 | ch12 | characters/齐年康/默认/ | 1 |
+| 角色名 | 类型 | stage_id | 章节范围 | 参考图路径 | 存在 |
+|--------|------|----------|---------|-----------|------|
+| 丁路 | 肖像 | — | — | characters/丁路/丁路_肖像.png | 1 |
+| 丁路 | 三视图 | — | — | characters/丁路/丁路_三视图.png | 1 |
+| 丁路 | 阶段 | 默认 | ch4-ch6 | characters/丁路/丁路_默认.png | 1 |
+| 于崇宝 | 肖像 | — | — | characters/于崇宝/于崇宝_肖像.png | 1 |
+| 于崇宝 | 三视图 | — | — | characters/于崇宝/于崇宝_三视图.png | 1 |
+| 于崇宝 | 阶段 | 默认 | ch61-ch66 | characters/于崇宝/于崇宝_默认.png | 1 |
+| 于永智 | 肖像 | — | — | characters/于永智/于永智_肖像.png | 1 |
+| 于永智 | 三视图 | — | — | characters/于永智/于永智_三视图.png | 1 |
+| 于永智 | 阶段 | 默认 | ch53-ch63 | characters/于永智/于永智_默认.png | 1 |
+| 于永龙 | 肖像 | — | — | characters/于永龙/于永龙_肖像.png | 1 |
+| 于永龙 | 三视图 | — | — | characters/于永龙/于永龙_三视图.png | 1 |
+| 于永龙 | 阶段 | 默认 | ch61-ch66 | characters/于永龙/于永龙_默认.png | 1 |
+| 元刚 | 肖像 | — | — | characters/元刚/元刚_肖像.png | 1 |
+| 元刚 | 三视图 | — | — | characters/元刚/元刚_三视图.png | 1 |
+| 元刚 | 阶段 | 默认 | ch61-ch62 | characters/元刚/元刚_默认.png | 1 |
+| 冯德友 | 肖像 | — | — | characters/冯德友/冯德友_肖像.png | 1 |
+| 冯德友 | 三视图 | — | — | characters/冯德友/冯德友_三视图.png | 1 |
+| 冯德友 | 阶段 | 默认 | ch55 | characters/冯德友/冯德友_默认.png | 1 |
+| 刘振 | 肖像 | — | — | characters/刘振/刘振_肖像.png | 1 |
+| 刘振 | 三视图 | — | — | characters/刘振/刘振_三视图.png | 1 |
+| 刘振 | 阶段 | 默认 | ch30-ch31 | characters/刘振/刘振_默认.png | 1 |
+| 刘默雨 | 肖像 | — | — | characters/刘默雨/刘默雨_肖像.png | 1 |
+| 刘默雨 | 三视图 | — | — | characters/刘默雨/刘默雨_三视图.png | 1 |
+| 刘默雨 | 阶段 | 默认 | ch7 | characters/刘默雨/刘默雨_默认.png | 1 |
+| 卢卫寿 | 肖像 | — | — | characters/卢卫寿/卢卫寿_肖像.png | 1 |
+| 卢卫寿 | 三视图 | — | — | characters/卢卫寿/卢卫寿_三视图.png | 1 |
+| 卢卫寿 | 阶段 | 默认 | ch12-ch42 | characters/卢卫寿/卢卫寿_默认.png | 1 |
+| 卢静 | 肖像 | — | — | characters/卢静/卢静_肖像.png | 1 |
+| 卢静 | 三视图 | — | — | characters/卢静/卢静_三视图.png | 1 |
+| 卢静 | 阶段 | 默认 | ch15-ch59 | characters/卢静/卢静_默认.png | 1 |
+| 向天志 | 肖像 | — | — | characters/向天志/向天志_肖像.png | 1 |
+| 向天志 | 三视图 | — | — | characters/向天志/向天志_三视图.png | 1 |
+| 向天志 | 阶段 | 默认 | ch44-ch70 | characters/向天志/向天志_默认.png | 1 |
+| 吴启思 | 肖像 | — | — | characters/吴启思/吴启思_肖像.png | 1 |
+| 吴启思 | 三视图 | — | — | characters/吴启思/吴启思_三视图.png | 1 |
+| 吴启思 | 阶段 | 默认 | ch53-ch71 | characters/吴启思/吴启思_默认.png | 1 |
+| 吴婶 | 肖像 | — | — | characters/吴婶/吴婶_肖像.png | 1 |
+| 吴婶 | 三视图 | — | — | characters/吴婶/吴婶_三视图.png | 1 |
+| 吴婶 | 阶段 | 默认 | ch1-ch60 | characters/吴婶/吴婶_默认.png | 1 |
+| 吴文顶 | 肖像 | — | — | characters/吴文顶/吴文顶_肖像.png | 1 |
+| 吴文顶 | 三视图 | — | — | characters/吴文顶/吴文顶_三视图.png | 1 |
+| 吴文顶 | 阶段 | 默认 | ch10-ch71 | characters/吴文顶/吴文顶_默认.png | 1 |
+| 威刚 | 肖像 | — | — | characters/威刚/威刚_肖像.png | 1 |
+| 威刚 | 三视图 | — | — | characters/威刚/威刚_三视图.png | 1 |
+| 威刚 | 阶段 | 默认 | ch66-ch70 | characters/威刚/威刚_默认.png | 1 |
+| 宁国红 | 肖像 | — | — | characters/宁国红/宁国红_肖像.png | 1 |
+| 宁国红 | 三视图 | — | — | characters/宁国红/宁国红_三视图.png | 1 |
+| 宁国红 | 阶段 | 默认 | ch19-ch20 | characters/宁国红/宁国红_默认.png | 0 |
+| 宋小仙 | 肖像 | — | — | characters/宋小仙/宋小仙_肖像.png | 1 |
+| 宋小仙 | 三视图 | — | — | characters/宋小仙/宋小仙_三视图.png | 1 |
+| 宋小仙 | 阶段 | 默认 | ch5-ch71 | characters/宋小仙/宋小仙_默认.png | 1 |
+| 封 | 肖像 | — | — | characters/封/封_肖像.png | 1 |
+| 封 | 三视图 | — | — | characters/封/封_三视图.png | 1 |
+| 封 | 阶段 | 默认 | ch3 | characters/封/封_默认.png | 1 |
+| 小周 | 肖像 | — | — | characters/小周/小周_肖像.png | 1 |
+| 小周 | 三视图 | — | — | characters/小周/小周_三视图.png | 1 |
+| 小周 | 阶段 | 默认 | ch4-ch48 | characters/小周/小周_默认.png | 1 |
+| 小小顶 | 肖像 | — | — | characters/小小顶/小小顶_肖像.png | 1 |
+| 小小顶 | 三视图 | — | — | characters/小小顶/小小顶_三视图.png | 1 |
+| 小小顶 | 阶段 | 默认 | ch59 | characters/小小顶/小小顶_默认.png | 1 |
+| 智刚 | 肖像 | — | — | characters/智刚/智刚_肖像.png | 1 |
+| 智刚 | 三视图 | — | — | characters/智刚/智刚_三视图.png | 1 |
+| 智刚 | 阶段 | 默认 | ch63-ch71 | characters/智刚/智刚_默认.png | 1 |
+| 曹元艺 | 肖像 | — | — | characters/曹元艺/曹元艺_肖像.png | 1 |
+| 曹元艺 | 三视图 | — | — | characters/曹元艺/曹元艺_三视图.png | 1 |
+| 曹元艺 | 阶段 | 默认 | ch35-ch56 | characters/曹元艺/曹元艺_默认.png | 1 |
+| 朱亮 | 肖像 | — | — | characters/朱亮/朱亮_肖像.png | 1 |
+| 朱亮 | 三视图 | — | — | characters/朱亮/朱亮_三视图.png | 1 |
+| 朱亮 | 阶段 | 默认 | ch34-ch55 | characters/朱亮/朱亮_默认.png | 1 |
+| 朱围庸 | 肖像 | — | — | characters/朱围庸/朱围庸_肖像.png | 1 |
+| 朱围庸 | 三视图 | — | — | characters/朱围庸/朱围庸_三视图.png | 1 |
+| 朱围庸 | 阶段 | 灵魂期 | ch3-ch4 | characters/朱围庸/朱围庸_灵魂期.png | 1 |
+| 朱围庸 | 阶段 | 乞丐前期 | ch4-ch9 | characters/朱围庸/朱围庸_乞丐前期.png | 1 |
+| 朱围庸 | 阶段 | 乞丐后期 | ch10-ch71 | characters/朱围庸/朱围庸_乞丐后期.png | 1 |
+| 李仁 | 肖像 | — | — | characters/李仁/李仁_肖像.png | 1 |
+| 李仁 | 三视图 | — | — | characters/李仁/李仁_三视图.png | 1 |
+| 李仁 | 阶段 | 灵魂期 | ch3-ch16 | characters/李仁/李仁_灵魂期.png | 1 |
+| 李仁 | 阶段 | 乞丐期 | ch17-ch23 | characters/李仁/李仁_乞丐期.png | 1 |
+| 李仁 | 阶段 | 老农期 | ch24-ch71 | characters/李仁/李仁_老农期.png | 1 |
+| 杨伯礼 | 肖像 | — | — | characters/杨伯礼/杨伯礼_肖像.png | 1 |
+| 杨伯礼 | 三视图 | — | — | characters/杨伯礼/杨伯礼_三视图.png | 1 |
+| 杨伯礼 | 阶段 | 默认 | ch59 | characters/杨伯礼/杨伯礼_默认.png | 1 |
+| 杨弘 | 肖像 | — | — | characters/杨弘/杨弘_肖像.png | 1 |
+| 杨弘 | 三视图 | — | — | characters/杨弘/杨弘_三视图.png | 1 |
+| 杨弘 | 阶段 | 默认 | ch45-ch70 | characters/杨弘/杨弘_默认.png | 1 |
+| 温伯封 | 肖像 | — | — | characters/温伯封/温伯封_肖像.png | 1 |
+| 温伯封 | 三视图 | — | — | characters/温伯封/温伯封_三视图.png | 1 |
+| 温伯封 | 阶段 | 默认 | ch14-ch69 | characters/温伯封/温伯封_默认.png | 1 |
+| 灵尤 | 肖像 | — | — | characters/灵尤/灵尤_肖像.png | 1 |
+| 灵尤 | 三视图 | — | — | characters/灵尤/灵尤_三视图.png | 1 |
+| 灵尤 | 阶段 | 默认 | ch9-ch69 | characters/灵尤/灵尤_默认.png | 1 |
+| 灵王 | 肖像 | — | — | characters/灵王/灵王_肖像.png | 1 |
+| 灵王 | 三视图 | — | — | characters/灵王/灵王_三视图.png | 1 |
+| 灵王 | 阶段 | 默认 | ch8 | characters/灵王/灵王_默认.png | 1 |
+| 灵闽 | 肖像 | — | — | characters/灵闽/灵闽_肖像.png | 0 |
+| 灵闽 | 三视图 | — | — | characters/灵闽/灵闽_三视图.png | 0 |
+| 灵闽 | 阶段 | 默认 | ch9 | characters/灵闽/灵闽_默认.png | 1 |
+| 熊大宝 | 肖像 | — | — | characters/熊大宝/熊大宝_肖像.png | 1 |
+| 熊大宝 | 三视图 | — | — | characters/熊大宝/熊大宝_三视图.png | 1 |
+| 熊大宝 | 阶段 | 默认 | ch38-ch39 | characters/熊大宝/熊大宝_默认.png | 1 |
+| 王轻无 | 肖像 | — | — | characters/王轻无/王轻无_肖像.png | 1 |
+| 王轻无 | 三视图 | — | — | characters/王轻无/王轻无_三视图.png | 1 |
+| 王轻无 | 阶段 | 默认 | ch50-ch56 | characters/王轻无/王轻无_默认.png | 1 |
+| 白巨 | 肖像 | — | — | characters/白巨/白巨_肖像.png | 1 |
+| 白巨 | 三视图 | — | — | characters/白巨/白巨_三视图.png | 1 |
+| 白巨 | 阶段 | 默认 | ch9-ch69 | characters/白巨/白巨_默认.png | 1 |
+| 白思元 | 肖像 | — | — | characters/白思元/白思元_肖像.png | 1 |
+| 白思元 | 三视图 | — | — | characters/白思元/白思元_三视图.png | 1 |
+| 白思元 | 阶段 | 默认 | ch7-ch8 | characters/白思元/白思元_默认.png | 1 |
+| 罗勇 | 肖像 | — | — | characters/罗勇/罗勇_肖像.png | 1 |
+| 罗勇 | 三视图 | — | — | characters/罗勇/罗勇_三视图.png | 1 |
+| 罗勇 | 阶段 | 默认 | ch35 | characters/罗勇/罗勇_默认.png | 1 |
+| 老吴 | 肖像 | — | — | characters/老吴/老吴_肖像.png | 1 |
+| 老吴 | 三视图 | — | — | characters/老吴/老吴_三视图.png | 1 |
+| 老吴 | 阶段 | 默认 | ch1-ch60 | characters/老吴/老吴_默认.png | 1 |
+| 胡酹 | 肖像 | — | — | characters/胡酹/胡酹_肖像.png | 1 |
+| 胡酹 | 三视图 | — | — | characters/胡酹/胡酹_三视图.png | 1 |
+| 胡酹 | 阶段 | 灵魂期 | ch3-ch16 | characters/胡酹/胡酹_灵魂期.png | 1 |
+| 胡酹 | 阶段 | 乞丐期 | ch17-ch20 | characters/胡酹/胡酹_乞丐期.png | 1 |
+| 苏伟力 | 肖像 | — | — | characters/苏伟力/苏伟力_肖像.png | 1 |
+| 苏伟力 | 三视图 | — | — | characters/苏伟力/苏伟力_三视图.png | 1 |
+| 苏伟力 | 阶段 | 默认 | ch35-ch71 | characters/苏伟力/苏伟力_默认.png | 1 |
+| 葛有利 | 肖像 | — | — | characters/葛有利/葛有利_肖像.png | 0 |
+| 葛有利 | 三视图 | — | — | characters/葛有利/葛有利_三视图.png | 0 |
+| 葛有利 | 阶段 | 默认 | ch43-ch44 | characters/葛有利/葛有利_默认.png | 1 |
+| 葛立 | 肖像 | — | — | characters/葛立/葛立_肖像.png | 1 |
+| 葛立 | 三视图 | — | — | characters/葛立/葛立_三视图.png | 1 |
+| 葛立 | 阶段 | 默认 | ch64 | characters/葛立/葛立_默认.png | 1 |
+| 裘万财 | 肖像 | — | — | characters/裘万财/裘万财_肖像.png | 0 |
+| 裘万财 | 三视图 | — | — | characters/裘万财/裘万财_三视图.png | 0 |
+| 裘万财 | 阶段 | 默认 | ch12-ch29 | characters/裘万财/裘万财_默认.png | 1 |
+| 郑伟玉 | 肖像 | — | — | characters/郑伟玉/郑伟玉_肖像.png | 0 |
+| 郑伟玉 | 三视图 | — | — | characters/郑伟玉/郑伟玉_三视图.png | 0 |
+| 郑伟玉 | 阶段 | 默认 | ch67-ch68 | characters/郑伟玉/郑伟玉_默认.png | 1 |
+| 郝大川 | 肖像 | — | — | characters/郝大川/郝大川_肖像.png | 1 |
+| 郝大川 | 三视图 | — | — | characters/郝大川/郝大川_三视图.png | 1 |
+| 郝大川 | 阶段 | 默认 | ch20-ch26 | characters/郝大川/郝大川_默认.png | 1 |
+| 郭云成 | 肖像 | — | — | characters/郭云成/郭云成_肖像.png | 1 |
+| 郭云成 | 三视图 | — | — | characters/郭云成/郭云成_三视图.png | 1 |
+| 郭云成 | 阶段 | 默认 | ch48-ch55 | characters/郭云成/郭云成_默认.png | 1 |
+| 黄亮伟 | 肖像 | — | — | characters/黄亮伟/黄亮伟_肖像.png | 1 |
+| 黄亮伟 | 三视图 | — | — | characters/黄亮伟/黄亮伟_三视图.png | 1 |
+| 黄亮伟 | 阶段 | 默认 | ch11-ch67 | characters/黄亮伟/黄亮伟_默认.png | 1 |
+| 齐年康 | 肖像 | — | — | characters/齐年康/齐年康_肖像.png | 1 |
+| 齐年康 | 三视图 | — | — | characters/齐年康/齐年康_三视图.png | 1 |
+| 齐年康 | 阶段 | 默认 | ch12-ch13 | characters/齐年康/齐年康_默认.png | 1 |
 
 ## 场景资产
 
-| 场景名 | stage_id | 章节范围 | 参考图路径 | 图片数 |
-|--------|----------|---------|-----------|--------|
-| AA大学 | 地下秘密 | ch54-55 | locations/AA大学/地下秘密/ | 1 |
-| AA大学 | 校园侦察 | ch53 | locations/AA大学/校园侦察/ | 1 |
-| AA大学 | 表面探查 | ch53-54 | locations/AA大学/表面探查/ | 1 |
-| 上神界 | 默认 | ch64-ch65 | locations/上神界/默认/ | 3 |
-| 凤廊山脉 | 默认 | ch9 | locations/凤廊山脉/默认/ | 4 |
-| 北岸新码头 | 默认 | ch19-ch26 | locations/北岸新码头/默认/ | 3 |
-| 十八层塔 | 默认 | ch3-ch65 | locations/十八层塔/默认/ | 6 |
-| 千秋星岗 | 战斗期 | ch50前 | locations/千秋星岗/战斗期/ | 1 |
-| 千秋星岗 | 战败期 | ch50 | locations/千秋星岗/战败期/ | 1 |
-| 半山腰秘密仓库 | 发现后 | ch27末 | locations/半山腰秘密仓库/发现后/ | 1 |
-| 半山腰秘密仓库 | 秘密期 | ch17-ch27 | locations/半山腰秘密仓库/秘密期/ | 1 |
-| 卢老板餐馆 | 战争阴影 | ch25-29 | locations/卢老板餐馆/战争阴影/ | 1 |
-| 卢老板餐馆 | 日常引入 | ch12-18 | locations/卢老板餐馆/日常引入/ | 1 |
-| 卢老板餐馆 | 暗流涌动 | ch18-25 | locations/卢老板餐馆/暗流涌动/ | 1 |
-| 县城破庙 | 默认 | ch17-ch18 | locations/县城破庙/默认/ | 3 |
-| 吴启思实验室 | 默认 | Ch53-Ch55 | locations/吴启思实验室/默认/ | 3 |
-| 周庄 | 休整与连接 | ch33-34 | locations/周庄/休整与连接/ | 1 |
-| 周庄 | 危机前兆 | ch34 | locations/周庄/危机前兆/ | 1 |
-| 周庄 | 逃离与到达 | ch33 | locations/周庄/逃离与到达/ | 1 |
-| 城主府 | 默认 | ch48-ch51 | locations/城主府/默认/ | 4 |
-| 天德城 | 大本营期 | ch59-ch66 | locations/天德城/大本营期/ | 1 |
-| 天德城 | 沦陷期 | ch49-ch58 | locations/天德城/沦陷期/ | 1 |
-| 天德城 | 繁华期 | ch41-ch48 | locations/天德城/繁华期/ | 1 |
-| 天德城城墙 | 默认 | ch41-ch43 | locations/天德城城墙/默认/ | 3 |
-| 天都山脉 | 默认期 | — | locations/天都山脉/默认期/ | 1 |
-| 宁阁码头 | 默认期 | — | locations/宁阁码头/默认期/ | 1 |
-| 定达国都 | 崩溃期 | ch60-ch65 | locations/定达国都/崩溃期/ | 4 |
-| 定达国都 | 权力期 | ch44-ch50 | locations/定达国都/权力期/ | 3 |
-| 定达国都 | 腐败期 | ch51-ch59 | locations/定达国都/腐败期/ | 3 |
-| 小顶天德城住所 | 默认 | ch42-ch43 | locations/小顶天德城住所/默认/ | 3 |
-| 少林寺 | 默认期 | ch65 | locations/少林寺/默认期/ | 2 |
-| 山谷旅行团被困 | 救援期 | ch5末 | locations/山谷旅行团被困/救援期/ | 1 |
-| 山谷旅行团被困 | 被困期 | ch4-ch5 | locations/山谷旅行团被困/被困期/ | 1 |
-| 巫方镇 | 默认期 | — | locations/巫方镇/默认期/ | 1 |
-| 恶灵区 | 决战期 | ch51-ch65 | locations/恶灵区/决战期/ | 2 |
-| 恶灵区 | 唤醒期 | ch21-ch50 | locations/恶灵区/唤醒期/ | 2 |
-| 恶灵区 | 战后期 | ch66-ch71 | locations/恶灵区/战后期/ | 2 |
-| 恶灵区 | 默认期 | ch3-ch20 | locations/恶灵区/默认期/ | 3 |
-| 户政室 | 默认期 | — | locations/户政室/默认期/ | 1 |
-| 望海河 | 夜间渡河 | ch38-39 | locations/望海河/夜间渡河/ | 1 |
-| 望海河 | 对岸脱险 | ch39 | locations/望海河/对岸脱险/ | 1 |
-| 望海河 | 河岸侦察 | ch38 | locations/望海河/河岸侦察/ | 1 |
-| 朱围庸住处 | 默认 | ch20-ch32 | locations/朱围庸住处/默认/ | 3 |
-| 杨弘秘密实验室 | 最后对抗 | ch71 | locations/杨弘秘密实验室/最后对抗/ | 1 |
-| 杨弘秘密实验室 | 真相揭露 | ch70-71 | locations/杨弘秘密实验室/真相揭露/ | 1 |
-| 杨弘秘密实验室 | 秘密进入 | ch70 | locations/杨弘秘密实验室/秘密进入/ | 1 |
-| 永安镇 | 市井期 | ch10-ch23 | locations/永安镇/市井期/ | 2 |
-| 永安镇 | 撤离期 | ch32-ch39 | locations/永安镇/撤离期/ | 3 |
-| 永安镇 | 紧张期 | ch24-ch31 | locations/永安镇/紧张期/ | 2 |
-| 永安镇会议厅 | 默认 | Ch38-Ch39 | locations/永安镇会议厅/默认/ | 4 |
-| 永安镇客栈 | 默认 | Ch10 | locations/永安镇客栈/默认/ | 4 |
-| 江新成宅邸 | 默认 | ch42 | locations/江新成宅邸/默认/ | 3 |
-| 泊岗镇 | 繁忙期 | ch11-ch29 | locations/泊岗镇/繁忙期/ | 2 |
-| 泊岗镇 | 要塞期 | ch35-ch67 | locations/泊岗镇/要塞期/ | 2 |
-| 泊岗镇 | 诡寂期 | ch30-ch34 | locations/泊岗镇/诡寂期/ | 2 |
-| 清平镇 | 占领初期 | ch35 | locations/清平镇/占领初期/ | 1 |
-| 清平镇 | 深层黑暗 | ch38 | locations/清平镇/深层黑暗/ | 1 |
-| 清平镇 | 管制建立 | ch36-37 | locations/清平镇/管制建立/ | 1 |
-| 温伯封府邸 | 默认 | ch14-ch21 | locations/温伯封府邸/默认/ | 3 |
-| 牛台山 | 回归期 | ch61-ch71 | locations/牛台山/回归期/ | 1 |
-| 牛台山 | 宁静期 | ch1-ch10 | locations/牛台山/宁静期/ | 4 |
-| 牛台山 | 守护期 | ch11-ch30 | locations/牛台山/守护期/ | 1 |
-| 牛台山 | 战略期 | ch31-ch60 | locations/牛台山/战略期/ | 2 |
-| 白巨神兽的隐谷 | 兽的呈现 | ch9中半 | locations/白巨神兽的隐谷/兽的呈现/ | 1 |
-| 白巨神兽的隐谷 | 困境始现 | ch9后半 | locations/白巨神兽的隐谷/困境始现/ | 1 |
-| 白巨神兽的隐谷 | 隐谷发现 | ch9前半 | locations/白巨神兽的隐谷/隐谷发现/ | 1 |
-| 皇宫 | 默认 | Ch44、Ch70 | locations/皇宫/默认/ | 4 |
-| 石岭关 | 激烈对抗 | ch46-47 | locations/石岭关/激烈对抗/ | 1 |
-| 石岭关 | 英勇坚守 | ch47 | locations/石岭关/英勇坚守/ | 1 |
-| 石岭关 | 防御准备 | ch46 | locations/石岭关/防御准备/ | 1 |
-| 美女榕 | 默认 | ch2-ch20 | locations/美女榕/默认/ | 7 |
-| 老吴山间小屋 | 默认 | ch1-ch8 | locations/老吴山间小屋/默认/ | 8 |
-| 老码头 | 初到期 | ch25-ch26 | locations/老码头/初到期/ | 1 |
-| 老码头 | 探索期 | ch27-ch33 | locations/老码头/探索期/ | 1 |
-| 茶馆 | 默认期 | — | locations/茶馆/默认期/ | 1 |
-| 荣康城 | 渗透期 | ch51-ch53 | locations/荣康城/渗透期/ | 1 |
-| 荣康城 | 防御期 | ch48-ch50 | locations/荣康城/防御期/ | 1 |
-| 荣康城 | 陷落期 | ch54-ch55 | locations/荣康城/陷落期/ | 1 |
-| 葛家堡 | 内部崩坏 | ch40后半 | locations/葛家堡/内部崩坏/ | 1 |
-| 葛家堡 | 堡垒运作 | ch40前半 | locations/葛家堡/堡垒运作/ | 1 |
-| 葛家堡 | 渗透激活 | ch40中半 | locations/葛家堡/渗透激活/ | 1 |
-| 虎口镇 | 投降后 | ch36末 | locations/虎口镇/投降后/ | 1 |
-| 虎口镇 | 默认期 | ch36 | locations/虎口镇/默认期/ | 1 |
-| 郝大川破败小屋 | 默认期 | — | locations/郝大川破败小屋/默认期/ | 1 |
-| 集市 | 默认期 | — | locations/集市/默认期/ | 1 |
-| 黄阳镇 | 战后 | ch36末 | locations/黄阳镇/战后/ | 1 |
-| 黄阳镇 | 默认期 | ch36 | locations/黄阳镇/默认期/ | 1 |
+| 场景名 | stage_id | 章节范围 | 参考图路径 | 存在 |
+|--------|----------|---------|-----------|------|
+| AA大学 | 默认 | ch53-ch55 | locations/AA大学/AA大学_默认.png | 1 |
+| 上神界 | 默认 | ch64-ch65 | locations/上神界/上神界_默认.png | 1 |
+| 凤廊山脉 | 默认 | ch9-ch67 | locations/凤廊山脉/凤廊山脉_默认.png | 1 |
+| 北岸新码头 | 默认 | ch19-ch26 | locations/北岸新码头/北岸新码头_默认.png | 1 |
+| 十八层塔 | 默认 | ch3-ch65 | locations/十八层塔/十八层塔_默认.png | 1 |
+| 千秋星岗 | 默认 | ch50 | locations/千秋星岗/千秋星岗_默认.png | 1 |
+| 半山腰秘密仓库 | 默认 | ch17-ch27 | locations/半山腰秘密仓库/半山腰秘密仓库_默认.png | 1 |
+| 卢老板餐馆 | 默认 | ch12-ch29 | locations/卢老板餐馆/卢老板餐馆_默认.png | 1 |
+| 县城破庙 | 默认 | ch17-ch18 | locations/县城破庙/县城破庙_默认.png | 1 |
+| 吴启思实验室 | 默认 | ch53-ch55, ch71 | locations/吴启思实验室/吴启思实验室_默认.png | 1 |
+| 城主府 | 默认 | ch48-ch51 | locations/城主府/城主府_默认.png | 1 |
+| 天德城 | 繁华期 | ch41-ch43 | locations/天德城/天德城_繁华期.png | 1 |
+| 天德城 | 沦陷期 | ch44-ch66 | locations/天德城/天德城_沦陷期.png | 1 |
+| 宁阁码头 | 默认 | ch11 | locations/宁阁码头/宁阁码头_默认.png | 1 |
+| 定达国都 | 默认期 | ch44-ch66 | locations/定达国都/定达国都_默认期.png | 1 |
+| 定达国都 | 围城期 | ch67-ch71 | locations/定达国都/定达国都_围城期.png | 1 |
+| 山谷 | 默认 | ch4-ch5 | locations/山谷/山谷_默认.png | 1 |
+| 朱围庸住处 | 默认 | ch20-ch32 | locations/朱围庸住处/朱围庸住处_默认.png | 1 |
+| 杨弘秘密实验室 | 默认 | ch70-ch71 | locations/杨弘秘密实验室/杨弘秘密实验室_默认.png | 1 |
+| 永安镇 | 默认 | ch10-ch39 | locations/永安镇/永安镇_默认.png | 1 |
+| 永安镇会议厅 | 默认 | ch38-ch39 | locations/永安镇会议厅/永安镇会议厅_默认.png | 1 |
+| 永安镇客栈 | 默认 | ch10 | locations/永安镇客栈/永安镇客栈_默认.png | 1 |
+| 江新成宅邸 | 默认 | ch42 | locations/江新成宅邸/江新成宅邸_默认.png | 1 |
+| 泊岗镇 | 默认 | ch11-ch67 | locations/泊岗镇/泊岗镇_默认.png | 1 |
+| 清平镇 | 默认 | ch35-ch38 | locations/清平镇/清平镇_默认.png | 1 |
+| 温伯封府邸 | 默认 | ch14-ch21 | locations/温伯封府邸/温伯封府邸_默认.png | 1 |
+| 牛台山 | 默认 | ch1-ch71 | locations/牛台山/牛台山_默认.png | 1 |
+| 石岭关 | 默认 | ch46-ch47 | locations/石岭关/石岭关_默认.png | 1 |
+| 美女榕 | 默认 | ch2-ch71 | locations/美女榕/美女榕_默认.png | 1 |
+| 老吴山间小屋 | 默认 | ch1-ch8 | locations/老吴山间小屋/老吴山间小屋_默认.png | 1 |
+| 茶馆 | 默认 | ch20-ch23 | locations/茶馆/茶馆_默认.png | 1 |
+| 荣康城 | 默认期 | ch48-ch53 | locations/荣康城/荣康城_默认期.png | 1 |
+| 荣康城 | 陷落期 | ch54-ch55 | locations/荣康城/荣康城_陷落期.png | 1 |
+| 葛家堡 | 默认 | ch36-ch40 | locations/葛家堡/葛家堡_默认.png | 1 |
+| 虎口镇 | 默认 | ch36 | locations/虎口镇/虎口镇_默认.png | 1 |
+| 郝大川小屋 | 默认 | ch25-ch26 | locations/郝大川小屋/郝大川小屋_默认.png | 1 |
+| 集市 | 默认 | ch8 | locations/集市/集市_默认.png | 1 |
+| 黄阳镇 | 默认 | ch36 | locations/黄阳镇/黄阳镇_默认.png | 1 |
 
 ## 道具资产
 
-| 道具名 | stage_id | 章节范围 | 参考图路径 | 图片数 |
-|--------|----------|---------|-----------|--------|
-| 仙人掌 | 默认期 | ch5-ch71 | props/仙人掌/默认期/ | 3 |
-| 分割带 | 默认期 | ch69-ch71 | props/分割带/默认期/ | 3 |
-| 匿名纸条 | 默认期 | ch7-ch71 | props/匿名纸条/默认期/ | 3 |
-| 十八层塔 | 默认期 | ch3-ch71 | props/十八层塔/默认期/ | 5 |
-| 大蒜 | 默认期 | ch22-ch71 | props/大蒜/默认期/ | 4 |
-| 干柿子与肉干 | 默认期 | ch9-ch71 | props/干柿子与肉干/默认期/ | 3 |
-| 数字人躯体 | 注魂期 | ch70-ch71+ | props/数字人躯体/注魂期/ | 4 |
-| 数字人躯体 | 空壳期 | ch53-ch70 | props/数字人躯体/空壳期/ | 4 |
-| 水晶棒 | 默认期 | ch65-ch71 | props/水晶棒/默认期/ | 5 |
-| 泉水 | 默认期 | ch1-ch71 | props/泉水/默认期/ | 5 |
-| 泡泡 | 默认期 | ch69-ch71 | props/泡泡/默认期/ | 3 |
-| 泥垛子建筑 | 默认期 | ch1-ch71 | props/泥垛子建筑/默认期/ | 3 |
-| 灵魂收集容器 | 默认期 | ch68-ch71 | props/灵魂收集容器/默认期/ | 2 |
-| 电磁枪 | 默认期 | ch35-ch71 | props/电磁枪/默认期/ | 3 |
-| 红领巾 | 默认期 | ch60-ch71 | props/红领巾/默认期/ | 3 |
-| 美女榕 | 完好期 | ch2 | props/美女榕/完好期/ | 7 |
-| 美女榕 | 断根期 | ch65 | props/美女榕/断根期/ | 3 |
-| 观音庙神水 | 默认期 | ch5-ch71 | props/观音庙神水/默认期/ | 4 |
-| 铁链 | 默认期 | ch9-ch71 | props/铁链/默认期/ | 3 |
-| 黑布阵 | 默认期 | ch50-ch71 | props/黑布阵/默认期/ | 4 |
+| 道具名 | stage_id | 章节范围 | 参考图路径 | 存在 |
+|--------|----------|---------|-----------|------|
+| 仙人掌 | 默认 | ch5 | props/仙人掌/仙人掌_默认.png | 1 |
+| 分割带 | 默认 | ch69-ch71 | props/分割带/分割带_默认.png | 1 |
+| 匿名纸条 | 默认 | ch7 | props/匿名纸条/匿名纸条_默认.png | 1 |
+| 十八层塔 | 默认 | ch3-ch71 | props/十八层塔/十八层塔_默认.png | 1 |
+| 大蒜 | 默认 | ch22-ch71 | props/大蒜/大蒜_默认.png | 1 |
+| 干柿子与肉干 | 默认 | ch9 | props/干柿子与肉干/干柿子与肉干_默认.png | 1 |
+| 数字人躯体 | 未激活 | ch53-激活前 | props/数字人躯体/数字人躯体_未激活.png | 1 |
+| 数字人躯体 | 激活后 | 激活后-ch71 | props/数字人躯体/数字人躯体_激活后.png | 0 |
+| 水晶棒 | 默认 | ch62-ch71 | props/水晶棒/水晶棒_默认.png | 1 |
+| 泉水 | 默认 | ch1-ch71 | props/泉水/泉水_默认.png | 1 |
+| 泡泡 | 默认 | ch69-ch71 | props/泡泡/泡泡_默认.png | 1 |
+| 泥垛子建筑 | 默认 | ch1-ch71 | props/泥垛子建筑/泥垛子建筑_默认.png | 1 |
+| 灵魂收集容器 | 默认 | ch68-ch71 | props/灵魂收集容器/灵魂收集容器_默认.png | 1 |
+| 电磁枪 | 默认 | ch35-ch71 | props/电磁枪/电磁枪_默认.png | 1 |
+| 红领巾 | 默认 | ch60-ch71 | props/红领巾/红领巾_默认.png | 1 |
+| 美女榕 | 默认 | ch2-ch71 | props/美女榕/美女榕_默认.png | 1 |
+| 观音庙神水 | 默认 | ch5 | props/观音庙神水/观音庙神水_默认.png | 1 |
+| 铁链 | 默认 | ch9 | props/铁链/铁链_默认.png | 1 |
+| 黑布阵 | 默认 | ch50-ch55+ | props/黑布阵/黑布阵_默认.png | 1 |
 
 ---
 
-**总资产条目**: 272 | **总图片数**: 477
+**总资产条目**: 203 | **已生成图片**: 193 | **缺失**: 10
