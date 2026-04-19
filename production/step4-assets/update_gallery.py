@@ -5,12 +5,57 @@
     python3 update_gallery.py
 
 生成图片后刷新 gallery.html 即可看到最新资产。
+
+扁平化目录结构（v2）：
+    characters/{角色名}/{角色名}_肖像.png    — 正面半身像
+    characters/{角色名}/{角色名}_三视图.png   — Character Sheet
+    characters/{角色名}/{角色名}_{stage_id}.png — 阶段图
+    locations/{场景名}/{场景名}_{stage_id}.png
+    props/{道具名}/{道具名}_{stage_id}.png
 """
-import json, os
+import json
+import os
 
 CATS = ["characters", "locations", "props"]
 IMG_EXT = {".png", ".jpg", ".jpeg", ".webp"}
 BASE = os.path.dirname(os.path.abspath(__file__))
+
+# 肖像类固定后缀（非阶段）
+PORTRAIT_SUFFIX = "肖像"
+CHARACTER_SHEET_SUFFIX = "三视图"
+
+# 排序优先级：肖像 > 三视图 > 阶段图
+SORT_PRIORITY = {PORTRAIT_SUFFIX: 0, CHARACTER_SHEET_SUFFIX: 1}
+
+
+def parse_filename(fname: str, element_name: str):
+    """解析文件名，返回 (category, suffix) 或 None。
+
+    category: 'portrait' | 'character_sheet' | 'stage'
+    suffix:   用作 label，阶段图时即为 stage_id
+    """
+    base, ext = os.path.splitext(fname)
+    if ext.lower() not in IMG_EXT:
+        return None
+    prefix = f"{element_name}_"
+    if not base.startswith(prefix):
+        return None
+    suffix = base[len(prefix):]
+    if not suffix:
+        return None
+    if suffix == PORTRAIT_SUFFIX:
+        return ("portrait", suffix)
+    if suffix == CHARACTER_SHEET_SUFFIX:
+        return ("character_sheet", suffix)
+    return ("stage", suffix)
+
+
+def sort_key(item):
+    """图片排序键：肖像 > 三视图 > 阶段（按 stage_id 字典序）"""
+    suffix = item["suffix"]
+    priority = SORT_PRIORITY.get(suffix, 2)
+    return (priority, suffix)
+
 
 assets = []
 for cat in CATS:
@@ -21,23 +66,47 @@ for cat in CATS:
         item_dir = os.path.join(cat_dir, name)
         if not os.path.isdir(item_dir):
             continue
-        stages, images = [], []
-        for sub in sorted(os.listdir(item_dir)):
-            sub_path = os.path.join(item_dir, sub)
-            if not os.path.isdir(sub_path):
+
+        # 扫描扁平化目录下的所有图片文件
+        raw_items = []
+        for f in os.listdir(item_dir):
+            parsed = parse_filename(f, name)
+            if not parsed:
                 continue
-            if sub == "_portrait":
-                for f in sorted(os.listdir(sub_path)):
-                    if os.path.splitext(f)[1].lower() in IMG_EXT:
-                        images.append({"path": f"{cat}/{name}/_portrait/{f}",
-                                       "label": f"肖像 · {os.path.splitext(f)[0]}"})
+            category, suffix = parsed
+            raw_items.append({
+                "fname": f,
+                "category": category,
+                "suffix": suffix,
+            })
+
+        # 按优先级排序
+        raw_items.sort(key=sort_key)
+
+        stages = []
+        images = []
+        for item in raw_items:
+            fname = item["fname"]
+            category = item["category"]
+            suffix = item["suffix"]
+            path = f"{cat}/{name}/{fname}"
+
+            if category == "portrait":
+                label = "肖像"
+            elif category == "character_sheet":
+                label = "三视图"
             else:
-                stages.append(sub)
-                for f in sorted(os.listdir(sub_path)):
-                    if os.path.splitext(f)[1].lower() in IMG_EXT:
-                        images.append({"path": f"{cat}/{name}/{sub}/{f}",
-                                       "label": f"{sub} · {os.path.splitext(f)[0]}"})
-        assets.append({"category": cat, "name": name, "stages": stages, "images": images})
+                stages.append(suffix)
+                label = suffix
+
+            images.append({"path": path, "label": label})
+
+        assets.append({
+            "category": cat,
+            "name": name,
+            "stages": stages,
+            "images": images,
+        })
 
 out_path = os.path.join(BASE, "gallery_data.js")
 with open(out_path, "w", encoding="utf-8") as f:
